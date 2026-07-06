@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Wechat-CC 项目详情，介绍微信连接 Claude Code、Codex 等桌面 AI 工具的中间层产品探索。"
+    />
+    <title>Wechat-CC | 莫秀文</title>
+    <link rel="stylesheet" href="./project-wechat-cc.css?v=20260705-2" />
+  </head>
+  <body>
+    <header class="cc-header">
+      <a class="cc-brand" href="./index.html">
+        <span class="cc-logo">CC</span>
+        <span>wechat-cc</span>
+      </a>
+      <nav aria-label="项目导航">
+        <a href="./index.html#projects">返回项目列表</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cc-hero">
+        <div class="cc-copy">
+          <p class="eyebrow">Wechat Gateway · Desktop AI Runtime · Companion UI</p>
+          <h1>Wechat-CC</h1>
+          <p>
+            一个把微信变成远程 AI 工作入口的中间层产品。它连接用户、微信、桌面电脑、Claude Code、Codex
+            和本地项目，让人在离开电脑时，也能发起任务、切换模型、查看状态、恢复连接，并让 AI 记住长期上下文。
+          </p>
+          <div class="hero-tags" aria-label="项目关键词">
+            <span>微信入口</span>
+            <span>多模型连接</span>
+            <span>长期记忆</span>
+            <span>状态恢复</span>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./assets/wechat-cc/ai-running.png" alt="Wechat-CC 正常运行状态界面" />
+        </figure>
+      </section>
+
+      <section class="section problem">
+        <div>
+          <p class="eyebrow">Product Question</p>
+          <h2>手机上的一句话，怎么稳定驱动电脑上的 AI 工具？</h2>
+        </div>
+        <p>
+          Wechat-CC 不是一个单纯的聊天界面，而是一个远程 AI 协作中间层。产品难点在于：用户需要知道当前谁连接着、
+          用哪个模型、任务有没有在执行、连接断了怎么恢复、AI 如何记住人与项目的长期上下文。
+        </p>
+      </section>
+
+      <section class="section state-section">
+        <div class="section-heading">
+          <p class="eyebrow">Runtime States</p>
+          <h2>把不可见的 AI 运行环境，设计成用户能理解的状态。</h2>
+        </div>
+        <div class="state-grid">
+          <article>
+            <img src="./assets/wechat-cc/no-model.png" alt="Wechat-CC 未检测到模型状态" />
+            <div>
+              <span>未检测到模型</span>
+              <p>当 Claude Code 或 Codex 没有安装时，界面不只报错，而是明确告诉用户还差哪一步。</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/wechat-cc/env-success.png" alt="Wechat-CC 环境检测成功状态" />
+            <div>
+              <span>环境检测成功</span>
+              <p>检测成功后进入微信扫码登录，让用户知道系统已经准备好，可以进入真实协作。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section interface-section">
+        <div class="section-heading">
+          <p class="eyebrow">Core Interfaces</p>
+          <h2>真正的产品重点，是把用户、记忆、对话和 Agent 能力组织清楚。</h2>
+        </div>
+        <div class="interface-grid">
+          <article class="interface-card interface-card-wide">
+            <div>
+              <span>此刻</span>
+              <h3>当前连接与子用户管理</h3>
+              <p>
+                这个界面让用户知道当前连接的是谁、使用哪个模型、有哪些子用户正在陪伴。它把“后台服务是否正常”
+                转译成用户能看懂的陪伴状态。
+              </p>
+              <p>
+                未来这块插画会继续动态化：小鱼在鱼缸里自然游动，用户可以把鱼缸拖到桌面，或发送到手机屏幕，
+                让 CC 与用户的连接从“打开网页查看”变成更频繁、更贴身的陪伴。
+              </p>
+              <div class="cc-status-card">
+                <img src="./assets/wechat-cc/disconnected.png" alt="Wechat-CC 暂时失去连接状态" />
+                <div>
+                  <span>暂时失去连接</span>
+                  <p>断连不是终点，而是可恢复状态；用户能看到当前连接对象、子用户和重新连接入口。</p>
+                </div>
+              </div>
+            </div>
+            <img src="./assets/wechat-cc/ai-running.png" alt="Wechat-CC 此刻界面" />
+          </article>
+          <article class="interface-card">
+            <div>
+              <span>记忆</span>
+              <h3>数字人格与长期上下文</h3>
+              <p>
+                记忆页把用户画像、长期偏好、关系模式和最近事项沉淀下来，让 AI 不只是响应一次消息，
+                而是逐渐理解一个人。
+              </p>
+            </div>
+            <img src="./assets/wechat-cc/memory.png" alt="Wechat-CC 记忆界面" />
+          </article>
+          <article class="interface-card">
+            <div>
+              <span>对话</span>
+              <h3>把微信交流沉淀成知识和任务</h3>
+              <p>
+                对话页承接长文本、任务清单、知识标签和导出能力，让微信里的讨论能继续进入项目协作。
+              </p>
+            </div>
+            <img src="./assets/wechat-cc/dialog.png" alt="Wechat-CC 对话界面" />
+          </article>
+        </div>
+      </section>
+
+      <section class="section memory-aquarium">
+        <div class="memory-copy">
+          <p class="eyebrow">Memory Aquarium</p>
+          <h2>记忆水族箱：把长期对话、记忆沉淀和陪伴关系，变成一个可照看的空间。</h2>
+          <p>
+            用户和 CC 的对话里，系统会先提取值得长期保留的内容，沉淀为记忆本体。这个本体不会直接以鱼的形式展示，
+            而是先留在记忆库里，作为后续调用和陪伴的底层内容。
+          </p>
+          <p>
+            鱼只是记忆的可视化载体。用户可以把领取出来的小鱼放进自己的水族箱，让长期关系有一个可以看见、
+            可以照看的外显空间。
+          </p>
+          <p>
+            聊天消耗的 token 会转化成鱼食，作为持续互动的可感知资源。随着鱼越来越多，水族箱需要被整理，
+            用户可以通过捕捞和放生，把不再需要长期展示的内容从可视空间里移走。
+          </p>
+          <p>
+            这条故事线还会延伸到“此刻”的动态鱼缸：鱼缸未来可以被拖到桌面或手机屏幕上，成为一个持续可见的陪伴入口，
+            让 CC 与用户的连接从一次性页面停留，变成更长期的关系场景。
+          </p>
+        </div>
+        <div class="aquarium-loop" aria-label="记忆水族箱产品循环">
+          <div>
+            <span>01</span>
+            <strong>记忆沉淀</strong>
+            <p>对话中值得长期保留的内容进入记忆库。</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>鱼作为载体</strong>
+            <p>记忆以小鱼的形式外显，变成可领取、可照看的对象。</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Token 变成鱼食</strong>
+            <p>聊天消耗转化为鱼食，让互动有可感知的回馈。</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>捕捞放生</strong>
+            <p>当水族箱变满，用户可以整理并移走不再需要长期展示的内容。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section architecture">
+        <div class="section-heading">
+          <p class="eyebrow">Product Structure</p>
+          <h2>我把它理解为一个“微信入口 + 本地 AI 工具 + 记忆系统”的协作中枢。</h2>
+        </div>
+        <div class="architecture-grid">
+          <article>
+            <span>01</span>
+            <h3>环境检测</h3>
+            <p>先确认 Claude Code、Codex 等能力是否可用，把工程依赖转成清晰的用户状态。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>连接管理</h3>
+            <p>处理扫码登录、当前用户、子用户、断连恢复和模型切换，让远程协作可控。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>对话沉淀</h3>
+            <p>把微信交流、任务、知识片段和长文本输出组织成可回看、可导出的内容资产。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>人格记忆</h3>
+            <p>让记忆以小鱼、水族箱、鱼食和放生的形式被照看，而不是只躺在数据库里。</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>陪伴状态体</h3>
+            <p>把动态鱼缸延伸到桌面和手机屏幕，让 CC 的陪伴从工具界面变成持续可见的连接。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section role-panel">
+        <div>
+          <p class="eyebrow">My Product Thinking</p>
+          <h2>我在这个项目里关注的是：AI 能力如何被长期、稳定、温和地陪伴用户。</h2>
+        </div>
+        <div class="role-list">
+          <p>把工程状态翻译成可理解的用户状态：未安装、已连接、断连、扫码、切换模型。</p>
+          <p>把单次对话延展成长期关系：用户画像、记忆水族箱、偏好、最近正在做的事。</p>
+          <p>把远程控制变成可信协作：用户知道当前谁在连接、AI 用什么工具、失败后怎样恢复。</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
