@@ -3,548 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="工业智能语义基座：一个高风险工业 AI 平台的交互设计案例。核心是在从数据到结论的每一层，界定人与 AI 的职责边界，让一线工程师能核对、甚至推翻会触发停机的 AI 结论。"
-    />
+    <meta name="description" content="工业智能语义基座：从工业数据、业务语义到质量 Agent，把高风险 AI 结论落成工程师能核验、能追溯、能推翻的产品体验。" />
     <title>工业智能语义基座 | 莫秀文</title>
-    <link rel="stylesheet" href="./project-industrial-semantic-base.css?v=20260812-10" />
+    <link rel="stylesheet" href="./project-industrial-semantic-base.css?v=20260901-v7" />
   </head>
   <body>
-    <header class="industrial-header">
-      <a href="./index.html">莫秀文</a>
-      <nav aria-label="项目导航">
-        <a href="./index.html#projects">返回项目列表</a>
-      </nav>
+    <header class="case-header">
+      <a class="case-brand" href="./index.html">莫秀文</a>
+      <nav aria-label="项目导航"><a href="./index.html#projects">返回项目列表</a></nav>
     </header>
 
     <main>
-      <!-- ① Hero — 以主张打头 -->
-      <section class="industrial-hero">
+      <section class="hero act act-dark" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">Primary Case · AI 产品交互设计</p>
+          <p class="act-index">01 / The Question</p><p class="eyebrow">Primary Case · Industrial AI</p>
           <h1>工业智能语义基座</h1>
-          <p class="hero-sub">
-            面向工业场景的「数据 + 本体 + Agent」平台，当前以<strong>铁路轴承制造质量</strong>为首个落地场景，能力成熟后扩展到更多场景。
-          </p>
-          <p class="hero-thesis">
-            <strong>AI 的一句结论，可能让一条产线停机。</strong>我做的交互设计，是让“AI 与人的边界”在界面上真的成立——让一线工程师始终能自己核对、甚至推翻机器。
-          </p>
-          <p class="hero-role">
-            我负责从数据接入、本体建模，到质量 Agent 与沙盘推演的交互设计。
-          </p>
-          <div class="hero-tags" aria-label="项目关键词">
-            <span>主展示项目</span>
-            <span>人机边界</span>
-            <span>质量 Agent</span>
-            <span>沙盘推演</span>
-            <span>AI 管道生成器</span>
-          </div>
+          <p class="hero-intro">面向工业场景的「数据 + 本体 + Agent」平台。铁路轴承制造质量是首个落地场景，成熟后扩展到更多工业业务。</p>
+          <blockquote><strong>AI 的一句结论，可能让一条产线停机。</strong><span>我做的，是把团队确定的人机边界落进每一层交互——让一线工程师始终能自己核对、甚至推翻机器。</span></blockquote>
+          <div class="hero-facts" aria-label="项目事实"><span>唯一交互设计师</span><span>6 人团队</span><span>2 年项目</span><span class="is-live">质量 Agent 已落地工厂</span></div>
+          <p class="screen-plan-note">下方界面为脱敏后的真实设计稿，其中数据均为示例。</p>
         </div>
-        <div class="layer-stack" aria-hidden="true">
-          <div class="layer-band band-app">
-            <span class="band-name">应用层</span>
-            <span class="band-hint">Agent 在这里用它做事</span>
-          </div>
-          <div class="layer-band band-onto">
-            <span class="band-name">本体层</span>
-            <span class="band-hint">定义有什么、怎么连、谁能改</span>
-          </div>
-          <div class="layer-band band-data">
-            <span class="band-name">数据层</span>
-            <span class="band-hint">把工厂数据接进来</span>
-          </div>
+        <div class="verdict-stage" aria-label="从 AI 结论到人工决策的证据链">
+          <div class="verdict-orbit" aria-hidden="true"></div>
+          <div class="verdict-card"><div class="verdict-head"><span></span>质量 Agent · 分析结论</div><p class="verdict-label">质量状态</p><strong>过程非受控</strong><dl><div><dt>依据</dt><dd>GB/T 4091 · 准则 1</dd></div><div><dt>风险</dt><dd>中高</dd></div><div><dt>建议</dt><dd class="alert">立即停机检查</dd></div></dl></div>
+          <div class="trace trace-data"><span>01</span>原始数据</div><div class="trace trace-rule"><span>02</span>国家标准</div><div class="trace trace-graph"><span>03</span>本体关系</div>
+          <div class="human-gate"><span>Human Gate</span><strong>机器给判断，人做决定</strong></div>
         </div>
       </section>
 
-      <!-- ② 平台价值 & 体量 -->
-      <section class="section platform-overview">
-        <div class="section-heading">
-          <p class="eyebrow">The Platform</p>
-          <h2>让集团所有工业软件、AI 和数据系统，说同一种“普通话”。</h2>
-          <p class="section-lead">
-            工业智能化转型卡在一个根本矛盾上：工业知识满是“行话”，同一个词在不同系统、不同人嘴里含义还不一样——机器听不懂，AI 也就没法真正介入。
-          </p>
-          <p class="section-lead">
-            这个平台要建的，是一套<strong>机器能理解、能执行的统一业务语义体系</strong>，相当于一本“工业数据字典”。有了它，集团各类工业软件、AI 模型、数据系统才对得上话，工业 AI 才能从“看得见数据”走到“看得懂业务、做得了决策”。
-          </p>
+      <section class="act platform" id="platform">
+        <header class="act-heading"><p class="act-index">02 / The Platform</p><h2>AI 要先听懂工厂在说什么，才有资格给结论。</h2><p>这个平台要建立一套机器能理解、能执行的统一业务语义体系——一本“工业数据字典”，让不同软件、数据系统和 AI 说同一种普通话。</p></header>
+        <div class="platform-problems" aria-label="平台要解决的问题">
+          <article><span>01</span><h3>数据对不上</h3><p>同一个概念散落在不同系统，口径不一，跨系统协同从源头断开。</p></article>
+          <article><span>02</span><h3>AI 不懂机理</h3><p>只看数值、不理解对象和关系，AI 无法给出能进入业务的判断。</p></article>
+          <article><span>03</span><h3>知识留不下来</h3><p>老师傅的经验难变成机器可计算、可执行、可复用的资产。</p></article>
         </div>
-        <div class="problem-grid" aria-label="平台要解决的三个难题">
-          <div class="problem">
-            <p class="problem-tag">难题 01</p>
-            <strong>数据孤岛，语义歧义</strong>
-            <p>数据各存各的，同一个概念对不上，全域协同就断在这里。</p>
-          </div>
-          <div class="problem">
-            <p class="problem-tag">难题 02</p>
-            <strong>AI 不懂机理，决策“失语”</strong>
-            <p>AI 缺乏对工业机理的语义理解，到了要给判断时，给不出能落地的结论。</p>
-          </div>
-          <div class="problem">
-            <p class="problem-tag">难题 03</p>
-            <strong>知识难沉淀，AI 难进化</strong>
-            <p>老师傅的经验，怎么变成机器能算、能复用的资产，让 AI 持续进化。</p>
+        <div class="data-journey">
+          <div class="journey-copy"><p class="scene-kicker">一份轴承检测数据的旅程</p><h3>从散乱信号，到一句会触发高成本动作的结论。</h3><p>三层不是技术架构展示，而是一条责任链。每多走一层，机器获得更多理解；人的核验入口也必须同时被保留下来。</p><div class="responsibility-rail"><div class="rail-line" aria-hidden="true"></div><div class="rail-step is-current"><span>01</span><div><strong>数据接入</strong><small>把振动、尺寸、工艺日志接进来</small></div></div><div class="rail-step"><span>02</span><div><strong>清洗与转换</strong><small>处理缺失、格式与计算口径</small></div></div><div class="rail-step"><span>03</span><div><strong>定义对象与关系</strong><small>明确数据代表什么，以及它和哪些对象有关</small></div></div><div class="rail-step"><span>04</span><div><strong>AI 推理</strong><small>计算结论，但不越过人</small></div></div><div class="rail-step"><span>05</span><div><strong>人工核验</strong><small>回到标准、数据与真实对象</small></div></div></div><div class="rail-foot"><span>责任边界</span><strong>机器提供判断，人保留决定权</strong></div></div>
+          <ol class="journey-steps">
+            <li><span class="step-no">01 · 数据层</span><strong>接进来，对齐口径</strong><p>振动信号、几何尺寸、工艺日志进入同一条数据链。</p><div class="signal-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></li>
+            <li><span class="step-no">02 · 本体层</span><strong>定义它是什么、和谁有关</strong><p>机床、工单、轴承、材料与操作员被连接为机器能读懂的关系。</p><div class="mini-graph" aria-hidden="true"><b>机床</b><b>工单</b><b>轴承</b><b>材料</b></div></li>
+            <li><span class="step-no">03 · 应用层</span><strong>AI 推理，人核验</strong><p>Agent 运行 Cpk、SPC 与判异；工程师沿数据与本体回查证据。</p><div class="journey-result"><span>过程非受控</span><em>等待人工确认</em></div></li>
+          </ol>
+        </div>
+        <div class="benchmark"><p><span>项目方向</span>对标 Palantir Foundry / AIP，做工业质量场景本地化。</p><p><span>建设中目标，不是成果</span>对象 ≥ 百类 · 属性 ≥ 千项 · 关系 ≥ 万组 · 字典响应秒级 · AI 推荐决策可解释性 &gt; 90%</p></div>
+        <div class="platform-map">
+          <div class="map-intro"><span>Platform Panorama</span><h3>一个底座，连接数据、知识与 Agent。</h3><p>平台不是单点质量工具。质量 Agent 是第一个进入真实工厂的应用，底下的数据接入、本体管理与智能能力会继续支撑更多工业场景。</p></div>
+          <div class="map-canvas" aria-label="工业智能语义基座能力全景示意">
+            <div class="map-ring ring-a"></div><div class="map-ring ring-b"></div><div class="map-ring ring-c"></div>
+            <strong class="map-core">工业语义<br />基座</strong>
+            <span class="map-node map-quality">质量 Agent<em>已落地</em></span><span class="map-node map-sandbox">沙盘推演</span><span class="map-node map-pipeline">AI 管道</span><span class="map-node map-entity">实体库</span><span class="map-node map-ontology">本体管理</span><span class="map-node map-data">多模态数据</span>
           </div>
         </div>
-        <h3 class="platform-subhead">
-          平台覆盖「数据 → 本体 → 应用」三层，层层递进<span class="subhead-note">当前在铁路轴承制造质量场景验证</span>
-        </h3>
-        <div class="stack-flow">
-          <p class="stack-question"><span class="stack-eg-tag">举个例子</span>一份轴承检测数据，怎么一层层变成“建议停机”</p>
-
-          <div class="stack-layer layer-data">
-            <div class="stack-head">
-              <span class="layer-tag tag-data">数据层</span>
-              <span class="stack-what">把工厂数据接进来</span>
-            </div>
-            <p class="stack-state">振动信号、几何尺寸、工艺日志……多源、散乱、机器读不懂。</p>
-            <div class="module-chips">
-              <span class="mod">数据连接</span>
-              <span class="mod">AI 管道生成器</span>
-            </div>
-          </div>
-
-          <p class="stack-arrow">↓ 接进来、对齐口径</p>
-
-          <div class="stack-layer layer-onto">
-            <div class="stack-head">
-              <span class="layer-tag tag-onto">本体层</span>
-              <span class="stack-what">定义有什么、怎么连、谁能改</span>
-            </div>
-            <p class="stack-state">建成对象 + 关系：“3 号线的机床，正在加工这批轴承。”——机器终于读得懂这些东西是什么、怎么连。</p>
-            <div class="module-chips">
-              <span class="mod">对象类型</span>
-              <span class="mod">链接类型</span>
-              <span class="mod">操作类型</span>
-              <span class="mod">AI 图标库</span>
-            </div>
-          </div>
-
-          <p class="stack-arrow">↓ 有了语义，AI 才能在上面推理</p>
-
-          <div class="stack-layer layer-app">
-            <div class="stack-head">
-              <span class="layer-tag tag-app">应用层</span>
-              <span class="stack-what">Agent 和人在这里用它做事</span>
-            </div>
-            <p class="stack-state">Agent 跑 Cpk / SPC / 判异 →“过程非受控，建议停机”；工程师能沿着本体一路追溯、核验、甚至推翻。</p>
-            <div class="module-chips">
-              <span class="mod">实体库</span>
-              <span class="mod">质量 Agent</span>
-              <span class="mod">沙盘推演</span>
-            </div>
-          </div>
-
-          <p class="stack-payoff">一堆散乱、没人看得懂的数字，变成一个<strong>能被验证、也可能让产线停机的结论</strong>。</p>
-        </div>
-
-        <div class="ontology-callout">
-          <p class="ontology-lead">
-            “本体层”听起来抽象，其实就是<strong>把工厂里的东西，一样样教给机器认</strong>。比如要回答——
-            <em>“这批出问题的轴承，是哪条产线、哪张工单、用了哪个供应商的料、当时谁在操作？”</em>
-            ——Agent 得连着跨过好几层关系，而这些关系，得先有人把它建出来。
-          </p>
-          <div class="ontology-grid">
-            <div class="onto-cell">
-              <p class="onto-kind">对象</p>
-              <p class="onto-mod">对象类型</p>
-              <p class="onto-eg">机床、轴承、工单、原材料、操作员……<span>各自带属性，如机床的“健康评分”</span></p>
-            </div>
-            <div class="onto-cell">
-              <p class="onto-kind">关系</p>
-              <p class="onto-mod">链接类型</p>
-              <p class="onto-eg">产线“包含”设备 · 工单“生产”轴承 · 轴承“投料”原材料<span>关系有方向、有基数（一对多 / 多对一）</span></p>
-            </div>
-            <div class="onto-cell">
-              <p class="onto-kind">行为</p>
-              <p class="onto-mod">操作类型</p>
-              <p class="onto-eg">定义能对这些对象执行哪些操作、谁被授权执行<span>例如：谁能修改某台设备的状态</span></p>
-            </div>
-          </div>
-          <p class="ontology-tie">对象 / 关系 / 行为，正好是我做交互设计的三个本体模块。</p>
-        </div>
-
-        <div class="platform-scope">
-          <span>统一业务语义体系 · “工业数据字典”</span>
-          <span>对象—链接—操作 三层本体</span>
-          <span class="scope-live">质量 Agent 已落地工厂</span>
-        </div>
-        <div class="benchmark">
-          <p class="benchmark-line">
-            <span class="benchmark-tag">对标</span>
-            项目立项即对标 <strong>Palantir Foundry / AIP</strong>，做的是工业质量场景的本地化。
-          </p>
-          <div class="targets">
-            <p class="targets-label">立项目标指标（项目设定，尚在建设中）</p>
-            <div class="target-row">
-              <div class="target">
-                <span>字典要建多全</span>
-                <strong>100+ 类对象 · 1000+ 个属性 · 10000+ 条关系</strong>
-              </div>
-              <div class="target">
-                <span>字典响应</span>
-                <strong>秒级</strong>
-              </div>
-              <div class="target">
-                <span>AI 推荐决策可解释性</span>
-                <strong>&gt; 90%</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="review-focus"><p class="scene-kicker">本次项目复盘聚焦</p><div><strong>01</strong><p>把“AI 给结论”重组为从结论、原因到原始证据的连续核验路径。</p></div><div><strong>02</strong><p>让数据、本体与 Agent 不再是三个割裂后台，而是一条能被人理解和接手的工作流。</p></div></div>
       </section>
 
-      <!-- ③ 我的角色 & 贡献 -->
-      <section class="section role-block">
-        <div class="section-heading">
-          <p class="eyebrow">My Role</p>
-          <h2>这么大一个平台，我在里面具体做了什么？</h2>
-        </div>
+      <section class="act role act-tint" id="role">
+        <header class="act-heading compact"><p class="act-index">03 / My Role</p><h2>产品定方向，我负责让它在界面上真的成立。</h2><p>我是 6 人团队中唯一的交互设计师。产品负责 WHAT / WHY；我负责交互 HOW，并在评审中发现和修正不合理处。</p></header>
         <div class="role-layout">
-          <div class="role-copy">
-            <p>
-              我是这 6 人团队里<strong>唯一的交互设计师</strong>。项目初期做竞品调研和原型探索、把初版交给团队；成员就位后，
-              和产品一起评审每个模块——功能是否合理、交互逻辑是否成立、流程能否闭环——再用体验视角把交互流程定下来、
-              交付高保真页面给前端。几乎每个模块都是这条链路。
-            </p>
-            <dl class="role-facts">
-              <div>
-                <dt>团队</dt>
-                <dd>6 人 · 2 产品 / 1 前端 / 1 后端 / 1 算法 / 1 设计（我）</dd>
-              </div>
-              <div>
-                <dt>周期</dt>
-                <dd>2 年项目，已投入开发大半年</dd>
-              </div>
-              <div>
-                <dt>落地</dt>
-                <dd>质量 Agent 已上线工厂、正在迭代；其余模块处于设计与开发阶段</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="contrib">
-            <p class="contrib-label">我在这个项目里真正做的事</p>
-            <ol class="contrib-list">
-              <li><strong>从 0 到 1 探索方向</strong>——需求不清时，我把 Palantir 产品文档，加上自己深度使用 Codex / Claude / GPT / Gemini 攒下的 Agent 交互体感，用 Figma Make / Claude Code 快速转成几版可交互原型，把团队带起来。</li>
-              <li><strong>几乎每个模块的交互都由我端到端负责</strong>——从体验视角设计交互流程，交付高保真给前端。</li>
-              <li><strong>把产品定的高风险 AI 方向，落成一线工程师真的能核实、敢用的界面</strong>——并在评审里发现、改掉不合理的地方。</li>
-              <li><strong>全程主导了 AI 图标库</strong>——从 0 设计功能机制，推动一个曾被判“无法实现”的方案落地。</li>
-            </ol>
-            <p class="contrib-handoff">方向由产品定调，我负责让它在界面上真的成立。下面几个场景，是这份工作最能说明问题的地方。</p>
-          </div>
+          <div class="role-facts"><div><span>团队</span><strong>2 产品 · 1 前端 · 1 后端 · 1 算法 · 1 设计</strong></div><div><span>周期</span><strong>2 年项目 · 已开发大半年</strong></div><div><span>落地</span><strong>质量 Agent 已进工厂，其他模块建设中</strong></div></div>
+          <ol class="contribution-track"><li><span>01</span><div><strong>0 → 1 原型探索</strong><p>结合 Palantir 文档、Agent 产品使用经验与 AI 工具，快速制作可交互原型，帮助团队对齐方向。</p></div></li><li><span>02</span><div><strong>全模块交互端到端</strong><p>从流程、状态到高保真交付，几乎每个模块都走完同一条设计链路。</p></div></li><li><span>03</span><div><strong>质量 Agent 交互重设计</strong><p>算法 demo 能算但不好用；我吃透业务后，重新设计了整个 Agent 的人机交互。</p></div></li><li><span>04</span><div><strong>AI 图标库全程主导</strong><p>从功能机制到技术可行性验证，推动一个曾被判断“无法实现”的方案落地。</p></div></li></ol>
         </div>
       </section>
 
-      <!-- ④ 立论 — 张力/问题 -->
-      <section class="section stakes">
-        <div class="stakes-copy">
-          <p class="eyebrow">The Stakes</p>
-          <h2>AI 说“立即停机”——凭什么有人敢按？</h2>
-          <p>
-            误判停机要担责，漏判不停机也要担责。一个质检工程师不会因为界面好看就按下这个按钮。
-          </p>
-          <p>
-            工程师本来就有判断力。这个平台每一层的交互，都在回答同一个问题：<strong>怎么让他用得上自己的专业判断去核实这句结论，而不是被要求闭眼相信它。</strong>把这个方向落成界面上真的成立的交互，正是我的工作。
-          </p>
-          <p class="handoff">下面几个场景，是这份工作最锋利的地方。</p>
+      <section class="act evidence-act act-dark" id="quality-agent">
+        <header class="act-heading inverse"><p class="act-index">04 / Primary Evidence</p><h2>不是让报告更好看，而是把判断拆成一条能核验的路径。</h2><p>算法工程师先做出了能算 Cpk、SPC 与判异的 demo。我重新设计了信息结构、三栏工作台与追问联动，让工程师能从结论一路查回数据。</p></header>
+        <figure class="real-shot" aria-label="质量 Agent 三栏联动工作台">
+          <img src="./assets/industrial/quality-agent-workbench.png" alt="质量分析工作台：左侧均值图 X̄ 与极差图 R、八大判异（依据 GB/T 4091），中间本体图谱，右侧质量 Agent 对话与按业务阅读顺序排列的八段报告导航" loading="lazy" />
+          <figcaption>质量分析工作台 · 左侧 SPC 图控与八大判异，中间本体图谱高亮，右侧 Agent 追问与八段报告导航</figcaption>
+        </figure>
+        <div class="scene-caption"><span>我的交互重设计</span><p>右侧自然语言提问，左侧图表按问题动态变化；结果同步高亮中间的图谱节点，历史图表可回看。上方为基于已交付方案重构的脱敏交互界面。</p></div>
+        <div class="interaction-sequence">
+          <header><p class="scene-kicker">一次分析，四个连续动作</p><h3>界面不是三块并排，而是一条来回核对的工作路径。</h3></header>
+          <ol>
+            <li><span>01</span><div class="seq-screen screen-query"><i>工程师提问</i><strong>分析 4 月 24 日外圈 CPK</strong><b></b></div><h4>用业务语言发起分析</h4><p>不要求先选择图表或算法，先从真实问题开始。</p></li>
+            <li><span>02</span><div class="seq-screen screen-chart"><i>图表动态生成</i><b></b><b></b><b></b><em></em></div><h4>结果落进熟悉的图表</h4><p>均值图和极差图按查看习惯并列，异常点直接定位。</p></li>
+            <li><span>03</span><div class="seq-screen screen-graph"><i>本体关系高亮</i><b></b><b></b><b></b><b></b></div><h4>从异常回到设备与工单</h4><p>结论同步高亮相关实体，让原因不只停在文字里。</p></li>
+            <li><span>04</span><div class="seq-screen screen-evidence"><i>国家标准依据</i><strong>GB/T 4091</strong><b>第 34 组数据</b></div><h4>人完成最终核验</h4><p>回到标准和数据点，而不是相信 AI 的语气。</p></li>
+          </ol>
         </div>
-        <div class="signal-card" role="img" aria-label="质量 Agent 的一条分析结论：过程非受控、风险中高、建议立即停机">
-          <div class="signal-head">
-            <span class="signal-dot"></span>质量 Agent · 分析结论
-          </div>
-          <dl class="signal-fields">
-            <div>
-              <dt>质量状态</dt>
-              <dd>过程非受控</dd>
-            </div>
-            <div>
-              <dt>风险等级</dt>
-              <dd>中高</dd>
-            </div>
-            <div>
-              <dt>优先措施</dt>
-              <dd class="signal-alert">立即停机检查支撑系统</dd>
-            </div>
-          </dl>
+        <div class="before-after">
+          <div class="ba-copy"><span>Information Reconstruction</span><h3>从算法报告，到工程师的判断界面。</h3><p>原始 demo 把计算结果连续堆出来；重构后，信息按照人的判断顺序展开。算法没有变，用户理解和接手结果的方式变了。</p></div>
+          <div class="ba-panels"><div class="ba-before"><span>Before · 能算</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="ba-arrow">→</div><div class="ba-after"><span>After · 能判断</span><strong>01 结论</strong><strong>02 数据依据</strong><strong>03 根因</strong><strong>04 影响范围</strong><strong>05 建议</strong></div></div>
+        </div>
+        <div class="report-story"><div class="report-copy"><p class="scene-kicker">一次提问，不再吐出一坨报告</p><h3>把结论、原因、数据依据、影响范围和处理建议拆开。</h3><p>目录可以跳转；工程师先看结论，需要时再逐层深入。分析过程、MCP 调用和本体依据全部保留，能一路追溯到底。</p></div><ol class="report-toc"><li class="active"><span>01</span>质量结论<em>先回答发生了什么</em></li><li><span>02</span>CPK 与判异结果<em>核对数字与准则</em></li><li><span>03</span>异常现象解释<em>看懂为什么异常</em></li><li><span>04</span>可能根因排序<em>回到设备与工艺</em></li><li><span>05</span>处理措施<em>人决定下一步</em></li><li><span>06—08</span>过程与依据<em>分析 / MCP / 本体留痕</em></li></ol></div>
+        <aside class="trust-rule"><span>平台的信任设计 · 非个人定调</span><p>AI 不用自己的话解释异常，只引用工程师原本认可的国家标准。我的责任，是让标准、数据点与结论之间的关系在界面上被看懂。</p><code>GB/T 4091 · 准则 1 · 第 34 组数据 · 均值越过控制下限</code></aside>
+        <div class="quality-detail-grid">
+          <article><span>设计细节 01</span><h3>报告目录始终可见</h3><p>长报告不靠滚动记忆。用户随时知道自己正在看结论、根因还是调用记录，并可在八段之间跳转。</p><div class="detail-toc"><i class="active"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article><span>设计细节 02</span><h3>历史图表不被新问题覆盖</h3><p>每次追问生成的新图表都会进入历史区，工程师可以回看前一次判断，避免对话把工作上下文冲掉。</p><div class="history-stack"><i></i><i></i><i></i></div></article>
+          <article><span>设计细节 03</span><h3>分析与调用过程分层</h3><p>业务用户先看结论；需要审计时再展开 Agent 分析、MCP 调用和本体依据，不把技术日志塞进主流程。</p><div class="detail-layers"><i>业务结论</i><i>分析过程</i><i>MCP 调用</i><i>本体依据</i></div></article>
         </div>
       </section>
 
-      <!-- ④ 签名决策 — 提供深度 -->
-      <section class="section decisions">
-        <div class="section-heading">
-          <p class="eyebrow">Signature Decisions</p>
-          <h2>几个关键场景：人与 AI 的边界，怎么落到界面上。</h2>
-          <p class="section-lead">
-            这些人机边界的方向由产品定调。作为平台的交互设计师，我负责把它们落成一线工程师真的能核实、敢用的界面，并在评审里发现、改掉不合理的地方。下面是最能说明这份工作的几个场景。
-          </p>
+      <section class="act foundations" id="foundations">
+        <header class="act-heading"><p class="act-index">05 / The Foundations</p><h2>可信不是 Agent 最后一屏的事，它从输入、语义和权限开始。</h2><p>产品方向由团队共同确定。下面只把已确认属于我的交互落地与结构化工作写成个人贡献；归属尚未逐条核实的部分保持中性。</p></header>
+        <div class="decision-method">
+          <div class="method-title"><p class="scene-kicker">同一个模块，两种完全相反的交互</p><h3>是否使用自然语言，不看“AI 感”，看出错代价。</h3><p>这是沙盘推演里的典型取舍：候选集有限且错误隐蔽时，用结构化输入；组合无限但能审阅时，才让自然语言参与起草。</p></div>
+          <div class="method-compare"><article><span>属性覆盖</span><strong>结构化表单</strong><dl><div><dt>候选集</dt><dd>有限，来自本体 schema</dd></div><div><dt>风险</dt><dd>编错字段名，用户不一定发现</dd></div><div><dt>闸门</dt><dd>让错误选项根本不出现</dd></div></dl></article><article><span>自动化步骤</span><strong>自然语言起草 + 结构化回显</strong><dl><div><dt>候选集</dt><dd>条件组合近乎无限</dd></div><div><dt>风险</dt><dd>高，但生成结果可以审阅</dd></div><div><dt>闸门</dt><dd>提议卡确认后才采纳</dd></div></dl></article></div>
         </div>
-
-        <div class="group-head">
-          <span class="group-tag">重点</span>
-          <span class="group-name">Agent 应用层</span>
-          <span class="group-desc">我的主战场——AI 直接和人打交道的地方</span>
+        <div class="foundation-scenes">
+          <article class="foundation-scene"><div class="scene-copy"><span class="scene-label">数据输入 · 交互落地</span><h3>让用户看着真实字段说话，错误在生成前就消失。</h3><p>AI 管道使用自然语言起草，但可用字段常驻在输入区；生成结果进入可编辑画布，画布才是唯一事实来源。意图解析当前使用正则，不包装成 LLM。</p></div><figure class="real-shot on-light" aria-label="AI 管道生成器"><img src="./assets/industrial/ai-pipeline-generator.png" alt="AI 管道生成器：数据转换管道列表，支持流处理、批处理、增量同步与周期调度，自然语言起草结果落入可编辑画布" loading="lazy" /><figcaption>AI 管道生成器 · 自然语言起草的数据转换管道，落入可检查、可编辑的画布</figcaption></figure></article>
+          <article class="foundation-scene"><div class="scene-copy"><span class="scene-label owned">本体操作 · 我负责结构化</span><h3>把模糊权限拆成两层：谁可以提交，什么条件下可以提交。</h3><p>这是我明确负责梳理的产品结构。抽象规则配置完后，界面直接显示命中用户预览，让配置者在保存前知道规则到底圈中了谁。</p></div><figure class="real-shot on-light" aria-label="操作授权组与提交准则"><img src="./assets/industrial/action-authorization.png" alt="授权与提交：操作授权组支持直接添加 / 从部门添加 / 从用户字段添加，右侧命中用户名单预览，下方提交准则按参数条件配置" loading="lazy" /><figcaption>操作授权组 + 提交准则 · 右侧「命中用户预览」让抽象规则在保存前就能被核对</figcaption></figure></article>
+          <article class="foundation-scene"><div class="scene-copy"><span class="scene-label">统一语义 · 交互落地</span><h3>对象、关系、行为，是 Agent 能够读懂工厂的地基。</h3><p>对象类型定义“有什么”，链接类型定义“怎么连”，操作类型定义“谁能做什么”。机器契约对人可见，核验链才不会在人机交界处断掉。</p></div><figure class="real-shot on-light real-shot--pair" aria-label="对象类型与链接类型配置"><img src="./assets/industrial/object-type-detail.png" alt="对象类型详情：一个「机床」对象的属性、连接类型关系图、数据源、动作类型、RID 与生命周期状态" loading="lazy" /><img src="./assets/industrial/link-type-cardinality.png" alt="新建链接类型的基数配置：1:1、1:N、N:1、N:N 四种基数，决定不同的键映射结构" loading="lazy" /><figcaption>对象类型详情（含 RID、关系图）与链接类型基数配置 · 不同基数走不同结构，让错误映射没有入口</figcaption></figure></article>
         </div>
-
-        <!-- 环节一 · 质量 Agent -->
-        <div class="env-group">
-          <div class="env-head">
-            <span class="env-name">质量 Agent</span>
-            <span class="env-ctx">AI 给出一个会花钱的结论时</span>
-          </div>
-          <p class="env-note">
-            算法工程师先跑出了能算 Cpk、SPC、判异的 demo，但结果又长又密、对用户很不友好。我吃透业务与功能后，把整个 Agent 的人机交互重新设计了一遍。下面是一个真实例子。
-          </p>
-
-          <div class="report-demo">
-            <p class="rd-title">一次提问，一份可跳转、可核对、可追溯的报告——<span>把 Agent 的一坨分析拆成这套结构，是我做的设计。</span></p>
-            <p class="rd-query"><span class="rd-query-tag">工程师提问</span>分析外圈 4 月 24 日 外径上截面 的 CPK 可判异情况</p>
-            <div class="rd-body">
-              <div class="rd-toc">
-                <p class="rd-toc-label">Agent 吐出的结构化报告 · 目录（可点击跳转）</p>
-                <ol>
-                  <li>质量结论</li>
-                  <li class="active">CPK 与判异结果</li>
-                  <li>异常现象解释</li>
-                  <li>可能根因排序</li>
-                  <li>处理措施</li>
-                  <li>Agent 分析过程</li>
-                  <li>MCP 调用记录</li>
-                  <li>本体依据追溯</li>
-                </ol>
-              </div>
-              <div class="rd-notes">
-                <div class="rd-note-item"><span class="rd-tag tag-app">结论先行</span>第 1 段先给判断，不让人读完全篇才知道结果。</div>
-                <div class="rd-note-item"><span class="rd-tag tag-onto">可核对</span>第 2–5 段：Cpk/判异、异常解释、根因、措施逐条摊开。</div>
-                <div class="rd-note-item"><span class="rd-tag tag-data">可追溯</span>第 6–8 段：Agent 分析过程、MCP 调用记录、本体依据全留痕，能一路查到底。</div>
-              </div>
-            </div>
-            <p class="rd-foot">工程师有时会追问，有时一次就够——但无论问不问，每次都是这套<strong>可跳转、可核对、可追溯</strong>的结构。它把"看得懂"和"信得过"一起解决了。</p>
-          </div>
-
-          <div class="decision-grid">
-            <article class="decision">
-              <p class="decision-scene"><span class="scene-tag">我的重设计</span>质量分析要同时看图表、看知识图谱、和 AI 对话——挤在一屏里谁都看不清。</p>
-              <h3>三栏可调布局：右边提问，左边图表跟着需求动态变。</h3>
-              <div class="evidence">
-                <div class="three-pane">
-                  <span>分析图表</span>
-                  <span>知识图谱</span>
-                  <span>对话</span>
-                </div>
-                <p class="ev-line">右侧自然语言提问 → 左侧图表动态变化 · 保留历史图表可回看 · 结果同步高亮图谱节点</p>
-              </div>
-              <p class="decision-note">连八大判异的均值图 / 极差图怎么左右排，也是我按用户的查看习惯定的排版。</p>
-            </article>
-
-            <article class="decision">
-              <p class="decision-scene"><span class="scene-tag scene-platform">平台的信任设计</span>Agent 要判断“这批轴承的加工过程稳不稳”，给出一个异常结论。</p>
-              <h3>不让 AI 用自己的话解释异常，只让它引用工程师本来就认的国家标准。</h3>
-              <p class="decision-body">用户的验证成本，从“判断这个 AI 可不可信”，降到“看一眼数字对不对”。</p>
-              <div class="evidence">
-                <p class="ev-label">AI 只能这样说话</p>
-                <p class="ev-line ev-bad">✗ “我觉得这里异常。”</p>
-                <p class="ev-line ev-good">✓ 依据国家标准 GB/T 4091 · 准则 1 · 第 34 组数据 · 均值越过控制下限。</p>
-              </div>
-              <p class="decision-note">对不对，翻一眼原始数据就知道；向上汇报时，工程师说的也是国标，不是“AI 说的”。</p>
-              <p class="tradeoff"><span class="tradeoff-tag">取舍</span>AI 的措辞被“锁”在国标术语里，不如自然语言顺口——但这个场景，可核验 &gt; 好读。</p>
-            </article>
-          </div>
-        </div>
-
-        <!-- 环节二 · 沙盘推演 -->
-        <div class="env-group">
-          <div class="env-head">
-            <span class="env-name">沙盘推演</span>
-            <span class="env-ctx">人要批量改写规则时</span>
-          </div>
-          <div class="decision-grid">
-            <article class="decision decision-wide">
-              <p class="decision-scene"><span class="scene-tag">场景</span>用户既要“覆盖某个属性值”，也要“配置一条会批量执行的自动化步骤”。</p>
-              <h3>同一个模块里，一个功能拒绝自然语言，另一个功能接受它。</h3>
-              <p class="decision-body">两个相反的决定，因为它们的出错代价不一样。</p>
-              <div class="contrast">
-                <div class="contrast-col">
-                  <p class="contrast-head">属性覆盖</p>
-                  <p class="contrast-row"><span>候选集</span>有限（来自本体 schema）</p>
-                  <p class="contrast-row"><span>出错代价</span>高且看不见——编错字段名，用户发现不了</p>
-                  <p class="contrast-row contrast-verdict"><span>这里的选择</span>结构化表单</p>
-                </div>
-                <div class="contrast-col">
-                  <p class="contrast-head">自动化步骤</p>
-                  <p class="contrast-row"><span>候选集</span>条件组合近乎无限</p>
-                  <p class="contrast-row"><span>出错代价</span>高但有闸门——提议卡可审阅</p>
-                  <p class="contrast-row contrast-verdict"><span>这里的选择</span>自然语言起草 + 结构化回显 + 采纳闸门</p>
-                </div>
-              </div>
-              <p class="tradeoff"><span class="tradeoff-tag">取舍</span>属性覆盖那边用户要多点几下、不能打字——换来他不可能编造出一个界面里不存在的字段名。<strong>自然语言用来加速，不用来替代。</strong></p>
-            </article>
-          </div>
-        </div>
-
-        <!-- 环节四 · AI 管道生成器 -->
-        <div class="env-group">
-          <div class="env-head">
-            <span class="env-name">AI 管道生成器</span>
-            <span class="env-ctx">让不写 SQL 的工艺工程师，自己搭出能上线的数据管道</span>
-          </div>
-          <div class="decision-grid">
-            <article class="decision">
-              <p class="decision-scene"><span class="scene-tag">场景</span>工艺工程师用大白话让 AI 生成数据处理，最典型的翻车是 AI 编出一个不存在的字段名，等半夜管道跑挂了才发现。</p>
-              <h3>把当前能用的字段常驻摆在输入框正上方，让人“看着真实字段名说话”。</h3>
-              <div class="evidence">
-                <p class="ev-label">可用列（当前作用域）</p>
-                <div class="schema-chips">
-                  <span>bearing <em>VARCHAR</em></span>
-                  <span>vibration_level <em>VARCHAR</em></span>
-                  <span>wear_level <em>VARCHAR</em></span>
-                  <span>failure_mode <em>VARCHAR</em></span>
-                  <span>is_pass <em>INT</em></span>
-                </div>
-                <p class="ev-line ev-gone">写了“去除 nonexistent 列” → 当场报错：该列不在可用列中</p>
-              </div>
-              <p class="decision-note"><strong>幻觉的最佳治理点在输入端，不在输出端</strong>——与其在结果里做校验，不如让用户一开始就说不出错的话。</p>
-              <p class="tradeoff"><span class="tradeoff-tag">取舍</span>面板占了输入框上方的空间，字段几百个时要折叠、搜索——但换来错误在说出口前就消失了。</p>
-            </article>
-
-            <article class="decision">
-              <p class="decision-scene"><span class="scene-tag">场景</span>最直觉的做法是纯对话——用户描述、AI 吐出一整条管道。但三个月后要改一个 JOIN 条件，只能重新对话，而对话不保证复现。</p>
-              <h3>AI 往画布“提案”，而不是接管画布——画布是唯一事实来源。</h3>
-              <div class="evidence">
-                <p class="ev-label">AI 回复</p>
-                <p class="ev-line">已生成连接管道，共 2 个操作节点：<code>join1</code> · <code>transform1</code></p>
-                <p class="ev-line ev-good">和手工拖出来的完全同构——能拖、能连、能删、双击改名</p>
-              </div>
-              <p class="decision-note"><strong>AI 加速的是搭建过程，不是替代了产物的可维护性。</strong></p>
-              <p class="tradeoff"><span class="tradeoff-tag">取舍</span>放弃了“一句话生成整条管道”的演示惊艳感——但换来这条半夜自动跑的管道跑挂时，有人能接手、能改。</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="group-head">
-          <span class="group-tag muted">支撑</span>
-          <span class="group-name">本体层</span>
-          <span class="group-desc">Agent 能力的地基——定义有什么、怎么连、谁能改</span>
-        </div>
-
-        <!-- 环节 · 本体配置 -->
-        <div class="env-group">
-          <div class="env-head">
-            <span class="env-name">本体配置</span>
-            <span class="env-ctx">定义对象与它们之间的关系时</span>
-          </div>
-          <div class="decision-grid">
-            <article class="decision">
-              <p class="decision-scene"><span class="scene-tag">场景</span>用户在配置两个对象之间的关系（设备与轴承是一对多还是一对一）。</p>
-              <h3>与其配错后报错拦下，界面干脆让错误的配置没有入口。</h3>
-              <div class="evidence">
-                <p class="ev-line"><span class="ev-pick">选择基数</span> 一对多（1:N）</p>
-                <p class="ev-line ev-gone">→ 界面上根本不存在“外键位置”这个选择器</p>
-                <p class="ev-line ev-good">用户配不出违反基数约束的映射</p>
-              </div>
-              <p class="decision-note"><strong>“错误不可能发生”永远优于“错误会被捕获”。</strong></p>
-              <p class="tradeoff"><span class="tradeoff-tag">取舍</span>不能用一个表单通吃所有情况，要为每种基数做不同布局，开发成本更高——但换来用户根本配不出错。</p>
-            </article>
-
-            <article class="decision">
-              <p class="decision-scene"><span class="scene-tag">场景</span>用户在实体库里查看某个具体的零件实例。</p>
-              <h3>机器给每个实体的唯一编号，普通产品会藏起来；这里让人也能看到。</h3>
-              <div class="evidence">
-                <p class="ev-label">实体详情 · 唯一编号</p>
-                <p class="rid-chip">ri.ontology.main.object.bearing.000143</p>
-              </div>
-              <p class="decision-note">这串编号，正是 Agent 引用某个实体时用的那个 token。人看不到它，就没法把 Agent 的输出和车间里那个实物对上，<strong>审计链会在人机交界处断掉</strong>。</p>
-              <p class="tradeoff"><span class="tradeoff-tag">取舍</span>界面上多了一串“技术味”的字符，可能显得不够干净——但它是人机核验的唯一物理入口，值。</p>
-            </article>
-
-            <article class="decision decision-wide">
-              <p class="decision-scene"><span class="scene-tag">场景</span>“更换轴承”“校准传感器”这类操作，不是谁都能随便执行的——要定义谁能提交、什么条件下能提交。这块的产品结构由我梳理。</p>
-              <h3>我把原本模糊、分散的权限需求，理成两层清晰的模型：谁可以提交、什么条件下可以提交。</h3>
-              <p class="decision-body">两件事拆开，配置者才不会把“授权”和“条件”搅在一起。</p>
-              <div class="evidence">
-                <p class="ev-label">操作授权组 · 谁可以提交</p>
-                <p class="ev-line">点名某几个人 · 按部门 · 按某个用户字段<span class="ev-gone"> —— 对应 点名 / 组织 / 条件 三种授权</span></p>
-                <p class="ev-label ev-label-sep">提交准则 · 什么条件下可以提交</p>
-                <p class="ev-line">在“属于授权组”之上，叠加设备状态、批次、操作类型等条件</p>
-              </div>
-              <p class="decision-note">关键一步：一条抽象规则配完，直接显示<strong>命中用户预览</strong>——命中 4 人，带姓名、工号、部门、职级。<strong>人对一条抽象规则的信任，来自看得见它到底命中了谁。</strong></p>
-              <p class="tradeoff"><span class="tradeoff-tag">取舍</span>多做一层“命中预览”，后端要多返回一批用户数据——但换来配置者敢在“保存”前确认规则没配错人。</p>
-            </article>
-          </div>
+        <div class="ontology-detail">
+          <header><p class="scene-kicker">本体配置的三个核验入口</p><h3>抽象模型必须在人能理解的地方，重新变具体。</h3></header>
+          <div class="ontology-detail-grid"><article><span>Cardinality</span><strong>基数决定界面</strong><p>一对多与一对一使用不同配置结构，让违反约束的映射没有入口，而不是保存后再报错。</p><div class="cardinality-demo"><b>设备</b><i>1</i><em></em><i>N</i><b>轴承</b></div></article><article><span>RID</span><strong>机器编号对人可见</strong><p>实体唯一编号不隐藏，人才能把 Agent 输出与工厂里的具体对象对上。</p><code>ri.ontology.main.object.bearing.000143</code></article><article><span>Preview</span><strong>规则命中了谁</strong><p>权限规则不是一句抽象描述，保存前直接展示姓名、工号、部门与职级。</p><div class="preview-avatars"><i>MX</i><i>LC</i><i>WJ</i><i>+1</i></div></article></div>
         </div>
       </section>
 
-      <!-- ⑤ AI 图标库 — 收尾彩蛋 -->
-      <section class="section icon-closer">
-        <div class="asset-flow" aria-label="AI 图标库资源闭环">
-          <div class="flow-step">
-            <span>01</span>
-            <strong>图库检索</strong>
-            <p>先从已有工业图标资产里找，稳定、可控、可复用——这是主路径。</p>
-          </div>
-          <div class="flow-step">
-            <span>02</span>
-            <strong>AI 生成</strong>
-            <p>只有当图库里确实没有匹配的，才用 AI 补足这个特定对象的图标。</p>
-          </div>
-          <div class="flow-step">
-            <span>03</span>
-            <strong>上传沉淀</strong>
-            <p>可用的结果回收入库，下次它就成了图库检索能命中的资产。</p>
-          </div>
+      <section class="act closer act-dark" id="closer">
+        <header class="act-heading inverse compact"><p class="act-index">06 / What Transfers</p><h2>AI 是兜底，不是入口。</h2><p>AI 图标库是我全程主导的模块：先检索确定性资产，找不到才生成，生成结果审核后回收入库。系统越用，重复生成应该越少。</p></header>
+        <div class="asset-loop" aria-label="AI 图标库闭环"><div><span>01</span><strong>图库检索</strong><p>稳定、可控、可复用的主路径</p></div><i aria-hidden="true">→</i><div><span>02</span><strong>AI 生成</strong><p>只补足图库没有的长尾对象</p></div><i aria-hidden="true">→</i><div><span>03</span><strong>审核入库</strong><p>一次生成变成下一次可复用资产</p></div><i class="loop-back" aria-hidden="true">↺</i></div>
+        <div class="icon-system-stage">
+          <div class="icon-stage-copy"><span>From Function To System</span><h3>不是接入一个生图按钮，而是建立一套会积累的工业图标系统。</h3><p>搜索结果、空状态、生成任务、审核状态、对象预览和资产回收共同组成完整闭环。方案一开始被判断无法实现，我借助 AI 拆解技术路径并与前端验证，推动它重新达成共识。</p></div>
+          <figure class="real-shot" aria-label="AI 图标库 · 生成候选"><img src="./assets/industrial/icon-library-ai-generate.png" alt="更多图标弹窗：工业图标库 / AI 生成 / 本地上传三个入口，AI 生成一次给 4 个候选，风格固定为工业线性·单色·透明背景·SVG，选中后自动加入企业图库供复用" loading="lazy" /><figcaption>更多图标 · 检索优先，图库无结果才 AI 生成 4 个候选，选中后自动入库供下次优先命中</figcaption></figure>
         </div>
-        <div class="icon-copy">
-          <p class="eyebrow">A Small, Complete Loop</p>
-          <h2>AI 是兜底，不是入口。</h2>
-          <p>
-            工业对象是无穷长尾，图标必填。原来用户搜不到就点第一个默认方块，语义关系图退化成一片相同的方块。
-            <strong>这是我全程主导的一个模块</strong>：我提出的不是接一个生成模型，而是一条<strong>检索 → 生成 → 入库</strong>的三级兜底链路——当确定性方案（图库）存在时，生成式能力被放在它失败的地方，而不是它前面。
-          </p>
-          <p>
-            这个方案一开始被判断为“无法实现”。我借助 AI 拆解技术路径、和前端一起验证可行性，最终推动它重新达成共识并落地。
-          </p>
-          <p class="icon-kicker">
-            判断标准很简单：这个功能用得越多，AI 调用应该越少还是越多？越多，说明只是把 AI 接进来了，没让它沉淀。
-          </p>
-        </div>
-      </section>
-
-      <!-- ⑥ 收束 — 6 条可迁移原则 -->
-      <section class="section principles">
-        <div class="section-heading">
-          <p class="eyebrow">What Transfers</p>
-          <h2>六条原则，换个行业也成立。</h2>
-        </div>
-        <ol class="principle-list">
-          <li><span>01</span>人定作用域，AI 在作用域内生成。范围界定是判断题，不该外包给概率模型。</li>
-          <li><span>02</span>生成与执行之间，必须有一个不可跳过的人类决策点——尤其当产物会批量、无人值守地运行。</li>
-          <li><span>03</span>高风险的有限枚举决策用结构化表单；自然语言用来加速，不替代。</li>
-          <li><span>04</span>可解释性外包给标准，比让模型解释自己更可信。用户能验证国标，验证不了模型的自我陈述。</li>
-          <li><span>05</span>暴露失败是信任的成本，不是信任的损失。永远顺畅的系统等同于不可信的系统。</li>
-          <li><span>06</span>机器侧的契约（编号、字段类型、接口名）必须对人可见，否则人无法验证模型。</li>
-        </ol>
-        <p class="closing-line">
-          这些原则成立于任何“AI 结论触发高成本动作”的场景——医疗辅助诊断、金融风控、运维告警。<strong>轴承，只是它们第一次被验证的地方。</strong>
-        </p>
-      </section>
-
-      <!-- ⑦ 支撑理解（暂保留，回头决定去留） -->
-      <section class="section support-entry" aria-label="支撑理解">
-        <div class="section-heading">
-          <p class="eyebrow">Also / Supporting</p>
-          <h2>另外两段帮助我读懂复杂 B 端系统的经历。</h2>
-        </div>
-        <div class="entry-grid">
-          <a href="#d4s" class="entry-card">
-            <span>支撑理解</span>
-            <strong>D4S</strong>
-            <p>帮助我理解复杂 B 端项目中的业务流程、角色协作、数据流转和系统边界。</p>
-          </a>
-          <a href="#knowledge-graph-demo" class="entry-card">
-            <span>支撑理解</span>
-            <strong>知识图谱示范系统</strong>
-            <p>帮助我理解 AI 应用背后的知识组织、实体关系、语义检索和可解释基础。</p>
-          </a>
-        </div>
+        <div class="principles"><article><span>01</span><p>人定作用域，AI 在作用域内生成。</p></article><article><span>02</span><p>生成与执行之间，必须有不可跳过的人类决策点。</p></article><article><span>03</span><p>高风险有限枚举用结构化表单，自然语言只负责加速。</p></article><article><span>04</span><p>可解释性优先回到标准与原始数据，而不是模型自述。</p></article><article><span>05</span><p>失败和限制需要被看见，透明是信任的成本。</p></article><article><span>06</span><p>机器侧契约对人可见，人才能核验模型。</p></article></div>
+        <p class="closing-line">这些原则适用于任何“AI 结论会触发高成本动作”的场景。<strong>轴承，是它们第一次落进真实产品的地方。</strong></p>
+        <div class="supporting-work" aria-label="支撑理解"><a class="supporting-link" href="./project-d4s.html"><article><span>Supporting 01</span><strong>D4S</strong><p>复杂 B 端业务、角色协作与跨系统数据流转。</p></article></a><a class="supporting-link" href="./project-knowledge-graph.html"><article><span>Supporting 02 · 前身</span><strong>数算融合知识图谱示范系统</strong><p>数据治理 + 知识图谱：实体关系、语义检索与可解释基础。</p></article></a></div>
       </section>
     </main>
   </body>
