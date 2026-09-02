@@ -326,11 +326,10 @@ img {
 }
 
 .expression-card-atelier {
-  color: #f8fffb;
   background:
-    radial-gradient(circle at 84% 14%, rgba(118, 216, 232, 0.28), transparent 28%),
-    linear-gradient(145deg, #102c31, #1b4a4e 58%, #3d6f68);
-  border-color: rgba(118, 216, 232, 0.34);
+    radial-gradient(circle at 84% 14%, rgba(118, 216, 232, 0.24), transparent 28%),
+    linear-gradient(145deg, rgba(255, 253, 246, 0.94), rgba(232, 247, 244, 0.9));
+  border-color: rgba(121, 188, 184, 0.42);
 }
 
 .expression-card-head {
@@ -351,11 +350,6 @@ img {
   text-transform: uppercase;
 }
 
-.expression-card-atelier .expression-status,
-.expression-card-atelier .expression-index {
-  color: rgba(210, 249, 241, 0.78);
-}
-
 .expression-index {
   color: var(--accent);
   font-size: 13px;
@@ -367,10 +361,6 @@ img {
   font-size: 25px;
 }
 
-.expression-card-atelier h3 {
-  color: #f8fffb;
-}
-
 .expression-card p {
   max-width: 530px;
   margin-bottom: 0;
@@ -378,73 +368,52 @@ img {
   line-height: 1.75;
 }
 
-.expression-card-atelier p {
-  color: rgba(235, 251, 246, 0.8);
-}
-
-.expression-flow,
-.atelier-process {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  margin: 28px 0 22px;
-}
-
-.expression-flow span {
-  padding: 8px 10px;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(197, 140, 91, 0.28);
-  border-radius: 9px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.expression-flow i {
-  color: var(--accent);
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 800;
-}
-
+.expression-process,
 .atelier-process {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   align-items: stretch;
+  margin: 28px 0 22px;
 }
 
+.expression-process div,
 .atelier-process div {
   min-height: 128px;
   padding: 14px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(198, 241, 231, 0.2);
+  border: 1px solid rgba(197, 140, 91, 0.2);
   border-radius: 12px;
 }
 
+.expression-process span,
+.expression-process strong,
+.expression-process p,
 .atelier-process span,
 .atelier-process strong,
 .atelier-process p {
   display: block;
 }
 
+.expression-process span,
 .atelier-process span {
   margin-bottom: 18px;
-  color: rgba(210, 249, 241, 0.72);
+  color: var(--accent);
   font-size: 11px;
   font-weight: 850;
   letter-spacing: 0.08em;
 }
 
+.expression-process strong,
 .atelier-process strong {
   margin-bottom: 6px;
-  color: #f8fffb;
+  color: var(--text);
   font-size: 14px;
 }
 
+.expression-process p,
 .atelier-process p {
-  color: rgba(235, 251, 246, 0.7);
+  color: var(--muted);
   font-size: 12px;
   line-height: 1.55;
 }
@@ -455,7 +424,7 @@ img {
 }
 
 .expression-card-atelier .expression-note {
-  border-top-color: rgba(198, 241, 231, 0.2);
+  border-top-color: rgba(121, 188, 184, 0.28);
 }
 
 .memory-aquarium {
