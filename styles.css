@@ -34,6 +34,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id^="project-"] {
+  scroll-margin-top: 104px;
+}
+
 body {
   margin: 0;
   background:
@@ -90,6 +94,104 @@ a {
   gap: 24px;
   color: var(--muted);
   font-size: 14px;
+}
+
+.nav-dropdown {
+  position: relative;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-trigger {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+}
+
+.project-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: -14px;
+  display: grid;
+  width: min(330px, calc(100vw - 32px));
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 18px 46px rgba(18, 40, 43, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    visibility 160ms ease;
+}
+
+.project-menu::before {
+  position: absolute;
+  top: -7px;
+  right: 27px;
+  width: 12px;
+  height: 12px;
+  content: "";
+  background: #fff;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  transform: rotate(45deg);
+}
+
+.project-menu a {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 10px 11px;
+  border-radius: 7px;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.project-menu a:hover,
+.project-menu a:focus-visible {
+  color: var(--accent-strong);
+  background: var(--surface-soft);
+  outline: none;
+}
+
+.project-menu-index {
+  padding-top: 2px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.project-menu strong,
+.project-menu small {
+  display: block;
+}
+
+.project-menu strong {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.project-menu small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.nav-dropdown:hover .project-menu,
+.nav-dropdown:focus-within .project-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .nav a:hover {
@@ -2655,6 +2757,14 @@ p {
     width: 100%;
     justify-content: space-between;
     gap: 8px;
+  }
+
+  .nav-dropdown {
+    height: 24px;
+  }
+
+  .project-menu {
+    display: none;
   }
 
   .section {
