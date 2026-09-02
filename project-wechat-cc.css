@@ -299,6 +299,133 @@ img {
   line-height: 1.68;
 }
 
+.expression-section {
+  padding-top: 54px;
+}
+
+.expression-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.expression-card {
+  position: relative;
+  min-height: 360px;
+  padding: 28px;
+  overflow: hidden;
+  border: 2px solid rgba(239, 202, 167, 0.9);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 46px rgba(95, 64, 44, 0.08);
+}
+
+.expression-card-sticker {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 232, 168, 0.72), transparent 30%),
+    linear-gradient(145deg, rgba(255, 253, 246, 0.94), rgba(255, 245, 220, 0.86));
+}
+
+.expression-card-atelier {
+  color: #f8fffb;
+  background:
+    radial-gradient(circle at 84% 14%, rgba(118, 216, 232, 0.28), transparent 28%),
+    linear-gradient(145deg, #102c31, #1b4a4e 58%, #3d6f68);
+  border-color: rgba(118, 216, 232, 0.34);
+}
+
+.expression-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 42px;
+}
+
+.expression-status {
+  max-width: 76%;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.expression-card-atelier .expression-status,
+.expression-card-atelier .expression-index {
+  color: rgba(210, 249, 241, 0.78);
+}
+
+.expression-index {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.expression-card h3 {
+  margin-bottom: 14px;
+  font-size: 25px;
+}
+
+.expression-card-atelier h3 {
+  color: #f8fffb;
+}
+
+.expression-card p {
+  max-width: 530px;
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.expression-card-atelier p {
+  color: rgba(235, 251, 246, 0.8);
+}
+
+.expression-flow,
+.atelier-materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 28px 0 22px;
+}
+
+.expression-flow span,
+.atelier-materials span {
+  padding: 8px 10px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(197, 140, 91, 0.28);
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.expression-flow i {
+  color: var(--accent);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.atelier-materials span {
+  color: rgba(240, 255, 249, 0.88);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(198, 241, 231, 0.22);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+}
+
+.expression-note {
+  padding-top: 18px;
+  border-top: 1px solid rgba(197, 140, 91, 0.24);
+}
+
+.expression-card-atelier .expression-note {
+  border-top-color: rgba(198, 241, 231, 0.2);
+}
+
 .memory-aquarium {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
@@ -418,7 +545,8 @@ img {
   .state-grid,
   .architecture-grid,
   .aquarium-loop,
-  .interface-grid {
+  .interface-grid,
+  .expression-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -454,12 +582,14 @@ img {
   .state-grid,
   .architecture-grid,
   .aquarium-loop,
-  .interface-grid {
+  .interface-grid,
+  .expression-grid {
     grid-template-columns: 1fr;
   }
 
   .problem,
   .memory-aquarium,
+  .expression-card,
   .role-panel,
   .interface-card,
   .architecture-grid article {
