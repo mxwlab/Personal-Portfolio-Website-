@@ -383,7 +383,7 @@ img {
 }
 
 .expression-flow,
-.atelier-materials {
+.atelier-process {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -391,8 +391,7 @@ img {
   margin: 28px 0 22px;
 }
 
-.expression-flow span,
-.atelier-materials span {
+.expression-flow span {
   padding: 8px 10px;
   color: var(--ink);
   background: rgba(255, 255, 255, 0.7);
@@ -409,12 +408,45 @@ img {
   font-weight: 800;
 }
 
-.atelier-materials span {
-  color: rgba(240, 255, 249, 0.88);
+.atelier-process {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.atelier-process div {
+  min-height: 128px;
+  padding: 14px;
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(198, 241, 231, 0.22);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border: 1px solid rgba(198, 241, 231, 0.2);
+  border-radius: 12px;
+}
+
+.atelier-process span,
+.atelier-process strong,
+.atelier-process p {
+  display: block;
+}
+
+.atelier-process span {
+  margin-bottom: 18px;
+  color: rgba(210, 249, 241, 0.72);
   font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.atelier-process strong {
+  margin-bottom: 6px;
+  color: #f8fffb;
+  font-size: 14px;
+}
+
+.atelier-process p {
+  color: rgba(235, 251, 246, 0.7);
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .expression-note {
