@@ -425,75 +425,184 @@ img {
   border-top-color: rgba(197, 140, 91, 0.24);
 }
 
-.memory-aquarium {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
-  gap: 28px;
-  align-items: stretch;
+.companion-aquarium {
   padding: 34px;
   background:
-    radial-gradient(circle at 82% 22%, rgba(118, 216, 232, 0.2), transparent 32%),
-    linear-gradient(180deg, rgba(255, 253, 246, 0.9), rgba(255, 245, 220, 0.78));
+    radial-gradient(circle at 10% 18%, rgba(255, 232, 168, 0.28), transparent 28%),
+    radial-gradient(circle at 90% 82%, rgba(118, 216, 232, 0.18), transparent 26%),
+    rgba(255, 253, 246, 0.9);
   border: 2px solid rgba(239, 202, 167, 0.9);
   border-radius: var(--radius);
 }
 
-.memory-copy {
-  align-self: center;
-}
-
-.memory-copy p:last-child {
-  margin-bottom: 0;
-}
-
-.aquarium-loop {
+.companion-aquarium-main {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  gap: clamp(28px, 4vw, 48px);
+  align-items: center;
 }
 
-.aquarium-loop div {
-  position: relative;
-  min-height: 170px;
-  padding: 22px;
-  overflow: hidden;
-  background: rgba(255, 253, 246, 0.78);
+.companion-aquarium-shot {
+  margin: 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.62);
   border: 1px solid rgba(197, 140, 91, 0.24);
   border-radius: 16px;
 }
 
-.aquarium-loop div::after {
-  position: absolute;
-  right: 18px;
-  bottom: 16px;
-  width: 38px;
-  height: 20px;
-  content: "";
-  background: rgba(118, 216, 232, 0.32);
-  border: 1px solid rgba(95, 64, 44, 0.18);
-  border-radius: 50% 46% 46% 50%;
+.companion-aquarium-shot .companion-aquarium-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #f3eee4;
 }
 
-.aquarium-loop span {
+.companion-aquarium-shot figcaption {
+  padding: 12px 4px 2px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.companion-aquarium-shot figcaption span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.companion-aquarium-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.companion-aquarium-details {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.companion-aquarium-details article {
+  min-height: 176px;
+  padding: 20px;
+  background: rgba(255, 253, 246, 0.74);
+  border: 1px solid rgba(197, 140, 91, 0.22);
+  border-radius: 14px;
+}
+
+.companion-aquarium-details span {
   display: block;
   margin-bottom: 26px;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 850;
+  letter-spacing: 0.08em;
 }
 
-.aquarium-loop strong {
-  display: block;
+.companion-aquarium-details h3 {
   margin-bottom: 8px;
-  color: var(--text);
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 17px;
 }
 
-.aquarium-loop p {
+.companion-aquarium-details p {
   margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.companion-aquarium-future {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-top: 14px;
+  padding: 18px 20px;
+  background: rgba(255, 245, 220, 0.58);
+  border: 1px dashed rgba(197, 140, 91, 0.34);
+  border-radius: 14px;
+}
+
+.companion-aquarium-future span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.companion-aquarium-future p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.proactive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.proactive-grid article {
+  padding: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 246, 0.92), rgba(255, 245, 220, 0.74));
+  border: 2px solid rgba(239, 202, 167, 0.86);
+  border-radius: 16px;
+}
+
+.proactive-grid span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.proactive-grid p {
+  margin-bottom: 0;
   font-size: 14px;
-  line-height: 1.68;
+  line-height: 1.7;
+}
+
+.cc-repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding: 11px 18px;
+  color: var(--ink);
+  background: #fff2cc;
+  border: 2px solid rgba(197, 140, 91, 0.38);
+  border-radius: 12px;
+  box-shadow: 0 3px 0 rgba(197, 140, 91, 0.22);
+  font-size: 14px;
+  font-weight: 850;
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.ownership-panel .cc-repo-link {
+  margin-top: 4px;
+}
+
+.cc-repo-link:focus-visible,
+.cc-header a:focus-visible {
+  outline: 3px solid rgba(0, 201, 200, 0.52);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .cc-repo-link:hover {
+    box-shadow: 0 5px 0 rgba(197, 140, 91, 0.26);
+    transform: translateY(-2px);
+  }
 }
 
 .architecture-grid {
@@ -535,7 +644,7 @@ img {
 @media (max-width: 980px) {
   .cc-hero,
   .problem,
-  .memory-aquarium,
+  .companion-aquarium-main,
   .role-panel,
   .interface-card-wide {
     grid-template-columns: 1fr;
@@ -543,9 +652,10 @@ img {
 
   .state-grid,
   .architecture-grid,
-  .aquarium-loop,
+  .companion-aquarium-details,
   .interface-grid,
-  .expression-grid {
+  .expression-grid,
+  .proactive-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -580,14 +690,17 @@ img {
 
   .state-grid,
   .architecture-grid,
-  .aquarium-loop,
+  .companion-aquarium-main,
+  .companion-aquarium-details,
+  .companion-aquarium-future,
   .interface-grid,
-  .expression-grid {
+  .expression-grid,
+  .proactive-grid {
     grid-template-columns: 1fr;
   }
 
   .problem,
-  .memory-aquarium,
+  .companion-aquarium,
   .expression-card,
   .role-panel,
   .interface-card,
@@ -597,5 +710,15 @@ img {
 
   .cc-status-card {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .cc-repo-link {
+    transition: none;
   }
 }

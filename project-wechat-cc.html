@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Wechat-CC 项目详情，介绍微信连接 Claude Code、Codex 等桌面 AI 工具的中间层产品探索，以及记忆水族箱。"
+      content="Wechat-CC 项目详情，介绍微信连接 Claude Code、Codex 等桌面 AI 工具的远程协作、主动陪伴、本地画室与桌面水族箱。"
     />
     <title>Wechat-CC | 莫秀文</title>
-    <link rel="stylesheet" href="./project-wechat-cc.css?v=20260901-3" />
+    <link rel="stylesheet" href="./project-wechat-cc.css?v=20260902-1" />
   </head>
   <body>
     <header class="cc-header">
@@ -91,8 +91,8 @@
                 转译成用户能看懂的陪伴状态。
               </p>
               <p>
-                未来这块插画会继续动态化：小鱼在鱼缸里自然游动，用户可以把鱼缸拖到桌面，或发送到手机屏幕，
-                让 CC 与用户的连接从“打开网页查看”变成更频繁、更贴身的陪伴。
+                这一入口已经扩展成可互动的动态水族箱：主窗口隐藏后，鱼缸仍能以透明悬浮窗口留在桌面，
+                让 CC 与用户的连接从“打开应用查看”变成持续可见的陪伴。
               </p>
               <div class="cc-status-card">
                 <img src="./assets/wechat-cc/disconnected.png" alt="Wechat-CC 暂时失去连接状态" />
@@ -110,7 +110,8 @@
               <h3>数字人格与长期上下文</h3>
               <p>
                 记忆页把用户画像、长期偏好、关系模式和最近事项沉淀下来，让 AI 不只是响应一次消息，
-                而是逐渐理解一个人。
+                而是逐渐理解一个人。这些理解可以建立在解密后的真实微信聊天记录之上，让长期记忆有真实往来作底，
+                而不是凭空生成。
               </p>
             </div>
             <img src="./assets/wechat-cc/memory.png" alt="Wechat-CC 记忆界面" />
@@ -124,6 +125,34 @@
               </p>
             </div>
             <img src="./assets/wechat-cc/dialog.png" alt="Wechat-CC 对话界面" />
+          </article>
+        </div>
+      </section>
+
+      <section class="section proactive-section">
+        <div class="section-heading">
+          <p class="eyebrow">Proactive Companion</p>
+          <h2>CC 不只是等你开口，它会自己出现。</h2>
+          <p>
+            远程 AI 通常被动等待指令。我给 CC 设计了主动触达能力：它会在合适的时间自己找你，
+            让“陪伴”从一次性响应，变成有节奏、可被用户掌控的日常关系。这条主动联系链路已经跑通。
+          </p>
+        </div>
+        <div class="proactive-grid" aria-label="CC 主动陪伴能力">
+          <article>
+            <span>Shipped</span>
+            <h3>晨间发现</h3>
+            <p>每天早上主动分享它发现的内容，让用户在打开电脑前，就和 CC 完成当天第一次连接。</p>
+          </article>
+          <article>
+            <span>Shipped</span>
+            <h3>轻量主动冒泡</h3>
+            <p>白天或晚上低频、自然地问候与分享，而不是只在被呼叫时才响应，让“在线”变成“存在感”。</p>
+          </article>
+          <article>
+            <span>By Design</span>
+            <h3>可控的主动边界</h3>
+            <p>频率、时段和打扰程度由用户设定；CC 先讲清能力边界，不过度承诺“像真人一样随时想起你”。</p>
           </article>
         </div>
       </section>
@@ -152,7 +181,7 @@
           </article>
           <article class="expression-card expression-card-atelier">
             <div class="expression-card-head">
-              <span class="expression-status">In Development · Local Renderer Verified</span>
+              <span class="expression-status">Local E2E Verified · Pre-release</span>
               <span class="expression-index">02</span>
             </div>
             <h3>CC Atelier · 画室</h3>
@@ -163,58 +192,52 @@
               <div><span>03</span><strong>选择表达方式</strong><p>根据这次创作的感觉，决定画面、材质和最合适的绘画媒介。</p></div>
               <div><span>04</span><strong>生成并保存</strong><p>调用 Mac 本地渲染器生成作品，保存进 CC Atelier 画廊。</p></div>
             </div>
-            <p class="expression-note">当前已验证 Mac 本地渲染器可以生成并保存 512×512 作品；自动判断“什么时候该画”和桌面端正式接入仍在开发中。</p>
+            <p class="expression-note">当前已在 M1 Pro 完成本地端到端验证：CC 能根据近期状态判断是否创作，自动准备模型，生成并保存 512×512 作品，桌面画室可查看；正式版本仍在合入前收口画质与分享隐私。</p>
           </article>
         </div>
       </section>
 
-      <section class="section memory-aquarium">
-        <div class="memory-copy">
-          <p class="eyebrow">Memory Aquarium</p>
-          <h2>记忆水族箱：把长期对话、记忆沉淀和陪伴关系，变成一个可照看的空间。</h2>
-          <p>
-            用户和 CC 的对话里，系统会先提取值得长期保留的内容，沉淀为记忆本体。这个本体不会直接以鱼的形式展示，
-            而是先留在记忆库里，作为后续调用和陪伴的底层内容。
-          </p>
-          <p>
-            鱼只是记忆的可视化载体。用户可以把领取出来的小鱼放进自己的水族箱，让长期关系有一个可以看见、
-            可以照看的外显空间。
-          </p>
-          <p>
-            聊天消耗的 token 会转化成鱼食，作为持续互动的可感知资源。随着鱼越来越多，水族箱需要被整理，
-            用户可以通过捕捞和放生，把不再需要长期展示的内容从可视空间里移走。
-          </p>
-          <p>
-            这条故事线还会延伸到“此刻”的动态鱼缸：鱼缸未来可以被拖到桌面或手机屏幕上，成为一个持续可见的陪伴入口，
-            让 CC 与用户的连接从一次性页面停留，变成更长期的关系场景。
-          </p>
-          <p>
-            我更关注的不是单次对话结果，而是记忆、关系和状态如何在一个界面里长期存在：什么值得记，怎么展示，
-            怎么让用户感知，怎么删除或修正，以及怎么让系统持续变得更懂人。
-          </p>
-        </div>
-        <div class="aquarium-loop" aria-label="记忆水族箱产品循环">
-          <div>
-            <span>01</span>
-            <strong>记忆沉淀</strong>
-            <p>对话中值得长期保留的内容进入记忆库，形成长期上下文。</p>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>鱼作为载体</strong>
-            <p>记忆以小鱼的形式外显，变成可领取、可照看的对象。</p>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Token 变成鱼食</strong>
-            <p>聊天消耗转化为鱼食，让互动有可感知的回馈。</p>
-          </div>
-          <div>
-            <span>04</span>
-            <strong>捕捞放生</strong>
-            <p>当水族箱变满，用户可以整理并移走不再需要长期展示的内容。</p>
+      <section id="companion-aquarium" class="section companion-aquarium">
+        <div class="companion-aquarium-main">
+          <figure class="companion-aquarium-shot">
+            <video
+              class="companion-aquarium-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="./assets/wechat-cc/companion-aquarium-poster.jpg"
+              aria-label="Wechat-CC 此刻页面的陪伴水族箱动画"
+            >
+              <source src="./assets/wechat-cc/companion-aquarium.webm" type="video/webm" />
+              <source src="./assets/wechat-cc/companion-aquarium.mp4" type="video/mp4" />
+              你的浏览器暂不支持视频播放，可通过封面查看陪伴水族箱界面。
+            </video>
+            <figcaption><span>Shipped · Interactive Companion</span>“此刻”页面与桌面悬浮窗口共享同一套互动水族箱。</figcaption>
+          </figure>
+          <div class="companion-aquarium-copy">
+            <p class="eyebrow">Companion Aquarium</p>
+            <h2>把后台运行的 AI，变成一只留在桌面上的陪伴体。</h2>
+            <p>
+              远程 Agent 的连接和运行状态通常藏在后台。我把它设计成一个可以互动的水族箱，让“CC 正在陪伴”
+              不再只是一行状态文字，而是能够被看见、被触碰、持续存在的产品体验。
+            </p>
+            <p>
+              主窗口隐藏后，鱼缸还能以透明悬浮窗口留在桌面；用户可以拖动和调整尺寸，下一次打开时继续回到熟悉的位置。
+            </p>
           </div>
         </div>
+        <div class="companion-aquarium-details" aria-label="桌面陪伴水族箱的已实现能力">
+          <article><span>01</span><h3>持续存在</h3><p>鱼群、水草和气泡保持自然运动，让 AI 在线状态持续可感知。</p></article>
+          <article><span>02</span><h3>性格反馈</h3><p>不同小鱼拥有不同胆量和速度，会靠近、聚集，也会在点击后四散逃开。</p></article>
+          <article><span>03</span><h3>角色回应</h3><p>小熊会呼吸、注视和挥手，花朵在靠近时收拢，形成细腻的陪伴反馈。</p></article>
+          <article><span>04</span><h3>桌面陪伴</h3><p>透明悬浮窗口支持拖动、缩放和状态恢复，让陪伴离开应用主界面。</p></article>
+        </div>
+        <aside class="companion-aquarium-future">
+          <span>Future Exploration</span>
+          <p>下一步探索记忆如何进入陪伴场景：让值得保留的内容以鱼的形式被照看，并为领取、整理和放生建立清晰边界。</p>
+        </aside>
       </section>
 
       <section class="section architecture">
@@ -241,13 +264,37 @@
           <article>
             <span>04</span>
             <h3>人格记忆</h3>
-            <p>让记忆以小鱼、水族箱、鱼食和放生的形式被照看，而不是只躺在数据库里。</p>
+            <p>把用户画像、长期偏好和关系模式沉淀为可回看的数字人格；以小鱼、鱼食和放生照看记忆的形态仍在探索中。</p>
           </article>
           <article>
             <span>05</span>
             <h3>陪伴状态体</h3>
-            <p>把动态鱼缸延伸到桌面和手机屏幕，让 CC 的陪伴从工具界面变成持续可见的连接。</p>
+            <p>把动态鱼缸延伸到独立桌面悬浮窗口，让 CC 的陪伴从工具界面变成持续可见的连接；手机端形态仍在探索。</p>
           </article>
+        </div>
+      </section>
+
+      <section class="section role-panel ownership-panel">
+        <div>
+          <p class="eyebrow">Role &amp; Collaboration</p>
+          <h2>我主导产品与体验，与一位算法工程师协作把它做成。</h2>
+          <p>
+            这是一次两个人的协作：算法工程师负责模型与算法接入、后端服务、微信协议与解密链路、
+            主动调度引擎；我负责把这些底层能力，组织成用户看得懂、用得上的产品——从产品定义、
+            交互设计，到桌面端体验和陪伴机制。
+          </p>
+          <a
+            class="cc-repo-link"
+            href="https://github.com/tendhearth/wechat-cc"
+            target="_blank"
+            rel="noopener"
+            >查看公开仓库 ↗</a
+          >
+        </div>
+        <div class="role-list">
+          <p>产品定义与交互设计：把远程 AI 协作拆成可理解的运行状态、核心界面与陪伴机制。</p>
+          <p>桌面端体验实现：此刻 / 记忆 / 对话界面、连接与断连状态呈现、模型切换的前端交互。</p>
+          <p>陪伴与情感机制设计：智能表情包、CC Atelier 画室、主动陪伴节奏与桌面陪伴水族箱。</p>
         </div>
       </section>
 
@@ -258,10 +305,33 @@
         </div>
         <div class="role-list">
           <p>把工程状态翻译成可理解的用户状态：未安装、已连接、断连、扫码、切换模型。</p>
-          <p>把单次对话延展成长期关系：用户画像、记忆水族箱、偏好、最近正在做的事。</p>
+          <p>把单次对话延展成长期关系：用户画像、长期记忆、偏好、最近正在做的事。</p>
           <p>把远程控制变成可信协作：用户知道当前谁在连接、AI 用什么工具、失败后怎样恢复。</p>
         </div>
       </section>
     </main>
+    <script>
+      // 让陪伴水族箱循环视频在进入视口时自动播放，离开时暂停（省电、避免离屏自动播放不稳定）
+      const companionVideo = document.querySelector(".companion-aquarium-video");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (companionVideo && prefersReducedMotion) {
+        companionVideo.removeAttribute("autoplay");
+        companionVideo.pause();
+      } else if (companionVideo && "IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                companionVideo.play().catch(() => {});
+              } else {
+                companionVideo.pause();
+              }
+            });
+          },
+          { threshold: 0.25 }
+        );
+        io.observe(companionVideo);
+      }
+    </script>
   </body>
 </html>
