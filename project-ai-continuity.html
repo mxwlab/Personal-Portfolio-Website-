@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI Continuity：让 Claude Code 与 Codex 在同一项目中接住目标、决定和下一步的本地优先连续协作工具。" />
+    <title>AI Continuity | 莫秀文</title>
+    <link rel="stylesheet" href="./project-independent-cases.css?v=20260903-1" />
+  </head>
+  <body class="continuity-case">
+    <header class="case-nav">
+      <a class="case-brand" href="./index.html">莫秀文</a>
+      <nav aria-label="项目导航">
+        <a href="./index.html#projects">返回项目列表</a>
+        <a class="nav-primary" href="https://github.com/mxwlab/ai-continuity" target="_blank" rel="noopener">查看公开仓库 ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero continuity-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">独立 AI 产品 · Agent 协作基础设施</p>
+          <h1>让下一位 Agent，<br />接住上一位的工作。</h1>
+          <p class="hero-intro">AI Continuity 是一个本地优先的跨 Agent 连续协作工具。它让 Claude Code 与 Codex 在同一项目中共享当前目标、已确认决定、开放问题和下一步，不再要求用户反复复述项目背景。</p>
+          <div class="fact-row" aria-label="项目事实">
+            <span><strong>独立完成</strong>产品到发布</span>
+            <span><strong>120 项</strong>测试通过</span>
+            <span><strong>本地优先</strong>无云端服务</span>
+            <span><strong>MIT</strong>公开仓库</span>
+          </div>
+        </div>
+
+        <div class="handoff-stage" aria-label="Claude Code 向 Codex 交接项目状态的示意">
+          <div class="agent-card agent-claude">
+            <span class="agent-dot"></span>
+            <small>当前工作端</small>
+            <strong>Claude Code</strong>
+            <p>正在收敛登录页方案</p>
+          </div>
+          <div class="handoff-bridge">
+            <span class="bridge-label">HANDOFF / REV. 08</span>
+            <div class="handoff-sheet">
+              <p><span>目标</span><strong>完成登录页验证</strong></p>
+              <p><span>已确认</span><strong>先写接口测试</strong></p>
+              <p><span>开放问题</span><strong>异常态文案</strong></p>
+              <p><span>下一步</span><strong>继续验收流程</strong></p>
+            </div>
+            <i aria-hidden="true"></i>
+          </div>
+          <div class="agent-card agent-codex">
+            <span class="agent-dot"></span>
+            <small>下一工作端</small>
+            <strong>Codex</strong>
+            <p>已接住目标与下一步</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section question-section" id="problem">
+        <div class="section-index"><span>01</span>产品问题</div>
+        <div class="section-lead">
+          <p class="eyebrow">The real interruption</p>
+          <h2>切换 Agent，不该等于重开项目。</h2>
+        </div>
+        <div class="comparison-grid">
+          <article class="comparison-card before">
+            <span>没有连续性</span>
+            <h3>用户重新解释一遍</h3>
+            <ul>
+              <li>项目目标散落在长对话里</li>
+              <li>已做过的取舍容易被重新讨论</li>
+              <li>新 Agent 不知道真正的下一步</li>
+            </ul>
+          </article>
+          <div class="comparison-arrow" aria-hidden="true">→</div>
+          <article class="comparison-card after">
+            <span>使用 AI Continuity</span>
+            <h3>下一位从当前状态继续</h3>
+            <ul>
+              <li>目标、约束与决定被压缩成交接状态</li>
+              <li>最近对话只提供必要语境</li>
+              <li>用户可以直接说“继续刚才的任务”</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section continuity-core" id="mechanism">
+        <div class="section-index"><span>02</span>关键判断</div>
+        <div class="core-statement">
+          <p>CONTINUITY ≠ COPY EVERYTHING</p>
+          <h2>连续性不是复制全部聊天，<br />而是交付下一步必需的状态。</h2>
+        </div>
+        <div class="mechanism-grid">
+          <article>
+            <span>01 / Scope</span>
+            <h3>一个项目，一段独立对话</h3>
+            <p>每个项目拥有独立身份和上下文边界，避免不同项目的信息混在一起。</p>
+          </article>
+          <article>
+            <span>02 / Handoff</span>
+            <h3>可更新的最小交接状态</h3>
+            <p>只保留当前目标、用户意图、约束、决定、开放问题和下一步承诺。</p>
+          </article>
+          <article>
+            <span>03 / Context</span>
+            <h3>有限的最近对话</h3>
+            <p>最近对话补充语气与现场信息，但不让无限增长的历史淹没当前任务。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section journey-section" id="journey">
+        <div class="section-index"><span>03</span>使用路径</div>
+        <div class="section-lead split-lead">
+          <div><p class="eyebrow">Invisible in daily work</p><h2>只在第一次做选择，之后照常工作。</h2></div>
+          <p>我把复杂机制压缩成“一次安装、每个项目接入一次”。用户仍然输入熟悉的 <code>claude</code> 或 <code>codex</code>，连续性在启动时自动发生。</p>
+        </div>
+        <div class="journey-track">
+          <article><span>01</span><small>安装一次</small><strong>一行命令完成环境接入</strong></article>
+          <article><span>02</span><small>项目选择</small><strong>只为需要的项目开启</strong></article>
+          <article><span>03</span><small>日常使用</small><strong>照常启动 Claude 或 Codex</strong></article>
+          <article><span>04</span><small>自然切换</small><strong>目标与下一步自动随项目交接</strong></article>
+        </div>
+        <div class="terminal-scene" aria-label="AI Continuity 使用命令示意">
+          <div class="terminal-head"><i></i><i></i><i></i><span>~/workspace/my-project</span></div>
+          <p><em>$</em> continuity-onboard . <span>项目已开启连续协作 ✓</span></p>
+          <p><em>$</em> claude</p>
+          <p class="terminal-muted">…完成阶段任务并退出，稍后切换工作端</p>
+          <p><em>$</em> codex <span>已载入当前目标、决定与下一步 ✓</span></p>
+        </div>
+      </section>
+
+      <section class="case-section safety-section" id="trust">
+        <div class="section-index"><span>04</span>可信边界</div>
+        <div class="section-lead"><p class="eyebrow">Trust by design</p><h2>能接住工作，也必须守住边界。</h2></div>
+        <div class="safety-grid">
+          <article><span>LOCAL</span><h3>数据留在本机</h3><p>没有云端服务和跨用户共享；每位用户运行自己的本地实例。</p></article>
+          <article><span>ISOLATED</span><h3>项目隔离</h3><p>只读取当前项目对应的交接与最近对话，其他项目保持不可见。</p></article>
+          <article><span>REVISIONED</span><h3>并发不静默覆盖</h3><p>交接状态使用版本检查，过期写入会明确冲突，而不是悄悄覆盖新决定。</p></article>
+          <article><span>RETENTION</span><h3>原始内容定期脱敏</h3><p>超过 30 天的事件正文被清除，同时保留必要的事件元数据。</p></article>
+          <article><span>FAIL CLOSED</span><h3>无法生成上下文就停止</h3><p>连续性失效时不会假装已经接上，而是阻止带着错误前提继续工作。</p></article>
+          <article><span>REVERSIBLE</span><h3>接入可以安全撤销</h3><p>支持按项目退出和完整卸载，默认保留用户数据，清除数据需要明确选择。</p></article>
+        </div>
+      </section>
+
+      <section class="case-section role-section" id="ownership">
+        <div class="section-index"><span>05</span>我的能力</div>
+        <div class="section-lead split-lead">
+          <div><p class="eyebrow">From idea to release</p><h2>我交付的不只是工具，而是一套可理解、可验证、可撤销的产品机制。</h2></div>
+          <p>我独立完成问题定义、产品机制、Agent 协作实现、测试验收、使用文档与公开发布，并持续用真实的 Claude / Codex 切换场景验证它。</p>
+        </div>
+        <div class="ability-list">
+          <article><span>01</span><div><h3>把模糊痛点定义成产品状态</h3><p>把“上下文断了”拆解为目标、决定、约束、开放问题和下一步，而不是笼统地保存所有聊天。</p></div></article>
+          <article><span>02</span><div><h3>在体验与架构之间做取舍</h3><p>用项目身份、最小交接和最近事件组合出可运行机制，同时主动限制云同步、跨机器等暂未解决的范围。</p></div></article>
+          <article><span>03</span><div><h3>借助 Agent 把判断推进到实现</h3><p>完成 CLI 包装、MCP 读写、项目接入、桌面投影、安装与卸载，并让复杂能力在日常使用中尽量无感。</p></div></article>
+          <article><span>04</span><div><h3>用测试与发布闭环验证产品</h3><p>120 项测试覆盖交接、隔离、冲突、安装、撤销和隐私清理；同时提供一行安装、中文指南与可视化引导。</p></div></article>
+        </div>
+      </section>
+
+      <section class="case-section evidence-section" id="evidence">
+        <div class="evidence-copy">
+          <p class="eyebrow">Evidence, not claims</p>
+          <h2>真正的完成，是别人能装、能用，也能安全退出。</h2>
+          <p>当前已验证 macOS + zsh 下的 Claude Code / Codex CLI 自动启动路径；桌面端采用辅助读取方式。它不假装已经解决云同步或多机协作，而是先把一个清晰、可信的本地闭环做完整。</p>
+          <p>我自己也是它的长期用户——每天在 Claude Code 与 Codex 之间切换时都在用它，用了一段时间，交接已经顺手到几乎无感。</p>
+          <a href="https://github.com/mxwlab/ai-continuity" target="_blank" rel="noopener">查看代码、安装说明与测试 ↗</a>
+        </div>
+        <div class="evidence-numbers">
+          <div><strong>120</strong><span>自动化测试通过</span></div>
+          <div><strong>1</strong><span>行命令完成安装</span></div>
+          <div><strong>0</strong><span>云端服务依赖</span></div>
+        </div>
+      </section>
+
+      <footer class="case-footer">
+        <div><span>下一项独立产品</span><strong>MeetingNotes / 声笺</strong></div>
+        <a href="./project-meetingnotes.html">查看如何把真实录音变成可靠纪要 →</a>
+      </footer>
+    </main>
+  </body>
+</html>

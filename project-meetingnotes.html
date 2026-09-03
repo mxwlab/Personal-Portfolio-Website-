@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MeetingNotes 声笺：把会议录音在 Mac 本机完成转录，再生成按议题组织、可搜索、可回查的 Markdown 纪要。" />
+    <title>MeetingNotes 声笺 | 莫秀文</title>
+    <link rel="stylesheet" href="./project-independent-cases.css?v=20260903-1" />
+  </head>
+  <body class="meeting-case">
+    <header class="case-nav">
+      <a class="case-brand" href="./index.html">莫秀文</a>
+      <nav aria-label="项目导航">
+        <a href="./index.html#projects">返回项目列表</a>
+        <a class="nav-primary" href="https://github.com/mxwlab/MeetingNotes" target="_blank" rel="noopener">查看公开仓库 ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero meeting-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">独立 AI 产品 · 本地会议知识助手</p>
+          <h1>把会后的记忆负担，<br />交给一条可靠的工作流。</h1>
+          <p class="hero-intro">MeetingNotes（声笺）把 Mac 上的会议录音转成按议题组织、可搜索、可回查的 Markdown 纪要。原始录音与语音识别留在本机，只有识别后的文字交给用户配置的 AI 服务整理。</p>
+          <div class="fact-row" aria-label="项目事实">
+            <span><strong>独立完成</strong>产品到内测</span>
+            <span><strong>本机转录</strong>录音不上传</span>
+            <span><strong>真实长会议</strong>完整验证</span>
+            <span><strong>Mac</strong>内测安装包</span>
+          </div>
+        </div>
+
+        <div class="meeting-stage" aria-label="从录音到结构化会议纪要的产品流程示意">
+          <div class="drop-panel">
+            <div class="drop-icon"><i></i><i></i><i></i></div>
+            <strong>拖放一段会议录音</strong>
+            <span>m4a · mp3 · wav · mp4 · mov</span>
+            <button type="button" tabindex="-1">选择录音</button>
+          </div>
+          <div class="pet-status">
+            <span class="cat-face">● ᴗ ●</span>
+            <div><small>MEETINGNOTES</small><strong>🎧 听录音中</strong></div>
+            <b>68%</b>
+          </div>
+          <div class="note-sheet">
+            <span class="sheet-label">会议纪要 · 已完成</span>
+            <h3>产品评审会</h3>
+            <p><b>TL;DR</b><i></i><i></i></p>
+            <p><b>会议决策</b><i></i><i></i></p>
+            <p><b>待办事项</b><i></i><i></i></p>
+            <p><b>风险 / 阻塞</b><i></i><i></i></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section question-section meeting-question" id="problem">
+        <div class="section-index"><span>01</span>产品问题</div>
+        <div class="section-lead">
+          <p class="eyebrow">The real job</p>
+          <h2>会议纪要最难的，不是写得像，<br />而是重要事实不能乱。</h2>
+        </div>
+        <div class="meeting-problem-grid">
+          <article><span>会后成本</span><h3>录音有了，信息仍然找不到</h3><p>完整录音太长，人工回听成本高；普通摘要又容易丢失决定、待办、分歧和阻塞。</p></article>
+          <article><span>AI 风险</span><h3>语句流畅，不代表内容可靠</h3><p>说话人、专有名词和责任归属一旦判断错误，越像正式纪要，误导性反而越强。</p></article>
+          <article><span>使用门槛</span><h3>后台脚本不能成为普通人的产品</h3><p>如果安装、等待和失败都没有清晰反馈，再强的处理能力也很难进入日常工作。</p></article>
+        </div>
+      </section>
+
+      <section class="case-section decision-section" id="decision">
+        <div class="section-index"><span>02</span>关键判断</div>
+        <div class="decision-layout">
+          <div class="decision-quote">
+            <p>REAL RECORDING &gt; PRETTY OUTPUT</p>
+            <h2>我用完整真实录音，推翻了“看起来很专业”的结果。</h2>
+            <p>短样本里表现漂亮的模型，到了 71 分钟、中英混杂且充满专有名词的真实会议中，可能出现重复、错词和错误归属。产品方向因此从“生成更多内容”转向“先保证可核对和不编造”。</p>
+          </div>
+          <div class="decision-rules">
+            <article><span>01</span><div><h3>按议题，而不是按人归纳</h3><p>没有可靠说话人信息时，不把观点强行安到某个人名下。</p></div></article>
+            <article><span>02</span><div><h3>负责人没有明确证据就留空</h3><p>待办只有在录音明确指派且人名可信时才填写负责人。</p></div></article>
+            <article><span>03</span><div><h3>原始转录与整理稿同时保留</h3><p>纪要不是唯一真相，用户可以沿着产物回查信息来源。</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section pipeline-section" id="pipeline">
+        <div class="section-index"><span>03</span>产品流程</div>
+        <div class="section-lead split-lead">
+          <div><p class="eyebrow">Local-first pipeline</p><h2>把复杂处理藏在背后，把状态和结果交给用户。</h2></div>
+          <p>用户只需要拖入录音或通过 AirDrop 发送文件。系统负责格式处理、本机识别、内容整理、结果保存与可选的 Obsidian 同步。</p>
+        </div>
+        <div class="pipeline-track">
+          <article><span>01</span><small>输入</small><strong>拖入录音 / AirDrop</strong><p>支持常见音频与视频格式</p></article>
+          <article><span>02</span><small>本机处理</small><strong>转码 + 语音识别</strong><p>原始录音不离开 Mac</p></article>
+          <article><span>03</span><small>内容整理</small><strong>整理稿 + 按议题纪要</strong><p>文字交给已配置的 AI 服务</p></article>
+          <article><span>04</span><small>沉淀</small><strong>文件夹 / Obsidian</strong><p>可搜索，也能回查原始语境</p></article>
+        </div>
+      </section>
+
+      <section class="case-section reliability-section" id="reliability">
+        <div class="section-index"><span>04</span>可靠性设计</div>
+        <div class="section-lead"><p class="eyebrow">A system that can fail safely</p><h2>真正可靠，不是永不失败，而是失败时不丢东西。</h2></div>
+        <div class="reliability-grid">
+          <article><span>ASR</span><h3>主模型 + 兜底模型</h3><p>Qwen3-ASR 负责主要转录；返回为空或发生异常时自动回退 Whisper。</p></article>
+          <article><span>QUALITY</span><h3>过滤明显幻觉与重复噪声</h3><p>清理异常重复字符和已知幻觉片段，再进入整理与纪要阶段。</p></article>
+          <article><span>MEMORY</span><h3>术语库持续反哺下一次</h3><p>从纪要中沉淀关键实体，用于后续会议里的专有名词纠错。</p></article>
+          <article><span>RECOVERY</span><h3>阶段成果逐步保全</h3><p>整理或纪要失败时，已经生成的转录不会消失，原录音保留等待重试。</p></article>
+          <article><span>PRIVACY</span><h3>音频始终留在本机</h3><p>录音、转码和识别都在本地完成；只有转录文字发送给用户选择的服务。</p></article>
+          <article><span>TRACE</span><h3>三份产物支持回查</h3><p>原始转录、分段整理稿、结构化纪要分开保存，不把模型输出当唯一证据。</p></article>
+        </div>
+      </section>
+
+      <section class="case-section experience-section" id="experience">
+        <div class="section-index"><span>05</span>体验演进</div>
+        <div class="section-lead split-lead">
+          <div><p class="eyebrow">From script to product</p><h2>处理能力跑通后，我继续解决“普通人敢不敢用”。</h2></div>
+          <p>MeetingNotes 从后台脚本逐步变成可双击安装、拖放录音、持续反馈状态的 Mac 产品。安装和等待不再只是工程过程，而是产品体验的一部分。</p>
+        </div>
+        <div class="experience-board">
+          <div class="install-window">
+            <div class="window-head"><span></span><span></span><span></span><strong>正在安装 MeetingNotes</strong><b>62%</b></div>
+            <div class="install-progress"><i></i></div>
+            <h3>正在下载本机语音模型</h3>
+            <p>已下载 1.4 GB / 2.2 GB · 预计还需约 2 分钟</p>
+            <ul><li class="done">检查这台 Mac</li><li class="done">连接 AI 服务</li><li class="active">下载语音模型</li><li>启动后台服务</li><li>启用 AirDrop 自动处理</li></ul>
+          </div>
+          <div class="state-stack">
+            <article><span class="cat-face">● ᴗ ●</span><div><small>空闲</small><strong>等待一段新录音</strong></div></article>
+            <article class="is-active"><span class="cat-face">● ᴗ ●</span><div><small>处理中 · 68%</small><strong>正在听录音</strong></div></article>
+            <article class="is-done"><span class="cat-face">● ᴗ ●</span><div><small>已完成</small><strong>纪要好了，可以回查</strong></div></article>
+          </div>
+        </div>
+        <p class="known-limit"><span>仍在继续改善</span>首条录音可能需要补充下载对齐与兜底模型，目前这段等待的界面反馈仍需进一步完善；内测包也尚未签名和公证。</p>
+      </section>
+
+      <section class="case-section role-section meeting-role" id="ownership">
+        <div class="section-index"><span>06</span>我的能力</div>
+        <div class="section-lead split-lead">
+          <div><p class="eyebrow">End-to-end ownership</p><h2>我把一次真实会议里的不可靠，推进成一个可安装、可理解、可验收的产品。</h2></div>
+          <p>我独立完成产品定义、交互与安装体验、Agent 协作实现、真实录音评测、质量机制、测试验收和内测发布。</p>
+        </div>
+        <div class="ability-list">
+          <article><span>01</span><div><h3>从真实任务定义价值</h3><p>目标不是“自动摘要”，而是减少会后整理成本，同时保留决策、待办、分歧、风险与回查路径。</p></div></article>
+          <article><span>02</span><div><h3>用评测推翻错误方向</h3><p>不被短样本和流畅文案迷惑，用完整长会议比较转录结果，并据此调整模型、提示词和信息结构。</p></div></article>
+          <article><span>03</span><div><h3>把技术链路转化为用户体验</h3><p>把模型下载、处理进度、等待、失败与重试转成普通用户能理解的安装器、拖放入口和状态反馈。</p></div></article>
+          <article><span>04</span><div><h3>把原型推进到可分发产品</h3><p>完成本地处理链、菜单栏状态、安装与升级、发布白名单、隐私边界和 Mac 内测包。</p></div></article>
+        </div>
+      </section>
+
+      <section class="case-section evidence-section meeting-evidence" id="evidence">
+        <div class="evidence-copy">
+          <p class="eyebrow">Evidence, not a demo</p>
+          <h2>它处理过完整会议，也经历过真实失败。</h2>
+          <p>当前项目已用 71 分钟真实技术会议验证产品方向；本次审读中，项目环境下 32 项标准 Python 测试通过，仓库还覆盖安装、升级、下载、发布和首次运行等脚本测试。页面只展示已实现能力，并明确保留内测限制。</p>
+          <p>我自己也是它的长期用户——每次真实会议后都用它出纪要，用了一段时间，整条流程已经顺手到几乎无感。</p>
+          <a href="https://github.com/mxwlab/MeetingNotes" target="_blank" rel="noopener">查看代码、安装包与使用说明 ↗</a>
+        </div>
+        <div class="evidence-numbers">
+          <div><strong>71<span>min</span></strong><span>完整真实会议验证</span></div>
+          <div><strong>3</strong><span>层可回查内容产物</span></div>
+          <div><strong>0</strong><span>原始录音上传</span></div>
+        </div>
+      </section>
+
+      <footer class="case-footer">
+        <div><span>上一项独立产品</span><strong>AI Continuity</strong></div>
+        <a href="./project-ai-continuity.html">查看不同 Agent 如何接住同一个项目 →</a>
+      </footer>
+    </main>
+  </body>
+</html>
