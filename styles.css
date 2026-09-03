@@ -116,12 +116,12 @@ a {
   display: grid;
   width: min(200px, calc(100vw - 32px));
   padding: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.74);
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: 10px;
   box-shadow: 0 18px 46px rgba(18, 40, 43, 0.16);
-  backdrop-filter: blur(60px) saturate(1.14);
-  -webkit-backdrop-filter: blur(60px) saturate(1.14);
+  backdrop-filter: blur(24px) saturate(1.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
@@ -152,7 +152,7 @@ a {
   width: 12px;
   height: 12px;
   content: "";
-  background: #fff;
+  background: rgba(255, 255, 255, 0.62);
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
   transform: rotate(45deg);
