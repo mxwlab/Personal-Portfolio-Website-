@@ -49,3 +49,8 @@
 .rail-foot{display:grid;gap:6px;margin-top:28px;padding:16px 0;border-top:1px solid var(--line)}
 .rail-foot span{color:var(--mint-2);font:800 9px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase}
 .rail-foot strong{font-size:15px;line-height:1.45}
+
+.lineage-note{display:grid;grid-template-columns:auto minmax(0,1fr) auto minmax(0,1fr);gap:8px 12px;align-items:baseline;max-width:760px;margin:24px 0 0;padding:14px 16px;color:rgba(231,246,242,.72);background:rgba(255,255,255,.045);border:1px solid rgba(119,223,204,.16);border-left:3px solid var(--gold);border-radius:10px}
+.lineage-note>span{grid-column:1/-1;color:var(--gold);font:800 10px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
+.lineage-note strong{color:#fff;font-size:13px}.lineage-note b{color:var(--mint);font-size:18px;font-weight:500}.lineage-note em{grid-column:1/-1;color:rgba(231,246,242,.58);font-size:12px;line-height:1.65;font-style:normal}
+@media(max-width:680px){.lineage-note{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;padding:13px 14px}.lineage-note>span,.lineage-note em{grid-column:1/-1}.lineage-note strong{font-size:12px}}
