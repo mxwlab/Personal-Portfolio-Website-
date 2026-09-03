@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="MeetingNotes 声笺：把会议录音在 Mac 本机完成转录，再生成按议题组织、可搜索、可回查的 Markdown 纪要。" />
     <title>MeetingNotes 声笺 | 莫秀文</title>
-    <link rel="stylesheet" href="./project-independent-cases.css?v=20260903-1" />
+    <link rel="stylesheet" href="./project-independent-cases.css?v=20260903-2" />
   </head>
   <body class="meeting-case">
     <header class="case-nav">
@@ -30,26 +30,8 @@
           </div>
         </div>
 
-        <div class="meeting-stage" aria-label="从录音到结构化会议纪要的产品流程示意">
-          <div class="drop-panel">
-            <div class="drop-icon"><i></i><i></i><i></i></div>
-            <strong>拖放一段会议录音</strong>
-            <span>m4a · mp3 · wav · mp4 · mov</span>
-            <button type="button" tabindex="-1">选择录音</button>
-          </div>
-          <div class="pet-status">
-            <span class="cat-face">● ᴗ ●</span>
-            <div><small>MEETINGNOTES</small><strong>🎧 听录音中</strong></div>
-            <b>68%</b>
-          </div>
-          <div class="note-sheet">
-            <span class="sheet-label">会议纪要 · 已完成</span>
-            <h3>产品评审会</h3>
-            <p><b>TL;DR</b><i></i><i></i></p>
-            <p><b>会议决策</b><i></i><i></i></p>
-            <p><b>待办事项</b><i></i><i></i></p>
-            <p><b>风险 / 阻塞</b><i></i><i></i></p>
-          </div>
+        <div class="meeting-stage" aria-label="MeetingNotes 主窗口真实截图">
+          <img class="mn-shot stage-window" src="./assets/meetingnotes/mn-main-window.png" alt="MeetingNotes 主窗口：显示“MeetingNotes 已准备好”，可拖放或选择录音，下方已完成一场“周五例会讨论”的纪要生成。" />
         </div>
       </section>
 
@@ -116,18 +98,21 @@
           <p>MeetingNotes 从后台脚本逐步变成可双击安装、拖放录音、持续反馈状态的 Mac 产品。安装和等待不再只是工程过程，而是产品体验的一部分。</p>
         </div>
         <div class="experience-board">
-          <div class="install-window">
-            <div class="window-head"><span></span><span></span><span></span><strong>正在安装 MeetingNotes</strong><b>62%</b></div>
-            <div class="install-progress"><i></i></div>
-            <h3>正在下载本机语音模型</h3>
-            <p>已下载 1.4 GB / 2.2 GB · 预计还需约 2 分钟</p>
-            <ul><li class="done">检查这台 Mac</li><li class="done">连接 AI 服务</li><li class="active">下载语音模型</li><li>启动后台服务</li><li>启用 AirDrop 自动处理</li></ul>
-          </div>
-          <div class="state-stack">
-            <article><span class="cat-face">● ᴗ ●</span><div><small>空闲</small><strong>等待一段新录音</strong></div></article>
-            <article class="is-active"><span class="cat-face">● ᴗ ●</span><div><small>处理中 · 68%</small><strong>正在听录音</strong></div></article>
-            <article class="is-done"><span class="cat-face">● ᴗ ●</span><div><small>已完成</small><strong>纪要好了，可以回查</strong></div></article>
-          </div>
+          <figure class="mn-shot-group">
+            <figcaption><span>首次安装</span>一页说清本机需要什么、配置 AI 服务，再自动完成环境检查与语音模型下载。</figcaption>
+            <div class="mn-shot-row install-row">
+              <img class="mn-shot" src="./assets/meetingnotes/mn-install-setup.png" alt="安装配置页：说明约需下载 3 GB 本机语音模型、原始录音不上传，并配置 DeepSeek 或其他兼容服务的 API Key。" />
+              <img class="mn-shot" src="./assets/meetingnotes/mn-install-progress.png" alt="安装进度页：依次完成检查这台 Mac、连接 AI 服务、准备运行环境、安装音频工具、下载语音模型等步骤。" />
+            </div>
+          </figure>
+          <figure class="mn-shot-group">
+            <figcaption><span>处理反馈</span>处理时，菜单栏小猫一直在桌面上显示进度：听录音 → 整理纪要 → 纪要好了。</figcaption>
+            <div class="mn-shot-row pet-row">
+              <img class="mn-shot pet" src="./assets/meetingnotes/mn-pet-1-listening.png" alt="桌宠状态：周五例会讨论，🎧 听录音中，56%。" />
+              <img class="mn-shot pet" src="./assets/meetingnotes/mn-pet-2-summarizing.png" alt="桌宠状态：周五例会讨论，✍️ 整理纪要中，34%。" />
+              <img class="mn-shot pet" src="./assets/meetingnotes/mn-pet-3-done.png" alt="桌宠状态：周五例会讨论，🎉 纪要好了，100%。" />
+            </div>
+          </figure>
         </div>
         <p class="known-limit"><span>仍在继续改善</span>首条录音可能需要补充下载对齐与兜底模型，目前这段等待的界面反馈仍需进一步完善；内测包也尚未签名和公证。</p>
       </section>
