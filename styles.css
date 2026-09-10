@@ -59,9 +59,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   padding: 18px clamp(20px, 5vw, 72px);
   background: transparent;
 }
@@ -87,22 +85,53 @@ a {
 }
 
 .brand {
-  gap: 10px;
+  gap: 12px;
+  justify-content: center;
+  padding: 0 clamp(20px, 4vw, 48px);
+  font-size: 17px;
   font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .brand-mark {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   border: 2px solid var(--accent);
   border-radius: 50%;
   box-shadow: 0 0 0 5px rgba(42, 157, 143, 0.12);
 }
 
 .nav {
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
   color: var(--muted);
   font-size: 14px;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(22px, 3.4vw, 48px);
+}
+
+.nav-group-left {
+  justify-content: flex-end;
+}
+
+.nav-group-right {
+  justify-content: flex-start;
+}
+
+.nav-group > a,
+.nav-trigger {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .nav-dropdown {
@@ -121,7 +150,7 @@ a {
 .project-menu {
   position: absolute;
   top: calc(100% + 12px);
-  right: -14px;
+  left: 50%;
   display: grid;
   width: min(200px, calc(100vw - 32px));
   padding: 8px;
@@ -133,7 +162,7 @@ a {
   -webkit-backdrop-filter: blur(28px) saturate(1.28);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-6px);
+  transform: translate(-50%, -6px);
   transition:
     opacity 160ms ease,
     transform 160ms ease,
@@ -157,9 +186,10 @@ a {
 .project-menu::before {
   position: absolute;
   top: -7px;
-  right: 27px;
+  left: 50%;
   width: 12px;
   height: 12px;
+  margin-left: -6px;
   content: "";
   background: rgba(246, 248, 247, 0.72);
   border-top: 1px solid var(--line);
@@ -216,7 +246,7 @@ a {
 .nav-dropdown:focus-within .project-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 .nav a:hover {
@@ -2793,16 +2823,23 @@ p {
     overflow-x: hidden;
   }
 
-  .site-header {
-    align-items: flex-start;
-    gap: 14px;
-    flex-direction: column;
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 18px;
   }
 
-  .nav {
+  .nav-group {
+    gap: 18px;
+  }
+
+  .brand {
+    order: -1;
     width: 100%;
-    justify-content: space-between;
-    gap: 8px;
+    padding: 0;
+    margin-bottom: 4px;
   }
 
   .nav-dropdown {
