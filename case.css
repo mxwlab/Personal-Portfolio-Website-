@@ -1,0 +1,285 @@
+/* case.css — 案例页专属"编辑式氛围"样式。
+   移植自已评审通过的组件画廊（编辑式氛围版）。
+   仅案例页加载（见 render.mjs layout()：type 含 case-page 时才注入此文件），
+   所有选择器限定在 .case-page 之下，不影响首页 / 作品列表 / 关于页。
+   Task 1 只做样式移植与加载；具体区块 markup 由 Task 2 产出，
+   figure/wide/fbleed 约定作用在 <figure class="media …"> 元素本身（通过 image() 的 cls 参数）。
+*/
+body.case-page{
+  --paper:#f1f0e9;--ink:#1b2a24;--ink-soft:#3c4a43;--muted:#8f8a7c;
+  --line:#cdc8ba;--line-soft:#ddd9cd;--forest:#2f5d4e;--forest-bright:#3f7a63;
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif SC",serif;
+  --mono:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,monospace;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background:var(--paper);
+}
+/* 氛围背景：蓝绿柔光 + 颗粒，固定在视口、不参与滚动，置于内容之后 */
+body.case-page::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(58% 42% at 84% 6%,#c9ddd0aa,transparent 60%),radial-gradient(48% 40% at 10% 92%,#e3ddccaa,transparent 62%)}
+body.case-page::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:var(--grain);opacity:.05;mix-blend-mode:multiply}
+/* 让正文内容盖在固定背景之上（header 已在 site.css 里是 position:fixed + z-index:20，无需处理） */
+body.case-page main{position:relative;z-index:1}
+body.case-page .site-footer{position:relative;z-index:1}
+
+/* 基础排版元件：等宽 eyebrow / 大字标题 / 正文 / 说明文字 */
+.case-page .eb{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--forest);margin:0 0 18px;font-weight:400}
+.case-page .eb.rule{display:flex;align-items:center;gap:16px}
+.case-page .eb.rule::after{content:"";flex:1;height:1px;background:var(--line)}
+.case-page .h{font-family:var(--serif);font-size:clamp(24px,3.2vw,36px);font-weight:600;line-height:1.28;letter-spacing:-.015em;margin:0 0 18px;max-width:38ch;text-wrap:balance}
+.case-page .body{font-family:var(--serif);font-size:16px;line-height:1.95;color:var(--ink-soft);max-width:60ch;margin:0 0 14px}
+.case-page .body:last-child{margin-bottom:0}
+.case-page .cap{font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--muted);margin-top:10px}
+
+/* StatementScreen：一整屏一句话，电影式停顿 */
+.case-page .stmt{padding:118px 44px;text-align:center;border-block:1px solid var(--line);position:relative}
+.case-page .stmt .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--forest);margin:0 0 30px}
+.case-page .stmt p{font-family:var(--serif);font-size:clamp(28px,4.6vw,54px);font-weight:500;line-height:1.3;letter-spacing:-.02em;max-width:min(1100px,calc(100% - 96px));margin:0 auto;text-wrap:balance}
+
+/* KeyDecisions：编号排版清单 */
+.case-page .dec{border-top:1px solid var(--line)}
+.case-page .dec>div{display:grid;grid-template-columns:60px 1fr;gap:22px;align-items:start;padding:24px 0;border-bottom:1px solid var(--line)}
+.case-page .dec .no{font-family:var(--mono);font-size:13px;color:var(--forest);padding-top:6px}
+.case-page .dec h4,.case-page .dec h3{font-family:var(--serif);font-size:21px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+.case-page .dec p{font-size:14.5px;line-height:1.8;color:var(--ink-soft);margin:0;max-width:56ch}
+
+/* Process：编号流程 */
+.case-page .flow{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-page .flow>div{padding:20px 16px 20px 0;border-left:1px solid var(--line);padding-left:16px}
+.case-page .flow>div:first-child{border-left:0;padding-left:0}
+.case-page .flow .n{font-family:var(--mono);font-size:12px;color:var(--forest)}
+.case-page .flow h4,.case-page .flow h3{font-family:var(--serif);margin:8px 0 6px;font-size:16px;font-weight:600}
+.case-page .flow p{margin:0;font-size:13px;line-height:1.65;color:var(--ink-soft)}
+
+/* Diagram：发丝线节点示意 */
+.case-page .dia{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-page .dia .n{flex:1;padding:28px 18px;text-align:center;border-left:1px solid var(--line);position:relative}
+.case-page .dia .n:first-child{border-left:0}
+.case-page .dia .n b{font-family:var(--serif);font-size:19px;font-weight:600}
+.case-page .dia .n small{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:8px}
+.case-page .dia .n::after{content:"→";position:absolute;right:-8px;top:50%;transform:translateY(-50%);color:var(--forest);background:var(--paper);font-size:14px}
+.case-page .dia .n:last-child::after{display:none}
+
+/* Comparison：双栏对比 */
+.case-page .compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.case-page .compare>div{padding:20px 24px 20px 0;border-left:1px solid var(--line);padding-left:24px}
+.case-page .compare>div:first-child{border-left:0;padding-left:0}
+.case-page .compare .l{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.case-page .compare p{margin:0;font-size:14.5px;line-height:1.75;color:var(--ink-soft)}
+
+/* Callout：要点框 */
+.case-page .callout{border-left:2px solid var(--forest);padding:4px 0 4px 22px}
+.case-page .callout .l{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--forest);margin-bottom:8px}
+.case-page .callout p{margin:0;font-size:14.5px;line-height:1.8;color:var(--ink-soft);max-width:54ch}
+
+/* Reflection：收束金句 */
+.case-page .ref{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1.55;font-weight:500;letter-spacing:-.01em;color:var(--forest);max-width:38ch;margin:0;text-wrap:balance}
+.case-page .ref .q{color:var(--muted);font-size:1.3em}
+
+/* Figure / WideFigure：真实图片用 <figure class="media …">，这里只调排版尺寸，不用灰块占位 */
+.case-page figure.media{margin:30px 0 0}
+.case-page figure.media img{border:1px solid var(--line);border-radius:3px;background:#e7ece6}
+.case-page figure.media figcaption{font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--muted);margin-top:10px;text-align:left}
+.case-page figure.media.wide img{border-radius:0;border-inline:0;min-height:280px;object-fit:cover}
+
+/* FullBleedImage：整屏出血图 + 深色叠字说明，电影感 */
+.case-page figure.media.fbleed{position:relative}
+.case-page figure.media.fbleed img{border:0;border-radius:0;min-height:420px;object-fit:cover;background-color:#1a2a23}
+.case-page figure.media.fbleed::after{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(180deg,transparent,#0d1613cc);pointer-events:none}
+.case-page figure.media.fbleed figcaption{position:absolute;left:40px;bottom:28px;right:40px;color:#eef2ee;font-family:var(--mono);font-size:12px;background:#0d1613aa;padding:8px 14px;backdrop-filter:blur(6px);margin:0;width:fit-content;max-width:calc(100% - 80px)}
+
+/* 区块间呼吸感：新类型区块（.case-block/.stmt/.callout）没有内建外边距，
+   统一给它们节奏；旧的 prose .case-section 自带 site.css 的上下间距，不重复加。 */
+.case-page .case-content>.case-block,
+.case-page .case-content>.stmt,
+.case-page .case-content>.callout{margin-top:56px}
+.case-page .case-content>.case-block:first-child,
+.case-page .case-content>.stmt:first-child,
+.case-page .case-content>.callout:first-child{margin-top:0}
+.case-page .case-content>.case-block:has(>figure.media.fbleed){margin-top:88px;margin-bottom:32px}
+
+/* 编辑式单栏布局：无侧栏 TOC，正文居中窄栏，"炸点"区块（StatementScreen / 全宽出血图 / 宽图）真全宽出血。
+   仅当项目区块含有类型化 block（industrial）时启用，普通 prose 案例页仍走 .case-layout + .case-toc（不变）。 */
+body.case-page{overflow-x:clip}
+.case-page .case-editorial{width:min(960px,calc(100% - 48px));margin-inline:auto;padding-top:82px}
+.case-page .case-editorial>*+*{margin-top:56px}
+.case-page .case-editorial>.stmt,
+.case-page .case-editorial>.case-block:has(>figure.media.fbleed),
+.case-page .case-editorial>.case-block:has(>figure.media.wide){
+  width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+}
+.case-page .case-editorial>.case-block:has(>figure.media.fbleed){margin-top:88px;margin-bottom:32px}
+.case-page .case-editorial>.case-block:has(>figure.media.wide) figure.media.wide figcaption{max-width:720px;margin-inline:auto;padding-inline:24px}
+
+@media(max-width:720px){
+  .case-page .case-editorial{padding-top:40px}
+  .case-page .flow{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:1fr}
+  .case-page .dia,.case-page .compare{grid-template-columns:1fr;display:grid}
+  .case-page .compare>div{padding:18px 0;border-left:0;border-top:1px solid var(--line)}
+  .case-page .compare>div:first-child{border-top:0}
+  .case-page .dia{display:block}
+  .case-page .dia .n{border-left:0;border-bottom:1px solid var(--line);text-align:left}
+  .case-page .dia .n::after{content:"↓";right:auto;left:18px;top:auto;bottom:-8px;transform:none}
+  .case-page .stmt{padding:66px 24px}
+  .case-page figure.media.fbleed img{min-height:280px}
+  .case-page figure.media.fbleed figcaption{left:20px;right:20px;max-width:calc(100% - 40px)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .case-page *{scroll-behavior:auto}
+}
+
+.case-page .case-editorial .body-copy{max-width:none}
+
+/* Three-scene editorial reading: existing components + optional deep reading. */
+.case-page .case-editorial>.case-section{max-width:960px;margin-inline:auto}
+.case-page .case-editorial>.case-section h2{font-size:clamp(28px,3vw,40px);line-height:1.4;text-wrap:balance}
+.case-page .case-editorial>#quality,.case-page .case-editorial>#sandbox,.case-page .case-editorial>#pipeline{margin-top:116px;padding-top:32px;border-top:1px solid var(--line)}
+.case-page .case-editorial>[id]{scroll-margin-top:100px}
+.case-page .scene-nav{padding-block:24px;border-block:1px solid var(--line)}
+.case-page .scene-nav>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.case-page .scene-nav a{display:block;text-decoration:none;position:relative;padding:8px 28px 14px 0}
+.case-page .scene-nav a span{font:12px var(--mono);color:var(--forest)}
+.case-page .scene-nav strong{display:block;font:500 22px/1.65 var(--serif);margin-top:14px}
+.case-page .scene-nav i{font-style:normal;color:var(--forest);position:absolute;right:0;bottom:20px}
+.case-page .scene-nav a:hover strong{text-decoration:underline;text-underline-offset:6px}
+.case-page .case-disclosure{border-block:1px solid var(--line);max-width:960px}
+.case-page .case-disclosure summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font-size:17px}
+.case-page .case-disclosure summary::-webkit-details-marker{display:none}
+.case-page .case-disclosure summary span{color:var(--forest)}
+.case-page .case-disclosure[open] summary span{transform:rotate(45deg)}
+.case-page .disclosure-content{padding:4px 0 32px}
+.case-page .disclosure-content>.body-copy{max-width:960px;margin:0 auto 20px}
+.case-page .disclosure-content .media{max-width:960px;margin:32px auto}
+.case-page .case-editorial .dec p{max-width:none;font-size:16px;line-height:1.9}
+.case-page .case-editorial .compare p{font-size:16px;line-height:1.9}
+.case-page .case-editorial figure.media img{min-height:0;object-fit:contain}
+.case-page .case-editorial .media.fbleed .zoom-image{display:block;width:100%}
+.case-page .case-editorial .media.fbleed .zoom-hint{bottom:auto;top:20px}
+.case-page .scene-nav a:focus-visible,.case-page .case-disclosure summary:focus-visible{outline:2px solid var(--forest);outline-offset:6px}
+@media(max-width:720px){.case-page .scene-nav>div{grid-template-columns:1fr;gap:0}.case-page .scene-nav a{border-bottom:1px solid var(--line-soft)}.case-page .case-editorial>#quality,.case-page .case-editorial>#sandbox,.case-page .case-editorial>#pipeline{margin-top:64px}}
+
+/* Explicit module identity; shared 960px content baseline. */
+.case-page .scene-rail{position:sticky;top:70px;z-index:10;background:rgba(241,240,233,.96);border-block:1px solid var(--line);backdrop-filter:blur(12px)}
+.case-page .scene-rail>div{width:min(960px,calc(100% - 48px));margin:auto;display:flex;gap:40px}
+.case-page .scene-rail a{padding:17px 0;text-decoration:none;border-bottom:2px solid transparent;font-size:16px}
+.case-page .scene-rail a span{font:11px var(--mono);margin-right:8px;color:var(--muted)}
+.case-page .scene-rail a[aria-current]{border-color:var(--forest);color:var(--forest);font-weight:700}
+.case-page .case-editorial>[id]{scroll-margin-top:155px}
+.case-page .scene-heading{display:flex;gap:30px;align-items:baseline;margin:0 0 40px;padding-top:12px}
+.case-page .scene-number{font:400 52px/1 var(--mono);color:var(--forest);opacity:.5}
+.case-page .scene-heading h2{font:500 clamp(38px,4vw,56px)/1.25 var(--serif);margin:0}
+.case-page .scene-purpose{font-size:16px;line-height:1.8;color:var(--ink-soft);margin-top:16px}
+.case-page .scene-header>h3{font:500 28px/1.5 var(--serif);margin:0 0 20px}
+@media(max-width:720px){.case-page .scene-rail>div{gap:18px}.case-page .scene-rail a{font-size:13px}.case-page .scene-rail a span{display:none}.case-page .scene-heading{gap:16px}.case-page .scene-number{font-size:32px}}
+
+.case-page .case-video video{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:3px;background:var(--paper)}
+
+/* Paired media and prose, within the shared editorial width. */
+.case-page .case-media-split{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:36px;align-items:center}
+.case-page .case-media-split figure.media{margin:0;padding:0;background:none;border:0}
+.case-page .case-media-split .split-copy{min-width:0}
+.case-page .case-media-split .split-copy h2{font-size:clamp(24px,2.25vw,32px);line-height:1.5;margin:0 0 22px}
+.case-page .case-media-split .split-copy .body-copy{margin-top:0;margin-bottom:16px}
+@media(max-width:760px){.case-page .case-media-split{grid-template-columns:1fr;gap:26px}}
+
+/* CC: one reading hierarchy across prose, comparison, process and media. */
+.case-page.project-wechat-cc{--cc-section-title:clamp(24px,2.1vw,28px);--cc-item-title:18px}
+.case-page.project-wechat-cc .case-editorial>.case-section h2,
+.case-page.project-wechat-cc .case-editorial .case-block>.h,
+.case-page.project-wechat-cc .scene-header>h3{
+  font-family:var(--serif);font-size:var(--cc-section-title);font-weight:500;
+  line-height:1.5;letter-spacing:-.015em;max-width:none;margin:0 0 20px;text-wrap:pretty;
+}
+.case-page.project-wechat-cc .dec h4,
+.case-page.project-wechat-cc .flow h4{font-size:var(--cc-item-title);font-weight:600;line-height:1.5}
+.case-page.project-wechat-cc .case-editorial>.case-section>.eyebrow{
+  font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.16em;color:var(--forest);
+}
+
+.case-page .video-toggle{display:block;margin:10px 0 0 auto;padding:4px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink-soft);font:12px/1.6 var(--serif);cursor:pointer}
+.case-page .video-toggle:hover{color:var(--forest)}
+.case-page .video-toggle:focus-visible{outline:2px solid var(--forest);outline-offset:4px}
+
+/* Quiet explanatory close to the atelier story. */
+.case-page.project-wechat-cc #atelier-status{border-left:0;padding:0;text-align:right}
+.case-page.project-wechat-cc #atelier-status .l{font-size:11px;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+.case-page.project-wechat-cc #atelier-status p{white-space:pre-line;max-width:none;font-size:12px;line-height:1.9;color:var(--ink-soft);margin:0}
+@media(max-width:600px){.case-page.project-wechat-cc #atelier-status p{white-space:normal}}
+
+.case-page.project-wechat-cc #context>.body-copy:last-child{
+  font-size:20px;line-height:1.8;color:var(--ink);margin-top:28px;
+}
+@media(max-width:600px){
+  .case-page.project-wechat-cc #context>.body-copy:last-child{font-size:18px}
+}
+
+/* D4S: consistent subsection hierarchy across editorial components. */
+.case-page.project-d4s .case-editorial>.case-section h2,
+.case-page.project-d4s .case-editorial .case-block>.h,
+.case-page.project-d4s .scene-header>h3{
+  font:500 clamp(24px,2.1vw,28px)/1.5 var(--serif);
+  letter-spacing:-.015em;max-width:none;margin:0 0 20px;text-wrap:pretty;
+}
+.case-page.project-d4s .case-editorial>.case-section>.eyebrow{
+  font:400 11.5px var(--mono);letter-spacing:.16em;color:var(--forest);
+}
+
+/* MeetingNotes: product-aligned dark editorial surface. */
+body.case-page.project-meetingnotes{
+  --paper:#16181b;--ink:#ecedef;--ink-soft:#bec5ce;--muted:#9ba5b2;
+  --line:#3d444e;--line-soft:#30363e;--forest:#8ab7ff;--forest-bright:#accbff;
+  --surface:#21262a;--accent:#8ab7ff;color:var(--ink);color-scheme:dark;
+}
+body.case-page.project-meetingnotes::before{background:radial-gradient(60% 35% at 90% 5%,#23354a66,transparent 70%)}
+.project-meetingnotes .site-header,.project-meetingnotes .scene-rail{background:rgba(22,24,27,.96)}
+.project-meetingnotes .site-header,.project-meetingnotes .site-footer{color:var(--ink)}
+.project-meetingnotes .case-cover,.project-meetingnotes .case-editorial .media{background:var(--paper);border-color:var(--line)}
+.project-meetingnotes .case-editorial>.case-section h2,
+.project-meetingnotes .case-editorial .case-block>.h,
+.project-meetingnotes .scene-header>h3{font:500 clamp(24px,2.1vw,28px)/1.5 var(--serif);margin:0 0 20px;max-width:none}
+.project-meetingnotes #installation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.project-meetingnotes #installation>:not(figure){grid-column:1/-1}
+.project-meetingnotes #installation figure{margin:24px 0 0;padding:0}
+.project-meetingnotes #states{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px}
+.project-meetingnotes #states>:not(figure){grid-column:1/-1}
+.project-meetingnotes #states figure{margin:16px 0 0;padding:0}
+.project-meetingnotes #menubar{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 48px;align-items:start}
+.project-meetingnotes #menubar>.eyebrow{grid-column:1/-1}
+.project-meetingnotes #menubar h2,.project-meetingnotes #menubar .body-copy{grid-column:1}
+.project-meetingnotes #menubar figure{grid-column:2;grid-row:2/4;margin:0;padding:0}
+.project-meetingnotes .case-cover img{max-height:620px;object-fit:contain}
+@media(max-width:650px){
+ .project-meetingnotes #installation,.project-meetingnotes #states,.project-meetingnotes #menubar{display:block}
+ .project-meetingnotes #states figure{max-width:380px;margin:20px auto}
+ .project-meetingnotes #menubar figure{max-width:280px;margin:24px auto}
+}
+.project-meetingnotes .body-copy{color:var(--ink-soft)}
+.project-meetingnotes .platform-tag{color:var(--forest)}
+.project-meetingnotes .zoom-image,.project-meetingnotes .media img{background:transparent}
+.case-page.project-meetingnotes figure.media img{background:transparent;border:0}
+.case-page.project-meetingnotes .zoom-hint{background:#252b34;color:var(--ink);border-color:var(--line)}
+
+/* AI Continuity: shared editorial hierarchy for prose and mechanism blocks. */
+.case-page.project-ai-continuity .case-editorial>.case-section h2,
+.case-page.project-ai-continuity .case-editorial .case-block>.h,
+.case-page.project-ai-continuity .scene-header>h3{
+ font:500 clamp(24px,2.1vw,28px)/1.5 var(--serif);max-width:none;margin:0 0 20px;
+}
+.case-page.project-ai-continuity .case-editorial>.case-section>.eyebrow{
+ font:400 11.5px var(--mono);letter-spacing:.16em;color:var(--forest);
+}
+
+/* Prose cases share the same readable content width as editorial cases. */
+.case-page .case-layout{display:block;width:min(960px,calc(100% - 48px));margin-inline:auto}
+.case-page .case-layout .case-content{width:100%;max-width:none}
+.case-page .case-layout .body-copy{max-width:none}
+.case-page .case-layout .case-toc{position:static;max-height:none;margin-bottom:48px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.case-page .case-layout .case-toc nav{display:flex;flex-wrap:wrap;gap:14px 28px}
+.case-page .case-layout .case-section h2{font:500 clamp(24px,2.1vw,28px)/1.5 var(--serif);max-width:none}
+
+/* Pocket fishpond: compact physical-interaction case. */
+.case-page.project-pocket-fishpond .case-editorial>.case-section h2,
+.case-page.project-pocket-fishpond .case-editorial .case-block>.h{
+ font:500 clamp(24px,2.1vw,28px)/1.5 var(--serif);max-width:none;margin:0 0 20px;
+}
+.project-pocket-fishpond .case-video video{object-fit:contain;background:#080b0c}

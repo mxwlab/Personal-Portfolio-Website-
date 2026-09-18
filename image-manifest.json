@@ -1,0 +1,526 @@
+{
+  "industrial/quality-agent-workbench.png": {
+    "src": "media/industrial-quality-agent-workbench-1600.jpg",
+    "width": 1920,
+    "height": 1074,
+    "variants": [
+      {
+        "src": "media/industrial-quality-agent-workbench-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-quality-agent-workbench-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/three-scenes/sandbox-overview.png": {
+    "src": "media/industrial-three-scenes-sandbox-overview-1600.jpg",
+    "width": 1920,
+    "height": 1164,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-sandbox-overview-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-sandbox-overview-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/three-scenes/sandbox-language.png": {
+    "src": "media/industrial-three-scenes-sandbox-language-873.jpg",
+    "width": 873,
+    "height": 1172,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-sandbox-language-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-sandbox-language-873.jpg",
+        "width": 873
+      }
+    ]
+  },
+  "industrial/three-scenes/sandbox-manual.png": {
+    "src": "media/industrial-three-scenes-sandbox-manual-873.jpg",
+    "width": 873,
+    "height": 1082,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-sandbox-manual-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-sandbox-manual-873.jpg",
+        "width": 873
+      }
+    ]
+  },
+  "industrial/three-scenes/pipeline-overview.png": {
+    "src": "media/industrial-three-scenes-pipeline-overview-1600.jpg",
+    "width": 1918,
+    "height": 1101,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-pipeline-overview-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-pipeline-overview-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/three-scenes/pipeline-preview.png": {
+    "src": "media/industrial-three-scenes-pipeline-preview-1600.jpg",
+    "width": 1966,
+    "height": 1121,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-pipeline-preview-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-pipeline-preview-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/three-scenes/pipeline-selection.png": {
+    "src": "media/industrial-three-scenes-pipeline-selection-1600.jpg",
+    "width": 1918,
+    "height": 1101,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-pipeline-selection-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-pipeline-selection-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/expense-overview.png": {
+    "src": "media/d4s-expense-overview-1600.jpg",
+    "width": 1921,
+    "height": 2695,
+    "variants": [
+      {
+        "src": "media/d4s-expense-overview-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-expense-overview-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/plm-link-dialog.png": {
+    "src": "media/d4s-plm-link-dialog-1600.jpg",
+    "width": 1921,
+    "height": 991,
+    "variants": [
+      {
+        "src": "media/d4s-plm-link-dialog-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-plm-link-dialog-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/reader/sap-template-matching.png": {
+    "src": "media/d4s-reader-sap-template-matching-1600.jpg",
+    "width": 1920,
+    "height": 1081,
+    "variants": [
+      {
+        "src": "media/d4s-reader-sap-template-matching-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-reader-sap-template-matching-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/template-library.png": {
+    "src": "media/d4s-template-library-1600.jpg",
+    "width": 1921,
+    "height": 991,
+    "variants": [
+      {
+        "src": "media/d4s-template-library-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-template-library-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/reader/task-planning-latest.png": {
+    "src": "media/d4s-reader-task-planning-latest-1590.jpg",
+    "width": 1590,
+    "height": 898,
+    "variants": [
+      {
+        "src": "media/d4s-reader-task-planning-latest-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-reader-task-planning-latest-1590.jpg",
+        "width": 1590
+      }
+    ]
+  },
+  "d4s/outcome-tracking.png": {
+    "src": "media/d4s-outcome-tracking-1600.jpg",
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/d4s-outcome-tracking-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-outcome-tracking-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "wechat-cc/companion-aquarium-poster.jpg": {
+    "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
+    "width": 1400,
+    "height": 934,
+    "variants": [
+      {
+        "src": "media/wechat-cc-companion-aquarium-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
+        "width": 1400
+      }
+    ]
+  },
+  "wechat-cc/reader/todo-example.png": {
+    "src": "media/wechat-cc-reader-todo-example-1440.jpg",
+    "width": 1440,
+    "height": 746,
+    "variants": [
+      {
+        "src": "media/wechat-cc-reader-todo-example-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-reader-todo-example-1440.jpg",
+        "width": 1440
+      }
+    ]
+  },
+  "wechat-cc/reader/social-released.png": {
+    "src": "media/wechat-cc-reader-social-released-1600.jpg",
+    "width": 2200,
+    "height": 1720,
+    "variants": [
+      {
+        "src": "media/wechat-cc-reader-social-released-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-reader-social-released-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "meetingnotes/mn-main-window.png": {
+    "src": "media/meetingnotes-mn-main-window-1464.png",
+    "width": 1464,
+    "height": 1588,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-main-window-720.png",
+        "width": 720
+      },
+      {
+        "src": "media/meetingnotes-mn-main-window-1464.png",
+        "width": 1464
+      }
+    ]
+  },
+  "meetingnotes/mn-install-setup.png": {
+    "src": "media/meetingnotes-mn-install-setup-1376.png",
+    "width": 1376,
+    "height": 1500,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-install-setup-720.png",
+        "width": 720
+      },
+      {
+        "src": "media/meetingnotes-mn-install-setup-1376.png",
+        "width": 1376
+      }
+    ]
+  },
+  "meetingnotes/mn-install-progress.png": {
+    "src": "media/meetingnotes-mn-install-progress-1376.png",
+    "width": 1376,
+    "height": 1500,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-install-progress-720.png",
+        "width": 720
+      },
+      {
+        "src": "media/meetingnotes-mn-install-progress-1376.png",
+        "width": 1376
+      }
+    ]
+  },
+  "meetingnotes/mn-pet-1-listening.png": {
+    "src": "media/meetingnotes-mn-pet-1-listening-612.png",
+    "width": 612,
+    "height": 328,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-pet-1-listening-612.png",
+        "width": 612
+      }
+    ]
+  },
+  "meetingnotes/mn-pet-2-summarizing.png": {
+    "src": "media/meetingnotes-mn-pet-2-summarizing-612.png",
+    "width": 612,
+    "height": 328,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-pet-2-summarizing-612.png",
+        "width": 612
+      }
+    ]
+  },
+  "meetingnotes/mn-pet-3-done.png": {
+    "src": "media/meetingnotes-mn-pet-3-done-612.png",
+    "width": 612,
+    "height": 328,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-pet-3-done-612.png",
+        "width": 612
+      }
+    ]
+  },
+  "meetingnotes/mn-menubar-menu.png": {
+    "src": "media/meetingnotes-mn-menubar-menu-274.png",
+    "width": 274,
+    "height": 306,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-menubar-menu-274.png",
+        "width": 274
+      }
+    ]
+  },
+  "pocket-fishpond/live-sharing.png": {
+    "src": "media/pocket-fishpond-live-sharing-1600.jpg",
+    "width": 1800,
+    "height": 1013,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-live-sharing-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-live-sharing-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "pocket-fishpond/reader/device-poster.jpg": {
+    "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
+    "width": 1006,
+    "height": 938,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-reader-device-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
+        "width": 1006
+      }
+    ]
+  },
+  "pocket-fishpond/maker-space-workshop.jpg": {
+    "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
+    "width": 1800,
+    "height": 1471,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-maker-space-workshop-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "agent-platform/workflow-canvas.png": {
+    "src": "media/agent-platform-workflow-canvas-1600.jpg",
+    "width": 1920,
+    "height": 1142,
+    "variants": [
+      {
+        "src": "media/agent-platform-workflow-canvas-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/agent-platform-workflow-canvas-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "agent-platform/app-marketplace.png": {
+    "src": "media/agent-platform-app-marketplace-1600.jpg",
+    "width": 1921,
+    "height": 1134,
+    "variants": [
+      {
+        "src": "media/agent-platform-app-marketplace-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/agent-platform-app-marketplace-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "agent-platform/create-app.png": {
+    "src": "media/agent-platform-create-app-1065.jpg",
+    "width": 1065,
+    "height": 736,
+    "variants": [
+      {
+        "src": "media/agent-platform-create-app-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/agent-platform-create-app-1065.jpg",
+        "width": 1065
+      }
+    ]
+  },
+  "agent-platform/knowledge-library.png": {
+    "src": "media/agent-platform-knowledge-library-1600.jpg",
+    "width": 1920,
+    "height": 1135,
+    "variants": [
+      {
+        "src": "media/agent-platform-knowledge-library-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/agent-platform-knowledge-library-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "agent-platform/model-monitor.png": {
+    "src": "media/agent-platform-model-monitor-1600.jpg",
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/agent-platform-model-monitor-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/agent-platform-model-monitor-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "knowledge-graph/overview-dashboard.png": {
+    "src": "media/knowledge-graph-overview-dashboard-1396.jpg",
+    "width": 1396,
+    "height": 1335,
+    "variants": [
+      {
+        "src": "media/knowledge-graph-overview-dashboard-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/knowledge-graph-overview-dashboard-1396.jpg",
+        "width": 1396
+      }
+    ]
+  },
+  "knowledge-graph/extraction-result.png": {
+    "src": "media/knowledge-graph-extraction-result-1396.jpg",
+    "width": 1396,
+    "height": 894,
+    "variants": [
+      {
+        "src": "media/knowledge-graph-extraction-result-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/knowledge-graph-extraction-result-1396.jpg",
+        "width": 1396
+      }
+    ]
+  },
+  "knowledge-graph/graph-editor.png": {
+    "src": "media/knowledge-graph-graph-editor-1396.jpg",
+    "width": 1396,
+    "height": 895,
+    "variants": [
+      {
+        "src": "media/knowledge-graph-graph-editor-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/knowledge-graph-graph-editor-1396.jpg",
+        "width": 1396
+      }
+    ]
+  },
+  "knowledge-graph/data-standards.png": {
+    "src": "media/knowledge-graph-data-standards-1396.jpg",
+    "width": 1396,
+    "height": 882,
+    "variants": [
+      {
+        "src": "media/knowledge-graph-data-standards-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/knowledge-graph-data-standards-1396.jpg",
+        "width": 1396
+      }
+    ]
+  },
+  "contact/wechat-qr.jpg": {
+    "src": "media/contact-wechat-qr-888.jpg",
+    "width": 888,
+    "height": 1131,
+    "variants": [
+      {
+        "src": "media/contact-wechat-qr-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/contact-wechat-qr-888.jpg",
+        "width": 888
+      }
+    ]
+  }
+}
