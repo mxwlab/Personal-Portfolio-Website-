@@ -156,3 +156,28 @@
   root.classList.add('motion-ready');
   syncMotion();
 })();
+
+// Optional controls enhance native horizontal scrolling; vertical scroll stays native.
+(() => {
+  const rail = document.querySelector('.work-rail');
+  if (!rail) return;
+  const controls = document.querySelector('.work-rail-controls');
+  const buttons = [...controls.querySelectorAll('button')];
+  controls.hidden = false;
+  const update = () => {
+    buttons[0].disabled = rail.scrollLeft <= 2;
+    buttons[1].disabled = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth - 2;
+  };
+  const move = direction => {
+    const step = rail.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap);
+    rail.scrollBy({left:direction * step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  };
+  buttons.forEach(button => button.addEventListener('click', () => move(Number(button.dataset.railStep))));
+  rail.addEventListener('keydown', event => {
+    if (event.target !== rail || !['ArrowLeft','ArrowRight'].includes(event.key)) return;
+    event.preventDefault();move(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  rail.addEventListener('scroll',update,{passive:true});
+  new ResizeObserver(update).observe(rail);
+  update();
+})();
