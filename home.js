@@ -103,14 +103,26 @@
     schedule();
   }
 
-  hero.addEventListener('pointermove', event => {
+  const header = document.querySelector('.site-header');
+  function moveLight(event) {
     if (event.pointerType === 'touch' || !active()) return;
     const box = hero.getBoundingClientRect();
     pointerX = (clamp((event.clientX - box.left) / box.width, 0, 1) - 0.61) * box.width;
     pointerY = (clamp((event.clientY - box.top) / box.height, 0, 1) - 0.60) * box.height;
     schedule();
-  }, {passive: true});
-  hero.addEventListener('pointerleave', () => { pointerX = pointerY = 0; schedule(); });
+  }
+  function leaveLight(event) {
+    const next = event.relatedTarget;
+    if (next instanceof Node && (hero.contains(next) || header?.contains(next))) return;
+    pointerX = pointerY = 0; schedule();
+  }
+  for (const surface of [hero, header].filter(Boolean)) {
+    surface.addEventListener('pointermove', moveLight, {passive:true});
+    surface.addEventListener('pointerleave', leaveLight);
+  }
+  const syncHeader = () => document.body.classList.toggle('header-scrolled', window.scrollY > 16);
+  addEventListener('scroll', syncHeader, {passive:true});
+  syncHeader();
   addEventListener('scroll', schedule, {passive: true});
   addEventListener('resize', () => { paintGrain(); schedule(); }, {passive: true});
   reduced.addEventListener('change', syncMotion);

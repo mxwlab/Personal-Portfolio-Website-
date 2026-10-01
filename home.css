@@ -110,3 +110,6 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 
 /* A monotonic single-hue falloff has no flat inner disc or pale concentric bands. */
 .atmosphere::after{content:none}
+
+/* At the top, the existing hero extends behind the navigation without a second light. */
+.home-page:not(.header-scrolled) .site-header{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:transparent}
