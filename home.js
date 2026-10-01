@@ -10,7 +10,7 @@
   const paused = false;
   let heroVisible = true, raf = 0, previousTime = 0;
   let pointerX = 0, pointerY = 0;
-  const current = {x: 0, y: 0, copy: 0, field: 0};
+  const current = {x: 0, y: 0, field: 0};
   const staticMode = () => reduced.matches || narrow.matches;
   const active = () => !paused && !staticMode() && !document.hidden;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -38,7 +38,6 @@
   function writeHero() {
     root.style.setProperty('--pointer-x', `${current.x.toFixed(2)}px`);
     root.style.setProperty('--pointer-y', `${current.y.toFixed(2)}px`);
-    root.style.setProperty('--copy-shift', `${current.copy.toFixed(2)}px`);
     root.style.setProperty('--field-shift', `${current.field.toFixed(2)}px`);
   }
   function resetPositions() {
@@ -79,7 +78,6 @@
       const distance = clamp(-heroBox.top, 0, heroBox.height);
       current.x = ease(current.x, pointerX);
       current.y = ease(current.y, pointerY);
-      current.copy = ease(current.copy, Math.min(42, distance * 0.07));
       current.field = ease(current.field, Math.min(105, distance * 0.18));
       writeHero();
     }
@@ -154,6 +152,18 @@
 
   try { paintGrain(); } catch { /* Keep the static gradient if canvas is unavailable. */ }
   root.classList.add('motion-ready');
+  // One brief stagger; default HTML stays fully visible without motion support.
+  if (active()) {
+    hero.querySelectorAll('.hero-title-line, .identity-copy').forEach((element, index) => {
+      if (typeof element.animate !== 'function') return;
+      const animation = element.animate([
+        {opacity: 0.72, transform: 'translateY(8px)'},
+        {opacity: 1, transform: 'translateY(0)'}
+      ], {duration: 750, delay: index * 250, easing: 'cubic-bezier(.2,.65,.3,1)', fill: 'backwards'});
+      entrances.add(animation);
+      animation.onfinish = () => entrances.delete(animation);
+    });
+  }
   syncMotion();
 })();
 

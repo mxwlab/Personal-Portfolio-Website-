@@ -1,4 +1,19 @@
 {
+  "industrial/cover.png": {
+    "src": "media/industrial-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/industrial-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
   "industrial/quality-agent-workbench.png": {
     "src": "media/industrial-quality-agent-workbench-1600.jpg",
     "width": 1920,
@@ -10,6 +25,21 @@
       },
       {
         "src": "media/industrial-quality-agent-workbench-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/quality-agent-demo-poster.jpg": {
+    "src": "media/industrial-quality-agent-demo-poster-1600.jpg",
+    "width": 1600,
+    "height": 900,
+    "variants": [
+      {
+        "src": "media/industrial-quality-agent-demo-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-quality-agent-demo-poster-1600.jpg",
         "width": 1600
       }
     ]
@@ -104,92 +134,17 @@
       }
     ]
   },
-  "d4s/expense-overview.png": {
-    "src": "media/d4s-expense-overview-1600.jpg",
-    "width": 1921,
-    "height": 2695,
+  "wechat-cc/cover.png": {
+    "src": "media/wechat-cc-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
     "variants": [
       {
-        "src": "media/d4s-expense-overview-720.jpg",
+        "src": "media/wechat-cc-cover-720.jpg",
         "width": 720
       },
       {
-        "src": "media/d4s-expense-overview-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "d4s/plm-link-dialog.png": {
-    "src": "media/d4s-plm-link-dialog-1600.jpg",
-    "width": 1921,
-    "height": 991,
-    "variants": [
-      {
-        "src": "media/d4s-plm-link-dialog-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/d4s-plm-link-dialog-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "d4s/reader/sap-template-matching.png": {
-    "src": "media/d4s-reader-sap-template-matching-1600.jpg",
-    "width": 1920,
-    "height": 1081,
-    "variants": [
-      {
-        "src": "media/d4s-reader-sap-template-matching-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/d4s-reader-sap-template-matching-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "d4s/template-library.png": {
-    "src": "media/d4s-template-library-1600.jpg",
-    "width": 1921,
-    "height": 991,
-    "variants": [
-      {
-        "src": "media/d4s-template-library-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/d4s-template-library-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "d4s/reader/task-planning-latest.png": {
-    "src": "media/d4s-reader-task-planning-latest-1590.jpg",
-    "width": 1590,
-    "height": 898,
-    "variants": [
-      {
-        "src": "media/d4s-reader-task-planning-latest-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/d4s-reader-task-planning-latest-1590.jpg",
-        "width": 1590
-      }
-    ]
-  },
-  "d4s/outcome-tracking.png": {
-    "src": "media/d4s-outcome-tracking-1600.jpg",
-    "width": 1920,
-    "height": 1080,
-    "variants": [
-      {
-        "src": "media/d4s-outcome-tracking-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/d4s-outcome-tracking-1600.jpg",
+        "src": "media/wechat-cc-cover-1600.jpg",
         "width": 1600
       }
     ]
@@ -239,18 +194,138 @@
       }
     ]
   },
-  "meetingnotes/mn-main-window.png": {
-    "src": "media/meetingnotes-mn-main-window-1464.png",
-    "width": 1464,
-    "height": 1588,
+  "d4s/cover.png": {
+    "src": "media/d4s-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
     "variants": [
       {
-        "src": "media/meetingnotes-mn-main-window-720.png",
+        "src": "media/d4s-cover-720.jpg",
         "width": 720
       },
       {
-        "src": "media/meetingnotes-mn-main-window-1464.png",
-        "width": 1464
+        "src": "media/d4s-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/plm-link-dialog.png": {
+    "src": "media/d4s-plm-link-dialog-1600.jpg",
+    "width": 1921,
+    "height": 991,
+    "variants": [
+      {
+        "src": "media/d4s-plm-link-dialog-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-plm-link-dialog-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/reader/sap-template-matching.png": {
+    "src": "media/d4s-reader-sap-template-matching-1600.jpg",
+    "width": 1920,
+    "height": 1081,
+    "variants": [
+      {
+        "src": "media/d4s-reader-sap-template-matching-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-reader-sap-template-matching-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/expense-overview.png": {
+    "src": "media/d4s-expense-overview-1600.jpg",
+    "width": 1921,
+    "height": 2695,
+    "variants": [
+      {
+        "src": "media/d4s-expense-overview-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-expense-overview-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/template-library.png": {
+    "src": "media/d4s-template-library-1600.jpg",
+    "width": 1921,
+    "height": 991,
+    "variants": [
+      {
+        "src": "media/d4s-template-library-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-template-library-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "d4s/reader/task-planning-latest.png": {
+    "src": "media/d4s-reader-task-planning-latest-1590.jpg",
+    "width": 1590,
+    "height": 898,
+    "variants": [
+      {
+        "src": "media/d4s-reader-task-planning-latest-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-reader-task-planning-latest-1590.jpg",
+        "width": 1590
+      }
+    ]
+  },
+  "d4s/outcome-tracking.png": {
+    "src": "media/d4s-outcome-tracking-1600.jpg",
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/d4s-outcome-tracking-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/d4s-outcome-tracking-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "ai-continuity/cover.png": {
+    "src": "media/ai-continuity-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/ai-continuity-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/ai-continuity-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "meetingnotes/cover.png": {
+    "src": "media/meetingnotes-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/meetingnotes-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/meetingnotes-cover-1600.jpg",
+        "width": 1600
       }
     ]
   },
@@ -328,17 +403,17 @@
       }
     ]
   },
-  "pocket-fishpond/live-sharing.png": {
-    "src": "media/pocket-fishpond-live-sharing-1600.jpg",
-    "width": 1800,
-    "height": 1013,
+  "pocket-fishpond/cover.png": {
+    "src": "media/pocket-fishpond-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
     "variants": [
       {
-        "src": "media/pocket-fishpond-live-sharing-720.jpg",
+        "src": "media/pocket-fishpond-cover-720.jpg",
         "width": 720
       },
       {
-        "src": "media/pocket-fishpond-live-sharing-1600.jpg",
+        "src": "media/pocket-fishpond-cover-1600.jpg",
         "width": 1600
       }
     ]
@@ -373,17 +448,17 @@
       }
     ]
   },
-  "agent-platform/workflow-canvas.png": {
-    "src": "media/agent-platform-workflow-canvas-1600.jpg",
-    "width": 1920,
-    "height": 1142,
+  "agent-platform/cover.png": {
+    "src": "media/agent-platform-cover-1600.jpg",
+    "width": 3344,
+    "height": 1882,
     "variants": [
       {
-        "src": "media/agent-platform-workflow-canvas-720.jpg",
+        "src": "media/agent-platform-cover-720.jpg",
         "width": 720
       },
       {
-        "src": "media/agent-platform-workflow-canvas-1600.jpg",
+        "src": "media/agent-platform-cover-1600.jpg",
         "width": 1600
       }
     ]
@@ -418,6 +493,21 @@
       }
     ]
   },
+  "agent-platform/workflow-canvas.png": {
+    "src": "media/agent-platform-workflow-canvas-1600.jpg",
+    "width": 1920,
+    "height": 1142,
+    "variants": [
+      {
+        "src": "media/agent-platform-workflow-canvas-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/agent-platform-workflow-canvas-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
   "agent-platform/knowledge-library.png": {
     "src": "media/agent-platform-knowledge-library-1600.jpg",
     "width": 1920,
@@ -448,18 +538,18 @@
       }
     ]
   },
-  "knowledge-graph/overview-dashboard.png": {
-    "src": "media/knowledge-graph-overview-dashboard-1396.jpg",
-    "width": 1396,
-    "height": 1335,
+  "knowledge-graph/cover.png": {
+    "src": "media/knowledge-graph-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
     "variants": [
       {
-        "src": "media/knowledge-graph-overview-dashboard-720.jpg",
+        "src": "media/knowledge-graph-cover-720.jpg",
         "width": 720
       },
       {
-        "src": "media/knowledge-graph-overview-dashboard-1396.jpg",
-        "width": 1396
+        "src": "media/knowledge-graph-cover-1600.jpg",
+        "width": 1600
       }
     ]
   },
@@ -520,6 +610,246 @@
       {
         "src": "media/contact-wechat-qr-888.jpg",
         "width": 888
+      }
+    ]
+  },
+  "about/sharing-pocket-reef.png": {
+    "src": "media/about-sharing-pocket-reef-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/about-sharing-pocket-reef-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-sharing-pocket-reef-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/maker-gathering.jpg": {
+    "src": "media/about-maker-gathering-1600.jpg",
+    "width": 1707,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "media/about-maker-gathering-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-maker-gathering-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/motion/smart-factory.jpg": {
+    "src": "media/about-motion-smart-factory-1600.jpg",
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-smart-factory-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-smart-factory-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/motion/knowledge-graph.jpg": {
+    "src": "media/about-motion-knowledge-graph-1600.jpg",
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-knowledge-graph-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-knowledge-graph-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/motion/blue-login.jpg": {
+    "src": "media/about-motion-blue-login-1600.jpg",
+    "width": 1920,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-blue-login-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-blue-login-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/motion/wide-login.jpg": {
+    "src": "media/about-motion-wide-login-1600.jpg",
+    "width": 3840,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-wide-login-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-wide-login-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/motion/layered-form.jpg": {
+    "src": "media/about-motion-layered-form-1024.jpg",
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "media/about-motion-layered-form-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-layered-form-1024.jpg",
+        "width": 1024
+      }
+    ]
+  },
+  "about/motion/cube-crystal.jpg": {
+    "src": "media/about-motion-cube-crystal-800.jpg",
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "src": "media/about-motion-cube-crystal-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-cube-crystal-800.jpg",
+        "width": 800
+      }
+    ]
+  },
+  "about/activity/bund-conference-sign.jpg": {
+    "src": "media/about-activity-bund-conference-sign-1200.jpg",
+    "width": 1536,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-activity-bund-conference-sign-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-activity-bund-conference-sign-1200.jpg",
+        "width": 1200
+      }
+    ]
+  },
+  "about/activity/equipment-software-onsite.jpg": {
+    "src": "media/about-activity-equipment-software-onsite-1200.jpg",
+    "width": 1536,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-activity-equipment-software-onsite-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-activity-equipment-software-onsite-1200.jpg",
+        "width": 1200
+      }
+    ]
+  },
+  "about/activity/maker-exchange.jpg": {
+    "src": "media/about-activity-maker-exchange-1200.jpg",
+    "width": 1536,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-activity-maker-exchange-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-activity-maker-exchange-1200.jpg",
+        "width": 1200
+      }
+    ]
+  },
+  "about/ai-floral/ai-floral-643.jpg": {
+    "src": "media/about-ai-floral-ai-floral-643-1086.jpg",
+    "width": 1086,
+    "height": 1448,
+    "variants": [
+      {
+        "src": "media/about-ai-floral-ai-floral-643-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-ai-floral-ai-floral-643-1086.jpg",
+        "width": 1086
+      }
+    ]
+  },
+  "about/activity/technology-exhibition.jpg": {
+    "src": "media/about-activity-technology-exhibition-1200.jpg",
+    "width": 1536,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-activity-technology-exhibition-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-activity-technology-exhibition-1200.jpg",
+        "width": 1200
+      }
+    ]
+  },
+  "about/illustrations/_MG_7873.jpg": {
+    "src": "media/about-illustrations-_MG_7873-1066.jpg",
+    "width": 1365,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-illustrations-_MG_7873-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-illustrations-_MG_7873-1066.jpg",
+        "width": 1066
+      }
+    ]
+  },
+  "about/ai-floral/ai-floral-646.png": {
+    "src": "media/about-ai-floral-ai-floral-646-1122.jpg",
+    "width": 1122,
+    "height": 1402,
+    "variants": [
+      {
+        "src": "media/about-ai-floral-ai-floral-646-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-ai-floral-ai-floral-646-1122.jpg",
+        "width": 1122
+      }
+    ]
+  },
+  "about/illustrations/_MG_7851.jpg": {
+    "src": "media/about-illustrations-_MG_7851-1066.jpg",
+    "width": 1365,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-illustrations-_MG_7851-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-illustrations-_MG_7851-1066.jpg",
+        "width": 1066
       }
     ]
   }

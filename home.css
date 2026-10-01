@@ -1,4 +1,4 @@
-:root{--paper:#f3f3ed;--ink:#223e39;--muted:#5d716b;--line:#cbd5ca;--accent:#315d58;--max:1232px;--sans:var(--serif)}
+:root{--paper:#f3f3ed;--ink:#223e39;--muted:#5d716b;--line:#cbd5ca;--accent:#315d58;--sans:var(--serif)}
 html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 .atmosphere-hero{min-height:760px;height:100svh;max-height:1100px;position:relative;isolation:isolate;overflow:hidden}
 .atmosphere{position:absolute;inset:0;z-index:-1;background:#e6ece3;pointer-events:none}
@@ -8,9 +8,10 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 .atmosphere::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--paper) 0%,#f3f3ed9c 7%,transparent 25%)}
 .grain{position:absolute;inset:0;width:100%;height:100%;opacity:.072;mix-blend-mode:multiply}
 .atmosphere-inner{height:100%;min-height:inherit;position:relative;display:flex;align-items:center;padding-top:44px;padding-bottom:130px}
-.identity{max-width:860px;transform:translate3d(0,var(--copy-shift,0px),0);will-change:transform}
+.identity{max-width:860px}
+.hero-title-line{display:block}
 .identity-label{font-size:13px;letter-spacing:.13em;margin-bottom:33px;color:#4d7168}.identity-label span{margin:0 12px;opacity:.5}
-.identity h1{font-size:clamp(45px,5.7vw,82px);line-height:1.38;letter-spacing:-.045em;font-weight:500}
+.identity h1{font-size:clamp(40px,5.1vw,70px);line-height:1.38;letter-spacing:-.045em;font-weight:500}
 .soft-ink{color:#547a66}
 .identity-copy{font-size:clamp(16px,1.35vw,19px);line-height:2;color:#405d52;margin-top:30px;max-width:650px}
 .identity-copy p+p{margin-top:9px}
@@ -32,7 +33,7 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 .project-summary dd{font-size:14px}.about-strip{position:relative}.about-strip::before{content:"";position:absolute;inset:15px -30px;z-index:-1;background:radial-gradient(ellipse at 88% 60%,#cddfd266,transparent 65%)}
 .motion-static .identity,.motion-static .light-field,.motion-static .project-image .media{transform:none!important}
 @keyframes breathe{from{transform:translate(-1.3%,-.8%) scale(1)}to{transform:translate(2%,1.5%) scale(1.05)}}
-@media(max-width:1000px){.identity h1{font-size:65px}.atmosphere-hero{min-height:750px}.capability h3{font-size:18px}.capability,.capability+.capability{padding-inline:15px}.capability p{font-size:12px}.capabilities .section-heading>p:last-child{font-size:14px}.identity-copy{font-size:17px}}
+@media(max-width:1000px){.identity h1{font-size:clamp(40px,5.1vw,70px)}.atmosphere-hero{min-height:750px}.capability h3{font-size:18px}.capability,.capability+.capability{padding-inline:15px}.capability p{font-size:12px}.capabilities .section-heading>p:last-child{font-size:14px}.identity-copy{font-size:17px}}
 @media(max-width:760px){.atmosphere-hero{height:auto;min-height:740px}.atmosphere-inner{padding-top:160px;padding-bottom:155px;min-height:740px;display:block}.identity{max-width:none}.identity h1{font-size:clamp(36px,7vw,55px)}.identity-label{margin-bottom:27px}.identity-copy{font-size:16px;max-width:540px}.hero-ground{bottom:27px}.capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.capability h3{font-size:21px}.capability p{font-size:13px;min-height:108px}.capability:nth-child(3){border-left:0}.capability:nth-child(n+3){border-top:1px solid var(--line)}.capability,.capability+.capability{padding:23px 18px}.capability:first-child,.capability:nth-child(3){padding-left:0}.capabilities{padding-bottom:65px}.capabilities .section-heading{display:block}.capabilities .section-heading>p:last-child{margin-top:18px}.cap-number{margin-bottom:22px}.light-orbit{animation:none}.identity,.light-field,.project-image .media{transform:none!important}.wide-break{display:none}}
 @media(max-width:430px){.atmosphere-inner{padding-top:140px;min-height:740px}.identity h1{font-size:38px;line-height:1.5}.identity-copy{font-size:16px;margin-top:24px}.identity-copy p+p{margin-top:15px}.identity-label{font-size:11px;letter-spacing:.07em}.quiet-cta{font-size:15px;margin-top:25px}.capability h3{font-size:18px}.hero-ground{font-size:12px}.capabilities .section-heading h2{font-size:29px}.capabilities .section-heading p:last-child{font-size:14px}.site-footer{padding-bottom:95px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.light-orbit{animation:none!important}.identity,.light-field,.project-image .media{transform:none!important}}
@@ -71,4 +72,19 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
  .work-rail-controls button:last-child{right:-10px}
  .work-rail .project-info h3{font-size:20px}
  .work-rail .project-image{padding:12px}
+}
+
+/* Let more-work artwork define its frame height; retain the entire cover. */
+.work-rail .project-image.poster-cover{aspect-ratio:auto;padding:0}
+.work-rail .project-image.poster-cover .media{height:auto;max-height:none}
+.work-rail .project-image.poster-cover img{height:auto;aspect-ratio:auto;object-fit:contain}
+
+/* The same three browsing directions as the work archive. */
+.capability-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:760px){
+ .capability-grid{grid-template-columns:1fr}
+ .capability,.capability+.capability{padding:24px 0;border-left:0}
+ .capability+.capability{border-top:1px solid var(--line)}
+ .capability p{min-height:0;font-size:14px}
+ .cap-number{margin-bottom:14px}
 }
