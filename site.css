@@ -323,4 +323,8 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
 }
 
 /* Decorative diagonal arrows use one vector shape, independent of system fonts. */
-.arrow-up-right{display:inline-block;width:1em;height:1em;flex:none;vertical-align:-.125em;pointer-events:none}
+.arrow-up-right{display:inline-block;width:22px;height:22px;flex:0 0 22px;vertical-align:middle;pointer-events:none}
+
+/* Card arrows accompany the title rather than covering the artwork. */
+.project-card .project-info h3>a,.design-card .project-info h3>button{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%}
+.project-title-text{min-width:0}

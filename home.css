@@ -99,7 +99,7 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 /* One soft teal light follows the pointer; all foreground content stays in place. */
 .atmosphere{background:var(--paper)}
 .light-field{inset:0;transform:translate3d(var(--pointer-x,0px),var(--pointer-y,0px),0)}
-.light-orbit{--spot-size:clamp(560px,84vw,1100px);inset:auto;left:61%;top:60%;width:var(--spot-size);height:var(--spot-size);translate:-50% -50%;background:radial-gradient(circle closest-side at center,rgb(143 166 155 / 1) 0%,rgb(143 166 155 / .972) 10%,rgb(143 166 155 / .896) 20%,rgb(143 166 155 / .784) 30%,rgb(143 166 155 / .648) 40%,rgb(143 166 155 / .5) 50%,rgb(143 166 155 / .352) 60%,rgb(143 166 155 / .216) 70%,rgb(143 166 155 / .104) 80%,rgb(143 166 155 / .028) 90%,rgb(143 166 155 / 0) 100%);animation:none;transform:none}
+.light-orbit{--spot-size:clamp(660px,100vw,1320px);inset:auto;left:61%;top:60%;width:var(--spot-size);height:var(--spot-size);translate:-50% -50%;background:radial-gradient(circle closest-side at center,rgb(110 140 127 / 1) 0%,rgb(110 140 127 / .972) 10%,rgb(110 140 127 / .896) 20%,rgb(110 140 127 / .784) 30%,rgb(110 140 127 / .648) 40%,rgb(110 140 127 / .5) 50%,rgb(110 140 127 / .352) 60%,rgb(110 140 127 / .216) 70%,rgb(110 140 127 / .104) 80%,rgb(110 140 127 / .028) 90%,rgb(110 140 127 / 0) 100%);animation:none;transform:none}
 .grain{opacity:.035}
 .motion-static .light-orbit{animation:none;transform:none}
 @media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.light-field{transform:none!important}.light-orbit{animation:none!important;transform:none}}
@@ -113,3 +113,19 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 
 /* At the top, the existing hero extends behind the navigation without a second light. */
 .home-page:not(.header-scrolled) .site-header{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:transparent}
+
+
+/* Home text hierarchy only; backgrounds, geometry and motion stay unchanged. */
+.home-page{--text-heading:#172e27;--text-body:#304b40;--text-support:#4b6155;color:var(--text-body)}
+.home-page :is(h1,h2,h3,.wordmark){color:var(--text-heading)}
+.home-page :is(.eyebrow,.cap-number,.cap-en){color:var(--text-support)}
+.home-page :is(.project-subtitle,.capability p,.about-strip>div p,.contact-section p:not(.eyebrow)){color:var(--text-body)}
+.home-page .about-strip h2 em,.home-page .atmosphere-hero .soft-ink{color:#244536}
+.home-page .atmosphere-hero :is(.identity-copy,.identity-label,.hero-ground,.quiet-cta){color:#1c362e}
+
+/* Stronger light: keep small foreground text legible at its darkest center. */
+.home-page .atmosphere-hero :is(.identity-copy,.identity-label,.hero-ground,.quiet-cta),
+.home-page:not(.header-scrolled) .site-header,
+.home-page:not(.header-scrolled) .site-header .wordmark{color:#0c2119}
+
+.home-page .atmosphere-hero .soft-ink{color:#203e30}
