@@ -88,3 +88,25 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
  .capability p{min-height:0;font-size:14px}
  .cap-number{margin-bottom:14px}
 }
+
+/* Pointer feedback treats each complete home work card as one unit. */
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .home-page :is(.selected-work,.more-work) .project-card{transform-origin:center;transition:transform 280ms cubic-bezier(.2,.65,.3,1),opacity 280ms cubic-bezier(.2,.65,.3,1)}
+ .home-page :is(.selected-work,.more-work) .project-card:is(:hover,:has(:focus-visible)){transform:scale(.975);opacity:.8}
+}
+
+
+/* One soft teal light follows the pointer; all foreground content stays in place. */
+.atmosphere{background:var(--paper)}
+.light-field{inset:0;transform:translate3d(var(--pointer-x,0px),var(--pointer-y,0px),0)}
+.light-orbit{--spot-size:clamp(560px,84vw,1100px);inset:auto;left:61%;top:60%;width:var(--spot-size);height:var(--spot-size);translate:-50% -50%;background:radial-gradient(circle closest-side at center,rgb(143 166 155 / 1) 0%,rgb(143 166 155 / .972) 10%,rgb(143 166 155 / .896) 20%,rgb(143 166 155 / .784) 30%,rgb(143 166 155 / .648) 40%,rgb(143 166 155 / .5) 50%,rgb(143 166 155 / .352) 60%,rgb(143 166 155 / .216) 70%,rgb(143 166 155 / .104) 80%,rgb(143 166 155 / .028) 90%,rgb(143 166 155 / 0) 100%);animation:none;transform:none}
+.grain{opacity:.035}
+.motion-static .light-orbit{animation:none;transform:none}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.light-field{transform:none!important}.light-orbit{animation:none!important;transform:none}}
+
+/* Keep foreground contrast clear as the stronger teal passes beneath it. */
+.atmosphere-hero .soft-ink{color:#284b40}
+.atmosphere-hero :is(.identity-copy,.identity-label,.hero-ground,.quiet-cta){color:#1e3932}
+
+/* A monotonic single-hue falloff has no flat inner disc or pale concentric bands. */
+.atmosphere::after{content:none}

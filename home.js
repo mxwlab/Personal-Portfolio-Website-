@@ -5,13 +5,14 @@
   if (!hero) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const narrow = matchMedia('(max-width: 760px)');
+  const touchOnly = matchMedia('(hover: none), (pointer: coarse)');
   const images = [...document.querySelectorAll('.project-image')].map(element => ({element, value: 0}));
   const entrances = new Set();
   const paused = false;
   let heroVisible = true, raf = 0, previousTime = 0;
   let pointerX = 0, pointerY = 0;
-  const current = {x: 0, y: 0, field: 0};
-  const staticMode = () => reduced.matches || narrow.matches;
+  const current = {x: 0, y: 0};
+  const staticMode = () => reduced.matches || narrow.matches || touchOnly.matches;
   const active = () => !paused && !staticMode() && !document.hidden;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
@@ -38,7 +39,6 @@
   function writeHero() {
     root.style.setProperty('--pointer-x', `${current.x.toFixed(2)}px`);
     root.style.setProperty('--pointer-y', `${current.y.toFixed(2)}px`);
-    root.style.setProperty('--field-shift', `${current.field.toFixed(2)}px`);
   }
   function resetPositions() {
     for (const key of Object.keys(current)) current[key] = 0;
@@ -62,7 +62,7 @@
     // Time-based easing stays consistent on 60/120 Hz displays. No endless JS loop at rest.
     const elapsed = previousTime ? clamp(time - previousTime, 1, 48) : 16.7;
     previousTime = time;
-    const blend = 1 - Math.exp(-elapsed / 145);
+    const blend = 1 - Math.exp(-elapsed / 190);
     let unsettled = false;
     function ease(from, to) {
       const delta = to - from;
@@ -75,10 +75,8 @@
     const visibleImages = images.map(image => ({image, box: image.element.getBoundingClientRect()}))
       .filter(({box}) => box.bottom > 0 && box.top < innerHeight);
     if (heroBox.bottom > 0 && heroBox.top < innerHeight) {
-      const distance = clamp(-heroBox.top, 0, heroBox.height);
       current.x = ease(current.x, pointerX);
       current.y = ease(current.y, pointerY);
-      current.field = ease(current.field, Math.min(105, distance * 0.18));
       writeHero();
     }
     for (const {image, box} of visibleImages) {
@@ -108,8 +106,8 @@
   hero.addEventListener('pointermove', event => {
     if (event.pointerType === 'touch' || !active()) return;
     const box = hero.getBoundingClientRect();
-    pointerX = (clamp((event.clientX - box.left) / box.width, 0, 1) - 0.5) * 28;
-    pointerY = (clamp((event.clientY - box.top) / box.height, 0, 1) - 0.5) * 18;
+    pointerX = (clamp((event.clientX - box.left) / box.width, 0, 1) - 0.61) * box.width;
+    pointerY = (clamp((event.clientY - box.top) / box.height, 0, 1) - 0.60) * box.height;
     schedule();
   }, {passive: true});
   hero.addEventListener('pointerleave', () => { pointerX = pointerY = 0; schedule(); });
@@ -117,6 +115,7 @@
   addEventListener('resize', () => { paintGrain(); schedule(); }, {passive: true});
   reduced.addEventListener('change', syncMotion);
   narrow.addEventListener('change', syncMotion);
+  touchOnly.addEventListener('change', syncMotion);
   document.addEventListener('visibilitychange', syncMotion);
   addEventListener('pagehide', stopFrame);
   addEventListener('pageshow', syncMotion);

@@ -315,3 +315,9 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
 .contact-qr img{display:block;width:100%;height:auto;object-fit:contain}
 @media(max-width:900px){.about-page .contact-detail{grid-template-columns:1fr;gap:32px}.contact-qr{justify-self:start}}
 @media(max-width:600px){.contact-qr{width:240px}}
+
+/* Match the home card feedback across the archive, including design entries. */
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .work-page .archive-section .project-card{transform-origin:center;transition:transform 280ms cubic-bezier(.2,.65,.3,1),opacity 280ms cubic-bezier(.2,.65,.3,1)}
+ .work-page .archive-section .project-card:is(:hover,:has(:focus-visible)){transform:scale(.975);opacity:.8}
+}
