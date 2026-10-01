@@ -321,3 +321,6 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
  .work-page .archive-section .project-card{transform-origin:center;transition:transform 280ms cubic-bezier(.2,.65,.3,1),opacity 280ms cubic-bezier(.2,.65,.3,1)}
  .work-page .archive-section .project-card:is(:hover,:has(:focus-visible)){transform:scale(.975);opacity:.8}
 }
+
+/* Decorative diagonal arrows use one vector shape, independent of system fonts. */
+.arrow-up-right{display:inline-block;width:1em;height:1em;flex:none;vertical-align:-.125em;pointer-events:none}
