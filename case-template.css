@@ -1,0 +1,17 @@
+/* Default case template: preserve the full 1120px reading area. */
+.case-page [data-case-reading].case-layout{display:block}
+.case-page .scene-rail[data-case-navigation]{position:fixed;inset:var(--header-height) 0 auto;z-index:10;width:auto;margin:0;border:0;border-bottom:1px solid var(--line);background:var(--paper);backdrop-filter:blur(12px);visibility:hidden;opacity:0;pointer-events:none}
+.case-page .scene-rail[data-case-navigation].is-reading{visibility:visible;opacity:1;pointer-events:auto}
+.case-page .scene-rail[data-case-navigation]>div{width:min(1120px,calc(100% - 48px));max-width:none;margin:auto;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;gap:26px;overflow-x:auto;scrollbar-width:thin;padding:0}
+.case-page .scene-rail[data-case-navigation] .case-navigation-label{flex:none;color:var(--muted);font:12px/1.5 var(--sans);white-space:nowrap}
+.case-page .scene-rail[data-case-navigation] a{flex:none;display:block;min-height:0;padding:15px 0;border:0;font:14px/1.6 var(--serif);color:var(--muted);white-space:nowrap;text-decoration:none;text-align:left}
+.case-page .scene-rail[data-case-navigation] a>span{display:none}
+.case-page .scene-rail[data-case-navigation] a[aria-current]{color:var(--accent,var(--forest));font-weight:600}
+.case-page .scene-rail[data-case-navigation] a:hover{color:var(--ink)}
+.case-page .scene-rail[data-case-navigation] a:focus-visible{outline:2px solid var(--accent,var(--forest));outline-offset:-2px}
+@media(min-width:1440px){
+ .case-page .scene-rail[data-case-navigation]{inset:calc(var(--header-height) + 48px) auto auto calc(50% + 584px);width:112px;border:0;background:transparent;backdrop-filter:none}
+ .case-page .scene-rail[data-case-navigation]>div{width:100%;display:flex;flex-direction:column;align-items:stretch;gap:2px;max-height:calc(100dvh - var(--header-height) - 80px);overflow-x:hidden;overflow-y:auto}
+ .case-page .scene-rail[data-case-navigation] .case-navigation-label{padding-bottom:12px}
+ .case-page .scene-rail[data-case-navigation] a{flex-shrink:0;min-height:44px;padding:10px 0;font-size:13px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+}

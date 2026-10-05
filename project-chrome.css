@@ -1,0 +1,38 @@
+/* Compact global navigation: full tap targets, text-width indicators. */
+:root{--header-height:60px}
+.header-inner{min-height:calc(var(--header-height) - 1px)}
+.site-header .wordmark{min-height:44px;align-items:center}
+.site-header nav a{min-width:44px;min-height:44px;padding-block:0;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+.site-header nav a::after{content:none}
+.site-header a[aria-current]{text-decoration:none}
+.site-header .nav-label{position:relative;margin-left:0}
+.site-header .nav-label::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.site-header nav a:hover .nav-label::after,.site-header nav a:focus-visible .nav-label::after,.site-header nav a[aria-current] .nav-label::after{transform:scaleX(1)}
+body:not(.home-page) main{padding-top:var(--header-height)}
+html{scroll-padding-top:calc(var(--header-height) + 35px)}
+@media(max-width:600px){
+ :root{--header-height:56px}
+ .site-header nav{gap:8px}
+ .site-header .nav-contact>span:not(.nav-label){display:none}
+}
+@media(max-width:360px){.site-header nav{gap:4px}}
+
+
+/* Selected B2 mark: preserve the supplied geometry and inherit the brand color. */
+.site-header .wordmark{gap:10px;flex-shrink:0}
+.site-header .brand-mark{display:block;width:30px;height:30px;flex:none}
+@media(max-width:600px){.site-header .wordmark{gap:8px}.site-header .brand-mark{width:26px;height:26px}}
+@media(max-width:360px){.site-header .wordmark{gap:5px}.site-header .brand-mark{width:22px;height:22px}}
+
+
+/* Neutral personal navigation across project themes; geometry is unchanged. */
+body .site-header{--ink:#30343b;--muted:#62666d;--accent:#30343b;--line:#dfe1e4;color:#30343b;background:rgba(250,250,251,.80);border-bottom-color:#dfe1e4;box-shadow:none;color-scheme:light}
+body .site-header .wordmark,body .site-header nav a{color:#30343b}
+body .site-header nav a:hover,body .site-header nav a[aria-current]{color:#202329}
+body .site-header a:focus-visible{outline-color:#62666d}
+body.home-page:not(.header-scrolled) .site-header{background:transparent;border-bottom-color:transparent;box-shadow:none}
+
+
+/* Native fullscreen controls stay available; pointer/keyboard activity reveals them. */
+video[controls].native-controls-idle:fullscreen::-webkit-media-controls{opacity:0;pointer-events:none}
+video[controls].native-controls-idle:fullscreen{cursor:none}

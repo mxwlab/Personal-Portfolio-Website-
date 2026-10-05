@@ -84,7 +84,7 @@ if (dialog) {
 
 // Keep the module identity visible through its evidence and expanded details.
 const sceneRail = document.querySelector('.scene-rail');
-if (sceneRail) {
+if (sceneRail && !sceneRail.hasAttribute('data-case-navigation')) {
   const scenes = [...document.querySelectorAll('[data-scene]')];
   const links = [...sceneRail.querySelectorAll('a')];
   let scheduled = false;

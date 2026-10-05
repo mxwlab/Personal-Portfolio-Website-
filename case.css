@@ -159,7 +159,7 @@ body.case-page{overflow-x:clip}
 @media(max-width:720px){.case-page .scene-nav>div{grid-template-columns:1fr;gap:0}.case-page .scene-nav a{border-bottom:1px solid var(--line-soft)}.case-page .case-editorial>#quality,.case-page .case-editorial>#sandbox,.case-page .case-editorial>#pipeline{margin-top:64px}}
 
 /* Explicit module identity; shared 960px content baseline. */
-.case-page .scene-rail{position:sticky;top:70px;z-index:10;background:rgba(241,240,233,.96);border-block:1px solid var(--line);backdrop-filter:blur(12px)}
+.case-page .scene-rail{position:sticky;top:var(--header-height);z-index:10;background:rgba(241,240,233,.96);border-block:1px solid var(--line);backdrop-filter:blur(12px)}
 .case-page .scene-rail>div{width:min(960px,calc(100% - 48px));margin:auto;display:flex;gap:40px}
 .case-page .scene-rail a{padding:17px 0;text-decoration:none;border-bottom:2px solid transparent;font-size:16px}
 .case-page .scene-rail a span{font:11px var(--mono);margin-right:8px;color:var(--muted)}
@@ -231,8 +231,8 @@ body.case-page.project-meetingnotes{
   --surface:#21262a;--accent:#8ab7ff;color:var(--ink);color-scheme:dark;
 }
 body.case-page.project-meetingnotes::before{background:radial-gradient(60% 35% at 90% 5%,#23354a66,transparent 70%)}
-.project-meetingnotes .site-header,.project-meetingnotes .scene-rail{background:rgba(22,24,27,.96)}
-.project-meetingnotes .site-header,.project-meetingnotes .site-footer{color:var(--ink)}
+.project-meetingnotes .scene-rail{background:rgba(22,24,27,.96)}
+.project-meetingnotes .site-footer{color:var(--ink)}
 .project-meetingnotes .case-cover,.project-meetingnotes .case-editorial .media{background:var(--paper);border-color:var(--line)}
 .project-meetingnotes .case-editorial>.case-section h2,
 .project-meetingnotes .case-editorial .case-block>.h,
@@ -283,3 +283,290 @@ body.case-page.project-meetingnotes::before{background:radial-gradient(60% 35% a
  font:500 clamp(24px,2.1vw,28px)/1.5 var(--serif);max-width:none;margin:0 0 20px;
 }
 .project-pocket-fishpond .case-video video{object-fit:contain;background:#080b0c}
+
+/* Long-form case video: native controls remain clear of the fullbleed image overlay. */
+.case-page figure.case-video.fbleed::after{content:none}
+.case-page figure.case-video.fbleed figcaption{position:static;margin:12px auto 0;padding:0 24px;max-width:960px;width:auto;color:var(--ink-soft);background:transparent;backdrop-filter:none}
+.case-page figure.case-video.fbleed video[controls]{width:auto;max-width:100%;max-height:calc(100svh - 180px);margin-inline:auto;object-fit:contain;scroll-margin-top:40px}
+
+.case-page .case-editorial>#quality-evidence:has(video[controls]){scroll-margin-top:40px}
+
+.case-page .scene-rail:has(a[href="#my-contribution"])>div{flex-wrap:wrap;gap:0 28px}
+.case-page .scene-rail:has(a[href="#my-contribution"]) a{white-space:nowrap}
+.case-page .scene-rail:has(a[href="#my-contribution"]) a span{display:none}
+@media(max-width:720px){.case-page .scene-rail:has(a[href="#my-contribution"])>div{gap:0 18px}.case-page .scene-rail:has(a[href="#my-contribution"]) a{padding:9px 0}}
+
+/* Compact contribution judgments, with evidence links kept visible. */
+.case-page .contribution-summary>.h{max-width:800px;font-size:clamp(28px,3vw,40px);line-height:1.45;margin-bottom:36px}
+.decision-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px}
+.decision-grid>li{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;align-items:flex-start}
+.decision-number{font:12px var(--mono);color:var(--forest);margin-bottom:12px}
+.decision-grid h3{font:500 23px/1.5 var(--serif);margin:0 0 12px;color:var(--ink)}
+.decision-grid p{font:16px/1.9 var(--serif);color:var(--ink-soft);margin:0 0 18px}
+.decision-reference{margin-top:auto;font:13px/1.7 var(--serif);color:var(--forest);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}
+.decision-reference:hover{text-decoration:underline;text-underline-offset:4px}
+.decision-reference:focus-visible{outline:2px solid var(--forest);outline-offset:5px}
+@media(max-width:720px){.decision-grid{grid-template-columns:1fr;gap:28px}.decision-grid h3{font-size:22px}.case-page .contribution-summary>.h{margin-bottom:28px}}
+
+/* Approved case narrative: decision headings stay at one clear level. */
+.case-page .narrative-decision+.narrative-decision{margin-top:36px}
+.case-page .narrative-decision h3{font:500 clamp(22px,2.1vw,26px)/1.55 var(--serif);margin:0 0 16px;color:var(--ink)}
+.case-page .narrative-decision .body-copy{margin:0 0 16px;overflow-wrap:anywhere}
+.case-page .narrative-decision .body-copy:last-child{margin-bottom:0}
+
+/* Industrial case: one outer reading grid, with shorter left-aligned prose. */
+.case-page.project-industrial-semantic-base .case-topline,
+.case-page.project-industrial-semantic-base .case-hero,
+.case-page.project-industrial-semantic-base .case-editorial,
+.case-page.project-industrial-semantic-base .scene-rail>div{
+  width:min(1120px,calc(100% - 48px));max-width:1120px;margin-inline:auto;
+}
+.case-page.project-industrial-semantic-base .case-editorial>.case-section,
+.case-page.project-industrial-semantic-base .case-disclosure,
+.case-page.project-industrial-semantic-base .disclosure-content .media{max-width:none}
+.case-page.project-industrial-semantic-base .case-editorial>.stmt,
+.case-page.project-industrial-semantic-base .case-editorial>.case-block:has(>figure.media.fbleed),
+.case-page.project-industrial-semantic-base .case-editorial>.case-block:has(>figure.media.wide){
+  width:100%;max-width:100%;margin-inline:0;
+}
+.case-page.project-industrial-semantic-base .case-editorial .body-copy{max-width:800px;margin-inline:0}
+.case-page.project-industrial-semantic-base figure.case-video.fbleed video[controls]{width:100%;margin-inline:0}
+.case-page.project-industrial-semantic-base figure.case-video.fbleed figcaption,
+.case-page.project-industrial-semantic-base .case-editorial>.case-block:has(>figure.media.wide) figure.media.wide figcaption{
+  max-width:800px;padding-inline:0;margin-inline:0;
+}
+
+/* Six continuous industrial chapters, with reachable mobile navigation. */
+@media(max-width:720px){
+ .case-page.project-industrial-semantic-base .scene-rail:has(a[href="#context"])>div{
+  flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;gap:18px;
+ }
+ .case-page.project-industrial-semantic-base .scene-rail:has(a[href="#context"])>div::-webkit-scrollbar{display:none}
+ .case-page.project-industrial-semantic-base .scene-rail a{flex-shrink:0;min-height:44px;display:flex;align-items:center}
+}
+
+/* Six equal chapter headings; claims and decisions are subordinate headings. */
+.case-page.project-industrial-semantic-base .case-editorial>.industrial-chapter>.chapter-title{
+ font:500 40px/1.4 var(--serif);color:var(--ink);letter-spacing:-.025em;margin:0 0 28px;text-wrap:balance;
+}
+.case-page.project-industrial-semantic-base .industrial-chapter>.chapter-claim{
+ font:500 24px/1.55 var(--serif);color:var(--ink);margin:0 0 20px;max-width:960px;
+}
+.case-page.project-industrial-semantic-base .case-editorial>.industrial-chapter{padding-bottom:0;border-bottom:0}
+@media(max-width:720px){
+ .case-page.project-industrial-semantic-base .case-editorial>.industrial-chapter>.chapter-title{font-size:32px;margin-bottom:24px}
+ .case-page.project-industrial-semantic-base .industrial-chapter>.chapter-claim{font-size:20px}
+}
+
+.case-page.project-industrial-semantic-base .case-editorial .case-block>h3.h{font:500 26px/1.55 var(--serif);margin:0 0 20px;color:var(--ink)}
+@media(max-width:720px){.case-page.project-industrial-semantic-base .case-editorial .case-block>h3.h{font-size:22px}}
+
+/* Industrial chapter rail appears only once the reader reaches the background. */
+.case-page.project-industrial-semantic-base .scene-rail{
+ position:fixed;inset:var(--header-height) 0 auto;margin:0;
+ visibility:hidden;opacity:0;pointer-events:none;
+}
+.case-page.project-industrial-semantic-base .scene-rail.is-visible{
+ visibility:visible;opacity:1;pointer-events:auto;
+}
+
+/* Full quality demo follows its native aspect ratio at the shared content width. */
+.case-page.project-industrial-semantic-base #quality-evidence video[controls]{width:100%;height:auto;max-height:none}
+
+
+
+/* Chapter name and explanation form one compact, wrapping heading group. */
+.case-page.project-industrial-semantic-base .chapter-heading{
+ display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 24px;margin-bottom:24px;
+}
+.case-page.project-industrial-semantic-base .chapter-heading>.chapter-title{
+ font:500 40px/1.4 var(--serif);color:var(--ink);letter-spacing:-.025em;margin:0;flex:none;text-wrap:nowrap;
+}
+.case-page.project-industrial-semantic-base .chapter-heading>.chapter-claim{
+ font:400 18px/1.7 var(--serif);color:#5b7066;margin:0;max-width:100%;flex:0 1 auto;text-wrap:wrap;
+}
+@media(max-width:720px){
+ .case-page.project-industrial-semantic-base .chapter-heading{gap:8px 16px;margin-bottom:20px}
+ .case-page.project-industrial-semantic-base .chapter-heading>.chapter-title{font-size:32px}
+ .case-page.project-industrial-semantic-base .chapter-heading>.chapter-claim{font-size:16px}
+}
+
+.case-page.project-industrial-semantic-base #pipeline-confirm-video video[controls]{width:100%;height:auto;max-height:none;object-fit:contain}
+
+/* Wide screens reserve a separate right gutter; narrower windows keep the top rail. */
+@media(min-width:1440px){
+ .case-page.project-industrial-semantic-base .scene-rail{
+  inset:calc(var(--header-height) + 48px) auto auto calc(50% + 584px);
+  width:112px;border:0;background:transparent;backdrop-filter:none;
+ }
+ .case-page.project-industrial-semantic-base .scene-rail:has(a[href="#my-contribution"])>div{
+  width:100%;max-width:none;margin:0;display:flex;flex-direction:column;flex-wrap:nowrap;gap:2px;
+ }
+ .case-page.project-industrial-semantic-base .scene-rail a{
+  display:flex;align-items:center;justify-content:flex-start;text-align:left;
+  min-height:44px;padding:10px 10px 10px 0;border-bottom:0;border-right:0;
+  font-size:13px;line-height:1.5;color:#65766c;
+ }
+ .case-page.project-industrial-semantic-base .scene-rail a[aria-current]{color:var(--forest);font-weight:700}
+ .case-page.project-industrial-semantic-base .scene-rail a:hover{color:var(--ink)}
+ .case-page.project-industrial-semantic-base .scene-rail a:focus-visible{outline-offset:2px}
+}
+
+/* Industrial images retain accessible zoom without a visible overlay CTA. */
+.case-page.project-industrial-semantic-base .zoom-hint{display:none}
+
+/* SQL closure: editing beside saved state and verified output, using real screenshot crops. */
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px 32px}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>p{grid-column:1/-1;margin:0}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure{margin:0;padding:0;border:0;background:transparent;min-width:0}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:first-of-type{grid-row:span 2}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence .zoom-image{overflow:hidden}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence img{position:absolute;max-width:none;max-height:none;height:auto;top:0;left:0;border:0;border-radius:0}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(1) .zoom-image{aspect-ratio:360/320}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(1) img{width:444.4444%;transform:translate(-77.5%,-33.3333%)}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) .zoom-image{aspect-ratio:800/240}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) img{width:200%;transform:translate(-20.625%,-9.52381%)}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(3) .zoom-image{aspect-ratio:920/250}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(3) img{width:173.913%;transform:translate(0,-58.09524%)}
+@media(max-width:720px){.case-page.project-industrial-semantic-base #pipeline-sql-evidence{grid-template-columns:1fr;gap:24px}.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:first-of-type{grid-row:auto}}
+
+/* Shared project-detail frame, aligned with the industrial case. */
+.case-page:not(.project-industrial-semantic-base) :is(.case-topline,.case-hero,.case-editorial,.case-layout,.showcase-gallery,.next-project){width:min(1120px,calc(100% - 48px));max-width:1120px;margin-inline:auto}
+.case-page:not(.project-industrial-semantic-base) .case-editorial>.case-section,
+.case-page:not(.project-industrial-semantic-base) .case-disclosure,
+.case-page:not(.project-industrial-semantic-base) .disclosure-content .media{max-width:none}
+.case-page:not(.project-industrial-semantic-base) .case-editorial>.stmt,
+.case-page:not(.project-industrial-semantic-base) .case-editorial>.case-block:has(>figure.media.fbleed),
+.case-page:not(.project-industrial-semantic-base) .case-editorial>.case-block:has(>figure.media.wide){width:100%;max-width:100%;margin-inline:0}
+.case-page:not(.project-industrial-semantic-base) :is(.case-editorial,.case-layout) .body-copy{max-width:800px;margin-inline:0}
+.case-page:not(.project-industrial-semantic-base) .case-editorial .dec p{max-width:800px}
+.case-page:not(.project-industrial-semantic-base) figure.case-video video{width:100%;height:auto;max-height:none;object-fit:contain;margin-inline:0}
+.case-page:not(.project-industrial-semantic-base) figure.case-video.fbleed figcaption,
+.case-page:not(.project-industrial-semantic-base) .case-editorial>.case-block:has(>figure.media.wide) figure.media.wide figcaption{max-width:800px;padding-inline:0;margin-inline:0}
+@media(max-width:720px){
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) .zoom-image{aspect-ratio:390/215}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) img{width:410.2564%;transform:translate(-28.75%,-10.47619%)}
+}
+
+/* SQL evidence rectangle: align the first preview with both right-hand steps. */
+@media(min-width:721px){
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence{grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:16px 24px}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure{display:contents}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(1) .zoom-image{grid-column:1;grid-row:3/6;aspect-ratio:auto;height:100%;min-height:0}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) .zoom-image{grid-column:2;grid-row:3}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(3) .zoom-image{grid-column:2;grid-row:5}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(1) figcaption{grid-column:1;grid-row:6}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) figcaption{grid-column:2;grid-row:4}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(3) figcaption{grid-column:2;grid-row:6}
+ .case-page.project-industrial-semantic-base #pipeline-sql-evidence figcaption{margin:0}
+}
+
+.case-page.project-industrial-semantic-base #pipeline-quality-sql-details .disclosure-content{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.case-page.project-industrial-semantic-base #pipeline-quality-sql-details .body-copy{grid-column:1/-1;margin:0}
+.case-page.project-industrial-semantic-base #pipeline-quality-sql-details .media{margin:0;min-width:0}
+.case-page.project-industrial-semantic-base #pipeline-quality-sql-details img{width:100%;height:auto;max-height:none;object-fit:contain}
+@media(max-width:720px){.case-page.project-industrial-semantic-base #pipeline-quality-sql-details .disclosure-content{grid-template-columns:1fr}}
+
+/* Industrial project only: the platform's verified light blue/gray palette. */
+body.case-page.project-industrial-semantic-base{
+ --paper:#f5f7fa;--surface:#f5f8fd;--tint:#f5f8fd;
+ --ink:#1e293b;--ink-soft:#475569;--muted:#64748b;
+ --line:#e2e8f0;--line-soft:#e2e8f0;
+ --accent:#0068b7;--forest:#0068b7;--forest-bright:#0068b7;
+ color:var(--ink);background:var(--paper);
+}
+body.case-page.project-industrial-semantic-base::before{background:radial-gradient(58% 42% at 84% 6%,#dbe9f780,transparent 60%),radial-gradient(48% 40% at 10% 92%,#e2e8f080,transparent 62%)}
+/* Keep the personal navigation identity independent of the case palette. */
+.case-page.project-industrial-semantic-base .chapter-heading>.chapter-claim,
+.case-page.project-industrial-semantic-base .scene-rail a{color:var(--muted)}
+.case-page.project-industrial-semantic-base .scene-rail a[aria-current]{color:var(--accent);border-color:var(--accent)}
+.case-page.project-industrial-semantic-base .scene-rail a:hover{color:var(--ink)}
+.case-page.project-industrial-semantic-base :is(.case-cover,figure.media img,.case-video video){background-color:var(--surface);border-color:var(--line)}
+.case-page.project-industrial-semantic-base main ::selection{background:#dbeafe;color:#1e293b}
+@media(max-width:1439px){.case-page.project-industrial-semantic-base .scene-rail{background:rgba(245,247,250,.96)}}
+.case-page.project-industrial-semantic-base .scene-rail a[aria-current]:hover{color:var(--accent)}
+.case-page.project-industrial-semantic-base .body-copy{color:var(--ink-soft)}
+
+/* Quality multi-table evidence: retain the aligned rectangle and expose complete SQL/output regions. */
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(1) img{width:444.4444%;transform:translate(-77.5%,-40%)}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) .zoom-image{aspect-ratio:500/245}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(2) img{width:320%;transform:translate(-15.625%,-13.3333%)}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(3) .zoom-image{aspect-ratio:1600/230}
+.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(3) img{width:100%;transform:translate(0,-58.09524%)}
+@media(min-width:721px){.case-page.project-industrial-semantic-base #pipeline-sql-evidence{grid-template-columns:minmax(0,32fr) minmax(0,68fr)}}
+@media(max-width:720px){.case-page.project-industrial-semantic-base #pipeline-sql-evidence>figure:nth-of-type(1) .zoom-image{aspect-ratio:360/530}}
+
+/* Shared desktop case template, derived from the established industrial page.
+   Only layout and reading hierarchy are shared; project palettes and content stay local.
+   Existing narrow-screen rules are intentionally unchanged in this pass. */
+@media(min-width:721px){
+ .case-page:not(.project-industrial-semantic-base) .scene-rail>div{
+  width:min(1120px,calc(100% - 48px));max-width:1120px;margin-inline:auto;
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-heading{
+  align-items:baseline;gap:18px;margin-bottom:24px;padding-top:0;
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-heading h2{
+  font:500 40px/1.4 var(--serif);letter-spacing:-.025em;margin:0;
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-number{font-size:28px;line-height:1.4}
+ .case-page:not(.project-industrial-semantic-base) .scene-header>h3{
+  font:400 18px/1.7 var(--serif);color:var(--ink-soft);margin:0 0 20px;max-width:960px;
+ }
+ .case-page:not(.project-industrial-semantic-base) :is(.case-editorial,.case-layout) .case-section h2,
+ .case-page:not(.project-industrial-semantic-base) .case-editorial .case-block>.h{
+  font:500 26px/1.55 var(--serif);letter-spacing:-.015em;max-width:none;margin:0 0 20px;
+ }
+ .case-page:not(.project-industrial-semantic-base) :is(.case-editorial,.case-layout) .body-copy{
+  font-size:16px;line-height:1.95;
+ }
+ .case-page:not(.project-industrial-semantic-base) .case-editorial>.case-section{
+  padding-bottom:0;margin-bottom:0;border-bottom:0;
+ }
+ .case-page:not(.project-industrial-semantic-base) .case-editorial>.scene-header{
+  margin-top:96px;padding-top:32px;border-top:1px solid var(--line);
+ }
+ .case-page:not(.project-industrial-semantic-base) .case-editorial>.scene-header:first-child{
+  margin-top:0;padding-top:0;border-top:0;
+ }
+ .case-page:not(.project-industrial-semantic-base) .case-layout .case-section{
+  padding-bottom:56px;margin-bottom:56px;
+ }
+ .case-page:not(.project-industrial-semantic-base) .case-editorial :is(.dec,.compare) p{
+  font-size:16px;line-height:1.9;
+ }
+ .case-page:not(.project-industrial-semantic-base) .flow p{font-size:15px;line-height:1.8}
+ .case-page:not(.project-industrial-semantic-base) figure.media img{
+  object-fit:contain;min-height:0;
+ }
+ .case-page:not(.project-industrial-semantic-base) figure.media.fbleed::after{content:none}
+ .case-page:not(.project-industrial-semantic-base) figure.media.fbleed figcaption{
+  position:static;width:auto;max-width:800px;margin:12px 0 0;padding:0;
+  color:var(--muted);background:transparent;backdrop-filter:none;
+ }
+ .case-page:not(.project-industrial-semantic-base) .zoom-hint{display:none}
+ .case-page:not(.project-industrial-semantic-base) .scene-rail{
+  position:fixed;inset:var(--header-height) 0 auto;margin:0;
+  visibility:hidden;opacity:0;pointer-events:none;
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-rail.is-reading{
+  visibility:visible;opacity:1;pointer-events:auto;
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-rail a{white-space:nowrap}
+ .case-page:not(.project-industrial-semantic-base) .scene-rail a span{display:none}
+}
+@media(min-width:1440px){
+ .case-page:not(.project-industrial-semantic-base) .scene-rail{
+  inset:calc(var(--header-height) + 48px) auto auto calc(50% + 584px);
+  width:112px;border:0;background:transparent;backdrop-filter:none;
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-rail>div{
+  width:100%;max-width:none;margin:0;display:flex;flex-direction:column;gap:2px;
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-rail a{
+  display:flex;align-items:center;justify-content:flex-start;text-align:left;
+  min-height:44px;padding:10px 0;border:0;font-size:13px;line-height:1.5;color:var(--muted);
+ }
+ .case-page:not(.project-industrial-semantic-base) .scene-rail a[aria-current]{color:var(--accent);font-weight:700}
+ .case-page:not(.project-industrial-semantic-base) .scene-rail a:hover{color:var(--ink)}
+}
