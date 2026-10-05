@@ -279,3 +279,7 @@ body.iv3-preview{background-image:linear-gradient(rgba(96,137,195,.055) 1px,tran
 .iv3-preview .iv3-sql-legacy>figure:nth-of-type(1) .zoom-image{background:#f8fafc}
 .iv3-preview .iv3-sql-legacy>figure:nth-of-type(1) img{clip-path:inset(0 0 10.47619% 0)}
 .iv3-preview .iv3-sql-legacy>figure:nth-of-type(2) img{transform:translate(-15.625%,-14.66667%)}
+
+/* Source-product light popover recapture, contained in the approved unchanged rectangle. */
+.iv3-preview .iv3-sql-legacy>figure:nth-of-type(2) .zoom-image{background:#f8fafc}
+.iv3-preview .iv3-sql-legacy>figure:nth-of-type(2) img{width:100%;height:100%;top:0;left:0;transform:none;object-fit:contain;clip-path:none}
