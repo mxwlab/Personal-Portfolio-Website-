@@ -224,6 +224,20 @@ body.iv3-preview{background:#fff;overflow-x:clip}
  .iv3-preview .iv3-problem-chain{gap:12px}.iv3-preview .iv3-problem-chain li{padding:10px 7px}.iv3-preview .iv3-problem-chain p{flex-direction:column;align-items:stretch;gap:4px;font-size:10px}.iv3-preview .iv3-problem-chain i{flex:none}.iv3-preview .iv3-problem-next{right:-12px;width:12px}
 }
 
+/* Owner's dark reference: a restrained blue glow and fine grain, only in existing dark bands. */
+.iv3-preview .iv3-dark,.iv3-preview .iv3-band.dark::before{background-image:radial-gradient(ellipse at 86% 88%,rgba(34,71,192,.32),transparent 64%),radial-gradient(ellipse at 100% 110%,rgba(11,128,181,.2),transparent 52%)!important}
+.iv3-preview .iv3-dark::after,.iv3-preview .iv3-band.dark::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+.iv3-preview .iv3-band.dark::after{width:100vw;left:50%;right:auto;transform:translateX(-50%)}
+
+/* Sparse grid and two directed callouts, inspired by the owner's light reference. */
+.iv3-preview :is(#v3-platform,#v3-pipeline,#v3-quality,#v3-sandbox,#v3-results){background-image:linear-gradient(rgba(96,137,195,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(96,137,195,.055) 1px,transparent 1px)!important;background-size:224px 160px!important;background-position:center top!important}
+.iv3-preview .iv3-platform-annotation{position:relative;display:block;width:160px;justify-self:center}
+.iv3-preview .iv3-annotation-curve{position:absolute;top:20px;left:-130px;width:138px;height:44px;fill:none;stroke:#8999ad;stroke-width:1;opacity:.65;pointer-events:none}
+.iv3-preview .iv3-platform-row.solution .iv3-annotation-curve{left:auto;right:-130px}
+.iv3-preview .iv3-curve-line{stroke-dasharray:2 4}
+@media(max-width:720px){.iv3-preview .iv3-platform-annotation{justify-self:start;width:130px}.iv3-preview .iv3-platform-row.issue .iv3-platform-annotation{grid-row:1}.iv3-preview .iv3-annotation-curve{display:none}}
+.iv3-preview .iv3-annotation-curve path:not(.iv3-curve-line){fill:#8999ad;stroke:none}
+
 /* Generated directly from the existing approved SQL layout. */
 .iv3-preview .iv3-sql-legacy{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px 32px}
 .iv3-preview .iv3-sql-legacy>p{grid-column:1/-1;margin:0}
