@@ -245,25 +245,33 @@ body.iv3-preview{background-image:linear-gradient(rgba(96,137,195,.055) 1px,tran
 .iv3-preview .iv3-hint-glyph-crop{position:absolute;top:0;display:block;height:30px;overflow:hidden}
 .iv3-preview .iv3-hint-glyph img{position:absolute;display:block;max-width:none;object-fit:fill}
 
-/* Owner-approved quality problem schematic: separate sources still require manual checking. */
-.iv3-preview .iv3-quality-problem{display:grid;grid-template-columns:280px 190px minmax(0,1fr);align-items:center;width:calc(100% + 260px);margin:8px 0 0 -260px;padding:28px 32px 24px;background:#f5f7fa;color:#34475a;font-family:IndustrialMiSans,sans-serif}
-.iv3-preview .iv3-quality-group-label{margin:0 0 12px;font-size:13px;line-height:1.5;color:#526271;text-align:center}
+/* One synthetic bearing and its existing MES/QMS records; still requires manual checking. */
+.iv3-preview .iv3-quality-problem{display:grid;grid-template-columns:260px 156px minmax(0,1fr);align-items:center;width:calc(100% + 260px);margin:8px 0 0 -260px;padding:28px 32px 24px;background:#f5f7fa;color:#34475a;font-family:IndustrialMiSans,sans-serif}
+.iv3-preview .iv3-quality-group-label{margin:0;font-size:13px;line-height:1.5;color:#526271;text-align:center}
 .iv3-preview .iv3-quality-group-label span{font-size:11px;color:#8693a1}
-.iv3-preview .iv3-quality-bearing-grid{display:grid;grid-template-columns:repeat(2,78px);gap:12px 24px;justify-content:center}
-.iv3-preview .iv3-quality-bearing{position:relative;display:block;width:78px;height:78px}
-.iv3-preview .iv3-quality-bearing>svg{display:block;width:100%;height:100%}
-.iv3-preview .iv3-quality-abnormal{position:absolute;top:0;right:0;display:grid;place-items:center;width:16px;height:16px;border-radius:50%;background:#f2e8d5;color:#947033;font:600 11px/1 IndustrialMiSans,sans-serif}
+.iv3-preview .iv3-quality-bearing{display:block;width:220px;height:192.5px;margin:0 auto;object-fit:contain}
+.iv3-preview .iv3-quality-object-id{font:12px/1.5 IndustrialRobotoMono,monospace;text-align:center;margin:0;color:#50677e}
+.iv3-preview .iv3-quality-object-clue{font-size:12px;text-align:center;margin:7px 0 0;color:#947033}
 .iv3-preview .iv3-quality-unresolved{height:190px;position:relative;display:grid;place-items:center}
 .iv3-preview .iv3-quality-unresolved svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#a9b9c9;stroke-width:1.2;stroke-dasharray:3 5}
-.iv3-preview .iv3-quality-unresolved span{font-size:13px;color:#768a9c;letter-spacing:2px}
-.iv3-preview .iv3-quality-records{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;padding-left:24px}
-.iv3-preview .iv3-quality-record{padding:22px 22px 24px;border:0;border-radius:8px;background:#fff}
-.iv3-preview .iv3-quality-record:nth-child(2){margin-top:30px}
-.iv3-preview .iv3-quality-record h4{font-size:17px;line-height:1.5;font-weight:600;margin:0 0 20px}
-.iv3-preview .iv3-quality-record p{display:flex;align-items:center;gap:12px;margin:14px 0 0;color:#82909f;font-size:11px;line-height:1.5}
-.iv3-preview .iv3-quality-record i{display:block;flex:1;height:1px;background:#e3eaf0}
+.iv3-preview .iv3-quality-unresolved span{font-size:12px;color:#768a9c}
+.iv3-preview .iv3-quality-records{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;padding-left:20px}
+.iv3-preview .iv3-quality-record{padding:22px 20px 24px;border:0;border-radius:8px;background:#fff}
+.iv3-preview .iv3-quality-record:nth-child(2){margin-top:34px}
+.iv3-preview .iv3-quality-record h4{font-size:17px;line-height:1.5;font-weight:600;margin:0}
+.iv3-preview .iv3-quality-record h4 span{font-weight:500;margin-left:5px}
+.iv3-preview .iv3-quality-source-id{font:10px/1.5 IndustrialRobotoMono,monospace;color:#8998a7;margin:6px 0 19px}
+.iv3-preview .iv3-quality-record dl{margin:0;font-size:12px;line-height:1.5}
+.iv3-preview .iv3-quality-record dl>div{display:flex;justify-content:space-between;gap:12px;margin-top:12px}
+.iv3-preview .iv3-quality-record dt{color:#8998a7}
+.iv3-preview .iv3-quality-record dd{margin:0;font-variant-numeric:tabular-nums;color:#51697e}
+.iv3-preview .iv3-quality-record .iv3-quality-match{display:block;background:#f2f6fa;margin:0 -8px 17px;padding:8px;border-radius:4px}
+.iv3-preview .iv3-quality-match dt{font-size:10px;margin-bottom:4px}
+.iv3-preview .iv3-quality-match dd{font:11px/1.6 IndustrialRobotoMono,monospace;white-space:nowrap}
 .iv3-preview .iv3-quality-problem figcaption{grid-column:1/-1;margin:25px 0 0;text-align:center;font-size:14px;line-height:1.6;color:#687583}
-@media(max-width:720px){.iv3-preview .iv3-quality-problem{width:100%;margin-left:0;padding:22px 16px;grid-template-columns:1fr}.iv3-preview .iv3-quality-bearing-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.iv3-preview .iv3-quality-bearing{width:100%;height:auto;aspect-ratio:1}.iv3-preview .iv3-quality-unresolved{height:70px}.iv3-preview .iv3-quality-unresolved svg{display:none}.iv3-preview .iv3-quality-records{padding-left:0;gap:14px}.iv3-preview .iv3-quality-record{padding:16px 14px}.iv3-preview .iv3-quality-record:nth-child(2){margin-top:15px}.iv3-preview .iv3-quality-record h4{font-size:15px}.iv3-preview .iv3-quality-record p{gap:8px}}
+@media(max-width:720px){.iv3-preview .iv3-quality-problem{width:100%;margin-left:0;padding:22px 16px;grid-template-columns:1fr}.iv3-preview .iv3-quality-unresolved{height:60px}.iv3-preview .iv3-quality-unresolved svg{display:none}.iv3-preview .iv3-quality-records{grid-template-columns:1fr;padding-left:0;gap:16px}.iv3-preview .iv3-quality-record{padding:18px}.iv3-preview .iv3-quality-record:nth-child(2){margin-top:0}.iv3-preview .iv3-quality-match dd{font-size:12px}}
+
+.iv3-preview .iv3-quality-problem figcaption small{display:block;font-size:10px;font-weight:400;color:#93a0ac;margin-top:6px}
 
 /* Generated directly from the existing approved SQL layout. */
 .iv3-preview .iv3-sql-legacy{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px 32px}
