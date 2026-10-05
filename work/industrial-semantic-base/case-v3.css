@@ -203,14 +203,14 @@ body.iv3-preview{background:#fff;overflow-x:clip}
 .iv3-preview .iv3-problem-layer{grid-column:2;min-width:0}
 .iv3-preview .iv3-problem-layer-title{font-size:13px;color:#526271;margin:0 0 14px;line-height:1.5}
 .iv3-preview .iv3-problem-contexts{display:grid;grid-template-columns:1fr 76px 1fr;align-items:center}
-.iv3-preview .iv3-problem-context{background:#fff;border:1px solid #dce3eb;padding:17px 18px}
+.iv3-preview .iv3-problem-context{background:#fff;border:1px solid #dce3eb;border-radius:8px;padding:17px 18px}
 .iv3-preview .iv3-pipeline-problem h4{font-size:17px;line-height:1.5;font-weight:600;margin:0;color:#34475a}
 .iv3-preview .iv3-problem-context p{font-size:12px;line-height:1.6;color:#687583;margin:6px 0 12px}
 .iv3-preview .iv3-problem-context>i{display:block;width:72%;height:10px;border-block:1px solid #e5ebf1}
 .iv3-preview .iv3-problem-compare{display:flex;flex-direction:column;align-items:center;gap:7px;font-size:10px;color:#687583}
 .iv3-preview .iv3-problem-compare svg{width:30px;height:20px;stroke:#7295ba;stroke-width:1.2;fill:none}
 .iv3-preview .iv3-problem-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:0;margin:0;list-style:none}
-.iv3-preview .iv3-problem-chain li{position:relative;min-width:0;border-top:2px solid #80a4cc;background:#fff;padding:13px 14px 15px}
+.iv3-preview .iv3-problem-chain li{position:relative;min-width:0;border-top:2px solid #80a4cc;border-radius:8px;background:#fff;padding:13px 14px 15px}
 .iv3-preview .iv3-problem-chain h4{font-size:16px;margin-bottom:12px}
 .iv3-preview .iv3-problem-chain p{display:flex;align-items:center;gap:9px;font-size:11px;line-height:1.5;color:#687583;margin:7px 0 0}
 .iv3-preview .iv3-problem-chain i{flex:1;min-width:10px;height:17px;border:1px solid #dce3eb;background:#fafbfd}
@@ -242,6 +242,7 @@ body.iv3-preview{background-image:linear-gradient(rgba(96,137,195,.055) 1px,tran
 /* The glyphs are actual generated bitmaps; this display mask guarantees the requested fade. */
 .iv3-preview .iv3-hint-word{display:grid;grid-template-columns:repeat(4,40px);gap:4px;width:172px;height:30px;opacity:.55;mask-image:linear-gradient(to bottom,#000 0%,#000 15%,rgba(0,0,0,.94) 35%,rgba(0,0,0,.72) 55%,rgba(0,0,0,.45) 72%,rgba(0,0,0,.18) 90%,transparent 100%)}
 .iv3-preview .iv3-hint-glyph{position:relative;display:block;width:40px;height:30px;overflow:hidden}
+.iv3-preview .iv3-hint-glyph-crop{position:absolute;top:0;display:block;height:30px;overflow:hidden}
 .iv3-preview .iv3-hint-glyph img{position:absolute;display:block;max-width:none;object-fit:fill}
 
 /* Generated directly from the existing approved SQL layout. */
