@@ -190,7 +190,9 @@
     buttons[1].disabled = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth - 2;
   };
   const move = direction => {
-    const step = rail.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap);
+    const card = [...rail.children].find(element => !element.hidden);
+    if (!card) return;
+    const step = card.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap);
     rail.scrollBy({left:direction * step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
   };
   buttons.forEach(button => button.addEventListener('click', () => move(Number(button.dataset.railStep))));
@@ -199,6 +201,7 @@
     event.preventDefault();move(event.key === 'ArrowRight' ? 1 : -1);
   });
   rail.addEventListener('scroll',update,{passive:true});
+  document.addEventListener('portfoliofilterchange', () => { rail.scrollTo({left:0,behavior:'instant'}); update(); });
   new ResizeObserver(update).observe(rail);
   update();
 })();

@@ -14,33 +14,153 @@
       }
     ]
   },
-  "industrial/quality-agent-workbench.png": {
-    "src": "media/industrial-quality-agent-workbench-1600.jpg",
-    "width": 1920,
-    "height": 1074,
+  "industrial/ai-pipeline-confirm-and-run-aze-bottom-poster.jpg": {
+    "src": "media/industrial-ai-pipeline-confirm-and-run-aze-bottom-poster-1440.jpg",
+    "width": 1440,
+    "height": 900,
     "variants": [
       {
-        "src": "media/industrial-quality-agent-workbench-720.jpg",
+        "src": "media/industrial-ai-pipeline-confirm-and-run-aze-bottom-poster-720.jpg",
         "width": 720
       },
       {
-        "src": "media/industrial-quality-agent-workbench-1600.jpg",
+        "src": "media/industrial-ai-pipeline-confirm-and-run-aze-bottom-poster-1440.jpg",
+        "width": 1440
+      }
+    ]
+  },
+  "industrial/case-evidence/01-quality-sql-edited.png": {
+    "src": "media/industrial-case-evidence-01-quality-sql-edited-1600.jpg",
+    "width": 1600,
+    "height": 1050,
+    "variants": [
+      {
+        "src": "media/industrial-case-evidence-01-quality-sql-edited-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-case-evidence-01-quality-sql-edited-1600.jpg",
         "width": 1600
       }
     ]
   },
-  "industrial/quality-agent-demo-poster.jpg": {
-    "src": "media/industrial-quality-agent-demo-poster-1600.jpg",
+  "industrial/case-evidence/02-quality-sql-saved-reopened.png": {
+    "src": "media/industrial-case-evidence-02-quality-sql-saved-reopened-1600.jpg",
     "width": 1600,
-    "height": 900,
+    "height": 1050,
     "variants": [
       {
-        "src": "media/industrial-quality-agent-demo-poster-720.jpg",
+        "src": "media/industrial-case-evidence-02-quality-sql-saved-reopened-720.jpg",
         "width": 720
       },
       {
-        "src": "media/industrial-quality-agent-demo-poster-1600.jpg",
+        "src": "media/industrial-case-evidence-02-quality-sql-saved-reopened-1600.jpg",
         "width": 1600
+      }
+    ]
+  },
+  "industrial/case-evidence/03-quality-sql-executed-output.png": {
+    "src": "media/industrial-case-evidence-03-quality-sql-executed-output-1600.jpg",
+    "width": 1600,
+    "height": 1050,
+    "variants": [
+      {
+        "src": "media/industrial-case-evidence-03-quality-sql-executed-output-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-case-evidence-03-quality-sql-executed-output-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/three-scenes/pipeline-overview.png": {
+    "src": "media/industrial-three-scenes-pipeline-overview-1600.jpg",
+    "width": 1918,
+    "height": 1101,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-pipeline-overview-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-pipeline-overview-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/three-scenes/pipeline-preview.png": {
+    "src": "media/industrial-three-scenes-pipeline-preview-1600.jpg",
+    "width": 1966,
+    "height": 1121,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-pipeline-preview-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-pipeline-preview-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/three-scenes/pipeline-selection.png": {
+    "src": "media/industrial-three-scenes-pipeline-selection-1600.jpg",
+    "width": 1918,
+    "height": 1101,
+    "variants": [
+      {
+        "src": "media/industrial-three-scenes-pipeline-selection-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-three-scenes-pipeline-selection-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "industrial/case-evidence/Q07-structured-report.jpg": {
+    "src": "media/industrial-case-evidence-Q07-structured-report-1398.jpg",
+    "width": 1398,
+    "height": 765,
+    "variants": [
+      {
+        "src": "media/industrial-case-evidence-Q07-structured-report-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-case-evidence-Q07-structured-report-1398.jpg",
+        "width": 1398
+      }
+    ]
+  },
+  "industrial/case-evidence/Q02-statistical-boundary.jpg": {
+    "src": "media/industrial-case-evidence-Q02-statistical-boundary-1398.jpg",
+    "width": 1398,
+    "height": 765,
+    "variants": [
+      {
+        "src": "media/industrial-case-evidence-Q02-statistical-boundary-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-case-evidence-Q02-statistical-boundary-1398.jpg",
+        "width": 1398
+      }
+    ]
+  },
+  "industrial/quality-agent-demo-revised-aze-poster.jpg": {
+    "src": "media/industrial-quality-agent-demo-revised-aze-poster-1440.jpg",
+    "width": 1440,
+    "height": 900,
+    "variants": [
+      {
+        "src": "media/industrial-quality-agent-demo-revised-aze-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/industrial-quality-agent-demo-revised-aze-poster-1440.jpg",
+        "width": 1440
       }
     ]
   },
@@ -89,47 +209,17 @@
       }
     ]
   },
-  "industrial/three-scenes/pipeline-overview.png": {
-    "src": "media/industrial-three-scenes-pipeline-overview-1600.jpg",
-    "width": 1918,
-    "height": 1101,
+  "compass/cover.png": {
+    "src": "media/compass/cover.png",
+    "width": 1672,
+    "height": 941,
     "variants": [
       {
-        "src": "media/industrial-three-scenes-pipeline-overview-720.jpg",
+        "src": "media/compass/cover-720.jpg",
         "width": 720
       },
       {
-        "src": "media/industrial-three-scenes-pipeline-overview-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "industrial/three-scenes/pipeline-preview.png": {
-    "src": "media/industrial-three-scenes-pipeline-preview-1600.jpg",
-    "width": 1966,
-    "height": 1121,
-    "variants": [
-      {
-        "src": "media/industrial-three-scenes-pipeline-preview-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/industrial-three-scenes-pipeline-preview-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "industrial/three-scenes/pipeline-selection.png": {
-    "src": "media/industrial-three-scenes-pipeline-selection-1600.jpg",
-    "width": 1918,
-    "height": 1101,
-    "variants": [
-      {
-        "src": "media/industrial-three-scenes-pipeline-selection-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/industrial-three-scenes-pipeline-selection-1600.jpg",
+        "src": "media/compass/cover-1600.jpg",
         "width": 1600
       }
     ]
@@ -733,21 +823,6 @@
       }
     ]
   },
-  "about/activity/bund-conference-sign.jpg": {
-    "src": "media/about-activity-bund-conference-sign-1200.jpg",
-    "width": 1536,
-    "height": 2048,
-    "variants": [
-      {
-        "src": "media/about-activity-bund-conference-sign-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/about-activity-bund-conference-sign-1200.jpg",
-        "width": 1200
-      }
-    ]
-  },
   "about/activity/equipment-software-onsite.jpg": {
     "src": "media/about-activity-equipment-software-onsite-1200.jpg",
     "width": 1536,
@@ -778,21 +853,6 @@
       }
     ]
   },
-  "about/ai-floral/ai-floral-643.jpg": {
-    "src": "media/about-ai-floral-ai-floral-643-1086.jpg",
-    "width": 1086,
-    "height": 1448,
-    "variants": [
-      {
-        "src": "media/about-ai-floral-ai-floral-643-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/about-ai-floral-ai-floral-643-1086.jpg",
-        "width": 1086
-      }
-    ]
-  },
   "about/activity/technology-exhibition.jpg": {
     "src": "media/about-activity-technology-exhibition-1200.jpg",
     "width": 1536,
@@ -819,36 +879,6 @@
       },
       {
         "src": "media/about-illustrations-_MG_7873-1066.jpg",
-        "width": 1066
-      }
-    ]
-  },
-  "about/ai-floral/ai-floral-646.png": {
-    "src": "media/about-ai-floral-ai-floral-646-1122.jpg",
-    "width": 1122,
-    "height": 1402,
-    "variants": [
-      {
-        "src": "media/about-ai-floral-ai-floral-646-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/about-ai-floral-ai-floral-646-1122.jpg",
-        "width": 1122
-      }
-    ]
-  },
-  "about/illustrations/_MG_7851.jpg": {
-    "src": "media/about-illustrations-_MG_7851-1066.jpg",
-    "width": 1365,
-    "height": 2048,
-    "variants": [
-      {
-        "src": "media/about-illustrations-_MG_7851-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/about-illustrations-_MG_7851-1066.jpg",
         "width": 1066
       }
     ]

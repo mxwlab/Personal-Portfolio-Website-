@@ -78,6 +78,8 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 .work-rail .project-image.poster-cover{aspect-ratio:auto;padding:0}
 .work-rail .project-image.poster-cover .media{height:auto;max-height:none}
 .work-rail .project-image.poster-cover img{height:auto;aspect-ratio:auto;object-fit:contain}
+/* Homepage cards use their title/subtitle; cover captions remain in the case detail. */
+.home-page .project-card>.project-image-link figcaption{display:none}
 
 /* The same three browsing directions as the work archive. */
 .capability-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -126,6 +128,91 @@ html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 /* Stronger light: keep small foreground text legible at its darkest center. */
 .home-page .atmosphere-hero :is(.identity-copy,.identity-label,.hero-ground,.quiet-cta),
 .home-page:not(.header-scrolled) .site-header,
-.home-page:not(.header-scrolled) .site-header .wordmark{color:#0c2119}
+.home-page:not(.header-scrolled) .site-header .wordmark{color:#30343b}
 
 .home-page .atmosphere-hero .soft-ink{color:#203e30}
+
+/* Supporting identity line: original position, one primary role and quieter skills. */
+.home-page .identity-label{display:flex;align-items:baseline;gap:0 18px;letter-spacing:.06em}
+.home-page .identity-label span{margin:0;opacity:1}
+.home-page .identity-label .identity-divider{opacity:.45}
+.home-page .identity-position{min-width:0}
+.home-page .identity-label .identity-domain{font-weight:500}
+.home-page .identity-label .identity-skills{opacity:1;font-weight:500;display:inline-block}
+@media(max-width:600px){.home-page .identity-label{gap:0 10px}.home-page .identity-label .identity-name,.home-page .identity-label .identity-divider{flex-shrink:0}.home-page .identity-position{line-height:1.9}}
+
+/* Supporting positioning line, without the repeated name. */
+.home-page .identity-label{font-size:15px}
+@media(max-width:430px){.home-page .identity-label{font-size:13px}}
+
+/* Owner-approved single-page overview: fixed copy, existing visual language. */
+html.single-page-home{scroll-padding-top:var(--home-anchor-offset,84px)}
+.home-page [data-home-section]{scroll-margin-top:0}
+.home-page [data-home-section]:focus{outline:none}
+.home-page .atmosphere-hero{height:auto;min-height:min(820px,100svh);max-height:none}
+.home-page .atmosphere-inner{height:auto;min-height:inherit;display:flex;align-items:center;padding-block:clamp(112px,15vh,168px) 92px}
+.home-page .identity{width:min(100%,840px);max-width:none}
+.home-page .identity h1{font-size:clamp(48px,5.2vw,72px);line-height:1.25;letter-spacing:-.025em}
+.home-page .identity-role{font-size:clamp(25px,2.8vw,36px);line-height:1.5;color:var(--text-heading);margin-top:22px;font-weight:500}
+.home-page .identity>.identity-domain{font-size:18px;line-height:1.7;color:var(--text-body);margin-top:8px}
+.home-page .identity-copy{max-width:740px;margin-top:28px;font-size:18px;line-height:1.9;color:#263b32}
+.home-page .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+.home-page .hero-actions a{display:inline-flex;align-items:center;justify-content:center;min-width:112px;min-height:44px;padding:10px 19px;border:1px solid #263f342b;border-radius:7px;background:transparent;color:#40574a;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;font-weight:500;line-height:22px;letter-spacing:.01em;gap:0;transform:none;transition:background .18s ease,border-color .18s ease,color .18s ease}
+.home-page .hero-actions .button{border-color:#36544880;background:#ffffff29;color:#203e30}
+.home-page .hero-actions .text-link>span[aria-hidden]{display:none}
+.home-page .hero-actions a:focus-visible{outline:2px solid #365448;outline-offset:4px}
+@media(hover:hover){.home-page .hero-actions a:hover{background:#ffffff38;border-color:#36544899;color:#203e30;transform:none}}
+.home-page .hero-actions a:active{background:#36544814;transform:none}
+.home-page .home-projects{padding-top:84px;padding-bottom:70px}
+.home-page .home-projects>.section-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px}
+.home-page .home-projects>.section-heading h2{font-size:clamp(32px,3vw,43px)}
+.home-page .home-projects .work-filters{position:static;flex-wrap:wrap;margin-bottom:24px}
+.home-page .home-projects .work-filters button{min-height:44px}
+.home-page .home-project-group-title{font-size:21px;line-height:1.5;font-weight:500;margin:0}
+.home-page .home-projects .selected-work{padding-top:0}
+.home-page .home-projects .selected-grid{margin-top:0}
+.home-page .home-projects .more-work{padding-top:62px;padding-bottom:0}
+.home-page .home-projects .work-rail-wrap{margin-top:22px}
+.home-page .home-projects .work-design{margin-top:42px;padding-bottom:0}
+.home-page .home-projects .work-design .archive-grid{padding-bottom:0}
+.home-page .home-about{border-top:1px solid var(--line);padding-top:32px}
+.home-page .home-about .about-intro{padding-top:58px}
+.home-page .home-about .about-portrait-copy h2{font-size:clamp(32px,3.5vw,46px);line-height:1.4;letter-spacing:-.025em}
+.home-page .home-about .about-portrait-copy{padding-top:20px}
+.home-page .home-about .about-exploration{padding-bottom:72px}
+.home-page .contact-detail{scroll-margin-top:0}
+.home-page .contact-detail h2{font-size:clamp(31px,3vw,42px)}
+.home-page .about-lead-grouped .about-copy-body{color:var(--text-body)}
+@media(max-width:900px){
+ .home-page .atmosphere-inner{padding-block:112px 72px}
+ .home-page .identity-copy{font-size:17px;max-width:680px}
+ .home-page .home-about .about-portrait-copy{padding-top:0}
+ .home-page .home-about .about-intro{padding-top:38px}
+}
+@media(max-width:600px){
+ .home-page .header-inner{width:calc(100% - 32px);gap:8px;min-height:55px}
+ .home-page .site-header .wordmark{gap:5px;font-size:18px}
+ .home-page .site-header nav{gap:2px;font-size:14px}
+ .home-page .site-header nav a{min-width:44px;min-height:44px;padding:0}
+ .home-page .site-header .brand-mark{width:24px;height:24px}
+ .home-page .atmosphere-inner{padding-block:110px 60px}
+ .home-page .identity h1{font-size:48px}
+ .home-page .identity-role{font-size:25px;margin-top:20px}
+ .home-page .identity>.identity-domain{font-size:16px;margin-top:6px}
+ .home-page .identity-copy{font-size:16px;line-height:1.9;margin-top:24px}
+ .home-page .hero-actions{gap:12px;margin-top:28px}
+ .home-page .home-projects{padding-top:44px;padding-bottom:48px}
+ .home-page .home-projects>.section-heading{gap:16px;margin-bottom:16px}
+ .home-page .home-projects>.section-heading .text-link{font-size:14px;gap:12px}
+ .home-page .home-project-group-title{font-size:18px}
+ .home-page .home-projects .more-work{padding-top:40px}
+ .home-page .home-about{padding-top:12px}
+ .home-page .home-about .about-portrait-copy h2{order:1;font-size:32px}
+ .home-page .home-about .about-exploration{padding-bottom:48px}
+ .home-page .contact-detail .email-link{font-size:clamp(16px,5.1vw,20px);overflow-wrap:anywhere}
+}
+@media(max-width:360px){
+ .home-page .header-inner{gap:4px}
+ .home-page .site-header nav{gap:0}
+ .home-page .hero-actions{gap:12px}
+}

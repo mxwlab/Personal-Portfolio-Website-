@@ -102,7 +102,7 @@ body.iv3-preview{background:#fff;overflow-x:clip}
 .iv3-preview .iv3-result-numbers{display:grid;grid-template-columns:1fr 1fr;gap:120px;margin:44px 0}
 .iv3-preview .iv3-quote{font-size:24px;line-height:1.7;margin:30px 0;color:#2b6de8}
 .iv3-preview .iv3-closing-title{font-size:44px;line-height:1.4;color:#fff;text-align:center;margin:38px 0 54px;font-weight:600}
-.iv3-preview .iv3-contribution-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;margin:44px 0 50px}
+.iv3-preview .iv3-contribution-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;margin:44px 0 50px}
 .iv3-preview .iv3-contribution-title .iv3-lead{font-size:28px}
 .iv3-preview .iv3-display{font-size:60px;line-height:1.35;font-weight:600}
 .iv3-preview .iv3-contribution-copy{padding-left:48px;border-left:1px solid #5678a8;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
@@ -190,6 +190,30 @@ body.iv3-preview{background:#fff;overflow-x:clip}
 .iv3-preview .iv3-sql-note-line .iv3-sql-inline{font-family:var(--mono);white-space:nowrap;color:#475569}
 
 .iv3-preview .iv3-quality-video-intro{font-size:17px;line-height:1.8}
+
+/* Approved review inserts inherit the case hierarchy without adding chapters. */
+.iv3-preview .iv3-review-insert{margin-top:52px;padding-top:32px;border-top:1px solid #dce3eb;scroll-margin-top:var(--iv3-reading-offset,130px)}
+.iv3-preview .iv3-review-label{font-size:13px;line-height:1.6;color:#687583;margin-bottom:12px}
+.iv3-preview .iv3-review-dimensions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:30px}
+.iv3-preview .iv3-review-dimension{min-width:0;padding:24px;background:#f5f7fa;border-top:2px solid #2b6de8}
+.iv3-preview .iv3-review-dimension-label{font-size:16px;line-height:1.6;font-weight:600;color:#2b6de8;margin-bottom:12px}
+.iv3-preview .iv3-review-dimension-summary{font-size:19px;line-height:1.55;font-weight:600;color:#14202c;margin-bottom:18px}
+.iv3-preview .iv3-review-linkage{max-width:none;margin-top:28px}
+.iv3-preview .iv3-review-verification{margin-top:10px}
+.iv3-preview .iv3-review-criteria{display:grid;grid-template-columns:1fr 1fr;gap:26px 56px;margin:28px 0 0}
+.iv3-preview .iv3-review-criteria>div{min-width:0;border-top:1px solid #dce3eb;padding-top:18px}
+.iv3-preview .iv3-review-criteria dt{font-size:18px;line-height:1.6;font-weight:600;color:#2b6de8;margin-bottom:8px}
+.iv3-preview .iv3-review-criteria dd{margin:0;font-size:17px;line-height:1.8;overflow-wrap:break-word}
+@media(max-width:767px){
+ .iv3-preview .iv3-review-insert{margin-top:36px;padding-top:26px}
+ .iv3-preview .iv3-review-dimensions,.iv3-preview .iv3-review-criteria{grid-template-columns:minmax(0,1fr);gap:22px}
+ .iv3-preview .iv3-review-dimensions{margin-top:24px}
+ .iv3-preview .iv3-review-dimension{padding:22px}
+ .iv3-preview .iv3-review-dimension-summary{font-size:18px;margin-bottom:14px}
+ .iv3-preview .iv3-review-criteria{margin-top:24px}
+ .iv3-preview .iv3-review-criteria dt{font-size:17px}
+ .iv3-preview .iv3-review-criteria dd{font-size:16px;line-height:1.85}
+}
 
 /* One person connects the two layers of manual work, before the AI rationale. */
 .iv3-preview .iv3-pipeline-problem{display:grid;grid-template-columns:292px minmax(0,1fr);grid-template-rows:auto auto auto;gap:30px 0;width:calc(100% + 260px);margin:8px 0 0 -260px;padding:28px 0 18px;background:#f5f7fa;font-family:IndustrialMiSans,sans-serif;color:#34475a}
