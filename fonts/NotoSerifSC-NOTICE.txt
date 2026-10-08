@@ -1,0 +1,11 @@
+Noto Serif SC — mobile Hero subset
+
+Copyright 2012 Google Inc. All Rights Reserved.
+Licensed under SIL Open Font License 1.1; see NotoSerifSC-OFL.txt.
+Official source: https://github.com/google/fonts/tree/main/ofl/notoserifsc
+Downloaded 2026-10-08 through the official Google Fonts CSS2 text-subset API.
+Subset text: 工业与企业级应用Hi, I'm Mo Xiuwen
+Weight range: 500–600 (variable WOFF2).
+The supplied font bytes are unmodified; “Mo Mobile Serif” is a CSS family alias.
+Only the mobile Hero heading and greeting use this font. Update the subset if their copy changes.
+SHA-256: 2b51a4a0c41de6690131af543e3e1da1bed237578eaa4f52808b5f06f00d9c61

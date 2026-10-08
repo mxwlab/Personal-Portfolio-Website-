@@ -290,3 +290,30 @@ html.single-page-home{scroll-padding-top:var(--home-anchor-offset,84px)}
 .hero-editorial .hero-symbol-glass{position:absolute;inset:0;--symbol-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201025%20840%22%3E%3Cpath%20fill%3D%22white%22%20fill-rule%3D%22evenodd%22%20d%3D%22M93%200H933C991%2085%201024%20190%201024%20302C1024%20585%20795%20814%20512%20814C440%20814%20370%20799%20309%20773C286%20762%20183%20792%2082%20837C65%20845%2047%20831%2050%20815C66%20753%2078%20670%2090%20631C93%20613%2088%20595%2085%20579C31%20500%200%20404%200%20302C0%20190%2034%2085%2093%200Z%20M241%20318C241%20258%20331%20258%20331%20318C331%20418%20412%20499%20512%20499C612%20499%20693%20418%20693%20318C693%20258%20783%20258%20783%20318C783%20468%20662%20589%20512%20589C362%20589%20241%20468%20241%20318Z%22%2F%3E%3C%2Fsvg%3E");-webkit-mask:var(--symbol-mask) center/contain no-repeat;mask:var(--symbol-mask) center/contain no-repeat;background:radial-gradient(ellipse at 24% 18%,rgb(248 252 238 / .88),transparent 55%),radial-gradient(ellipse at 82% 80%,rgb(146 183 159 / .5),transparent 65%),linear-gradient(140deg,rgb(207 225 193 / .72),rgb(219 235 211 / .42) 56%,rgb(184 209 184 / .7));-webkit-backdrop-filter:blur(14px) saturate(.85);backdrop-filter:blur(14px) saturate(.85)}
 .hero-editorial .hero-symbol-glass::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22120%22%20height%3D%22120%22%3E%3Cfilter%20id%3D%22grain%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.82%22%20numOctaves%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23grain%29%22%20opacity%3D%22.5%22%2F%3E%3C%2Fsvg%3E");background-size:90px 90px;opacity:.16;mix-blend-mode:soft-light}
 @media(max-width:600px){.hero-editorial .hero-symbol{opacity:.65}}
+
+/* Phone-only composition; the approved desktop cover keeps its system serif. */
+@font-face{
+ font-family:"Mo Mobile Serif";
+ font-style:normal;
+ font-weight:500 600;
+ font-display:swap;
+ src:url("fonts/noto-serif-sc-hero-subset.woff2") format("woff2");
+ unicode-range:U+20,U+27,U+2C,U+48-49,U+4D,U+58,U+65,U+69,U+6D-6F,U+75,U+77,U+4E0E,U+4E1A,U+4F01,U+5DE5,U+5E94,U+7528,U+7EA7;
+}
+@media(max-width:600px){
+ .hero-editorial .hero-symbol{width:84%}
+ .hero-editorial .light-field{display:none}
+ .home-page .hero-editorial .hero-byline .hero-practice{display:none}
+ .hero-editorial-grid{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"greeting" "statement" "intro"}
+ .hero-editorial .hero-profile{display:contents}
+ .hero-editorial .hero-statement{grid-area:statement;justify-content:flex-start}
+ .hero-editorial .hero-title-block{width:100%;text-align:left}
+ .hero-editorial .hero-service-label{position:static;margin:0 0 10px;line-height:1.2}
+ .hero-editorial .hero-service-label span{font-size:14px}
+ .home-page .hero-editorial .identity-domain{font-family:"Mo Mobile Serif",var(--serif);font-weight:500}
+ .hero-editorial .hero-greeting{grid-area:greeting;margin:0;font-family:"Mo Mobile Serif",var(--serif);font-weight:600;text-align:left}
+ .home-page .hero-editorial .identity-copy{grid-area:intro;font-weight:500;text-align:left}
+ .home-page .hero-editorial .identity-copy p{text-indent:0}
+ .hero-editorial .hero-capabilities{width:100%;max-width:none;justify-content:flex-start;gap:8px;margin-inline:0}
+ .hero-editorial .hero-capabilities li{flex:0 0 auto;padding-inline:10px}
+}
