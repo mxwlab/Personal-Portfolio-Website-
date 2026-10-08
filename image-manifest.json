@@ -209,21 +209,6 @@
       }
     ]
   },
-  "compass/cover.png": {
-    "src": "media/compass/cover.png",
-    "width": 1672,
-    "height": 941,
-    "variants": [
-      {
-        "src": "media/compass/cover-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/compass/cover-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
   "d4s/cover.png": {
     "src": "media/d4s-cover-1600.jpg",
     "width": 1672,

@@ -323,3 +323,7 @@ html.single-page-home{scroll-padding-top:var(--home-anchor-offset,84px)}
  .home-page .more-work .work-rail-controls{display:none}
  .home-page .more-work .work-rail-wrap{padding-inline:0}
 }
+
+/* A three-project selection fills each row after a project is withdrawn. */
+@media(min-width:901px){.home-page .selected-grid:has(>.project-card:nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){.home-page .selected-grid:has(>.project-card:nth-child(3):last-child){grid-template-columns:minmax(0,1fr)}}
