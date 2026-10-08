@@ -823,6 +823,66 @@
       }
     ]
   },
+  "about/motion/walking-robot.jpg": {
+    "src": "media/about-motion-walking-robot-1500.jpg",
+    "width": 1500,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-walking-robot-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-walking-robot-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
+  "about/motion/building-blocks.jpg": {
+    "src": "media/about-motion-building-blocks-1500.jpg",
+    "width": 1500,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-building-blocks-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-building-blocks-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
+  "about/motion/monkey-head-build.jpg": {
+    "src": "media/about-motion-monkey-head-build-1500.jpg",
+    "width": 1500,
+    "height": 1500,
+    "variants": [
+      {
+        "src": "media/about-motion-monkey-head-build-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-monkey-head-build-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
+  "about/motion/can-collision.jpg": {
+    "src": "media/about-motion-can-collision-1500.jpg",
+    "width": 1500,
+    "height": 1000,
+    "variants": [
+      {
+        "src": "media/about-motion-can-collision-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-can-collision-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
   "about/activity/equipment-software-onsite.jpg": {
     "src": "media/about-activity-equipment-software-onsite-1200.jpg",
     "width": 1536,
@@ -868,19 +928,52 @@
       }
     ]
   },
-  "about/illustrations/_MG_7873.jpg": {
-    "src": "media/about-illustrations-_MG_7873-1066.jpg",
-    "width": 1365,
-    "height": 2048,
+  "about/exploration/blender-scene-study.png": {
+    "src": "media/about-exploration-blender-scene-study-1600.webp",
+    "width": 3024,
+    "height": 1898,
     "variants": [
       {
-        "src": "media/about-illustrations-_MG_7873-720.jpg",
+        "src": "media/about-exploration-blender-scene-study-480.webp",
+        "width": 480
+      },
+      {
+        "src": "media/about-exploration-blender-scene-study-960.webp",
+        "width": 960
+      },
+      {
+        "src": "media/about-exploration-blender-scene-study-720.webp",
         "width": 720
       },
       {
-        "src": "media/about-illustrations-_MG_7873-1066.jpg",
-        "width": 1066
+        "src": "media/about-exploration-blender-scene-study-1600.webp",
+        "width": 1600
       }
-    ]
+    ],
+    "original": "media/about/exploration/blender-scene-study.png"
+  },
+  "about/exploration/mountain-sketch-and-photo.jpg": {
+    "src": "media/about-exploration-mountain-sketch-and-photo-1242.webp",
+    "width": 1242,
+    "height": 1923,
+    "variants": [
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-480.webp",
+        "width": 480
+      },
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-960.webp",
+        "width": 960
+      },
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-720.webp",
+        "width": 720
+      },
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-1242.webp",
+        "width": 1242
+      }
+    ],
+    "original": "media/about/exploration/mountain-sketch-and-photo.jpg"
   }
 }

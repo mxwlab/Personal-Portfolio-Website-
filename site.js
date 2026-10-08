@@ -85,25 +85,36 @@ document.querySelectorAll('[data-zoom]').forEach(button => button.addEventListen
   if (!dialog?.showModal) { window.open(button.dataset.zoom, '_blank', 'noopener'); return; }
   imageTrigger = button;
   button.classList.remove('about-touch-restored');
-  dialog.classList.toggle('about-photo-mode', Boolean(button.closest('.about-photo-main,.about-photo-note')));
+  dialog.classList.toggle('about-photo-mode', Boolean(button.closest('.about-photo-main,.about-photo-note,.creative-wall')));
+  const landscape = Boolean(button.closest('.creative-postcard-wide'));
+  dialog.classList.toggle('landscape-detail-mode', landscape);
+
   dialog.querySelector('img').src = button.dataset.zoom;
   dialog.querySelector('img').alt = button.dataset.alt;
   dialog.querySelector('.dialog-caption').textContent = button.dataset.alt;
   dialog.showModal();
 }));
 if (dialog) {
+  const picture = dialog.querySelector('img');
+  const imageStage = document.createElement('div'); imageStage.className = 'dialog-image-stage';
+  picture.before(imageStage); imageStage.append(picture);
   dialog.addEventListener('pointerdown', event => { lastImageInputWasTouch = event.pointerType === 'touch'; });
   document.addEventListener('keydown', () => {
     lastImageInputWasTouch = false;
     document.querySelectorAll('.about-touch-restored').forEach(button => button.classList.remove('about-touch-restored'));
   }, true);
-  document.querySelectorAll('.about-photo-main [data-zoom],.about-photo-note [data-zoom]').forEach(button => button.addEventListener('blur', () => button.classList.remove('about-touch-restored')));
-  // The image viewer has one control; keep Tab navigation inside the modal.
+  document.querySelectorAll('.about-photo-main [data-zoom],.about-photo-note [data-zoom],.creative-wall [data-zoom]').forEach(button => button.addEventListener('blur', () => button.classList.remove('about-touch-restored')));
+  // Keep focus inside both the simple image viewer and case-page viewers.
   dialog.addEventListener('keydown', event => {
-    if (event.key === 'Tab') { event.preventDefault(); dialog.querySelector('.dialog-close').focus(); }
+    if (event.key !== 'Tab') return;
+    const controls = [...dialog.querySelectorAll('button,a[href],[tabindex="0"]')].filter(e => !e.disabled && !e.closest('[hidden]') && e.getClientRects().length);
+    const first = controls[0], last = controls.at(-1);
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
     const box = dialog.getBoundingClientRect();
     if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
   });
@@ -265,7 +276,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
       media.setAttribute('aria-label',work.title+'完整视频');
       const detail = document.createElement('p');
       const duration = document.createElement('span'); duration.className = 'craft-media-duration';
-      duration.textContent = `${work.duration} 秒 · 无声视频`;
+      duration.textContent = `${work.duration} 秒${work.hasAudio ? '' : ' · 无声视频'}`;
       const name = document.createElement('span'); name.className = 'craft-media-name'; name.textContent = work.title;
       detail.append(duration,name);
       const status = document.createElement('p'); status.hidden = true; status.setAttribute('role','status');
@@ -450,12 +461,13 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
         const availableWidth = Math.min(560, right ? rightSpace : leftSpace);
         const availableHeight = Math.min(640, innerHeight - topLimit - pad);
         const ratio = enlarged.naturalWidth / enlarged.naturalHeight;
-        const width = Math.min(availableWidth, availableHeight * ratio);
+        const wide = Boolean(source.closest('.creative-postcard-wide'));
+        const width = Math.min(wide ? Math.min(1100,innerWidth - pad * 2) : availableWidth, availableHeight * ratio);
         const height = width / ratio;
         if (width < 200 || height < 150) return;
         preview.style.width = `${width}px`;
         preview.style.height = `${height}px`;
-        preview.style.left = `${right ? r.right + gap : r.left - gap - width}px`;
+        preview.style.left = `${wide ? Math.max(pad,Math.min(r.left + (r.width - width) / 2,innerWidth - pad - width)) : right ? r.right + gap : r.left - gap - width}px`;
         preview.style.top = `${Math.max(topLimit, Math.min(r.top + (r.height - height) / 2, innerHeight - pad - height))}px`;
         preview.hidden = false;
       }, 180);
