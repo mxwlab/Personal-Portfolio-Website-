@@ -176,8 +176,11 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
 .craft-stage.screens-strip{display:block;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 16px 20px;border:0;background:#0a1020;text-align:left}
 .screens-strip figure{margin:0 0 24px}
 .screens-strip figcaption{font-size:12px;color:#afbec9;padding:8px 0}
+.screen-original-link{display:flex;align-items:center;justify-content:flex-end;min-height:36px;width:max-content;margin-left:auto;color:#afbec9;font-size:13px;padding:4px 2px;text-decoration:underline;text-underline-offset:3px}
+.screen-original-link:focus-visible{outline:2px solid #bddcf5;outline-offset:2px}
 .screens-strip img{display:block;width:100%;height:auto;max-width:none;max-height:none;margin-inline:auto;object-fit:contain;transform:none}
 @media(max-width:600px){.screen-toolbar{gap:6px;padding:6px 8px}.screen-toolbar button{font-size:12px;padding:6px 9px;min-height:34px}.craft-stage.screens-strip{padding-inline:8px}.screens-strip figure{margin-bottom:16px}}
+@media(max-width:600px){.screen-original-link{min-height:44px}}
 
 /* Video arrows sit outside the media, leaving native controls unobstructed. */
 .craft-playback-row{display:grid;grid-template-columns:40px minmax(0,1fr) 40px;gap:12px;align-items:center;min-width:0}
@@ -194,7 +197,10 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
 @media(max-width:600px){.craft-playback-row{grid-template-columns:44px minmax(0,1fr) 44px;gap:4px}}
 
 .craft-step-label{display:none}
+.craft-media-name{display:none}
 @media(max-width:600px){
+ .craft-media-name{display:inline}
+ .craft-media-duration,.craft-dialog.motion-mode .craft-viewer-footer{display:none}
  .craft-playback-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px}
  .craft-playback-row .craft-stage{grid-column:1/-1;grid-row:1}
  .craft-dialog .craft-side-arrow{width:auto;min-width:88px;height:44px;padding:0 10px;border:0;border-radius:0;background:transparent;font-size:14px}
@@ -224,6 +230,11 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
 .design-card .project-info h3 button:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px}
 .design-card button:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 @media(max-width:600px){.design-card [data-craft-open].craft-touch-restored:focus{outline:none}}
+@media(max-width:600px){
+ .image-dialog.about-photo-mode .dialog-close{width:44px;height:44px;right:10px;top:8px;padding:0;border:0;background:transparent;color:var(--ink);font-size:0}
+ .image-dialog.about-photo-mode .dialog-close::after{content:"×";font-size:24px;line-height:1}
+ :is(.about-photo-main,.about-photo-note) .zoom-image.about-touch-restored:focus{outline:none}
+}
 .design-grid{padding-bottom:0}
 
 .about-evidence{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}

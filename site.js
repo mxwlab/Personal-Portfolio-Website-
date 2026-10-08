@@ -80,16 +80,24 @@ if (filters.length) {
 }
 const dialog = document.getElementById('image-dialog');
 dialog?.setAttribute('aria-label', '作品图片查看器');
-let imageTrigger;
+let imageTrigger, lastImageInputWasTouch = false;
 document.querySelectorAll('[data-zoom]').forEach(button => button.addEventListener('click', () => {
   if (!dialog?.showModal) { window.open(button.dataset.zoom, '_blank', 'noopener'); return; }
   imageTrigger = button;
+  button.classList.remove('about-touch-restored');
+  dialog.classList.toggle('about-photo-mode', Boolean(button.closest('.about-photo-main,.about-photo-note')));
   dialog.querySelector('img').src = button.dataset.zoom;
   dialog.querySelector('img').alt = button.dataset.alt;
   dialog.querySelector('.dialog-caption').textContent = button.dataset.alt;
   dialog.showModal();
 }));
 if (dialog) {
+  dialog.addEventListener('pointerdown', event => { lastImageInputWasTouch = event.pointerType === 'touch'; });
+  document.addEventListener('keydown', () => {
+    lastImageInputWasTouch = false;
+    document.querySelectorAll('.about-touch-restored').forEach(button => button.classList.remove('about-touch-restored'));
+  }, true);
+  document.querySelectorAll('.about-photo-main [data-zoom],.about-photo-note [data-zoom]').forEach(button => button.addEventListener('blur', () => button.classList.remove('about-touch-restored')));
   // The image viewer has one control; keep Tab navigation inside the modal.
   dialog.addEventListener('keydown', event => {
     if (event.key === 'Tab') { event.preventDefault(); dialog.querySelector('.dialog-close').focus(); }
@@ -99,7 +107,12 @@ if (dialog) {
     const box = dialog.getBoundingClientRect();
     if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
   });
-  dialog.addEventListener('close', () => { dialog.querySelector('img').removeAttribute('src'); imageTrigger?.focus(); });
+  dialog.addEventListener('close', () => {
+    dialog.querySelector('img').removeAttribute('src');
+    const phonePhoto = matchMedia('(max-width:600px)').matches && dialog.classList.contains('about-photo-mode');
+    imageTrigger?.classList.toggle('about-touch-restored', Boolean(phonePhoto && lastImageInputWasTouch));
+    imageTrigger?.focus({preventScroll:phonePhoto});
+  });
 }
 
 // Quiet looping demos: pause offscreen; respect reader pause and reduced motion.
@@ -202,7 +215,10 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
   const illustrations = JSON.parse(document.getElementById('illustration-media-data')?.textContent || '[]');
   const collection = () => kind === 'illustrations' ? illustrations : works;
   const pauseMedia = () => viewer.querySelectorAll('video').forEach(video => video.pause());
-  function render() {
+  function render({playRequested = false} = {}) {
+    const previousVideo = stage.querySelector('video');
+    const phone = matchMedia('(max-width:600px)').matches;
+    const sound = phone && previousVideo ? {muted:previousVideo.muted,volume:previousVideo.volume} : null;
     pauseMedia();
     const screens = kind === 'screens';
     const pictures = kind === 'illustrations';
@@ -217,6 +233,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
     viewer.querySelector('.craft-viewer-footer').hidden = screens;
     steps.forEach(button => { button.hidden = screens; });
     viewer.classList.toggle('screens-mode', screens);
+    viewer.classList.toggle('motion-mode', !screens && !pictures);
     stage.classList.toggle('screens-strip', screens);
     groups.querySelectorAll('button').forEach((button, index) => button.setAttribute('aria-pressed', String(index === group)));
     current.textContent = screens ? `${screenGroups[group].title} · ${count} 张` : pictures ? '插画' : works[item].title;
@@ -241,25 +258,31 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
       const work = works[item];
       const media = document.createElement('video');
       media.className = 'craft-real-media';
-      media.controls = true; media.playsInline = true; media.muted = true;
-      media.autoplay = !matchMedia('(max-width:600px)').matches;
+      media.controls = true; media.playsInline = true; media.muted = sound ? sound.muted : true;
+      if (sound) media.volume = sound.volume;
+      media.autoplay = !phone;
       media.preload = 'metadata'; media.poster = work.poster; media.src = work.video; media.tabIndex = 0;
       media.setAttribute('aria-label',work.title+'完整视频');
       const detail = document.createElement('p');
-      detail.textContent = `${work.duration} 秒 · 无声视频`;
+      const duration = document.createElement('span'); duration.className = 'craft-media-duration';
+      duration.textContent = `${work.duration} 秒 · 无声视频`;
+      const name = document.createElement('span'); name.className = 'craft-media-name'; name.textContent = work.title;
+      detail.append(duration,name);
+      const status = document.createElement('p'); status.hidden = true; status.setAttribute('role','status');
       const fallback = document.createElement('button');
       fallback.type = 'button'; fallback.hidden = true; fallback.textContent = '点击播放';
       const attemptPlay = async () => {
         try { await media.play(); }
         catch {
-          if (viewer.open && stage.contains(media)) { fallback.hidden = false; detail.textContent = '未能自动播放，请点击播放或使用视频控件。'; }
+          if (viewer.open && stage.contains(media)) { fallback.hidden = false; status.hidden = false; status.textContent = playRequested ? '未能开始播放，请点击播放或使用视频控件。' : '未能自动播放，请点击播放或使用视频控件。'; }
         }
       };
       fallback.addEventListener('click', attemptPlay);
-      media.addEventListener('playing', () => { fallback.hidden = true; detail.textContent = `${work.duration} 秒 · 无声视频`; });
-      media.addEventListener('error', () => { if (viewer.open && stage.contains(media)) { fallback.hidden = false; detail.textContent = '视频暂未加载成功，可点击重试。'; } });
-      stage.append(media,detail,fallback);
-      if (media.autoplay) attemptPlay();
+      media.addEventListener('playing', () => { fallback.hidden = true; status.hidden = true; });
+      media.addEventListener('error', () => { if (viewer.open && stage.contains(media)) { fallback.hidden = false; status.hidden = false; status.textContent = '视频暂未加载成功，可点击重试。'; } });
+      stage.append(media,detail,status,fallback);
+      // A switch click requests play before yielding, preserving its user activation while the source loads.
+      if (media.autoplay || playRequested) attemptPlay();
     } else {
       screenGroups.forEach((platform, platformIndex) => {
         const section = document.createElement('section');
@@ -269,24 +292,45 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
         platform.pages.forEach((page, index) => {
           const figure = document.createElement('figure');
           const media = document.createElement('img');
-          media.src = page.src; media.alt = `${platform.title} · ${page.name}`;
+          media.dataset.preview = page.preview; media.dataset.previewSet = page.previewSet;
+          media.alt = `${platform.title} · ${page.name}`;
           media.width = page.width; media.height = page.height;
-          media.loading = platformIndex === 0 && index === 0 ? 'eager' : 'lazy'; media.decoding = 'async';
+          media.style.aspectRatio = `${page.width} / ${page.height}`;
+          media.decoding = 'async';
+          const original = document.createElement('a');
+          original.className = 'screen-original-link'; original.href = page.src;
+          original.target = '_blank'; original.rel = 'noopener noreferrer';
+          original.textContent = '查看原图 ↗'; original.setAttribute('aria-label',`查看原图：${page.name}（新窗口）`);
           const error = document.createElement('p'); error.hidden = true;
           error.textContent = `${page.name} 暂未加载成功，请重新打开浏览器。`;
           media.addEventListener('error', () => { error.hidden = false; });
-          figure.append(media, error); section.append(figure);
+          figure.append(media, original, error); section.append(figure);
         });
         stage.append(section);
       });
       updateScreenActive();
     }
     stage.scrollTop = 0; stage.scrollLeft = 0;
+    if (screens) requestAnimationFrame(loadNearbyScreens);
     steps[0].disabled = item === 0;
     steps[1].disabled = item === count - 1;
     if (document.activeElement?.disabled) steps.find(button => !button.disabled)?.focus({preventScroll:true});
   }
   const screenOffset = () => screenToolbar.getBoundingClientRect().height + 12;
+  function loadNearbyScreens() {
+    if (kind !== 'screens' || !viewer.open) return;
+    const viewport = stage.getBoundingClientRect();
+    const nearby = [...stage.querySelectorAll('img[data-preview]')].filter(media => {
+      const box = media.getBoundingClientRect();
+      return box.bottom >= viewport.top - 160 && box.top <= viewport.bottom + 160;
+    });
+    for (const media of nearby) {
+      media.sizes = '(max-width:600px) calc(100vw - 16px), calc(100vw - 32px)';
+      media.srcset = media.dataset.previewSet;
+      media.src = media.dataset.preview;
+      delete media.dataset.preview; delete media.dataset.previewSet;
+    }
+  }
   function updateScreenActive() {
     if (kind !== 'screens' || !viewer.open) return;
     const sections = [...stage.querySelectorAll('.screen-platform-section')];
@@ -306,9 +350,9 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
   stage.addEventListener('scroll', () => {
     if (screenScrollScheduled || kind !== 'screens') return;
     screenScrollScheduled = true;
-    requestAnimationFrame(() => { screenScrollScheduled = false; updateScreenActive(); });
+    requestAnimationFrame(() => { screenScrollScheduled = false; updateScreenActive(); loadNearbyScreens(); });
   },{passive:true});
-  window.addEventListener('resize', updateScreenActive);
+  window.addEventListener('resize', () => { updateScreenActive(); loadNearbyScreens(); });
   screenGroups.forEach((platform, index) => {
     const button = document.createElement('button');
     button.type = 'button'; button.textContent = platform.title;
@@ -320,6 +364,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
       if (!target) return;
       stage.scrollTo({top:stage.scrollTop + target.getBoundingClientRect().top - stage.getBoundingClientRect().top - screenOffset(),behavior:'instant'});
       updateScreenActive();
+      loadNearbyScreens();
     });
     platformButtons.append(button);
   });
@@ -345,7 +390,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
   steps.forEach(button => button.addEventListener('click', () => {
     if (kind === 'screens') return;
     item = Math.max(0, Math.min(collection().length - 1, item + Number(button.dataset.craftStep)));
-    render();
+    render({playRequested:matchMedia('(max-width:600px)').matches});
   }));
   close.addEventListener('click', () => viewer.close());
   viewer.addEventListener('cancel', event => { event.preventDefault(); viewer.close(); });
@@ -356,7 +401,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
       render(); return;
     }
     if (event.key !== 'Tab') return;
-    const buttons = [...viewer.querySelectorAll('button, select, video[controls], [tabindex="0"]')].filter(button => !button.disabled && !button.closest('[hidden]'));
+    const buttons = [...viewer.querySelectorAll('button, select, video[controls], a[href], [tabindex="0"]')].filter(button => !button.disabled && !button.closest('[hidden]') && button.getClientRects().length);
     const first = buttons[0], last = buttons.at(-1);
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
