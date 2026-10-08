@@ -317,3 +317,9 @@ html.single-page-home{scroll-padding-top:var(--home-anchor-offset,84px)}
  .hero-editorial .hero-capabilities{width:100%;max-width:none;justify-content:flex-start;gap:8px;margin-inline:0}
  .hero-editorial .hero-capabilities li{flex:0 0 auto;padding-inline:10px}
 }
+
+/* Phones browse the more-work rail directly by touch. */
+@media(max-width:600px){
+ .home-page .more-work .work-rail-controls{display:none}
+ .home-page .more-work .work-rail-wrap{padding-inline:0}
+}

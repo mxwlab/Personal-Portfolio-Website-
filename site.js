@@ -183,7 +183,20 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
   const platformButtons = viewer.querySelector('.screen-platforms');
   const screenClose = viewer.querySelector('.screen-close');
   const steps = [...viewer.querySelectorAll('[data-craft-step]')];
+  steps.forEach(button => {
+    const icon = document.createElement('span');
+    icon.className = 'craft-step-icon'; icon.textContent = button.textContent;
+    const label = document.createElement('span');
+    label.className = 'craft-step-label';
+    label.textContent = Number(button.dataset.craftStep) < 0 ? '上一个' : '下一个';
+    button.replaceChildren(icon, label);
+  });
   let kind = 'spatial', group = 0, item = 0, trigger, scrollX = 0, scrollY = 0, bodyStyle;
+  let lastViewerInputWasTouch = false;
+  document.addEventListener('keydown', () => {
+    lastViewerInputWasTouch = false;
+    document.querySelectorAll('.craft-touch-restored').forEach(button => button.classList.remove('craft-touch-restored'));
+  }, true);
   const screenGroups = JSON.parse(document.getElementById('screen-media-data')?.textContent || '[]');
   const works = JSON.parse(document.getElementById('craft-media-data').textContent);
   const illustrations = JSON.parse(document.getElementById('illustration-media-data')?.textContent || '[]');
@@ -206,7 +219,13 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
     viewer.classList.toggle('screens-mode', screens);
     stage.classList.toggle('screens-strip', screens);
     groups.querySelectorAll('button').forEach((button, index) => button.setAttribute('aria-pressed', String(index === group)));
-    current.textContent = screens ? `${screenGroups[group].title} · ${count} 张` : pictures ? `插画 ${item + 1} / ${count}` : `${works[item].title} · ${item + 1} / ${count}`;
+    current.textContent = screens ? `${screenGroups[group].title} · ${count} 张` : pictures ? '插画' : works[item].title;
+    if (!screens) {
+      const counter = document.createElement('span');
+      counter.className = 'craft-item-count';
+      counter.textContent = `${pictures ? ' ' : ' · '}${item + 1} / ${count}`;
+      current.append(counter);
+    }
     stage.replaceChildren();
     if (pictures) {
       const picture = illustrations[item];
@@ -222,7 +241,8 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
       const work = works[item];
       const media = document.createElement('video');
       media.className = 'craft-real-media';
-      media.controls = true; media.playsInline = true; media.muted = true; media.autoplay = true;
+      media.controls = true; media.playsInline = true; media.muted = true;
+      media.autoplay = !matchMedia('(max-width:600px)').matches;
       media.preload = 'metadata'; media.poster = work.poster; media.src = work.video; media.tabIndex = 0;
       media.setAttribute('aria-label',work.title+'完整视频');
       const detail = document.createElement('p');
@@ -239,7 +259,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
       media.addEventListener('playing', () => { fallback.hidden = true; detail.textContent = `${work.duration} 秒 · 无声视频`; });
       media.addEventListener('error', () => { if (viewer.open && stage.contains(media)) { fallback.hidden = false; detail.textContent = '视频暂未加载成功，可点击重试。'; } });
       stage.append(media,detail,fallback);
-      attemptPlay();
+      if (media.autoplay) attemptPlay();
     } else {
       screenGroups.forEach((platform, platformIndex) => {
         const section = document.createElement('section');
@@ -304,9 +324,13 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
     platformButtons.append(button);
   });
   screenClose.addEventListener('click', () => viewer.close());
-  viewer.addEventListener('pointerdown', () => viewer.classList.remove('screen-keyboard'));
+  viewer.addEventListener('pointerdown', event => {
+    viewer.classList.remove('screen-keyboard');
+    lastViewerInputWasTouch = event.pointerType === 'touch';
+  });
   viewer.addEventListener('keydown', event => { if (event.key === 'Tab') viewer.classList.add('screen-keyboard'); });
   document.querySelectorAll('[data-craft-open]').forEach(button => button.addEventListener('click', () => {
+    button.classList.remove('craft-touch-restored');
     viewer.classList.remove('screen-keyboard');
     trigger = button; kind = button.dataset.craftOpen; group = 0; item = 0;
     scrollX = window.scrollX; scrollY = window.scrollY; bodyStyle = document.body.getAttribute('style');
@@ -315,6 +339,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
     Object.assign(document.body.style, {position:'fixed', top:`-${scrollY}px`, left:`-${scrollX}px`, width:'100%', overflow:'hidden'});
     (kind === 'screens' ? screenClose : close).focus({preventScroll:true});
   }));
+  document.querySelectorAll('.design-card [data-craft-open]').forEach(button => button.addEventListener('blur', () => button.classList.remove('craft-touch-restored')));
   // Direct preview link reuses the existing viewer and close/focus behavior.
   if (location.hash === '#visualization') document.querySelector('[data-craft-open="screens"]')?.click();
   steps.forEach(button => button.addEventListener('click', () => {
@@ -342,6 +367,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
     if (bodyStyle === null) document.body.removeAttribute('style');
     else document.body.setAttribute('style', bodyStyle);
     window.scrollTo({left:scrollX, top:scrollY, behavior:'instant'});
+    trigger?.classList.toggle('craft-touch-restored', Boolean(lastViewerInputWasTouch && matchMedia('(max-width:600px)').matches && trigger.closest('.design-card')));
     trigger?.focus({preventScroll:true});
   });
 })();

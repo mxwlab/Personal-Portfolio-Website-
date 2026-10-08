@@ -193,6 +193,17 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
 .craft-close:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 @media(max-width:600px){.craft-playback-row{grid-template-columns:44px minmax(0,1fr) 44px;gap:4px}}
 
+.craft-step-label{display:none}
+@media(max-width:600px){
+ .craft-playback-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px}
+ .craft-playback-row .craft-stage{grid-column:1/-1;grid-row:1}
+ .craft-dialog .craft-side-arrow{width:auto;min-width:88px;height:44px;padding:0 10px;border:0;border-radius:0;background:transparent;font-size:14px}
+ .craft-side-arrow[data-craft-step="-1"]{grid-column:1;grid-row:2;justify-self:end}
+ .craft-side-arrow[data-craft-step="1"]{grid-column:2;grid-row:2;justify-self:start}
+ .craft-step-icon,.craft-item-count{display:none}
+ .craft-step-label{display:inline}
+}
+
 /* Glass is composited over the scrollable artwork, with safe space at both ends. */
 .craft-dialog.screens-mode[open]{background:#0a1020}
 .craft-dialog.screens-mode .screen-toolbar{position:absolute;inset:0 0 auto;z-index:2;background:rgba(10,18,32,.58);backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%);border-bottom:1px solid rgba(191,211,235,.13)}
@@ -212,6 +223,7 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
 .design-card .project-info h3 button{padding:0;border:0;background:transparent;color:inherit;text-align:left;font:inherit;cursor:pointer}
 .design-card .project-info h3 button:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px}
 .design-card button:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+@media(max-width:600px){.design-card [data-craft-open].craft-touch-restored:focus{outline:none}}
 .design-grid{padding-bottom:0}
 
 .about-evidence{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
