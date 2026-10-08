@@ -224,66 +224,6 @@
       }
     ]
   },
-  "wechat-cc/cover.png": {
-    "src": "media/wechat-cc-cover-1600.jpg",
-    "width": 1672,
-    "height": 941,
-    "variants": [
-      {
-        "src": "media/wechat-cc-cover-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/wechat-cc-cover-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "wechat-cc/companion-aquarium-poster.jpg": {
-    "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
-    "width": 1400,
-    "height": 934,
-    "variants": [
-      {
-        "src": "media/wechat-cc-companion-aquarium-poster-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
-        "width": 1400
-      }
-    ]
-  },
-  "wechat-cc/reader/todo-example.png": {
-    "src": "media/wechat-cc-reader-todo-example-1440.jpg",
-    "width": 1440,
-    "height": 746,
-    "variants": [
-      {
-        "src": "media/wechat-cc-reader-todo-example-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/wechat-cc-reader-todo-example-1440.jpg",
-        "width": 1440
-      }
-    ]
-  },
-  "wechat-cc/reader/social-released.png": {
-    "src": "media/wechat-cc-reader-social-released-1600.jpg",
-    "width": 2200,
-    "height": 1720,
-    "variants": [
-      {
-        "src": "media/wechat-cc-reader-social-released-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/wechat-cc-reader-social-released-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
   "d4s/cover.png": {
     "src": "media/d4s-cover-1600.jpg",
     "width": 1672,
@@ -493,51 +433,6 @@
       }
     ]
   },
-  "pocket-fishpond/cover.png": {
-    "src": "media/pocket-fishpond-cover-1600.jpg",
-    "width": 1672,
-    "height": 941,
-    "variants": [
-      {
-        "src": "media/pocket-fishpond-cover-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/pocket-fishpond-cover-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
-  "pocket-fishpond/reader/device-poster.jpg": {
-    "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
-    "width": 1006,
-    "height": 938,
-    "variants": [
-      {
-        "src": "media/pocket-fishpond-reader-device-poster-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
-        "width": 1006
-      }
-    ]
-  },
-  "pocket-fishpond/maker-space-workshop.jpg": {
-    "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
-    "width": 1800,
-    "height": 1471,
-    "variants": [
-      {
-        "src": "media/pocket-fishpond-maker-space-workshop-720.jpg",
-        "width": 720
-      },
-      {
-        "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
-        "width": 1600
-      }
-    ]
-  },
   "agent-platform/cover.png": {
     "src": "media/agent-platform-cover-1600.jpg",
     "width": 3344,
@@ -685,6 +580,111 @@
       {
         "src": "media/knowledge-graph-data-standards-1396.jpg",
         "width": 1396
+      }
+    ]
+  },
+  "wechat-cc/cover.png": {
+    "src": "media/wechat-cc-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/wechat-cc-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "wechat-cc/companion-aquarium-poster.jpg": {
+    "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
+    "width": 1400,
+    "height": 934,
+    "variants": [
+      {
+        "src": "media/wechat-cc-companion-aquarium-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
+        "width": 1400
+      }
+    ]
+  },
+  "wechat-cc/reader/todo-example.png": {
+    "src": "media/wechat-cc-reader-todo-example-1440.jpg",
+    "width": 1440,
+    "height": 746,
+    "variants": [
+      {
+        "src": "media/wechat-cc-reader-todo-example-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-reader-todo-example-1440.jpg",
+        "width": 1440
+      }
+    ]
+  },
+  "wechat-cc/reader/social-released.png": {
+    "src": "media/wechat-cc-reader-social-released-1600.jpg",
+    "width": 2200,
+    "height": 1720,
+    "variants": [
+      {
+        "src": "media/wechat-cc-reader-social-released-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-reader-social-released-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "pocket-fishpond/cover.png": {
+    "src": "media/pocket-fishpond-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "pocket-fishpond/reader/device-poster.jpg": {
+    "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
+    "width": 1006,
+    "height": 938,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-reader-device-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
+        "width": 1006
+      }
+    ]
+  },
+  "pocket-fishpond/maker-space-workshop.jpg": {
+    "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
+    "width": 1800,
+    "height": 1471,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-maker-space-workshop-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
+        "width": 1600
       }
     ]
   },

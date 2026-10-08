@@ -317,17 +317,6 @@ video.craft-real-media{width:auto;height:auto;min-width:0;min-height:0;flex:none
  .work-page .archive-section .project-card:is(:hover,:has(:focus-visible)){transform:scale(.975);opacity:.8}
 }
 
-/* Collection entries share subtle feedback across the home and archive filters. */
-@media(hover:hover) and (pointer:fine){
- :is(.home-page,.work-page) .work-design .design-card{transition:transform 220ms var(--ease)}
- .work-design .design-card .project-image{transition:box-shadow 220ms var(--ease)}
- :is(.home-page,.work-page) .work-design .design-card:is(:hover,:has(:focus-visible)){opacity:1}
- .work-design .design-card:is(:hover,:has(:focus-visible)) .project-image{box-shadow:0 14px 30px #263c3324}
-}
-@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
- :is(.home-page,.work-page) .work-design .design-card:is(:hover,:has(:focus-visible)){transform:translateY(-4px)}
-}
-
 /* Decorative diagonal arrows use one vector shape, independent of system fonts. */
 .arrow-up-right{display:inline-block;width:22px;height:22px;flex:0 0 22px;vertical-align:middle;pointer-events:none}
 
