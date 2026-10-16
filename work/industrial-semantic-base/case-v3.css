@@ -543,3 +543,6 @@ html:has(> .iv3-preview){scroll-padding-top:0}
  .iv3-preview .iv3-chapter-name{font-size:28px}
  .iv3-preview .iv3-chapter-claim,.iv3-preview .iv3-lead{font-size:20px}
 }
+
+/* The cover introduction is a single text column after removing its old thumbnail. */
+.iv3-preview #v3-01-cover .iv3-row.iv3-cover-intro{grid-template-columns:minmax(0,1fr)}
