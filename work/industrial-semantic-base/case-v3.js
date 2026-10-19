@@ -48,30 +48,42 @@
   update();
 })();
 
-// Full-size evidence remains readable on touch screens, with explicit fit/zoom and close controls.
+// One width-fit viewer for every evidence image on this case page.
 (() => {
   const dialog=document.querySelector('#image-dialog');
   const img=dialog?.querySelector('img');
   if(!dialog||!img)return;
-  const area=document.createElement('div');area.className='iv3-dialog-image-area';
+  const close=dialog.querySelector('.dialog-close');
+  const caption=dialog.querySelector('.dialog-caption');
+  const area=document.createElement('div');
+  area.className='iv3-dialog-image-area';
+  area.tabIndex=0;
+  area.setAttribute('role','region');
+  area.setAttribute('aria-label','图片内容，可向下滚动查看');
   img.before(area);area.append(img);
-  const zoom=document.createElement('button');zoom.type='button';zoom.className='iv3-dialog-zoom';
-  zoom.textContent='原图尺寸';zoom.setAttribute('aria-pressed','false');
-  dialog.querySelector('.dialog-close').after(zoom);
-  const reset=()=>{dialog.classList.remove('is-detail-zoomed');zoom.textContent='原图尺寸';zoom.setAttribute('aria-pressed','false');area.scrollTo(0,0);};
-  zoom.addEventListener('click',()=>{
-    const enabled=!dialog.classList.contains('is-detail-zoomed');
-    dialog.style.setProperty('--iv3-original-width',`${img.naturalWidth}px`);
-    dialog.classList.toggle('is-detail-zoomed',enabled);
-    zoom.textContent=enabled?'适合屏幕':'原图尺寸';zoom.setAttribute('aria-pressed',String(enabled));
-    area.scrollTo(0,0);
+  let trigger,position,previousOverflow;
+  document.querySelectorAll('[data-zoom]').forEach(button=>{
+    button.addEventListener('click',event=>{
+      if(!dialog.showModal)return;
+      event.preventDefault();event.stopImmediatePropagation();
+      trigger=button;position={left:scrollX,top:scrollY};
+      previousOverflow=document.documentElement.style.overflow;
+      document.documentElement.style.overflow='hidden';
+      img.src=button.dataset.zoom;
+      img.alt=button.dataset.alt||button.querySelector('img')?.alt||'作品图片';
+      caption.textContent=img.alt;
+      area.scrollTo(0,0);dialog.scrollTo(0,0);
+      dialog.showModal();
+      close.focus({preventScroll:true});
+      area.scrollTo({top:0,left:0,behavior:'instant'});dialog.scrollTo(0,0);
+    },true);
   });
-  dialog.addEventListener('keydown',event=>{
-    if(event.key!=='Tab')return;
-    event.preventDefault();event.stopImmediatePropagation();
-    const controls=[dialog.querySelector('.dialog-close'),zoom];
-    const index=controls.indexOf(document.activeElement);
-    controls[(index+(event.shiftKey?-1:1)+controls.length)%controls.length].focus();
+  dialog.addEventListener('close',event=>{
+    // Replace the shared viewer's focus restoration, which can scroll the page.
+    event.stopImmediatePropagation();
+    img.removeAttribute('src');area.scrollTo(0,0);
+    document.documentElement.style.overflow=previousOverflow;
+    trigger?.focus({preventScroll:true});
+    if(position)scrollTo({...position,behavior:'instant'});
   },true);
-  dialog.addEventListener('close',reset);
 })();
