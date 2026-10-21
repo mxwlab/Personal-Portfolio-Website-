@@ -18,12 +18,12 @@ function revealCurrentThumbnail() {
  else if (item.bottom > bounds.bottom - 8) panel.scrollTop += Math.min(item.bottom - bounds.bottom + 8, item.top - bounds.top - 8);
 }
 function sidebar(open) {
- const pageNumber = pdf ? viewer.currentPageNumber : 1;
+ const anchor = readingAnchor();
  $('sidebar').hidden = !open;
  $('sidebar-toggle').setAttribute('aria-expanded', String(open));
  $('sidebar-toggle').setAttribute('aria-label', open ? '收起侧栏' : '展开侧栏');
  if (open) requestAnimationFrame(revealCurrentThumbnail);
- if (pdf && !mobile.matches) fitAfterResize(pageNumber);
+ if (pdf && !mobile.matches && mode.startsWith('page-')) applyZoom(mode, anchor);
 }
 sidebar(!mobile.matches);
 $('sidebar-toggle').onclick = () => sidebar($('sidebar').hidden);
@@ -35,7 +35,19 @@ function goto(number) {
 }
 $('page-number').onchange = e => goto(e.target.value);
 $('page-number').onkeydown = e => { if(e.key === 'Enter') { goto(e.target.value); e.target.blur(); } };
-function setZoom(value) { mode = value; viewer.currentScaleValue = value; }
+function readingAnchor() {
+ if (!pdf) return null;
+ const pageNumber = viewer.currentPageNumber, page = viewer.getPageView(pageNumber - 1);
+ const bounds = page.div.getBoundingClientRect(), container = $('viewer-container').getBoundingClientRect();
+ const [x,y] = page.getPagePoint(Math.max(0,container.left-bounds.left),Math.max(0,container.top-bounds.top));
+ return {pageNumber,x,y};
+}
+function applyZoom(value, anchor = readingAnchor()) {
+ viewer.currentScaleValue = value;
+ if (anchor) viewer.scrollPageIntoView({pageNumber:anchor.pageNumber,
+  destArray:[null,{name:'XYZ'},value==='page-width'?0:anchor.x,anchor.y,null],ignoreDestinationZoom:true});
+}
+function setZoom(value) { mode = value; applyZoom(value); }
 $('zoom').onchange = e => setZoom(e.target.value);
 $('fit-width').onclick = () => setZoom('page-width');
 function zoomBy(factor) { setZoom(String(Math.max(.25, Math.min(4, viewer.currentScale * factor)))); }
@@ -44,8 +56,17 @@ $('zoom-out').onclick = () => zoomBy(1 / 1.25);
 eventBus.on('scalechanging', ({scale}) => {
  const select = $('zoom'); select.querySelector('[data-custom]')?.remove();
  const value = String(scale);
- if (![...select.options].some(o => o.value === value)) { const option = new Option(`${Math.round(scale*100)}%`, value); option.dataset.custom = 'true'; select.add(option); }
- select.value = value;
+ const preset = mode === 'page-width' || mode === 'page-fit';
+ select.querySelector('[value="page-width"]').textContent = '适合宽度';
+ select.querySelector('[value="page-fit"]').textContent = '适合页面';
+ if (preset) {
+  select.querySelector(`[value="${mode}"]`).textContent = `${mode === 'page-width' ? '适宽' : '整页'} ${Math.round(scale*100)}%`;
+  select.value = mode;
+ } else {
+  if (![...select.options].some(o => o.value === value)) { const option = new Option(`${Math.round(scale*100)}%`,value);option.dataset.custom='true';select.add(option); }
+  select.value = value;
+ }
+ $('fit-width').setAttribute('aria-pressed',String(mode === 'page-width'));
  $('zoom-out').disabled = scale <= .25;
  $('zoom-in').disabled = scale >= 4;
 });
@@ -101,18 +122,11 @@ $('viewer-container').addEventListener('keydown', e => {
  if(e.key === 'Home') { e.preventDefault(); goto(1); }
  if(e.key === 'End') { e.preventDefault(); goto(pdf?.numPages); }
 });
-let resizeTimer, resizePage;
-function fitAfterResize(pageNumber = viewer.currentPageNumber) {
+function fitAfterResize() {
  if (!pdf || !mode.startsWith('page-')) return;
- resizePage ??= pageNumber;
- clearTimeout(resizeTimer);
- resizeTimer = setTimeout(() => {
-  const anchor = resizePage; resizePage = undefined;
-  if (!mode.startsWith('page-')) return;
-  viewer.currentScaleValue = mode;
-  viewer.scrollPageIntoView({pageNumber:anchor, ignoreDestinationZoom:true});
-  revealCurrentThumbnail();
- }, 120);
+ // Recompute from the current page/location, never a delayed stale page number.
+ applyZoom(mode);
+ revealCurrentThumbnail();
 }
 new ResizeObserver(() => fitAfterResize()).observe($('viewer-container'));
 async function makeThumbs() {
