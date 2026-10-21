@@ -416,3 +416,43 @@ video[controls].native-controls-idle:fullscreen{cursor:none}
 .image-dialog.landscape-detail-mode img{width:auto;height:auto;max-width:100%;max-height:100%;margin:auto;object-fit:contain}
 .landscape-detail-mode .dialog-caption{display:none}
 @media(max-width:600px){.image-dialog.landscape-detail-mode{padding-inline:8px}}
+
+
+/* The portfolio is available from the same quiet navigation as the rest of the site. */
+.nav-portfolio{position:relative}
+.nav-portfolio summary{display:flex;align-items:center;gap:6px;min-height:44px;cursor:pointer;list-style:none;white-space:nowrap;font:inherit}
+.nav-portfolio summary::-webkit-details-marker{display:none}
+.nav-portfolio summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.nav-portfolio summary:hover .nav-label::after,.nav-portfolio[open] .nav-label::after{transform:scaleX(1)}
+.nav-portfolio-panel{position:absolute;right:0;top:calc(100% + 8px);width:min(220px,calc(100vw - 32px));padding:8px;background:rgba(246,248,247,.52);border:1px solid rgba(255,255,255,.72);border-radius:10px;box-shadow:0 18px 46px rgba(18,40,43,.16);backdrop-filter:blur(28px) saturate(1.28);-webkit-backdrop-filter:blur(28px) saturate(1.28);color:#30343b}
+.nav-portfolio-panel p{margin:3px 11px 7px;padding-bottom:10px;border-bottom:1px solid rgba(42,72,78,.12);font:500 14px/1.6 var(--sans)}
+.nav-portfolio-panel p span{display:block;margin-top:3px;color:#62666d;font-size:12px;font-weight:400}
+.site-header nav .nav-portfolio-panel a{display:flex;justify-content:space-between;gap:16px;width:100%;padding:10px 11px;min-height:44px;border-radius:7px;font-size:14px}
+.site-header nav .nav-portfolio-panel a:hover,.site-header nav .nav-portfolio-panel a:focus-visible{background:#e5ece2;text-decoration:none}
+@media(max-width:600px){
+ :root{--header-height:100px}
+ .site-header .header-inner{flex-wrap:wrap;align-content:center;gap:0;padding-block:4px}
+ .site-header nav{width:100%;justify-content:space-between;gap:4px}
+ .site-header .nav-portfolio-panel{right:0}
+}
+@media(max-width:360px){
+ body .site-header nav,body.home-page .site-header nav{gap:2px;font-size:12px}
+ body .site-header nav>a,body.home-page .site-header nav>a{min-width:40px}
+}
+
+/* Reuse legacy project-menu glass treatment (18ba02b), with viewport-safe right alignment. */
+.nav-portfolio-panel::before{position:absolute;top:-7px;right:26px;width:12px;height:12px;content:"";background:rgba(246,248,247,.72);border-top:1px solid rgba(42,72,78,.12);border-left:1px solid rgba(42,72,78,.12);transform:rotate(45deg)}
+.nav-portfolio[open] .nav-portfolio-panel{animation:portfolio-menu-in 160ms ease both}
+.nav-portfolio::after{content:"";position:absolute;top:100%;left:0;right:0;height:12px}
+body.home-page .site-header nav .nav-portfolio-panel a{padding:10px 11px}
+@keyframes portfolio-menu-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.nav-portfolio[open] .nav-portfolio-panel{animation:none}}
+
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.nav-portfolio-panel{background:rgba(246,248,247,.97)}}
+
+/* Both PDF actions use the same type, target and icon geometry. */
+body .site-header nav .nav-portfolio-panel a{height:44px;min-height:44px;font-size:14px;font-weight:400;line-height:22px;gap:16px;align-items:center;padding:10px 11px;border-radius:7px}
+.nav-portfolio-panel a>span[aria-hidden]{display:flex;align-items:center;justify-content:center;width:22px;height:22px;flex:0 0 22px}
+.nav-portfolio-panel a svg{display:block;width:22px;height:22px;flex:none;stroke-width:1.15}
+/* Let the open panel sample the page rather than the header's backdrop layer. */
+body .site-header:has(.nav-portfolio[open]){backdrop-filter:none;-webkit-backdrop-filter:none}

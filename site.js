@@ -511,3 +511,20 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
   window.addEventListener('blur', () => { clearTimeout(timer); current?.classList.remove('native-controls-idle'); });
   window.addEventListener('focus', reveal);
 })();
+
+
+// Native details keeps this small link menu usable without JavaScript.
+(() => {
+ const menu=document.querySelector('.nav-portfolio');
+ if(!menu)return;
+ const hover=matchMedia('(hover:hover) and (pointer:fine)');
+ menu.querySelector('summary').addEventListener('click',event=>{if(hover.matches&&event.detail>0){event.preventDefault();menu.open=true;}});
+ menu.addEventListener('mouseenter',()=>{if(hover.matches)menu.open=true;});
+ menu.addEventListener('mouseleave',()=>{if(hover.matches&&!menu.contains(document.activeElement))menu.open=false;});
+ document.addEventListener('click',event=>{
+  if(!menu.contains(event.target)||event.target.closest('.nav-portfolio-panel a'))menu.open=false;
+ });
+ document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&menu.open){menu.open=false;menu.querySelector('summary').focus();}
+ });
+})();
