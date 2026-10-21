@@ -153,7 +153,7 @@ async function makeOutline() {
  }
 }
 try {
- const task=pdfjsLib.getDocument({url:new URL('../downloads/mo-xiuwen-design-portfolio.pdf',import.meta.url).href,cMapUrl:new URL('./vendor/cmaps/',import.meta.url).href,cMapPacked:true,standardFontDataUrl:new URL('./vendor/standard_fonts/',import.meta.url).href,wasmUrl:new URL('./vendor/wasm/',import.meta.url).href,iccUrl:new URL('./vendor/iccs/',import.meta.url).href,enableXfa:false,isEvalSupported:false});
+ const task=pdfjsLib.getDocument({url:new URL('../downloads/mo-xiuwen-design-portfolio-51.pdf',import.meta.url).href,cMapUrl:new URL('./vendor/cmaps/',import.meta.url).href,cMapPacked:true,standardFontDataUrl:new URL('./vendor/standard_fonts/',import.meta.url).href,wasmUrl:new URL('./vendor/wasm/',import.meta.url).href,iccUrl:new URL('./vendor/iccs/',import.meta.url).href,enableXfa:false,isEvalSupported:false});
  task.onProgress=({loaded,total})=>{ if(total && !$('status').hidden) $('status').textContent=`正在载入作品集… ${Math.min(100,Math.round(loaded/total*100))}%`; };
  pdf=await task.promise;$('page-count').textContent=pdf.numPages;$('page-number').max=pdf.numPages;
  linkService.setDocument(pdf);viewer.setDocument(pdf);
