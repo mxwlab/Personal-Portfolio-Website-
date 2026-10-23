@@ -1,0 +1,94 @@
+/* Independent color experiment. No geometry or typography overrides. */
+:root{--paper:#F5F3EA;--ink:#203D35;--text-heading:#203D35;--muted:#596A57;--line:#203d3526}
+body.home-page{background:#F5F3EA;color:#203D35}
+.home-page .site-header{background:#f5f3eaeF;color:#203D35}
+.home-page #home{background:#F5F3EA;color:#203D35}
+.home-page #home :is(h1,.hero-greeting,.hero-service-label,.hero-byline,.identity-copy){color:#203D35}
+.home-page .cap-marquee{background:#58702F;color:#F5F3EA}
+.home-page .cap-marquee .cap-index-link{color:#F5F3EA}
+.home-page .cap-marquee .cap-index-link:is(:hover,:focus-visible){color:#F5F3EA;background:#ffffff1f}
+.home-page #capabilities,.home-page #projects{background:#F5F3EA}
+.home-page #design-works,.home-page #contact{background:#203D35;color:#F5F3EA;--text-heading:#F5F3EA;--ink:#F5F3EA;--muted:#D7DEC9;--line:#f5f3ea40}
+.home-page #main :is(#design-works,#contact) :is(h2,h3,p,.eyebrow,a,button){color:#F5F3EA}
+.home-page #about,.home-page .about-intro,.home-page #about-practice{background:#F5F3EA}
+.home-page .about-exploration{background:#F5F3EA;box-shadow:0 0 0 100vmax #F5F3EA;clip-path:inset(0 -100vmax)}
+.home-page .contact-detail{box-shadow:0 0 0 100vmax #203D35;clip-path:inset(0 -100vmax)}
+.home-page .site-footer{background:#203D35;color:#F5F3EA;box-shadow:0 0 0 100vmax #203D35;clip-path:inset(0 -100vmax)}
+.home-page .site-footer :is(a,p){color:#F5F3EA}
+/* Keep the existing illustration and all photographic assets unchanged. */
+.home-page .site-footer :is(span,small){color:#D7DEC9}
+.home-page .cap-marquee .cap-index-link:focus-visible{outline-color:#F5F3EA}
+.home-page .cap-marquee .cap-word{background-image:linear-gradient(#203D35,#203D35)}
+.home-page .cap-marquee .cap-general .cap-word{background-image:none}
+/* Extend only the visual-practice background; retain its content geometry. */
+.home-page #design-works{box-shadow:0 0 0 100vmax #203D35;clip-path:inset(0 -100vmax -130px)}
+/* Preserve the section's 60px margin and parent's 70/48px padding,
+   painting their existing space rather than changing content layout. */
+@media(max-width:600px){.home-page #design-works{clip-path:inset(0 -100vmax -108px)}}
+.home-page #design-works .project-image.poster-cover{background:#203D35}
+
+/* Reuse the existing >16px scroll state and existing 18px backdrop blur. */
+.home-page.header-scrolled .site-header{background:rgba(85,109,31,.9372549);color:#F5F3EA;--line:#f5f3ea40;border-bottom-color:#f5f3ea24}
+.home-page.header-scrolled .site-header :is(a,.wordmark){color:#F5F3EA}
+.home-page.header-scrolled .site-header a:focus-visible{outline:2px solid #F5F3EA;outline-offset:5px}
+.home-page #contact{margin-bottom:0}
+.home-page .color-footer{border-top:0;display:flex;justify-content:space-between;align-items:center;gap:28px;padding-block:42px 54px}
+.home-page .color-footer .footer-name{color:#F5F3EA}
+.home-page .color-footer p{color:#D7DEC9}
+.home-page .color-footer .footer-top{display:inline-flex;align-items:center;gap:14px;text-decoration:none;font-size:14px;white-space:nowrap}
+.home-page .color-footer .footer-top-arrow{display:grid;place-items:center;width:42px;height:42px;border:1px solid #f5f3ea66;border-radius:50%;font-size:23px;color:#F5F3EA;transition:transform .2s ease,border-color .2s ease}
+.home-page .footer-top:hover .footer-top-arrow{transform:translateY(-3px);border-color:#F5F3EA}
+.home-page .footer-top:focus-visible{outline:2px solid #F5F3EA;outline-offset:7px;border-radius:3px}
+@media(max-width:600px){.home-page .color-footer{align-items:flex-start;flex-direction:column;gap:24px;padding-block:28px 42px}}
+@media(prefers-reduced-motion:reduce){.home-page .footer-top .footer-top-arrow{transition:none}.home-page .footer-top:hover .footer-top-arrow{transform:none}}
+/* Floating glass navigation: same outer width as the main shell. */
+.home-page.header-scrolled .site-header{inset:12px 0 auto;width:min(calc(100% - var(--space)*2),var(--max));margin-inline:auto;border:1px solid rgb(245 243 234 / .24);border-radius:18px;background:rgb(85 109 31 / .70);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 5px 18px rgb(32 61 53 / .08)}
+.home-page.header-scrolled .site-header .header-inner{width:100%;padding-inline:24px}
+.home-page.header-scrolled .site-header a{text-shadow:0 1px 2px rgb(32 61 53 / .3)}
+@media(max-width:600px){.home-page.header-scrolled .site-header{width:calc(100% - 24px);top:10px;border-radius:16px}.home-page.header-scrolled .site-header .header-inner{width:100%;padding-inline:12px}}
+/* Two-color closing section; contact content and footer geometry stay intact. */
+.home-page .color-footer{background:#58702F;box-shadow:0 0 0 100vmax #58702F;border-top:0}
+.home-page #contact{border-bottom:0}
+.home-page .color-footer :is(.footer-name,p,.footer-top,.footer-top-arrow){color:#F5F3EA}
+/* User-selected final order: olive contact, forest signature. */
+.home-page #contact{background:#58702F;box-shadow:0 0 0 100vmax #58702F}
+.home-page .color-footer{background:#203D35;box-shadow:0 0 0 100vmax #203D35}
+/* Extend only the hover paint, preserving measured word/track geometry. */
+.home-page .cap-marquee .cap-index-link{position:relative;isolation:isolate}
+.home-page .cap-marquee .cap-index-link::before{content:"";position:absolute;inset:0 -14px;border-radius:4px;background:#ffffff1f;opacity:0;pointer-events:none;z-index:-1}
+.home-page .cap-marquee .cap-index-link:is(:hover,:focus-visible){background:transparent}
+.home-page .cap-marquee .cap-index-link:is(:hover,:focus-visible)::before{opacity:1}
+/* Restore the unified forest-green closing section. */
+.home-page #contact,.home-page .color-footer{background:#203D35;box-shadow:0 0 0 100vmax #203D35}
+/* Navigation labels: one size larger in both transparent and glass states. */
+.home-page .site-header nav{font-size:18px}
+.home-page .site-header nav .arrow-up-right{width:24px;height:24px}
+@media(max-width:900px){.home-page .site-header nav{font-size:16px;gap:20px}}
+@media(max-width:600px){.home-page .site-header nav{font-size:15px;gap:2px}.home-page .site-header nav .arrow-up-right{width:20px;height:20px}}
+/* Remove the previous word underline in every interaction state. */
+.home-page .cap-marquee .cap-index-link .cap-word{background-image:none;background-size:0 0}
+/* Two selected cases, matching the existing visual-practice card columns. */
+.home-page .selected-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:38px}
+@media(max-width:600px){.home-page .selected-grid{grid-template-columns:1fr}}
+/* Trial only: full-bleed automatic work rail. */
+.home-page .more-work .work-rail-wrap{max-width:none;overflow:hidden}
+.home-page .more-work .work-rail{scroll-behavior:auto;scroll-snap-type:none;overflow-x:auto;scrollbar-width:none;padding-inline:24px;touch-action:pan-x pan-y}
+.home-page .more-work .work-rail::-webkit-scrollbar{display:none}
+.home-page .more-work .work-rail-controls{display:none!important}
+
+/* Secondary work cards: 80% of previous column width, with readable type. */
+.home-page .more-work .work-rail{grid-auto-columns:calc((100% - 60px)/4.0625)}
+.home-page .more-work .project-info h3{font-size:20px}
+@media(max-width:1100px){.home-page .more-work .work-rail{grid-auto-columns:calc((100% - 40px)/3)}}
+@media(max-width:760px){.home-page .more-work .work-rail{grid-auto-columns:64%}.home-page .more-work .project-info h3{font-size:18px}}
+
+.home-page #more-work-rail .project-info h3{font-size:20px}
+@media(max-width:760px){.home-page #more-work-rail .project-info h3{font-size:18px}}
+
+/* Warm charcoal trial: only the two large dark homepage areas. */
+.home-page #design-works,.home-page #contact{background:#3F5148;box-shadow:0 0 0 100vmax #3F5148}
+.home-page #design-works .project-image.poster-cover{background:#3F5148}
+.home-page .contact-detail{box-shadow:0 0 0 100vmax #3F5148}
+
+/* Shift only the About illustration; preserve its size and vertical placement. */
+@media(min-width:901px){.home-page .about-desk-art #digital-desk{container-type:inline-size}.home-page .about-desk-art .desk-stage{position:relative;left:min(40px,max(0px,calc((100cqw - 583px)/2)));}}

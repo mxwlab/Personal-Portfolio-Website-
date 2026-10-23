@@ -1,0 +1,21 @@
+/* Local-only use of supplied ClawdDesk sprites and the existing adapted room. */
+.home-page #contact{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center}
+#contact-desk{width:100%;min-width:0;align-self:center;background:#3F5148}
+#contact-desk canvas{display:block;width:100%;height:auto;aspect-ratio:16/9}
+#contact-desk button{display:none}
+.home-page #contact .contact-actions{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.home-page #contact .wechat-trigger{background:none;border:0;border-bottom:1px solid #f5f3ea70;padding:0 0 5px;font:inherit;cursor:pointer}
+#wechat-card{position:fixed;z-index:10000;width:240px;max-width:calc(100vw - 24px);padding:6px;background:#fff;color:#203D35;border:1px solid #d7dbd2;border-radius:10px;box-shadow:0 12px 35px #16291e30;box-sizing:border-box;}
+#wechat-card[hidden]{display:none}
+#wechat-card img{display:block;width:100%;height:auto;max-height:calc(100dvh - 100px);object-fit:contain;background:#fff}
+#wechat-card .wechat-close{position:absolute;right:4px;top:2px;background:#fff;color:#203D35;border:0;font-size:22px;line-height:28px;width:28px;cursor:pointer;border-radius:50%}
+#wechat-card .wechat-contact-link{display:block;text-align:center;font-size:13px;color:#203D35;margin-top:2px;padding:3px;text-decoration:underline}
+#wechat-card :focus-visible{outline:2px solid #58702F;outline-offset:2px}
+@media(max-width:800px){.home-page #contact{grid-template-columns:1fr;gap:24px}#contact-desk{max-width:560px;margin:auto}}
+
+.home-page #home .hero-role-centered{text-align:center;margin:16px auto 20px}
+
+#contact-desk iframe{display:block;width:100%;aspect-ratio:3456/2234;border:0;background:#3F5148;pointer-events:none}
+.home-page .cap-marquee{background:var(--band-bg,#E8ECDF);color:var(--band-ink,#58702F)}
+.home-page .cap-marquee .cap-index-link,.home-page .cap-marquee .cap-index-link:is(:hover,:focus-visible){color:var(--band-ink,#58702F)}
+.home-page .cap-marquee .cap-index-link:focus-visible{outline-color:currentColor}

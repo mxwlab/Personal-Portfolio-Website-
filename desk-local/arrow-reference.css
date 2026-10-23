@@ -1,0 +1,4 @@
+/* Reference arrow motif only; never product-image pixels. */
+html body svg.arrow-up-right{color:#58702F;stroke:currentColor}
+/* Retain legibility on the colored contact surface. */
+html body #contact svg.arrow-up-right{color:#FAF8F2}

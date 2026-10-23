@@ -1,0 +1,58 @@
+.desk-transition{display:block;margin-top:60px;margin-bottom:58px;background:#f3f2eb;overflow:hidden}.desk-stage{position:relative;width:min(100%,720px);aspect-ratio:16/9;margin:0 auto}.desk-stage canvas{display:block;width:100%;height:100%;object-fit:contain}.desk-toggle,main>.cap-marquee .marquee-toggle{display:none}main>.cap-marquee{margin-top:0;margin-bottom:0;padding-right:0}@media(max-width:700px){.desk-transition{margin-top:32px;margin-bottom:36px}}/* Keep the complete number + caption group vertically centered. */
+#capabilities.capabilities-section{display:flex;flex-direction:column;justify-content:center;padding-block:72px}
+#capabilities .practice-numbers{width:100%;padding-block:0;margin-block:0}
+#capabilities .practice-stat>p{margin-bottom:0}
+#capabilities .cap-index-layout:empty{display:none}
+@media(max-width:700px){#capabilities.capabilities-section{padding-block:44px}}
+/* The blank space before the project heading belongs to the number band. */
+#capabilities.capabilities-section{padding-block:114px}
+.home-page #capabilities + .home-projects{padding-top:0}
+@media(max-width:700px){#capabilities.capabilities-section{padding-block:86px}}
+
+#capabilities.capabilities-section{padding-block:110px 118px}
+@media(max-width:700px){#capabilities.capabilities-section{padding-block:84px 88px}}
+.about-photo-note #digital-desk{width:100%;margin:0;min-height:0}.about-photo-note #digital-desk .desk-stage{width:100%;max-width:720px;margin:auto}.about-photo-note:has(#digital-desk){padding:0;background:transparent}.about-gallery-nav{display:flex;justify-content:center;gap:24px;margin:10px 0}.about-gallery-nav[hidden]{display:none}.about-gallery-nav button{min-width:44px;min-height:44px;border:1px solid #8c9988;background:#f3f2eb;color:#30483c;border-radius:4px;font:inherit}
+.about-photo-note #digital-desk .desk-stage{width:62%;max-width:440px}
+.about-photo-note #digital-desk{background:transparent}
+@media(max-width:700px){.about-photo-note #digital-desk .desk-stage{width:65%}}
+.about-photo-note #digital-desk .desk-stage{max-width:370px}
+/* Place the small illustration within the requested lower-left breathing space. */
+.about-photo-note:has(#digital-desk){margin-top:90px;border-left:0}
+.about-photo-note #digital-desk{position:relative;left:-64px;overflow:visible}
+.about-photo-note #digital-desk canvas{mask-image:linear-gradient(to bottom,transparent,#000 6%,#000 89%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect}
+.home-page #about-practice{border-top:0}
+@media(max-width:900px){.about-photo-note:has(#digital-desk){margin-top:32px}.about-photo-note #digital-desk{left:0}}
+#capabilities .practice-count{font-family:"Times New Roman",Times,serif;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+
+/* About illustration is independent of the activity gallery. */
+.about-desk-art{display:flex;align-items:center;justify-content:center;min-width:0;align-self:center}.about-desk-art #digital-desk{margin:0;width:100%;background:transparent;overflow:visible}.about-desk-art .desk-stage{width:90%;max-width:530px}.about-desk-art canvas{mask-image:linear-gradient(to bottom,transparent,#000 6%,#000 89%,transparent),linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect}@media(max-width:900px){.about-desk-art{margin-top:16px}.about-desk-art .desk-stage{width:100%;max-width:460px}}
+
+/* Give the activity photos their own broad row within the existing section. */
+.about-exploration .creative-wall{max-width:none;width:100%;grid-template-columns:repeat(6,minmax(0,1fr));gap:40px 32px;padding:28px 14px 34px;box-sizing:border-box}
+.about-exploration .creative-postcard{grid-column:span 2}
+.about-exploration .creative-postcard-wide{grid-column:span 4}
+.about-exploration .maker-activity-card,.about-exploration .maker-gathering-card{grid-column:span 3;margin-top:0;--tilt:-1deg}
+.about-exploration .maker-gathering-card{--tilt:1deg}
+@media(max-width:900px){.about-exploration .creative-wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}.about-exploration .creative-postcard{grid-column:span 1}.about-exploration .creative-postcard-wide{grid-column:span 2}}
+@media(max-width:600px){.about-exploration .creative-wall{grid-template-columns:minmax(0,1fr);padding-inline:10px}.about-exploration .creative-postcard:nth-child(n){grid-column:auto}}
+
+/* Six existing images, two balanced desktop rows. */
+@media(min-width:901px){
+.about-exploration .creative-wall{grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 30px}
+.about-exploration .creative-wall .creative-postcard:nth-child(n){grid-column:auto;width:100%;margin:0;box-sizing:border-box;--tilt:-1deg}
+.about-exploration .creative-wall .creative-postcard:nth-child(2n){--tilt:1deg}
+.about-exploration .creative-wall .zoom-image{display:block;width:100%}
+.about-exploration .creative-wall .media img{height:260px;width:100%;object-fit:contain}
+}
+
+/* Original-aspect frames: two justified rows, no letterboxed image windows. */
+.about-exploration .creative-wall{display:flex;flex-direction:column;gap:42px;padding-inline:14px}
+.creative-row{display:flex;align-items:flex-start;gap:30px;min-width:0}
+.about-exploration .creative-row .creative-postcard:nth-child(n){flex:var(--image-ratio) 1 0;width:auto;min-width:0;margin:0;box-sizing:content-box;padding:20px 10px 12px;transform:rotate(-.6deg)}
+.about-exploration .creative-row .creative-postcard:nth-child(2){transform:rotate(.6deg)}
+.about-exploration .creative-row .media img{display:block;width:100%;height:auto;object-fit:initial}
+.about-exploration .creative-row .zoom-image{display:block;width:100%}
+@media(max-width:900px){.creative-row{gap:20px}.about-exploration .creative-row .creative-postcard:nth-child(n){padding:18px 8px 10px}}
+@media(max-width:600px){.creative-row{flex-direction:column;align-items:center;gap:30px}.about-exploration .creative-row .creative-postcard:nth-child(n){flex:none;width:calc(100% - 20px);max-width:calc(300px * var(--image-ratio));box-sizing:border-box}.about-exploration .creative-wall{gap:30px}}
+
+@media(min-width:901px){.about-desk-art .desk-stage{width:99%;max-width:583px}}

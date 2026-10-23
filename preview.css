@@ -1,0 +1,25 @@
+
+/* Isolated local concept; original hero and styles remain intact. */
+.practice-results{padding-top:76px;padding-bottom:36px}
+.practice-numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-bottom:68px;border-bottom:1px solid var(--line)}
+.practice-stat{padding-left:45px;border-left:1px solid var(--line)}
+.practice-stat:first-child{padding-left:0;border-left:0}
+.practice-value{display:flex;align-items:baseline;font-family:Georgia,"Songti SC",serif;font-size:112px;line-height:1.05;letter-spacing:-.055em;font-weight:400;color:var(--ink)}
+.practice-unit{font-family:var(--serif);font-size:25px;letter-spacing:0;margin-left:16px}
+.practice-plus{font-size:57px;line-height:1;margin-left:8px;align-self:flex-start;padding-top:12px;font-weight:400}
+.practice-stat>p{font-size:18px;letter-spacing:.12em;margin-top:17px;color:var(--muted)}
+.practice-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin:64px 0 39px}
+.practice-heading h2{font-size:38px;line-height:1.5;margin-top:12px}
+.practice-heading>p{font-size:15px;line-height:1.95;color:var(--muted);padding-bottom:4px}
+.practice-cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.practice-case{padding:0 32px;border-left:1px solid var(--line)}
+.practice-case:first-child{padding-left:0;border-left:0}.practice-case:last-child{padding-right:0}
+.practice-case-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--muted);letter-spacing:.035em}
+.practice-status{font-size:11px;background:#e4eae0;color:#416252;border:1px solid #c8d5c6;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.practice-case h3{font-size:22px;letter-spacing:-.02em;margin-top:23px}
+.practice-outcome{font-size:30px;line-height:1.6;letter-spacing:-.03em;margin-top:28px}
+.practice-detail{font-size:15px;line-height:1.95;color:var(--muted);margin-top:18px}
+.practice-case footer{display:flex;gap:20px;align-items:center;border-top:1px solid var(--line);margin-top:31px;padding-top:18px;font-size:12px}
+.practice-case footer>span{color:var(--muted)}.practice-case footer strong{font-size:14px;font-weight:400}
+@media(max-width:900px){.practice-stat{padding-left:25px}.practice-value{font-size:90px}.practice-case{padding-inline:20px}.practice-case-meta{align-items:flex-start;flex-direction:column;gap:8px}.practice-case h3{font-size:20px}.practice-outcome{font-size:26px}.practice-detail{font-size:14px}.practice-heading h2{font-size:32px}}
+@media(max-width:600px){.practice-results{padding-top:40px;padding-bottom:10px}.practice-numbers{padding-bottom:35px}.practice-stat{padding-left:15px}.practice-value{font-size:55px}.practice-plus{font-size:28px;margin-left:3px;padding-top:6px}.practice-unit{font-size:16px;margin-left:6px}.practice-stat>p{font-size:12px;letter-spacing:.03em;margin-top:12px}.practice-heading{display:block;margin:36px 0 28px}.practice-heading h2{font-size:27px}.practice-heading>p{margin-top:16px;font-size:14px}.practice-cases{grid-template-columns:1fr;gap:28px}.practice-case,.practice-case:first-child,.practice-case:last-child{padding:0 0 28px;border-left:0;border-bottom:1px solid var(--line)}.practice-case-meta{flex-direction:row}.practice-case h3{font-size:23px;margin-top:20px}.practice-outcome{font-size:28px;margin-top:17px}.practice-detail{margin-top:12px}.practice-case footer{margin-top:22px;padding-top:15px}}

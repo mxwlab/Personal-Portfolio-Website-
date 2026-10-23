@@ -1,0 +1,245 @@
+/* Isolated colour-only comparison. No geometry/type/interaction changes. */
+body.light-study{--paper:#FAF8F2;--ink:#243D32;--text-heading:#243D32;--muted:#52674F;--line:#243d3226;background:#FAF8F2;color:#243D32}
+.light-study #home,.light-study #capabilities,.light-study #projects,.light-study #about,.light-study .about-intro,.light-study #about-practice{background:#FAF8F2;color:#243D32}
+.light-study #home :is(h1,.hero-greeting,.hero-service-label,.hero-byline,.identity-copy){color:#243D32}
+.light-study .atmosphere{background:transparent}
+.light-study .light-orbit{background:radial-gradient(circle closest-side at center,#E8EDDC 0%,#E8EDDCF5 18%,#E8EDDCB0 48%,#E8EDDC55 72%,#E8EDDC00 100%)}
+.light-study .atmosphere::after{background:linear-gradient(0deg,#FAF8F2 0%,#FAF8F299 7%,transparent 25%)}
+.light-study .about-exploration{background:#FAF8F2;box-shadow:0 0 0 100vmax #FAF8F2}
+.light-study #design-works{background:#E8EDDC;box-shadow:0 0 0 100vmax #E8EDDC;color:#243D32;--text-heading:#243D32;--ink:#243D32;--muted:#52674F;--line:#243d3226}
+.light-study #main #design-works :is(h2,h3,p,.eyebrow,a,button){color:#243D32}
+.light-study #design-works .project-image.poster-cover{background:#E8EDDC}
+.light-study #main #design-works a:focus-visible{outline-color:#58702F}
+.light-study .site-header,body.light-study.header-scrolled .site-header{background:rgb(250 248 242 / .70);color:#243D32;--line:#243d3226;border-color:#243d3224;box-shadow:0 5px 18px #243d3210}
+.light-study .site-header :is(a,.wordmark),body.light-study.header-scrolled .site-header :is(a,.wordmark){color:#243D32;text-shadow:none}
+body.light-study.header-scrolled .site-header a:focus-visible{outline-color:#58702F}
+.light-study .site-header nav a:hover{color:#58702F}
+.light-study .site-header nav a[aria-current]{color:#58702F}
+.light-study #about-practice .journey-card,.light-study #about-practice li:nth-child(1) .journey-card{background:#FAF8F2;color:#243D32;--text-heading:#243D32;border-color:#243d322b;box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 #E8EDDC,0 3px 0 -1px #F0F0E6,0 4px 0 -1px #243d3225,0 12px 24px -16px #243d3230}
+.light-study #about-practice .journey-card::before{opacity:.035}
+.light-study #about-practice li:nth-child(2) .journey-card{background:#3F5148;color:#FAF8F2;--text-heading:#FAF8F2;border-color:#81918480;box-shadow:inset 0 1px 0 #dce7d65c,inset 0 -2px 0 #283c32,0 3px 0 -1px #6b7b70,0 4px 0 -1px #293d3270,0 16px 28px -18px #20372d80}
+.light-study #about-practice li:nth-child(2) .journey-index{color:#E8B49A}
+.light-study .cap-marquee{--band-bg:#E8EDDC;--band-ink:#58702F}
+.light-study #contact{background:#3F5148;box-shadow:0 0 0 100vmax #3F5148;--text-heading:#F5F3EA;--ink:#F5F3EA;--muted:#D7DEC9;--line:#f5f3ea40;color:#F5F3EA}
+.light-study #wechat-card{background:#fff;color:#243D32}
+.light-study #wechat-card img{background:#fff}
+/* Explicit, visible accent locations; unchanged geometry and event targets. */
+.light-study .site-header nav a[aria-current],
+body.light-study.header-scrolled .site-header nav a[aria-current]{color:#58702F}
+.light-study .site-header nav a[aria-current] .nav-label::after{background:#58702F}
+.light-study .site-header nav .nav-contact,
+body.light-study.header-scrolled .site-header nav .nav-contact{color:#243D32;isolation:isolate}
+.light-study .site-header nav .nav-contact::before{content:"";position:absolute;inset:3px -8px 3px 16px;background:#E8B49A;border-radius:6px;z-index:-1;pointer-events:none}
+.light-study .site-header nav .nav-contact:is(:hover,:focus-visible),
+body.light-study.header-scrolled .site-header nav .nav-contact:is(:hover,:focus-visible){color:#243D32}
+.light-study .site-header nav .nav-contact:focus-visible{outline:2px solid #58702F;outline-offset:4px}
+.light-study #main :is(.selected-work,.more-work,.work-design,#design-works) .project-card:is(:hover,:focus-within) .arrow-up-right,
+.light-study #main :is(.selected-work,.more-work,.work-design,#design-works) .project-info :is(a,button):is(:hover,:focus-visible),
+.light-study #main :is(.home-projects,.journey-work-links) a.text-link:is(:hover,:focus-visible){color:#58702F}
+.light-study #main :is(.selected-work,.more-work,.work-design,#design-works) :is(a,button):focus-visible{outline-color:#58702F}
+@media(max-width:600px){.light-study .site-header nav .nav-contact::before{inset:3px -4px}}
+
+/* Remove the separate contact accent; retain navigation interaction and geometry. */
+.light-study .site-header nav .nav-contact::before{content:none;background:none}
+/* Equal navigation tracks keep the M at the actual bar centre. */
+.light-study .site-header .header-inner{position:relative;justify-content:center}
+.light-study .site-header .wordmark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44px;justify-content:center;gap:0;margin:0;z-index:1}
+.light-study .site-header nav{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 80px minmax(0,1fr);gap:0;align-items:center}
+.light-study .site-header .nav-left,.light-study .site-header .nav-right{display:flex;align-items:center;gap:28px;min-width:0}
+.light-study .site-header .nav-left{grid-column:1;justify-content:flex-end}
+.light-study .site-header .nav-right{grid-column:3;justify-content:flex-start}
+.light-study .site-header .nav-contact{border-left-color:transparent;padding-left:0}
+@media(max-width:760px){
+ .light-study{--header-height:104px}
+ .light-study .site-header .header-inner{min-height:104px;padding-top:48px;padding-bottom:4px}
+ .light-study .site-header .wordmark{top:2px;transform:translateX(-50%)}
+ .light-study .site-header nav{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+ .light-study .site-header .nav-left{grid-column:1;justify-content:flex-start;gap:4px}
+ .light-study .site-header .nav-right{grid-column:2;justify-content:flex-end;gap:8px}
+ .light-study .site-header .nav-contact>span:not(.nav-label){display:none}
+}
+/* Round central monogram; symmetric two-link groups, separate contact utility. */
+.light-study{--header-height:80px}
+.light-study .site-header .header-inner{min-height:80px}
+.light-study .site-header .wordmark{width:62px;height:62px;min-height:62px;box-sizing:border-box;border:1px solid rgb(36 61 50 / .42);border-radius:50%;background:rgb(250 248 242 / .48);box-shadow:none;padding:0;top:50%;transform:translate(-50%,-50%)}
+.light-study .site-header .wordmark .brand-mark{width:38px;height:38px;flex:none}
+.light-study .site-header nav{grid-template-columns:minmax(0,1fr) 104px minmax(0,1fr)}
+.light-study .site-header .nav-left,.light-study .site-header .nav-right{gap:28px}
+.light-study .site-header .nav-aux{position:absolute;right:24px;top:50%;transform:translateY(-50%)}
+.light-study .site-header .wordmark:focus-visible{outline:2px solid #58702F;outline-offset:4px}
+@media(max-width:900px){
+ .light-study{--header-height:106px}
+ .light-study .site-header .header-inner{min-height:106px;padding-top:0;padding-bottom:42px}
+ .light-study .site-header .wordmark{width:48px;height:48px;min-height:48px;top:32px}
+ .light-study .site-header .wordmark .brand-mark{width:30px;height:30px}
+ .light-study .site-header nav{grid-template-columns:minmax(0,1fr) 72px minmax(0,1fr);gap:0}
+ .light-study .site-header .nav-left{grid-column:1;justify-content:flex-end;gap:4px}
+ .light-study .site-header .nav-right{grid-column:3;justify-content:flex-start;gap:4px}
+ .light-study .site-header .nav-aux{top:auto;bottom:0;right:16px;transform:none}
+ .light-study .site-header .nav-contact>span:not(.nav-label){display:none}
+}
+/* Airier navigation only; keep the same centred monogram and glass shell. */
+.light-study{--header-height:90px}
+.light-study .site-header .header-inner{min-height:90px}
+.light-study .site-header nav{font-size:22px;grid-template-columns:minmax(0,1fr) 144px minmax(0,1fr)}
+.light-study .site-header .nav-left,.light-study .site-header .nav-right{gap:44px}
+.light-study .site-header .nav-aux{right:28px}
+@media(min-width:901px) and (max-width:1150px){
+ .light-study .site-header nav{font-size:20px;grid-template-columns:minmax(0,1fr) 124px minmax(0,1fr)}
+ .light-study .site-header .nav-left,.light-study .site-header .nav-right{gap:36px}
+ .light-study .site-header .nav-aux{right:20px}
+}
+@media(max-width:900px){
+ .light-study{--header-height:110px}
+ .light-study .site-header .header-inner{min-height:110px;padding-top:0;padding-bottom:44px}
+ .light-study .site-header nav{font-size:18px;grid-template-columns:minmax(0,1fr) 80px minmax(0,1fr)}
+ .light-study .site-header .nav-left,.light-study .site-header .nav-right{gap:12px}
+ .light-study .site-header .wordmark{top:33px}
+ .light-study .site-header .nav-aux{right:16px}
+}
+@media(max-width:480px){
+ .light-study .site-header nav{font-size:16px;grid-template-columns:minmax(0,1fr) 68px minmax(0,1fr)}
+ .light-study .site-header .nav-left,.light-study .site-header .nav-right{gap:6px}
+}
+/* Canonical navigation states: scrolling does not change the card or logo. */
+body.light-study:not(.header-scrolled) .site-header,
+body.light-study.header-scrolled .site-header{
+ position:fixed;inset:26px 0 auto;width:min(calc(100% - var(--space)*2),var(--max));margin-inline:auto;
+ border:1px solid rgb(36 61 50 / .14);border-radius:38px;
+ background:rgb(250 248 242 / .70);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+ box-shadow:0 5px 18px rgb(36 61 50 / .06);overflow:visible;transform:none;color:#243D32;
+}
+body.light-study:not(.header-scrolled) .site-header .header-inner,
+body.light-study.header-scrolled .site-header .header-inner{width:100%;min-height:90px;padding-inline:24px;overflow:visible}
+body.light-study:not(.header-scrolled) .site-header .wordmark,
+body.light-study.header-scrolled .site-header .wordmark{
+ left:50%;top:50%;transform:translate(-50%,-50%);width:80px;height:80px;min-height:80px;
+ color:#243D32;background:rgb(250 248 242 / .94);
+}
+.light-study .site-header .wordmark .brand-mark{width:50px;height:50px;transform:rotate(0deg);transform-origin:center;transition:none;animation:none}
+@keyframes light-monogram-turn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.light-study .site-header .wordmark:is(:hover,:focus-visible) .brand-mark{animation:light-monogram-turn 760ms ease-in-out 1 both}
+@media(max-width:900px){
+ body.light-study:not(.header-scrolled) .site-header,body.light-study.header-scrolled .site-header{top:20px;border-radius:32px;width:calc(100% - 24px)}
+ body.light-study:not(.header-scrolled) .site-header .header-inner,body.light-study.header-scrolled .site-header .header-inner{min-height:110px;padding-inline:12px}
+ body.light-study:not(.header-scrolled) .site-header .wordmark,body.light-study.header-scrolled .site-header .wordmark{width:48px;height:48px;min-height:48px;top:50%;transform:translate(-50%,-50%)}
+ .light-study .site-header .wordmark .brand-mark{width:30px;height:30px}
+}
+@media(prefers-reduced-motion:reduce){
+ .light-study .site-header .wordmark .brand-mark,.light-study .site-header .wordmark:is(:hover,:focus-visible) .brand-mark{animation:none;transform:none;transition:none}
+}
+
+/* Same section-heading grid as Selected Projects; card dimensions stay untouched. */
+.light-study #design-works>.section-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:0 0 24px;padding:0}
+.light-study #design-works>.section-heading .draft-note{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}
+@media(max-width:760px){.light-study #design-works>.section-heading{gap:16px;margin-bottom:16px}.light-study #design-works>.section-heading .draft-note{font-size:14px;max-width:10em}}
+
+.light-study .contact-wechat-static{width:280px;max-width:100%;justify-self:center;align-self:center;margin:0;background:white;line-height:0}
+.light-study .contact-wechat-static img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:760px){.light-study .contact-wechat-static{width:250px;margin-top:24px;justify-self:start}}
+
+/* Reduce empty travel between cards, retaining their internal dimensions. */
+@media(min-width:761px) and (prefers-reduced-motion:no-preference){
+ body.light-study #about-practice li{margin-bottom:108px}
+ body.light-study #about-practice li:last-child{margin-bottom:0}
+}
+
+body.light-study:not(.header-scrolled) .site-header .wordmark,
+body.light-study.header-scrolled .site-header .wordmark{background:#CBCB6C;color:#323200;border-color:rgb(50 50 0 / .18)}
+
+/* Shanghai Electric only: a brighter archive card echoing the monogram. */
+body.light-study #about-practice li:nth-child(2) .journey-card{background:#CBCB6C;color:#323200;--text-heading:#323200;border-color:rgb(50 50 0 / .18);box-shadow:inset 0 1px 0 rgb(255 255 255 / .35),0 2px 0 -1px #b6b65f,0 8px 18px -14px rgb(50 50 0 / .28)}
+body.light-study #about-practice li:nth-child(2) .journey-card::before{opacity:.025}
+body.light-study #about-practice li:nth-child(2) .journey-meta{border-color:rgb(50 50 0 / .18)}
+body.light-study #about-practice li:nth-child(2) .journey-index{color:#323200;opacity:.7}
+
+/* Compact paper stack; light Shanghai card, yellow monogram unchanged. */
+body.light-study #about-practice li:nth-child(2) .journey-card{background:#F3F0E5;color:#323A2D;--text-heading:#323A2D;border-color:rgb(50 58 45 / .15);box-shadow:inset 0 1px 0 #fff9,0 3px 0 -1px #dedbce,0 10px 22px -16px rgb(50 58 45 / .32)}
+body.light-study #about-practice li:nth-child(2) .journey-index{color:#323A2D}
+@media(min-width:761px) and (prefers-reduced-motion:no-preference){
+ body.light-study #about-practice li{top:136px;margin-bottom:16px}
+ body.light-study #about-practice li:nth-child(2){top:158px}
+ body.light-study #about-practice li:nth-child(3){top:180px}
+ body.light-study #about-practice li:nth-child(4){top:202px;margin-bottom:0}
+}
+@media(min-width:1151px){
+ body.light-study .site-header nav{grid-template-columns:minmax(0,1fr) 184px minmax(0,1fr)}
+ body.light-study .site-header .nav-left,body.light-study .site-header .nav-right{gap:64px}
+}
+@media(min-width:901px) and (max-width:1150px){
+ body.light-study .site-header nav{grid-template-columns:minmax(0,1fr) 144px minmax(0,1fr)}
+ body.light-study .site-header .nav-left,body.light-study .site-header .nav-right{gap:42px}
+}
+
+body.light-study .hero-editorial .hero-symbol{top:32px}
+
+/* A restrained hierarchy accent, retaining the pale card and its footprint. */
+body.light-study #about-practice li:nth-child(2) .journey-context{font-size:22px;font-weight:600;opacity:1}
+body.light-study #about-practice li:nth-child(2) .journey-card{box-shadow:inset 0 1px 0 #fff9,0 3px 0 -1px #dedbce,0 14px 26px -17px rgb(50 58 45 / .42)}
+body.light-study #about-practice .journey-focus-label{position:absolute;right:56px;top:54px;font-size:12px;font-weight:500;letter-spacing:.04em;color:#58702F;border-bottom:1px solid #58702F40;padding-bottom:4px;line-height:1.5}
+@media(max-width:1000px){body.light-study #about-practice .journey-focus-label{top:auto;bottom:12px;right:24px;font-size:10px;padding-bottom:0;border:0}}
+@media(max-width:760px){body.light-study #about-practice li:nth-child(2) .journey-context{font-size:18px;line-height:25.5px}}
+
+/* Featured professional chapter, composed as a warm paper dossier. */
+body.light-study #about-practice li:nth-child(2) .journey-featured{background:#FBF9F1;padding:32px 56px;box-shadow:inset 0 1px 0 #fff,0 3px 0 -1px #e5e0d2,0 5px 0 -2px #c9c5b7,0 16px 24px -19px #323a2d70}
+body.light-study #about-practice .journey-featured::before{display:none}
+body.light-study #about-practice .journey-featured-top{display:flex;align-items:center;gap:24px;font-size:14px;line-height:24px;color:#58604E;margin-bottom:14px;font-variant-numeric:tabular-nums}
+body.light-study #main #about-practice .journey-featured h3{font-size:38px;line-height:1.4;font-weight:600;letter-spacing:.015em;margin:0 0 22px}
+body.light-study #about-practice .journey-featured-work{display:grid;grid-template-columns:1fr 1.35fr;gap:40px;border-top:1px solid #323a2d20;padding-top:18px}
+body.light-study #about-practice .journey-work-label{display:block;font-size:12px;line-height:20px;letter-spacing:.08em;margin-bottom:7px;color:#58604E}
+body.light-study #about-practice .journey-work-label::before{content:'';display:inline-block;width:7px;height:7px;background:#CBCB6C;margin-right:8px}
+body.light-study #about-practice .journey-featured-work p{font-size:16px;line-height:1.8;opacity:1}
+@media(max-width:760px){
+ body.light-study #about-practice li:nth-child(2) .journey-featured{padding:28px 24px}
+ body.light-study #about-practice .journey-featured-top{display:block;font-size:12px;line-height:22px;margin-bottom:12px}
+ body.light-study #about-practice .journey-featured-top span{display:block}
+ body.light-study #main #about-practice .journey-featured h3{font-size:27px;line-height:1.45;margin-bottom:18px}
+ body.light-study #about-practice .journey-featured-work{grid-template-columns:1fr;gap:16px;padding-top:16px}
+}
+
+body.light-study #about-practice .journey-featured::before{display:block;opacity:.018;background-image:repeating-linear-gradient(0deg,transparent 0 2px,#6b6555 2px 2.4px),repeating-linear-gradient(90deg,transparent 0 3px,#fff 3px 3.5px);background-size:4px 4px,5px 5px}
+body.light-study #about-practice .journey-featured::after{content:'';position:absolute;inset:5px;pointer-events:none;border:1px solid rgb(255 255 255 / .6);border-bottom-color:rgb(156 145 119 / .13);border-radius:4px}
+
+/* Journey palette only: one champagne focal card, three matching cream cards. */
+body.light-study #about-practice li:not(:nth-child(2)) .journey-card{background:#FAF8F2}
+body.light-study #about-practice li:nth-child(2) .journey-featured{background:#F4EBD7}
+
+/* Contact palette sampled from the user reference; QR remains unchanged. */
+body.light-study #contact{background:#6F844A;box-shadow:0 0 0 100vmax #6F844A;color:#12241A;--text-heading:#12241A;--ink:#12241A;--muted:#12241A;--line:#12241A55}
+body.light-study #main #contact :is(h2,h3,p,.eyebrow,a,button){color:#12241A}
+body.light-study #contact :is(a,button):focus-visible{outline-color:#12241A}
+
+/* Final local refinements: readable reference footer, capsule navigation, QR corners. */
+body.light-study #main #contact :is(p,.eyebrow,a,button){color:#09140D;opacity:1}
+body.light-study:not(.header-scrolled) .site-header,body.light-study.header-scrolled .site-header{border-radius:999px}
+body.light-study #contact .contact-wechat-static{border-radius:20px;overflow:hidden}
+body.light-study #contact .contact-wechat-static img{border-radius:20px;display:block}
+
+/* User-confirmed white contact typography; image pixels are unchanged. */
+body.light-study #contact{color:#FFFFFF;--text-heading:#FFFFFF;--ink:#FFFFFF;--muted:#FFFFFF;--line:#FFFFFF55}
+body.light-study #main #contact :is(h2,h3,p,.eyebrow,a,button){color:#FFFFFF;opacity:1}
+body.light-study #contact :is(a,button):focus-visible{outline-color:#FFFFFF}
+body.light-study #main #contact svg.arrow-up-right{color:#FFFFFF}
+
+/* Short transition contained within existing contact top padding. */
+body.light-study #contact{position:relative}
+body.light-study #contact::before{content:"";position:absolute;pointer-events:none;top:0;left:50%;transform:translateX(-50%);width:100vw;height:56px;background:linear-gradient(to bottom,#FAF8F2 0%,#E8EDDC 30%,#B6C29B 60%,#6F844A 100%)}
+@media(max-width:600px){body.light-study #contact::before{height:30px}}
+
+body.light-study #contact{border-top-color:transparent}
+
+body.light-study #contact::before{top:-1px;height:57px}
+@media(max-width:600px){body.light-study #contact::before{height:31px}}
+/* Feather into existing preceding whitespace, without adding section height. */
+body.light-study #contact{isolation:isolate;background:transparent;box-shadow:none;clip-path:inset(-100px -100vmax 0);border-top-color:transparent}
+body.light-study #contact::after{content:"";position:absolute;z-index:-2;pointer-events:none;top:0;bottom:0;left:50%;transform:translateX(-50%);width:100vw;background:#6F844A}
+body.light-study #contact::before{z-index:-1;top:-100px;height:156px;background:radial-gradient(ellipse 85% 100% at 22% -30%,#FAF8F2 25%,#FAF8F200 88%),linear-gradient(to bottom,#FAF8F2 0%,#F6F5EC 12%,#EBEEDD 26%,#D8DFC5 40%,#BAC7A0 55%,#98AD76 70%,#7A9056 85%,#6F844A 100%)}
+@media(max-width:600px){body.light-study #contact{clip-path:inset(-70px -100vmax 0)}body.light-study #contact::before{top:-70px;height:100px}}
+
+/* Longer, continuous fade with content on the settled green surface. */
+body.light-study #contact{padding-top:246px}
+body.light-study #contact::before{height:336px}
+@media(max-width:600px){body.light-study #contact{padding-top:130px}body.light-study #contact::before{height:190px}}
+
+/* Match actual section-heading-to-card spacing; archive defaults added 40px. */
+body.light-study #design-works > .design-grid{padding-top:0;margin-top:0}
