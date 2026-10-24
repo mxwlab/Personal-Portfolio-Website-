@@ -7,7 +7,7 @@ body.light-study{--paper:#FAF8F2;--ink:#243D32;--text-heading:#243D32;--muted:#5
 .light-study .atmosphere::after{background:linear-gradient(0deg,#FAF8F2 0%,#FAF8F299 7%,transparent 25%)}
 .light-study .about-exploration{background:#FAF8F2;box-shadow:0 0 0 100vmax #FAF8F2}
 .light-study #design-works{background:#E8EDDC;box-shadow:0 0 0 100vmax #E8EDDC;color:#243D32;--text-heading:#243D32;--ink:#243D32;--muted:#52674F;--line:#243d3226}
-.light-study #main #design-works :is(h2,h3,p,.eyebrow,a,button){color:#243D32}
+.light-study #main #design-works :is(h2,h3,p,.eyebrow,a,button):not(:where(dialog *)){color:#243D32}
 .light-study #design-works .project-image.poster-cover{background:#E8EDDC}
 .light-study #main #design-works a:focus-visible{outline-color:#58702F}
 .light-study .site-header,body.light-study.header-scrolled .site-header{background:rgb(250 248 242 / .70);color:#243D32;--line:#243d3226;border-color:#243d3224;box-shadow:0 5px 18px #243d3210}
@@ -36,7 +36,7 @@ body.light-study.header-scrolled .site-header nav .nav-contact:is(:hover,:focus-
 .light-study #main :is(.selected-work,.more-work,.work-design,#design-works) .project-card:is(:hover,:focus-within) .arrow-up-right,
 .light-study #main :is(.selected-work,.more-work,.work-design,#design-works) .project-info :is(a,button):is(:hover,:focus-visible),
 .light-study #main :is(.home-projects,.journey-work-links) a.text-link:is(:hover,:focus-visible){color:#58702F}
-.light-study #main :is(.selected-work,.more-work,.work-design,#design-works) :is(a,button):focus-visible{outline-color:#58702F}
+.light-study #main :is(.selected-work,.more-work,.work-design,#design-works) :is(a,button):not(:where(dialog *)):focus-visible{outline-color:#58702F}
 @media(max-width:600px){.light-study .site-header nav .nav-contact::before{inset:3px -4px}}
 
 /* Remove the separate contact accent; retain navigation interaction and geometry. */

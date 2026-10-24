@@ -9,7 +9,7 @@ body.home-page{background:#F5F3EA;color:#203D35}
 .home-page .cap-marquee .cap-index-link:is(:hover,:focus-visible){color:#F5F3EA;background:#ffffff1f}
 .home-page #capabilities,.home-page #projects{background:#F5F3EA}
 .home-page #design-works,.home-page #contact{background:#203D35;color:#F5F3EA;--text-heading:#F5F3EA;--ink:#F5F3EA;--muted:#D7DEC9;--line:#f5f3ea40}
-.home-page #main :is(#design-works,#contact) :is(h2,h3,p,.eyebrow,a,button){color:#F5F3EA}
+.home-page #main :is(#design-works,#contact) :is(h2,h3,p,.eyebrow,a,button):not(:where(dialog *)){color:#F5F3EA}
 .home-page #about,.home-page .about-intro,.home-page #about-practice{background:#F5F3EA}
 .home-page .about-exploration{background:#F5F3EA;box-shadow:0 0 0 100vmax #F5F3EA;clip-path:inset(0 -100vmax)}
 .home-page .contact-detail{box-shadow:0 0 0 100vmax #203D35;clip-path:inset(0 -100vmax)}
