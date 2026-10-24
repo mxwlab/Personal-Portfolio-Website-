@@ -311,7 +311,7 @@ document.querySelectorAll('[data-case-video]').forEach(video => {
           const original = document.createElement('a');
           original.className = 'screen-original-link'; original.href = page.src;
           original.target = '_blank'; original.rel = 'noopener noreferrer';
-          original.textContent = '查看原图 ↗'; original.setAttribute('aria-label',`查看原图：${page.name}（新窗口）`);
+          original.innerHTML = '查看原图 '+'<svg class="entry-arrow" viewBox="0 0 28 28" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19L22 6M14 6H22V14"/></svg>'; original.setAttribute('aria-label',`查看原图：${page.name}（新窗口）`);
           const error = document.createElement('p'); error.hidden = true;
           error.textContent = `${page.name} 暂未加载成功，请重新打开浏览器。`;
           media.addEventListener('error', () => { error.hidden = false; });

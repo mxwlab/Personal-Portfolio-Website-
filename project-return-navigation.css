@@ -42,3 +42,6 @@ body.d4s-return-page .chapter-links{font-size:14px;line-height:1.8}
 /* Center the whole chapter group against the bar, independently of return width. */
 body.d4s-return-page .chapters .chapter-links.fits-slot{justify-content:center}
 body.d4s-return-page .topbar>.chapter-links.is-centered{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;width:max-content;max-width:none;justify-content:center}
+
+/* Directional sibling of the rounded entry arrow; inherit each glass theme. */
+.project-return-nav>a .return-arrow,.topbar>a .return-arrow{display:block;flex:0 0 14px;width:14px;height:14px;margin-right:4px;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;background:none;border:0}

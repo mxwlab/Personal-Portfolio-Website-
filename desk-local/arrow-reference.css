@@ -7,4 +7,20 @@ html body:is(.home-page,.work-page) .project-card .project-info h3 .arrow-up-rig
 html body.home-page .section-heading .text-link .arrow-up-right,
 html body:is(.home-page,.about-page) .journey .text-link .arrow-up-right,
 html body:is(.project-agent-platform,.project-ai-continuity,.project-knowledge-graph,.project-meetingnotes,.project-pocket-fishpond,.project-wechat-cc) .next-project .arrow-up-right,
-html body:is(.project-ai-continuity,.project-meetingnotes) .case-hero .text-link .arrow-up-right{color:#6F844A!important;stroke:currentColor}
+html body:is(.project-ai-continuity,.project-meetingnotes) .case-hero .text-link .arrow-up-right{color:#6F844A!important;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+/* These project-entry links have no decorative baseline; retain keyboard focus. */
+html body.home-page .section-heading .text-link,
+html body:is(.home-page,.about-page) .journey .text-link{border-bottom:0;text-decoration:none}
+html body.home-page .section-heading .text-link:focus-visible,
+html body:is(.home-page,.about-page) .journey .text-link:focus-visible{outline:2px solid #6F844A;outline-offset:5px;border-radius:3px;text-decoration:none}
+
+/* One slanted entry motif, including existing view hints and contact controls.
+   Colors of filled controls/green contact surfaces remain contextual. */
+html body svg.arrow-up-right{stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+html body .site-header svg.arrow-up-right{stroke-width:1.15}
+html body .entry-arrow{display:inline-block;width:1em;height:1em;vertical-align:-.12em;flex:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;color:inherit}
+html body .site-footer .footer-links .arrow-up-right,
+html body .wechat-contact-link .entry-arrow{color:#6F844A!important}
+
+html body .cap-preview-visit .entry-arrow,html body .screen-original-link .entry-arrow{color:#6F844A!important}
