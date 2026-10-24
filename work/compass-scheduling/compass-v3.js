@@ -3,7 +3,7 @@
   const rail=document.querySelector('.cv3-rail'),chapters=[...document.querySelectorAll('[data-cv3-chapter]')];
   if(!rail||!chapters.length)return;
   const links=[...rail.querySelectorAll('a')],side=()=>matchMedia('(min-width:1440px)').matches;
-  const headerHeight=()=>document.querySelector('.site-header')?.getBoundingClientRect().height||60;
+  const headerHeight=()=>document.querySelector('.project-return-nav,.site-header')?.getBoundingClientRect().height||60;
   const offset=()=>headerHeight()+(side()?0:rail.getBoundingClientRect().height||54)+16;
   let scheduled=false,activeId='';
   function update(){

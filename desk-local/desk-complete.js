@@ -40,7 +40,7 @@ ctx.strokeStyle='#91a187';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(339,337);ct
 ctx.fillStyle='#b4c1a9';ctx.beginPath();ctx.moveTo(333,338);ctx.bezierCurveTo(329,306,407,306,403,338);ctx.quadraticCurveTo(401,347,393,345);ctx.quadraticCurveTo(368,334,343,345);ctx.quadraticCurveTo(335,347,333,338);ctx.fill();
 ctx.fillStyle='#9eaf94';ctx.beginPath();ctx.ellipse(368,360,42,9,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#c8d1ba';ctx.beginPath();ctx.ellipse(368,357,41,7,0,0,Math.PI*2);ctx.fill();
 rect(421,220,112,67,'#334c40');rect(427,226,100,55,'#c1d2bc');rect(435,236,30,3,'#7b977b');rect(435,245,68,3,'#90a58c');rect(435,254,50,3,'#90a58c');rect(410,287,135,6,'#82917b');rect(565,268,23,23,'#c58b68');ctx.strokeStyle='#c58b68';ctx.lineWidth=4;ctx.strokeRect(588,273,9,11);rect(231,289,43,4,'#73846d');lamp();sprite();frames++;section.dataset.frames=frames;}
-function allowed(){return visible&&!manual&&!reduce.matches&&!mobile.matches&&!document.hidden}
+function allowed(){return visible&&!manual&&!reduce.matches&&!document.hidden}
 function frame(now){raf=0;if(!allowed())return;time+=last?Math.min((now-last)/1000,.1):0;last=now;draw();raf=requestAnimationFrame(frame)}
 function sync(){cancelAnimationFrame(raf);raf=0;last=0;section.dataset.playing=String(allowed());if(allowed())raf=requestAnimationFrame(frame);else draw()}
 new IntersectionObserver(e=>{visible=e[0].isIntersecting;sync()},{threshold:.12}).observe(section);button.addEventListener('click',()=>{manual=!manual;button.textContent=manual?'播放':'暂停';button.setAttribute('aria-pressed',String(manual));button.setAttribute('aria-label',manual?'播放书桌动画':'暂停书桌动画');sync()});reduce.addEventListener('change',sync);mobile.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);draw();

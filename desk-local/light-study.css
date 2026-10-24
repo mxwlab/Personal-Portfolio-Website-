@@ -243,3 +243,36 @@ body.light-study #contact::before{height:336px}
 
 /* Match actual section-heading-to-card spacing; archive defaults added 40px. */
 body.light-study #design-works > .design-grid{padding-top:0;margin-top:0}
+
+/* Independent circular logo, equally protruding above and below the glass bar. */
+body.light-study{--header-height:64px}
+body.light-study:not(.header-scrolled) .site-header .header-inner,
+body.light-study.header-scrolled .site-header .header-inner{height:64px;min-height:64px;padding-top:0;padding-bottom:0}
+body.light-study .site-header .wordmark{z-index:3}
+@media(min-width:701px) and (max-width:900px){
+ body.light-study .site-header .nav-aux{top:50%;bottom:auto;transform:translateY(-50%)}
+}
+@media(max-width:700px){
+ body.light-study{--header-height:48px}
+ body.light-study .site-header .nav-aux{display:none}
+ body.light-study:not(.header-scrolled) .site-header .header-inner,
+ body.light-study.header-scrolled .site-header .header-inner{height:48px;min-height:48px;padding-top:0;padding-bottom:0}
+ body.light-study:not(.header-scrolled) .site-header .wordmark,
+ body.light-study.header-scrolled .site-header .wordmark{width:60px;height:60px;min-height:60px}
+}
+
+/* Keep the independent badge larger than the tablet capsule too. */
+@media(min-width:701px) and (max-width:900px){body.light-study:not(.header-scrolled) .site-header .wordmark,body.light-study.header-scrolled .site-header .wordmark{width:80px;height:80px;min-height:80px}.light-study .site-header .wordmark .brand-mark{width:50px;height:50px}}
+
+/* Navigation selection: ink and weight, without decorative underlines. */
+body.light-study .site-header nav a{text-decoration:none}
+body.light-study .site-header nav a::after,
+body.light-study .site-header nav .nav-label::after{content:none}
+body.light-study .site-header nav a[aria-current]{color:#58702F;font-weight:600}
+body.light-study .site-header nav a:focus-visible{outline:2px solid #58702F;outline-offset:4px;border-radius:4px}
+/* Slightly smaller labels; preserve the existing touch targets and spacing. */
+body.light-study .site-header nav{font-size:20px}
+body.light-study .site-header nav .nav-contact{min-width:67px}
+@media(min-width:901px) and (max-width:1150px){body.light-study .site-header nav{font-size:18px}body.light-study .site-header nav .nav-contact{min-width:61px}}
+@media(max-width:900px){body.light-study .site-header nav{font-size:16px}body.light-study .site-header nav .nav-contact{min-width:55px}}
+@media(max-width:480px){body.light-study .site-header nav{font-size:15px}}

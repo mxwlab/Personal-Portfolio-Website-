@@ -1,0 +1,44 @@
+/* D4S-style lightweight return; no full site menu on project case studies. */
+body.project-return-page{--header-height:0px}
+body.project-return-page .project-return-nav{height:70px;display:flex;align-items:center;padding:0 clamp(24px,5vw,76px);font-size:14px;line-height:1.7;color:var(--ink,#263c33);background:var(--paper,#f4f3ee);box-sizing:border-box}
+body.project-return-page .project-return-nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:inherit}
+body.project-return-page .project-return-nav a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+body.project-return-page main{padding-top:0}
+
+body.project-return-page :is(.case-topline,.cv3-topline)>span{margin-left:auto}
+
+/* Shared lightweight return typography; preserve each case's content grid. */
+:is(body.project-return-page .project-return-nav,body.d4s-return-page .topbar){font-family:OPPOSans,"PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:14px;font-weight:400;line-height:1.8;letter-spacing:normal;height:70px}
+:is(body.project-return-page .project-return-nav,body.d4s-return-page .topbar) a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:400;line-height:1.8;letter-spacing:normal}
+body.d4s-return-page .chapters-return{font-size:14px;font-weight:400;line-height:1.8}
+@media(max-width:600px){:is(body.project-return-page .project-return-nav,body.d4s-return-page .topbar){height:60px}}
+
+/* Match the case cover, not the homepage button palette. */
+body.iv3-preview .project-return-nav{background:#F5F8FB;color:#162330}
+body.compass-v3 .project-return-nav{background:linear-gradient(118deg,#102D42 0%,#103752 62%,#163F58 100%);color:#F3F7FA}
+:is(body.project-return-page .project-return-nav,body.d4s-return-page .topbar) a:is(:hover,:focus-visible){color:inherit;background:transparent}
+:is(body.project-return-page .project-return-nav,body.d4s-return-page .topbar) a:hover{text-decoration:underline;text-underline-offset:4px}
+:is(body.project-return-page .project-return-nav,body.d4s-return-page .topbar) a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+
+/* A separate persistent site return, above each project's own contents. */
+body.project-return-page,body.d4s-return-page{--detail-return-height:calc(70px + env(safe-area-inset-top,0px));--header-height:var(--detail-return-height)}
+:is(body.project-return-page .project-return-nav,body.d4s-return-page .topbar){position:sticky;top:0;z-index:45;height:var(--detail-return-height);padding-top:env(safe-area-inset-top,0px);box-sizing:border-box}
+body.d4s-return-page .chapters{top:var(--detail-return-height);grid-template-columns:minmax(0,1fr);gap:0}
+html:has(>body.d4s-return-page){scroll-padding-top:calc(70px + env(safe-area-inset-top,0px) + 66px + 16px)}
+body.d4s-return-page .chapter{scroll-margin-top:0}
+@media(max-width:600px){body.project-return-page,body.d4s-return-page{--detail-return-height:calc(60px + env(safe-area-inset-top,0px))}html:has(>body.d4s-return-page){scroll-padding-top:calc(60px + env(safe-area-inset-top,0px) + 58px + 16px)}}
+
+/* D4S: one persistent row. The original chapter slot retains its flow height. */
+body.d4s-return-page .topbar{justify-content:flex-start;gap:32px}
+body.d4s-return-page .topbar>a{flex:none;white-space:nowrap}
+body.d4s-return-page .topbar>.chapter-links{flex:1;min-width:0;justify-content:flex-start;padding-block:0;font-size:14px;line-height:1.8}
+body.d4s-return-page .topbar>.chapter-links a{flex:none;white-space:nowrap;min-height:44px}
+body.d4s-return-page .chapters{position:relative;top:auto;z-index:auto;min-height:66.2px}
+body.d4s-return-page .chapters.is-docked{visibility:hidden}
+html:has(>body.d4s-return-page){scroll-padding-top:calc(70px + env(safe-area-inset-top,0px) + 16px)}
+@media(max-width:600px){body.d4s-return-page .topbar{gap:18px;padding-inline:16px}body.d4s-return-page .topbar>.chapter-links{gap:20px}body.d4s-return-page .chapters{min-height:58.6px}html:has(>body.d4s-return-page){scroll-padding-top:calc(60px + env(safe-area-inset-top,0px) + 16px)}}
+body.d4s-return-page .chapter-links{font-size:14px;line-height:1.8}
+
+/* Center the whole chapter group against the bar, independently of return width. */
+body.d4s-return-page .chapters .chapter-links.fits-slot{justify-content:center}
+body.d4s-return-page .topbar>.chapter-links.is-centered{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;width:max-content;max-width:none;justify-content:center}

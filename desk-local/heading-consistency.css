@@ -3,12 +3,12 @@
 .home-page #main h2{font-family:var(--serif);font-size:clamp(30px,3vw,40px);font-weight:500;line-height:1.4;letter-spacing:-.025em;color:var(--text-heading);margin:0}
 .home-page #main .eyebrow:has(+h2){margin-bottom:16px}
 .home-page #main h2+p{margin-top:16px}
-.home-page #main .project-info h3{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1.45;letter-spacing:normal;color:var(--text-heading);margin:0}
+.home-page #main .project-info h3,.work-page #main .project-info h3{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1.45;letter-spacing:normal;color:var(--text-heading);margin:0}
 .home-page #main .section-heading>h3{font-family:var(--serif);font-size:21px;font-weight:500;line-height:1.5;letter-spacing:normal;color:var(--text-heading);margin:0}
 .home-page #main .journey h3{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1.6;letter-spacing:normal;color:var(--text-heading);margin:0}
 .home-page #main .about-copy-group .about-copy-intro{font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.45;letter-spacing:normal;color:var(--text-heading);margin:0 0 9px}
 @media(max-width:900px){
 .home-page #main :is(.home-projects,.home-about,.home-design,.design-works,.contact-detail) h2,.home-page #main h2{font-size:30px}
-.home-page #main .project-info h3,.home-page #main .journey h3{font-size:22px}
+.home-page #main .project-info h3,.work-page #main .project-info h3,.home-page #main .journey h3{font-size:22px}
 .home-page #main .about-copy-group .about-copy-intro{font-size:18px}
 }

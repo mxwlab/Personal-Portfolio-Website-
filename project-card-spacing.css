@@ -1,0 +1,6 @@
+/* Card internals only; section-heading spacing and artwork dimensions stay unchanged. */
+:root{--project-image-title-gap:20px;--project-title-description-gap:12px}
+body:is(.home-page,.work-page) .project-card .project-info{margin-top:0;padding-top:var(--project-image-title-gap)}
+body:is(.home-page,.work-page) .project-card .project-info h3{margin-bottom:0}
+body:is(.home-page,.work-page) .project-card .project-info .project-subtitle{margin-top:var(--project-title-description-gap)}
+@media(max-width:720px){:root{--project-image-title-gap:16px}}

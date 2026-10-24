@@ -13,3 +13,5 @@
 @media(prefers-reduced-motion:reduce){.marquee-toggle{display:none}.cap-marquee{padding-right:0}}
 .cap-marquee{width:var(--marquee-viewport,100%);margin-left:calc((100% - var(--marquee-viewport,100%))/2);box-sizing:border-box}
 .cap-marquee .cap-index-directory{position:relative}
+
+@media(max-width:700px){.cap-marquee-window{overflow-x:auto;scrollbar-width:none}.cap-marquee-window::-webkit-scrollbar{display:none}}

@@ -5,7 +5,7 @@
   if (!rail || !chapters.length) return;
   const links = [...rail.querySelectorAll('a')];
   const side = () => matchMedia('(min-width:1440px)').matches;
-  const offset = () => (document.querySelector('.site-header')?.getBoundingClientRect().height || 60) + (side() ? 0 : rail.getBoundingClientRect().height || 54) + 16;
+  const offset = () => (document.querySelector('.project-return-nav,.site-header')?.getBoundingClientRect().height || 60) + (side() ? 0 : rail.getBoundingClientRect().height || 54) + 16;
   let scheduled = false, activeId = '';
   function update() {
     scheduled = false;

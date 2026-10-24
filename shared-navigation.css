@@ -1,0 +1,58 @@
+/* Shared portfolio navigation only. Page bodies and PDF reader are independent. */
+body.shared-nav.shared-nav .site-header{position:fixed;inset:26px 0 auto;z-index:30;width:min(calc(100% - clamp(24px,5vw,76px)*2),1320px);height:66px;margin:0 auto;padding:0;border:1px solid rgb(36 61 50 / .14);border-radius:999px;background:rgb(250 248 242 / .70);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 5px 18px rgb(36 61 50 / .06);overflow:visible;transform:none;color:#243D32;font-family:"Songti SC","STSong","Noto Serif CJK SC","Source Han Serif SC",Georgia,serif;line-height:1.7;box-sizing:border-box}
+body.shared-nav.shared-nav .site-header .header-inner{position:relative;display:flex;justify-content:center;align-items:center;width:100%;max-width:none;height:64px;min-height:64px;margin:0;padding:0 24px;overflow:visible;box-sizing:border-box}
+body.shared-nav.shared-nav .site-header nav{display:grid;align-items:center;grid-template-columns:minmax(0,1fr) 184px minmax(0,1fr);width:100%;gap:0;font-size:20px;line-height:1.7;font-weight:400;letter-spacing:0}
+body.shared-nav.shared-nav .site-header .nav-left,body.shared-nav.shared-nav .site-header .nav-right{display:flex;align-items:center;gap:64px;min-width:0}
+body.shared-nav.shared-nav .site-header .nav-left{grid-column:1;justify-content:flex-end}
+body.shared-nav.shared-nav .site-header .nav-right{grid-column:3;justify-content:flex-start}
+body.shared-nav.shared-nav .site-header .nav-aux{display:block;position:absolute;right:28px;top:50%;bottom:auto;transform:translateY(-50%)}
+body.shared-nav.shared-nav .site-header nav a{display:inline-flex;align-items:center;justify-content:center;position:relative;min-width:44px;min-height:44px;padding:0;border:0;background:none;color:#243D32;font:inherit;text-decoration:none;white-space:nowrap;text-shadow:none;box-sizing:border-box}
+body.shared-nav.shared-nav .site-header nav .nav-contact{min-width:67px}
+body.shared-nav.shared-nav .site-header .nav-label{margin:0;position:relative}
+body.shared-nav.shared-nav .site-header nav a::before,body.shared-nav.shared-nav .site-header nav a::after,body.shared-nav.shared-nav .site-header .nav-label::after{content:none}
+body.shared-nav.shared-nav .site-header nav a:is(:hover,[aria-current]){color:#58702F}
+body.shared-nav.shared-nav .site-header nav a[aria-current]{font-weight:600}
+body.shared-nav.shared-nav .site-header :is(a,button):focus-visible{outline:2px solid #58702F;outline-offset:4px}
+body.shared-nav.shared-nav .site-header nav a:focus-visible{border-radius:4px}
+body.shared-nav.shared-nav .site-header .wordmark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;gap:0;width:80px;height:80px;min-height:80px;margin:0;padding:0;z-index:3;border:1px solid rgb(50 50 0 / .18);border-radius:50%;background:#CBCB6C;color:#323200;box-shadow:none;text-decoration:none;box-sizing:border-box}
+body.shared-nav.shared-nav .site-header .brand-mark{display:block;width:50px;height:50px;flex:none;transform:rotate(0deg);transform-origin:center;transition:none;animation:none}
+@keyframes shared-monogram-turn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+body.shared-nav.shared-nav .site-header .wordmark:is(:hover,:focus-visible) .brand-mark{animation:shared-monogram-turn 760ms ease-in-out 1 both}
+body.shared-nav:not(.home-page){--header-height:110px}
+body.shared-nav:not(.home-page) main{padding-top:110px}
+@media(min-width:901px) and (max-width:1150px){
+ body.shared-nav.shared-nav .site-header nav{font-size:18px;grid-template-columns:minmax(0,1fr) 144px minmax(0,1fr)}
+ body.shared-nav.shared-nav .site-header .nav-left,body.shared-nav.shared-nav .site-header .nav-right{gap:42px}
+ body.shared-nav.shared-nav .site-header .nav-aux{right:20px}
+ body.shared-nav.shared-nav .site-header nav .nav-contact{min-width:61px}
+}
+@media(max-width:900px){
+ body.shared-nav.shared-nav .site-header{top:20px;width:calc(100% - 24px)}
+ body.shared-nav.shared-nav .site-header .header-inner{padding-inline:12px}
+ body.shared-nav.shared-nav .site-header nav{font-size:16px;grid-template-columns:minmax(0,1fr) 80px minmax(0,1fr)}
+ body.shared-nav.shared-nav .site-header .nav-left,body.shared-nav.shared-nav .site-header .nav-right{gap:12px}
+ body.shared-nav.shared-nav .site-header .nav-aux{right:16px}
+ body.shared-nav.shared-nav .site-header nav .nav-contact{min-width:55px}
+}
+@media(max-width:700px){
+ body.shared-nav.shared-nav .site-header{height:50px}
+ body.shared-nav.shared-nav .site-header .header-inner{height:48px;min-height:48px}
+ body.shared-nav.shared-nav .site-header .wordmark{width:60px;height:60px;min-height:60px}
+ body.shared-nav.shared-nav .site-header .brand-mark{width:30px;height:30px}
+ body.shared-nav.shared-nav .site-header .nav-aux{display:none}
+ body.shared-nav:not(.home-page){--header-height:88px}
+ body.shared-nav:not(.home-page) main{padding-top:88px}
+}
+@media(max-width:480px){
+ body.shared-nav.shared-nav .site-header nav{font-size:15px;grid-template-columns:minmax(0,1fr) 68px minmax(0,1fr)}
+ body.shared-nav.shared-nav .site-header .nav-left,body.shared-nav.shared-nav .site-header .nav-right{gap:6px}
+}
+@media(prefers-reduced-motion:reduce){body.shared-nav.shared-nav .site-header .wordmark .brand-mark,body.shared-nav.shared-nav .site-header .wordmark:is(:hover,:focus-visible) .brand-mark{animation:none;transition:none;transform:none}}
+/* Same contact preview on all ordinary portfolio pages. */
+body.shared-nav #wechat-card{position:fixed;z-index:10000;width:240px;max-width:calc(100vw - 24px);padding:6px;background:#fff;color:#203D35;border:1px solid #d7dbd2;border-radius:10px;box-shadow:0 12px 35px #16291e30;box-sizing:border-box;font:13px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+body.shared-nav #wechat-card[hidden]{display:none}
+body.shared-nav #wechat-card picture{display:contents}
+body.shared-nav #wechat-card img{display:block;width:100%;height:auto;max-height:calc(100dvh - 100px);object-fit:contain;background:white}
+body.shared-nav #wechat-card .wechat-close{position:absolute;right:4px;top:2px;background:#fff;color:#203D35;border:0;font-size:22px;line-height:28px;width:28px;cursor:pointer;border-radius:50%}
+body.shared-nav #wechat-card .wechat-contact-link{display:block;text-align:center;font-size:13px;color:#203D35;margin-top:2px;padding:3px;text-decoration:underline}
+body.shared-nav #wechat-card :focus-visible{outline:2px solid #58702F;outline-offset:2px}

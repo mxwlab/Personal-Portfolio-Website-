@@ -2,3 +2,9 @@
 html body svg.arrow-up-right{color:#58702F;stroke:currentColor}
 /* Retain legibility on the colored contact surface. */
 html body #contact svg.arrow-up-right{color:#FAF8F2}
+/* Approved naked entry glyphs only. Keep transparent hit areas and themed controls. */
+html body:is(.home-page,.work-page) .project-card .project-info h3 .arrow-up-right,
+html body.home-page .section-heading .text-link .arrow-up-right,
+html body:is(.home-page,.about-page) .journey .text-link .arrow-up-right,
+html body:is(.project-agent-platform,.project-ai-continuity,.project-knowledge-graph,.project-meetingnotes,.project-pocket-fishpond,.project-wechat-cc) .next-project .arrow-up-right,
+html body:is(.project-ai-continuity,.project-meetingnotes) .case-hero .text-link .arrow-up-right{color:#6F844A!important;stroke:currentColor}

@@ -7,7 +7,7 @@
   const sections = links.map(link => document.getElementById(link.hash.slice(1)));
   if (sections.some(section => !section)) return;
   const side = () => matchMedia('(min-width:1440px)').matches;
-  const offset = () => (document.querySelector('.site-header')?.getBoundingClientRect().height || 0)
+  const offset = () => (document.querySelector('.project-return-nav,.site-header')?.getBoundingClientRect().bottom || 0)
     + (side() ? 0 : rail.getBoundingClientRect().height) + 16;
   let scheduled = false;
   const update = () => {
