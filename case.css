@@ -6,7 +6,7 @@
    figure/wide/fbleed 约定作用在 <figure class="media …"> 元素本身（通过 image() 的 cls 参数）。
 */
 body.case-page{
-  --paper:#f1f0e9;--ink:#1b2a24;--ink-soft:#3c4a43;--muted:#8f8a7c;
+  --paper:#f1f0e9;--ink:#1b2a24;--ink-soft:#3c4a43;--muted:#645f50;
   --line:#cdc8ba;--line-soft:#ddd9cd;--forest:#2f5d4e;--forest-bright:#3f7a63;
   --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif SC",serif;
   --mono:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,monospace;
@@ -166,7 +166,7 @@ body.case-page{overflow-x:clip}
 .case-page .scene-rail a[aria-current]{border-color:var(--forest);color:var(--forest);font-weight:700}
 .case-page .case-editorial>[id]{scroll-margin-top:155px}
 .case-page .scene-heading{display:flex;gap:30px;align-items:baseline;margin:0 0 40px;padding-top:12px}
-.case-page .scene-number{font:400 52px/1 var(--mono);color:var(--forest);opacity:.5}
+.case-page .scene-number{font:400 52px/1 var(--mono);color:var(--forest);opacity:.72}
 .case-page .scene-heading h2{font:500 clamp(38px,4vw,56px)/1.25 var(--serif);margin:0}
 .case-page .scene-purpose{font-size:16px;line-height:1.8;color:var(--ink-soft);margin-top:16px}
 .case-page .scene-header>h3{font:500 28px/1.5 var(--serif);margin:0 0 20px}

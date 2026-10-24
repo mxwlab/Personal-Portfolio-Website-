@@ -1,3 +1,4 @@
+picture{display:contents}
 :root{--paper:#f3f3ed;--ink:#223e39;--muted:#5d716b;--line:#cbd5ca;--accent:#315d58;--sans:var(--serif)}
 html{overflow-x:clip}body{background:var(--paper);overflow-x:clip}
 .atmosphere-hero{min-height:760px;height:100svh;max-height:1100px;position:relative;isolation:isolate;overflow:hidden}
