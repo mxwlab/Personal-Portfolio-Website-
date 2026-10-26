@@ -1,0 +1,91 @@
+/* This reading layout belongs only to the standalone About page. */
+body.about-reading{background:#fff;color:#262626;font-family:var(--sans)}
+body.about-reading.shared-nav .about-reader{width:min(720px,calc(100% - 48px));margin-inline:auto;padding-top:174px;padding-bottom:96px}
+.about-reading .about-document{font-size:16px;line-height:1.9;overflow-wrap:break-word}
+.about-reading .about-identity{display:flex;align-items:center;gap:18px;margin-bottom:38px}
+.about-reading .about-monogram{width:52px;height:52px;flex:none}
+.about-reading .about-identity h1{font-size:19px;font-weight:600;line-height:1.5;letter-spacing:0;text-wrap:wrap}
+.about-reading .about-identity p{font-size:14px;line-height:1.7;color:#777;margin-top:4px}
+.about-reading .about-prose p+p{margin-top:20px}
+.about-reading .about-chapter{margin-top:68px}
+.about-reading .about-chapter h2{font-size:19px;font-weight:600;line-height:1.6;letter-spacing:0;text-wrap:wrap;margin-bottom:25px}
+.about-reading .about-topic+.about-topic,.about-reading .about-prose+.about-topic{margin-top:30px}
+.about-reading .about-topic h3,.about-reading .about-experience h3{font-size:16px;line-height:1.7;font-weight:600;letter-spacing:0;text-wrap:wrap;margin-bottom:10px}
+.about-reading .about-topic p,.about-reading .about-experience p{color:#555}
+.about-reading .about-experience{display:grid;grid-template-columns:156px minmax(0,1fr);gap:24px;margin-top:30px}
+.about-reading .about-experience .about-date{font-size:14px;color:#888;line-height:1.9;padding-top:2px;font-variant-numeric:tabular-nums}
+.about-reading details{margin-top:10px}
+.about-reading summary{display:flex;align-items:center;gap:8px;min-height:44px;width:max-content;cursor:pointer;font-size:14px;list-style:none}
+.about-reading summary::-webkit-details-marker{display:none}
+.about-reading summary:hover{color:#58702F}
+.about-reading summary .when-open,.about-reading details[open] .when-closed{display:none}
+.about-reading details[open] .when-open{display:inline}
+.about-reading details[open] summary svg{transform:rotate(180deg)}
+.about-reading details>p{margin-top:10px}
+.about-reading .about-collage{margin-top:72px;background:#243D32;padding:40px 46px 24px;border-radius:2px;overflow:hidden}
+.about-reading .about-collage-pictures{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center;padding:12px 0 20px}
+.about-reading .about-collage img{width:100%;height:auto;border:7px solid #fff;box-shadow:0 8px 20px #0003}
+.about-reading .about-collage img:first-child{transform:rotate(-5deg)}
+.about-reading .about-collage img:nth-child(2){transform:rotate(5deg) translateY(5px)}
+.about-reading .about-collage figcaption{color:#d9e1d9;font-size:12px;text-align:center;margin-top:14px;letter-spacing:.06em}
+.about-reading .about-outside{margin-top:50px}
+.about-reading .about-contact-actions{display:flex;align-items:center;flex-wrap:wrap;gap:24px}
+.about-reading .site-footer{font-family:var(--sans);color:#777;background:#fff}
+@media(max-width:700px){
+ body.about-reading.shared-nav .about-reader{padding-top:132px;padding-bottom:64px}
+ .about-reading .about-document{font-size:16px;line-height:1.85}
+ .about-reading .about-identity{gap:14px;margin-bottom:30px}
+ .about-reading .about-identity h1{font-size:18px}
+ .about-reading .about-chapter{margin-top:52px}
+ .about-reading .about-experience{grid-template-columns:1fr;gap:7px;margin-top:28px}
+ .about-reading .about-collage{margin-top:52px;padding:24px 20px 18px}
+ .about-reading .about-collage-pictures{gap:16px;padding-top:8px;padding-bottom:8px}
+ .about-reading .about-collage img{border-width:4px}
+ .about-reading .about-outside{margin-top:38px}
+}
+
+.about-reading .about-collage img.about-floral-cutout{grid-column:1 / -1;justify-self:center;width:min(100%,420px);margin-top:10px;border:0;background:transparent;box-shadow:none;transform:none}
+
+.about-reading .about-filter-defs{position:absolute;pointer-events:none}
+.about-reading .about-collage img.about-outlined-cutout{border:0;box-shadow:none;background:transparent;filter:url(#about-cutout-outline)}
+.about-reading .about-collage img.about-painting-cutout{transform:rotate(5deg);width:94%;justify-self:center}
+
+.about-reading .about-collage img.about-floral-cutout{grid-column:1;width:100%}
+.about-reading .about-collage img.about-device-cutout{grid-column:2;width:100%;justify-self:center;transform:rotate(7deg) translateY(12px)}
+
+/* Tools and honest aggregate empty state; isolated to the reading page. */
+.about-reading .about-tools{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.about-reading .about-tools li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;min-width:0;font-size:14px;line-height:1.5}
+.about-reading .about-tools img,.about-reading .about-dsh-mark{width:40px;height:40px;flex:none}
+.about-reading .about-dsh-mark{display:grid;place-items:center;border:1px solid #d9dfd2;border-radius:10px;background:#E8EDDC;color:#243D32;font-size:11px;font-weight:650;letter-spacing:.02em}
+.about-reading .about-tool-note{display:block;color:#777;font-size:12px;margin-top:2px}
+.about-reading .about-usage-intro{color:#777;font-size:14px;margin-top:-12px}
+.about-reading .about-usage-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:26px 0 22px;padding:0 0 24px;border-bottom:1px solid #e8e8e5}
+.about-reading .about-usage-metrics dt{font-size:13px;color:#777}
+.about-reading .about-usage-metrics dd{margin:5px 0 0;font-size:27px;line-height:1.5;color:#243D32}
+.about-reading .about-usage-metrics small{display:block;font-size:12px;color:#888;font-weight:400}
+.about-reading .about-usage-sources{list-style:none;padding:0;margin:0;display:grid;gap:12px;font-size:14px}
+.about-reading .about-usage-sources li{display:flex;justify-content:space-between;gap:20px}
+.about-reading .about-usage-sources li>span:last-child{color:#777;text-align:right}
+.about-reading .about-usage-coverage{margin-top:18px;font-size:13px;color:#777}
+.about-reading .about-usage-coverage summary{font-size:13px;color:#555;gap:7px}
+.about-reading .about-usage-coverage summary::before{content:"+";font-size:17px;width:12px;text-align:center}
+.about-reading .about-usage-coverage[open] summary::before{content:"−"}
+.about-reading .about-usage-coverage summary:focus-visible{outline:2px solid #CBCB6C;outline-offset:4px;border-radius:4px}
+@media(max-width:600px){.about-reading .about-tools{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 12px}.about-reading .about-usage-metrics{gap:12px}.about-reading .about-usage-sources{font-size:13px}.about-reading .about-usage-sources li{gap:12px}}
+
+/* Three transparent keepsakes, with more breathing room. */
+.about-reading .about-collage img.about-painting-cutout{grid-column:1;grid-row:1 / 3;width:77%}
+.about-reading .about-collage img.about-floral-cutout{grid-column:2;grid-row:1;width:82%;justify-self:center;margin-top:0;transform:rotate(-5deg)}
+.about-reading .about-collage img.about-device-cutout{grid-column:2;grid-row:2;width:82%;transform:rotate(7deg)}
+
+/* Low-contrast cutting mat; decoration does not participate in collage layout. */
+.about-reading .about-collage{position:relative;isolation:isolate;border-radius:24px;box-shadow:0 8px 22px #243d3214}
+.about-reading .about-collage::before{content:"";position:absolute;inset:18px 18px 58px;z-index:-1;border:1px solid #cbcb6c30;border-radius:9px;background-image:linear-gradient(#cbcb6c22 1px,transparent 1px),linear-gradient(90deg,#cbcb6c22 1px,transparent 1px),linear-gradient(#e8eddc0c 1px,transparent 1px),linear-gradient(90deg,#e8eddc0c 1px,transparent 1px);background-size:100px 100px,100px 100px,20px 20px,20px 20px;pointer-events:none}
+.about-reading .mat-ruler{position:absolute;left:32px;top:12px;width:calc(100% - 64px);height:26px;color:#cbcb6c66;pointer-events:none;z-index:-1}
+.about-reading .mat-ruler path,.about-reading .mat-angle path{fill:none;stroke:currentColor;stroke-width:.8}
+.about-reading .mat-ruler text,.about-reading .mat-angle text{fill:currentColor;stroke:none;font:8px ui-monospace,monospace;text-anchor:middle}
+.about-reading .mat-angle{position:absolute;bottom:62px;left:22px;width:110px;height:110px;color:#cbcb6c42;pointer-events:none;z-index:-1}
+@media(max-width:600px){.about-reading .about-collage{border-radius:18px}.about-reading .about-collage::before{inset:12px 12px 52px;background-size:120px 120px,120px 120px,24px 24px,24px 24px}.about-reading .mat-ruler{left:20px;top:6px;width:calc(100% - 40px);height:20px}.about-reading .mat-ruler text:nth-of-type(even){visibility:hidden}.about-reading .mat-angle{width:76px;height:76px;left:15px;bottom:56px}}
+.about-reading .about-collage::after{content:"";position:absolute;inset:18px 18px 58px;pointer-events:none;z-index:-1;background-image:repeating-linear-gradient(90deg,#cbcb6c40 0 1px,transparent 1px 20px),repeating-linear-gradient(90deg,#cbcb6c40 0 1px,transparent 1px 20px),repeating-linear-gradient(#cbcb6c40 0 1px,transparent 1px 20px),repeating-linear-gradient(#cbcb6c40 0 1px,transparent 1px 20px);background-size:100% 5px,100% 5px,5px 100%,5px 100%;background-position:top,bottom,left,right;background-repeat:no-repeat;border-radius:9px}
+@media(max-width:600px){.about-reading .about-collage::after{inset:12px 12px 52px;opacity:.65}}

@@ -1,0 +1,105 @@
+/* Approved cover; reuse existing site controls and background layers. */
+body.home-page .hero-editorial .atmosphere-inner{width:min(calc(100% - 80px),1200px);padding-block:132px 56px}
+body.home-page .hero-editorial{min-height:0}
+.home-page .hero-cover-grid{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:42px;width:100%}
+.home-page .hero-cover-stage{position:relative;width:100%;padding:108px 0 36px;text-align:center;isolation:isolate}
+.home-page #home .hero-cover-title{font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:clamp(78px,7.8vw,112px);font-weight:600;-webkit-text-stroke:.006em currentColor;line-height:1.08;letter-spacing:-.035em;color:#243D32;margin:0}
+.home-page .hero-cover-title>span{display:inline;white-space:nowrap}
+.home-page .hero-title-ai{display:inline-block;font-size:1.2em;line-height:0;position:relative;top:.045em}
+.home-page .hero-cover-title b{font:inherit;color:#CBCB6C;letter-spacing:-.08em;position:relative;top:-.1em}
+.home-page .hero-cover-subtitle{font-family:var(--sans);font-size:clamp(40px,3.4vw,48px);font-weight:650;line-height:1.4;color:#243D32;margin-top:24px}
+.home-page .hero-cover-orbit{position:absolute;z-index:-1;pointer-events:none;inset:115px 0 76px;border:2px solid #E8EDDC;border-radius:50%;transform:rotate(-14deg)}
+.home-page .hero-sticker{position:absolute;z-index:1;color:#243D32;border:2px solid #243D32;border-radius:16px;background:#FAF8F2;text-align:left;box-shadow:0 3px 0 #243d320b}
+.home-page .hero-sticker strong{display:block;font-size:21px;line-height:1.14}
+.home-page .hero-sticker-hello{left:clamp(-48px,calc(620px - 50vw),-20px);bottom:12px;transform:rotate(-13deg);overflow:hidden;font-family:var(--sans)}
+.home-page .hero-sticker-hello>span{display:block;background:#CBCB6C;padding:6px 12px;font:700 13px/1.4 Georgia,serif;letter-spacing:.04em}
+.home-page .hero-sticker-hello strong{padding:10px 13px;font-size:19px;font-style:italic}
+.home-page .hero-sticker-taste{right:2px;top:0;transform:rotate(15deg);padding:12px 16px;background:#E8EDDC;font-family:Georgia,serif}
+.home-page .hero-sticker-taste>span{display:block;line-height:1;margin-bottom:4px;font-size:22px}
+.home-page .hero-cover-grid .hero-profile{width:min(100%,760px);padding:0}
+.home-page #home .hero-cover-grid .hero-greeting{font-family:var(--sans);font-size:30px;line-height:1.4;font-weight:750;margin:0 0 20px;color:#243D32}
+.home-page .hero-cover-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:26px}
+@media(max-width:1000px){
+ body.home-page .hero-editorial .atmosphere-inner{width:calc(100% - 48px);padding-top:138px}
+ .home-page .hero-cover-stage{padding-top:104px;padding-bottom:118px}
+ .home-page #home .hero-cover-title{font-size:clamp(55px,8.5vw,85px)}
+ .home-page .hero-sticker strong{font-size:17px}
+ .home-page .hero-sticker-hello{bottom:8px;left:10px}
+ .home-page .hero-sticker-taste{right:15px;top:0}
+ .home-page .hero-cover-subtitle{font-size:36px}
+ .home-page .hero-cover-orbit{inset:105px 0 120px}
+}
+@media(max-width:600px){
+ body.home-page .hero-editorial .atmosphere-inner{width:calc(100% - 40px);padding-block:112px 42px}
+ .home-page .hero-cover-grid{gap:32px}
+ .home-page .hero-cover-stage{padding-top:96px;padding-bottom:0}
+ .home-page #home .hero-cover-title{font-size:clamp(44px,12.8vw,76px);line-height:1.14;letter-spacing:-.055em}
+ .home-page .hero-cover-subtitle{font-size:28px;margin-top:110px;letter-spacing:0;text-wrap:balance}
+ .home-page .hero-cover-title>span{display:block}
+ .home-page .hero-cover-subtitle>span{display:block}
+ .home-page .hero-sticker{border-radius:11px}
+ .home-page .hero-sticker strong{font-size:15px}
+ .home-page .hero-sticker-hello{left:8px;bottom:106px;transform:rotate(-9deg)}
+ .home-page .hero-sticker-hello>span{font-size:10px;padding:4px 9px}
+ .home-page .hero-sticker-hello strong{padding:7px 10px}
+ .home-page .hero-sticker-taste{top:0;right:10px;padding:9px 12px;transform:rotate(11deg)}
+ .home-page .hero-sticker-taste>span{font-size:16px}
+ .home-page .hero-cover-orbit{inset:110px 0 150px}
+ .home-page #home .hero-cover-grid .hero-greeting{font-size:25px;margin-bottom:18px}
+ .home-page .hero-cover-grid .identity-copy{font-size:16px;line-height:1.8}
+ .home-page .hero-cover-actions{gap:12px;margin-top:24px}
+}
+
+/* Geometry from website-button-colors.css work-page contact CTA (999px).
+   Secondary states from the existing unselected work-filter capsule. */
+body.home-page .hero-cover-actions .button{border-radius:999px;min-height:44px;padding:9px 16px;font-size:14px;gap:12px;transform:none}
+body.home-page .hero-cover-actions .hero-action-secondary{background:transparent;color:var(--website-button-ink);border-color:var(--website-button-bg)}
+body.home-page .hero-cover-actions .hero-action-secondary:hover{background:transparent;color:var(--website-button-ink);border-color:var(--website-button-bg)}
+body.home-page .hero-cover-actions .button:focus-visible{outline:2px solid rgb(203 203 108 / .65);outline-offset:3px;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
+body.home-page .hero-cover-actions .hero-action-secondary:focus-visible{background:var(--website-button-bg);color:var(--website-button-ink);border-color:var(--website-button-bg)}
+body.home-page .hero-cover-actions .hero-action-secondary:active{background:transparent;border-color:var(--website-button-bg)}
+@media(max-width:720px){body.home-page .hero-cover-actions .button{padding:8px 11px}}
+
+/* Optical reduction of both cover stickers, keeping their anchored placement. */
+.home-page .hero-sticker{scale:.85}
+.home-page .hero-sticker-hello{transform-origin:left bottom}
+.home-page .hero-sticker-taste{transform-origin:right top}
+
+/* Mobile composition: title, supporting line, paired stickers, then readable profile. */
+@media(max-width:600px){
+ body.home-page .hero-editorial .atmosphere-inner{width:calc(100% - 48px);padding-block:122px 44px;min-height:0}
+ .home-page .hero-cover-grid{gap:38px;align-items:stretch}
+ .home-page .hero-cover-stage{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;row-gap:0;padding:0;text-align:left}
+ .home-page #home .hero-cover-title{grid-column:1/-1;grid-row:1;font-size:clamp(44px,13.6vw,60px);line-height:1.13;letter-spacing:-.045em}
+ .home-page .hero-cover-subtitle{grid-column:1/-1;grid-row:2;font-size:clamp(23px,6vw,27px);line-height:1.45;margin:18px 0 27px;font-weight:600;text-align:left;text-wrap:initial}
+ .home-page .hero-cover-subtitle>span{display:inline-block;white-space:nowrap}
+ .home-page .hero-sticker{position:relative;inset:auto;scale:1;align-self:center;max-width:100%;width:max-content;box-sizing:border-box}
+ .home-page .hero-sticker-hello{grid-column:1;grid-row:3;transform:rotate(-5deg);transform-origin:center}
+ .home-page .hero-sticker-hello>span{font-size:9px;padding:4px 8px}
+ .home-page .hero-sticker-hello strong{font-size:13px;line-height:1.2;padding:7px 8px}
+ .home-page .hero-sticker-taste{grid-column:2;grid-row:3;justify-self:end;padding:9px 10px;transform:rotate(6deg);transform-origin:center}
+ .home-page .hero-sticker-taste>span{font-size:13px;margin-bottom:4px}
+ .home-page .hero-sticker-taste strong{font-size:14px;line-height:1.18}
+ .home-page .hero-cover-orbit{inset:26px -8px 22px;border-width:1px;opacity:.65;transform:rotate(-12deg)}
+ .home-page .hero-editorial .hero-cover-grid .hero-profile{display:block;width:100%;max-width:none;padding:0;text-align:left}
+ .home-page #home .hero-cover-grid .hero-greeting{font-size:25px;line-height:1.3;margin:0 0 16px;text-align:left}
+ .home-page .hero-editorial .hero-cover-grid .identity-copy{font-size:16px;line-height:1.85;margin:0;font-weight:400;text-align:left}
+ .home-page .hero-cover-actions{justify-content:flex-start;gap:12px;margin-top:24px}
+ body.home-page .hero-cover-actions .button{min-height:46px;padding:10px 17px;font-size:14px}
+}
+@media(max-width:350px){
+ body.home-page .hero-editorial .atmosphere-inner{width:calc(100% - 40px);padding-top:112px}
+ .home-page .hero-cover-stage{column-gap:12px}
+ .home-page #home .hero-cover-grid .hero-greeting{font-size:23px}
+}
+@media(max-width:900px) and (orientation:landscape) and (max-height:500px){
+ body.home-page .hero-editorial .atmosphere-inner{padding-top:112px}
+}
+
+/* Mobile title: multiplication mark follows AI产品 on the first line. */
+@media(max-width:600px){
+ .home-page #home .hero-cover-title{position:relative;width:max-content;max-width:100%;padding-right:.95em;box-sizing:border-box}
+ .home-page .hero-cover-title>span:last-child{font-size:0;white-space:normal}
+ .home-page .hero-cover-title .hero-title-human{font-size:clamp(44px,13.6vw,60px);white-space:nowrap}
+ .home-page .hero-cover-title b{position:absolute;left:3.12em;right:auto;top:.565em;transform:translateY(-50%);font-size:clamp(44px,13.6vw,60px);line-height:1;letter-spacing:0;margin-top:-.1em}
+}

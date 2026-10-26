@@ -6,7 +6,7 @@
 .cap-marquee .cap-word{white-space:nowrap}
 .marquee-toggle{position:absolute;right:0;top:0;bottom:0;width:64px;border:0;background:#e1e8df;color:#294438;font:inherit;font-size:12px;cursor:pointer;z-index:1}
 .marquee-toggle:focus-visible{outline:1px solid #294438;outline-offset:-5px}
-.cap-marquee.is-manual .cap-marquee-window{overflow-x:auto;scrollbar-width:thin}
+.cap-marquee.is-manual .cap-marquee-window{overflow-x:auto;}
 .cap-marquee.is-manual .cap-index-directory{transform:none!important;will-change:auto}
 .cap-marquee.is-manual .marquee-copy{display:none}
 @media(max-width:700px){.cap-marquee{margin-top:44px;padding-right:0}.cap-marquee-window{padding:12px 18px}.cap-marquee .cap-index-directory ol{gap:28px;padding-right:28px}.cap-marquee .cap-index-link{font-size:17px}.marquee-toggle{display:none}}

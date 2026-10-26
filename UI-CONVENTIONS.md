@@ -10,3 +10,7 @@
 ## 2026-10-24 release
 Naked project-entry arrow SVG glyphs use #6F844A (including hover). No new icon shells or hit-area backgrounds. Pill-contained, theme-return, chapter, image-view and contact-on-green arrows retain their role-specific colors.
 This repository is the directly served static Pages source, with no npm build step. Keep its shared navigation/glass/spacing styles linked after legacy styles. The older personal-site generator is not the source of this release and must not overwrite it. Six original capability images are retained outside the web root in the dated originals archive; full-resolution data-zoom images remain served.
+
+## Fixed scrollbar rule — 2026-10-26
+
+All site pages and all device sizes must hide native scrollbars, including document, horizontal rails, heatmaps, dialogs and the portfolio reader. Load shared `page-scrollbar.css`; do not override it with visible/thin scrollbars. Preserve overflow scrolling, touch, wheel, keyboard navigation and visible focus. Never use `overflow:hidden` to satisfy this rule or clip content. Horizontal regions must remain reachable and keyboard-focusable; validate actual scrolling on narrow screens. This is a permanent site design requirement, not an operating-system setting.

@@ -1,3 +1,3 @@
-/* Hide only document scrollbars; preserve scrolling and internal viewers. */
-html,body{scrollbar-width:none}
-html::-webkit-scrollbar,body::-webkit-scrollbar{display:none;width:0;height:0}
+/* Site-wide invariant: hide native chrome, never disable scrolling. */
+*,*::before,*::after{scrollbar-width:none;-ms-overflow-style:none}
+*::-webkit-scrollbar{display:none;width:0;height:0}

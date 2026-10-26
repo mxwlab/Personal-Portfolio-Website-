@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "sources": [
+    {
+      "source": "codex",
+      "status": "pending",
+      "timeZone": null,
+      "coverageStart": null,
+      "coverageEnd": null,
+      "updatedAt": null,
+      "daily": [],
+      "verified": false,
+      "semantics": null
+    },
+    {
+      "source": "claude-code",
+      "status": "unavailable",
+      "timeZone": null,
+      "coverageStart": null,
+      "coverageEnd": null,
+      "updatedAt": null,
+      "daily": [],
+      "verified": false,
+      "semantics": null
+    },
+    {
+      "source": "deepseek-harness",
+      "status": "needs-review",
+      "timeZone": null,
+      "coverageStart": null,
+      "coverageEnd": null,
+      "updatedAt": null,
+      "daily": [],
+      "verified": false,
+      "semantics": null
+    }
+  ]
+}
