@@ -103,3 +103,15 @@ body.home-page .hero-cover-actions .hero-action-secondary:active{background:tran
  .home-page .hero-cover-title .hero-title-human{font-size:clamp(44px,13.6vw,60px);white-space:nowrap}
  .home-page .hero-cover-title b{position:absolute;left:3.12em;right:auto;top:.565em;transform:translateY(-50%);font-size:clamp(44px,13.6vw,60px);line-height:1;letter-spacing:0;margin-top:-.1em}
 }
+
+/* Home introduction: centered reading measure; profile heading and CTAs stay in place. */
+.home-page .hero-editorial .hero-cover-grid .identity-copy{width:min(900px,calc(100vw - 112px));max-width:none;margin-inline:calc((100% - min(900px,100vw - 112px)) / 2);text-align:center}
+.home-page .hero-editorial .hero-cover-grid .identity-copy p{text-indent:0}
+@media(max-width:600px){
+ .home-page .hero-editorial .hero-cover-grid .identity-copy{width:100%;margin-inline:0;text-align:center}
+}
+
+/* Homepage experience cards: company first, role second. */
+.home-page #main #about-practice .journey-card h3{font-size:34px;font-weight:600;line-height:1.35;margin-bottom:10px}
+.home-page #about-practice .journey-card .journey-role{font-size:17px;line-height:1.6;margin:0 0 18px;opacity:.8}
+@media(max-width:760px){.home-page #main #about-practice .journey-card h3{font-size:24px}.home-page #about-practice .journey-card .journey-role{font-size:15px;margin-bottom:14px}}

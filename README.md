@@ -1,11 +1,11 @@
 # 莫秀文个人作品集
 
-面向 B 端 AI 产品设计岗位的静态作品集网站。首页组织职业来路、企业项目、独立 AI 产品与联系方式；每个核心项目使用独立详情页呈现。
+莫秀文的个人作品集。职业定位：AI 产品设计师 · 工业 AI / 复杂 B 端。
 
 ## 本地预览
 
 ```bash
-cd /Users/moxiuwen/workspace/personal-site
+cd Personal-Portfolio-Website-
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
