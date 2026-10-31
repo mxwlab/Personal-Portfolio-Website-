@@ -1,0 +1,51 @@
+/* Current Figma 2167:10192. Text flows; UI interiors retain source geometry. */
+#board-10.task-native{height:auto;background:#071127;color:#fff;font-family:OPPOSans,"PingFang SC",sans-serif}
+#board-10.task-native>.board{display:none!important}
+#board-10 .task-inner{position:relative;margin-inline:var(--d4s-gutter);container-type:inline-size}
+#board-10 h2,#board-10 h3,#board-10 h4,#board-10 p{margin:0}
+#board-10 .task-header{display:flex;align-items:center;justify-content:space-between;padding-top:2.56cqw;font-size:2.38cqw;font-weight:400;line-height:1.2}
+#board-10 .task-header span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:1.43cqw}
+#board-10 .task-wave{position:absolute;left:calc(-1 * var(--d4s-gutter));top:6.13cqw;width:100vw;height:auto}
+#board-10 h2{font-size:42px;line-height:1.35;font-weight:650;letter-spacing:-.025em}
+#board-10 .task-intro h2{margin-top:10.3cqw;margin-bottom:6.9cqw}
+#board-10 .task-dot{display:inline-block;background:#3d76ff;width:.72cqw;height:.72cqw;margin-left:3px}
+#board-10 h3,#board-10 h4{font-size:2.38cqw;line-height:1.5;font-weight:700}
+#board-10 .task-copy{font-size:2.02cqw;line-height:1.8}
+#board-10 .task-intro h3,#board-10 .task-strategy h3{margin-bottom:1.4cqw}
+#board-10 .task-insights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.14cqw;margin-top:1.95cqw}
+#board-10 .task-insights article{background:#14213d;text-align:center;min-height:26.2cqw;padding:5.8cqw 1.3cqw 3.3cqw}
+#board-10 .task-insights h4{font-size:1.76cqw;line-height:1.2;white-space:nowrap;margin-bottom:3.1cqw}
+#board-10 .task-insights p{font-size:1.55cqw;line-height:1.8}
+#board-10 .task-intro{padding-bottom:7.8cqw}
+#board-10 .task-strategy{padding-bottom:10.2cqw}
+#board-10 .task-strategy-row{display:grid;grid-template-columns:569fr 1199.865fr;gap:2.24cqw;align-items:center}
+#board-10 .task-strategy-copy{padding-inline:1.35cqw}
+#board-10 .task-strategy-copy h4{font-size:2.23cqw;line-height:1.5;margin-bottom:2.07cqw}
+#board-10 .task-strategy-copy p{font-size:1.9cqw;line-height:1.5}
+#board-10 .task-row-group{padding-bottom:1.85cqw}
+#board-10 .task-visual-scroll{overflow:auto;scrollbar-width:none;min-width:0;outline-offset:4px}
+#board-10 .task-visual-scroll::-webkit-scrollbar{display:none}
+#board-10 .task-visual-scroll:focus-visible{outline:2px solid #7bffff}
+#board-10 .task-visual{position:relative;width:100%;overflow:hidden}
+#board-10 .task-canvas{position:absolute;left:0;top:0;transform-origin:0 0;overflow:hidden}
+#board-10 .task-canvas>div{position:relative;left:0;top:0;width:100%;height:100%}
+#board-10 .task-delivery{padding-top:20.2cqw}
+#board-10 .task-delivery h3{margin-bottom:1.7cqw}
+#board-10 .task-delivery h4,#board-10 .task-confirm h4{margin-bottom:1.7cqw}
+#board-10 .task-delivery .task-copy,#board-10 .task-confirm .task-copy{margin-bottom:1.7cqw}
+#board-10 .task-confirm{padding-top:10.8cqw;padding-bottom:7cqw}
+@media(max-width:600px){
+ #board-10 .task-inner{margin-inline:0;padding-inline:24px}
+ #board-10 .task-header{font-size:18px;padding-top:24px}#board-10 .task-header span:last-child{font-size:12px}#board-10 .task-wave{top:57px}
+ #board-10 .task-intro h2{font-size:26px;margin-top:58px;margin-bottom:40px}#board-10 h3{font-size:24px}#board-10 h4{font-size:20px}
+ #board-10 .task-copy{font-size:16px;line-height:1.8}#board-10 .task-intro h3,#board-10 .task-strategy h3{margin-bottom:20px}
+ #board-10 .task-insights{grid-template-columns:1fr;gap:16px;margin-top:24px}#board-10 .task-insights article{padding:30px 24px;min-height:0}#board-10 .task-insights h4{font-size:19px;white-space:normal;margin-bottom:18px}#board-10 .task-insights p{font-size:16px}
+ #board-10 .task-intro{padding-bottom:56px}#board-10 .task-strategy{padding-bottom:36px}
+ #board-10 .task-strategy-row{grid-template-columns:1fr;gap:24px}#board-10 .task-strategy-copy{padding:0}#board-10 .task-strategy-copy h4{font-size:20px;margin-bottom:18px}#board-10 .task-strategy-copy p{font-size:16px;line-height:1.8}
+ #board-10 .task-row-group{padding-bottom:40px}#board-10 .task-visual{width:760px}
+ #board-10 .task-delivery{padding-top:24px}#board-10 .task-delivery h3,#board-10 .task-delivery h4,#board-10 .task-confirm h4{margin-bottom:22px}
+ #board-10 .task-delivery .task-copy,#board-10 .task-confirm .task-copy{margin-bottom:24px}#board-10 .task-confirm{padding-block:48px}
+ #board-10 .task-delivery .task-visual,#board-10 .task-confirm .task-visual{width:1100px}
+}
+
+@media(max-width:350px){#board-10 .task-inner{margin-inline:0;padding-inline:20px}}

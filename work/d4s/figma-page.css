@@ -1,0 +1,255 @@
+@font-face{font-family:OPPOSans;src:url(figma-assets/OPPOSans-R.woff) format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:OPPOSans;src:url(figma-assets/OPPOSans-M.woff) format('woff');font-weight:500;font-display:swap}
+@font-face{font-family:OPPOSans;src:url(figma-assets/OPPOSans-B.woff) format('woff');font-weight:700;font-display:swap}
+@font-face{font-family:OPPOSans;src:url(figma-assets/OPPOSans-H.woff) format('woff');font-weight:900;font-display:swap}
+@font-face{font-family:OPPOSans;src:url(figma-assets/OPPOSans-L.woff) format('woff');font-weight:300;font-display:swap}
+*{box-sizing:border-box}body{margin:0;background:#071127;color:white;font-family:OPPOSans,"PingFang SC",sans-serif;--d4s-gutter:max(6.6vw,calc((100vw - 1320px)/2))}a{color:inherit}.skip{position:fixed;left:20px;top:-100px;z-index:100}.skip:focus{top:10px;padding:12px;background:white;color:#071127}.topbar{display:flex;align-items:center;padding-inline:var(--d4s-gutter);background:rgba(7,17,39,.96);color:#dce0f0;backdrop-filter:blur(14px)}.topbar a{text-decoration:none}.topbar>span{margin-left:auto;color:#8591ad}main{margin:0}.board-shell{position:relative;margin:0;width:100%;isolation:isolate;overflow:clip}.board{position:relative;width:1920px;transform-origin:top left;overflow:visible;line-height:1.5;font-size:16px;color:#000}.board *{border-width:0;border-style:solid}.board p,.board ol,.board ul{margin:0}.board ol,.board ul{padding-left:1.5em}.board img{display:block}.board>div{height:100%;width:100%}.case-end{padding:20px var(--d4s-gutter) 70px}.case-end a{font-size:16px;text-underline-offset:6px}@media(max-width:900px){body{--d4s-gutter:32px}}@media(max-width:600px){body{--d4s-gutter:24px}.topbar>span{display:none}main{margin-top:0}.board-shell{margin:0}}@media(max-width:350px){body{--d4s-gutter:20px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+
+.board [data-node-id="2395:2973"]{-webkit-text-stroke:3px #4a576c}
+
+/* Existing D4S chapter rail and content gutters, with full-viewport board surfaces. */
+.chapters{display:grid;grid-template-columns:minmax(0,1fr);align-items:center;padding:0 var(--d4s-gutter);background:rgba(7,17,39,.95);color:#e8edff;border-bottom:1px solid #293752;font-size:14px;white-space:nowrap}
+.chapter-links{display:flex;gap:32px;justify-content:center;overflow-x:auto;min-width:0;padding:20px 0;scrollbar-width:none}
+.chapter-links a{flex:none;text-decoration:none;white-space:nowrap}
+.chapter-links a:hover,.chapter-links a:focus-visible,.chapter-links a[aria-current]{color:#8eb8ff}
+body.d4s-return-page .topbar.topbar{padding-inline:var(--d4s-gutter)}
+@media(max-width:1100px){.chapter-links{justify-content:flex-start;gap:24px}}
+@media(max-width:600px){.chapter-links{gap:20px;padding-block:18px}}
+
+.surface-bleed{position:absolute;left:0;right:0;pointer-events:none}#board-0 .board{--cover-image-left:813.22px}#board-0 [data-node-id="2383:2650"]{left:var(--cover-image-left)}body.d4s-return-page .chapters.is-docked{min-height:0;border:0;padding-block:0}
+
+/* Right-align chapter links; overflow stays inside the rail on narrow screens. */
+body.d4s-return-page .chapter-links{gap:clamp(10px,1vw,18px);justify-content:safe flex-end}
+body.d4s-return-page .chapter-links a{font-size:13px}
+body.d4s-return-page .topbar>.chapter-links{justify-content:safe flex-end}
+@media(max-width:600px){body.d4s-return-page .topbar>.chapter-links{gap:16px}body.d4s-return-page .chapter-links a{font-size:13px}}
+
+/* This Figma SVG is a plain background rectangle, not a UI image.
+   Expose its fill as CSS so the full-width section surface inherits it. */
+.board [data-node-id="2343:2845"]{background:#0e1621}
+.board [data-node-id="2343:2845"]>img{visibility:hidden}
+a:focus-visible{outline:2px solid #78f1ff;outline-offset:4px}
+
+/* Cover-only navigation state. Scope overrides to this preview, including
+   shared glass !important declarations, without changing other pages. */
+body.d4s-return-page .chapters{display:none}
+body.d4s-return-page .topbar>.chapter-links[hidden],
+body.d4s-return-page.is-cover-view .topbar>.chapter-links{display:none}
+body.d4s-return-page.is-cover-view .topbar{
+ background:transparent!important;background-image:none!important;
+ backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+ box-shadow:none;border-color:transparent;
+ --glass-text:#f5f7f3;--glass-active:#e1e6a0;color:#f5f7f3!important;
+}
+
+/* Let the existing cover decoration reach the viewport top behind the return bar. */
+#board-0{overflow:visible}
+@media(max-width:600px){
+ #board-0{overflow:clip}
+ body.d4s-return-page.is-cover-view .topbar{background-image:url(figma-assets/75b0ac58-12b2-42d8-be85-b2077999297a.svg)!important;background-size:260px auto!important;background-position:180px -120px!important;background-repeat:no-repeat!important}
+}
+
+@media(min-width:601px){
+ #board-0 [data-node-id="2167:9150"]{top:var(--cover-copy-top)}
+ #board-0 [data-node-id="2383:2650"]{top:var(--cover-ui-top);transform:scale(var(--cover-ui-scale));transform-origin:right top}
+ #board-0 [data-node-id="2395:13604"]{top:var(--cover-note-top)}
+}
+
+@media(max-width:600px){
+ #board-0 .mobile-band{background-image:url(figma-assets/75b0ac58-12b2-42d8-be85-b2077999297a.svg)!important;background-size:260px auto!important;background-position:180px -180px!important;background-repeat:no-repeat!important}
+}
+/* Keep long strategy headings inside their original card, at the same font size. */
+@media(min-width:601px){
+ #board-10>.board [data-node-id="2167:10210"] ol{
+  left:24px;width:calc(100% - 48px);height:auto;padding-left:0;
+  list-style-position:inside;text-align:center;white-space:normal;
+ }
+ #board-10>.board [data-node-id="2167:10210"] ol li,
+ #board-10>.board [data-node-id="2167:10210"] ol span{white-space:normal}
+}
+
+/* Layout changes must not relocate the reader through browser scroll anchoring. */
+main{overflow-anchor:none}
+
+/* Current Figma headers: page-specific label, right wordmark, original waveform asset. */
+.quiet-portfolio-rail{display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:OPPOSans,"PingFang SC",sans-serif;font-size:clamp(20px,2.083333vw,40px);font-weight:400;line-height:1;letter-spacing:0;white-space:nowrap;pointer-events:none}
+.quiet-portfolio-rail[hidden]{display:none}
+.quiet-portfolio-rail[data-tone=dark]{color:#fff}
+.quiet-portfolio-rail[data-tone=light]{color:#333}
+.portfolio-wordmark{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:clamp(14px,1.25vw,24px)}
+.portfolio-wave{position:absolute;top:calc(100% + 12px);left:calc(-1 * var(--d4s-gutter));width:100vw;height:auto;pointer-events:none}
+.desktop-portfolio-rail{position:absolute;left:var(--d4s-gutter);right:var(--d4s-gutter);z-index:2}
+.mobile-portfolio-rail{display:none}
+.results-native .results-eyebrow{height:20px;color:#fff;font-size:clamp(20px,2.083333vw,40px);line-height:1}
+.results-native .results-eyebrow span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:clamp(14px,1.25vw,24px)}
+.results-native .results-rule{top:20px}
+@media(max-width:600px){.desktop-portfolio-rail{display:none}.mobile-portfolio-rail{position:relative;display:flex;font-size:16px;gap:12px;width:100%;min-width:0;margin-bottom:24px}.mobile-portfolio-rail[hidden]{display:none}.portfolio-wordmark{font-size:12px;flex-shrink:0}.portfolio-wave{top:calc(100% + 10px)}.results-native .results-eyebrow{font-size:16px}.results-native .results-eyebrow span:last-child{font-size:12px}.results-native .results-rule{top:30px}}
+
+/* The actual menu edge is shared by layout, anchors and reading stops. */
+body.d4s-return-page{--detail-return-height:calc(54px + env(safe-area-inset-top,0px))}
+body.d4s-return-page .topbar{height:var(--detail-return-height);min-height:var(--detail-return-height);padding-block:env(safe-area-inset-top,0px) 0}
+body.d4s-return-page .topbar>.chapter-links{padding-block:0}
+html:has(>body.d4s-return-page){scroll-padding-top:var(--d4s-nav-height,54px)}
+@media(max-width:600px){body.d4s-return-page{--detail-return-height:calc(50px + env(safe-area-inset-top,0px))}html:has(>body.d4s-return-page){scroll-padding-top:var(--d4s-nav-height,50px)}}
+
+/* Configuration/finance shares the 80..1840 content rails.
+   Enlarge only UI assets uniformly; editorial type and the left rail stay unchanged. */
+@media(min-width:601px){
+ #board-9>.board [data-node-id="2321:2844"]{width:1760px}
+ #board-9>.board [data-node-id="2321:2844"]>*,
+ #board-9>.board [data-node-id="2382:2371"]>p{width:100%}
+ #board-9>.board [data-node-id="2321:2848"]{height:990px}
+ #board-9>.board [data-node-id="2321:2851"]{height:calc(530px * 1760 / 1664)}
+ #board-9>.board [data-node-id="2321:2852"]{transform:scale(calc(1760 / 1664));transform-origin:top left;top:calc(-265px * 1760 / 1664)}
+}
+
+/* Approved role-specific closing judgments; retain source type size. */
+#board-14 .judgment-title{display:block;font-weight:600;margin-bottom:20px}
+#board-14 .judgment-description{display:block;font-weight:400}
+#board-14>.board [data-node-id="2395:2981"]{align-items:flex-start}
+@media(max-width:600px){#board-14 .judgment-title{margin-bottom:16px}}
+
+/* Approved retrospective: readable paragraphs, original type sizes retained. */
+#board-14>.board [data-node-id="2395:2980"]{flex-direction:column;gap:28px}
+#board-14>.board [data-node-id="2313:2870"]{white-space:normal;width:100%}
+#board-14>.board [data-node-id="2313:2871"]{width:100%;height:auto}
+#board-14 .review-paragraph{display:block;margin-bottom:24px}
+#board-14 .review-paragraph:last-child{margin-bottom:0}
+#board-14 .review-paragraph strong{display:block;font-weight:600;margin-bottom:8px}
+
+/* Only the three judgment descriptions use the standard body tone. */
+#board-14 .judgment-description{color:#BCC5D5}
+
+/* D4S dark-surface editorial copy only; UI assets, headings and accents stay original. */
+#board-0 :is([data-node-id="2167:9154"],[data-node-id="2395:2953"],[data-node-id="2167:9156"],[data-source-node="2167:9154"],[data-source-node="2395:2953"],[data-source-node="2167:9156"]),
+#board-0 :is([data-node-id="2395:2953"],[data-node-id="2167:9156"],[data-source-node="2395:2953"],[data-source-node="2167:9156"])>*,
+#board-3 [data-reading-type="body"],
+#board-7 .journey-lead p,#board-7 tbody :is(td,th),
+#board-8 .project-insights p,#board-8 .project-native>.project-lead,
+#board-8 .project-intro .project-lead,
+#board-10 :is(.task-copy,.task-insights p,.task-strategy-copy p),
+#board-11 [data-reading-type="body"]:not([data-node-id="2395:2845"]):not([data-node-id="2392:2876"]):not([data-node-id="2395:2808"]):not([data-source-node="2395:2845"]):not([data-source-node="2392:2876"]):not([data-source-node="2395:2808"]),
+#board-14 :is(.judgment-description,.review-paragraph){color:#BCC5D5!important}
+#board-14 .review-paragraph strong{color:#fff}
+
+/* Scope introduction shares the page content line; diagram labels retain their own alignment. */
+@media(min-width:601px){#board-5>.board :is([data-node-id="2382:2163"],[data-node-id="2382:2156"]){left:80px!important;width:1760px!important;text-align:left!important}}
+#board-5 .mobile-section :is([data-source-node="2382:2163"],[data-source-node="2382:2156"]){text-align:left!important}
+
+@media(min-width:601px){#board-5>.board [data-node-id="2382:2143"]{left:0!important}}
+/* Journey table cells are editorial body copy, not viewport-scaled headings. */
+#board-7 tbody :is(td,th){font-size:20px!important;line-height:34px!important;font-weight:400!important}
+@media(max-width:600px){#board-7 tbody :is(td,th){font-size:16px!important;line-height:28px!important}}
+
+/* The two peer scheme headings must match before and after script initialization. */
+#board-8 :is(.project-build>h4,.project-finance>h4:first-child){font-size:26px!important;line-height:38px!important;font-weight:600!important}
+@media(max-width:600px){#board-8 :is(.project-build>h4,.project-finance>h4:first-child){font-size:20px!important;line-height:30px!important}}
+
+/* Shared chapter starts. Auxiliary rail remains 20px below the menu. */
+#board-1.results-native{padding-top:20px}
+#board-1.results-native h2{margin-top:46px;margin-bottom:12px;text-align:left}
+#board-1.results-native .results-source{margin:0 0 24px}
+#board-8.project-native .project-intro{justify-content:flex-start;padding-top:92px}
+#board-8 .project-intro h2{margin-top:0}
+@media(max-width:600px){
+ #board-1.results-native{padding-top:16px}
+ #board-1.results-native h2{margin-top:38px}
+ #board-8.project-native .project-intro{padding-top:0}
+ #board-8 .project-intro h2{margin-top:38px}
+}
+
+/* Role summary is explanatory body copy, separate from the chapter title. */
+#board-4 .role-intro{color:#BCC5D5!important;font-weight:400}
+@media(max-width:600px){#board-4 .mobile-copy.role-intro{margin-top:16px;margin-bottom:28px}}
+
+/* Match the light-surface journey introduction; leave image headings and UI text alone. */
+#board-13 :is([data-node-id="2313:2858"],[data-source-node="2313:2858"]){color:#1a233a!important}
+
+#board-11 :is([data-node-id="2395:2830"],[data-source-node="2395:2830"]){text-align:left;align-self:stretch;width:100%}
+
+/* Opening explanations follow the business-flow title: 10px desktop, 38px mobile. */
+#board-1.results-native h2,#board-8 .project-intro h2{margin-bottom:10px!important}
+@media(max-width:600px){#board-1.results-native h2,#board-8 .project-intro h2{margin-bottom:38px!important}}
+/* Match the journey's “用户调研” subheading, not its research paragraph. */
+#board-13 :is([data-node-id="2313:2857"],[data-source-node="2313:2857"],[data-node-id="2321:2855"],[data-source-node="2321:2855"]){color:#27335f!important}
+
+#board-13 .mobile-section [data-source-node="2321:2855"]>.mobile-copy{color:#27335f!important}
+
+/* Approved grouped retrospective: native, selectable copy; no source-canvas scaling. */
+#board-14 .review-final{position:absolute;left:0;right:0;width:100%;isolation:isolate;overflow:hidden;min-height:0;padding:56px var(--d4s-gutter) 100px;background:#081d38;color:#bcc5d5;font-family:OPPOSans,"PingFang SC",sans-serif;scroll-margin-top:54px}
+#board-14 .review-final-eyebrow{position:relative;z-index:1;font-size:20px;line-height:26px;font-weight:400;margin:0 0 28px;color:#8994a7}
+#board-14 .review-final-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.22fr);gap:clamp(44px,5vw,76px);align-items:start}
+#board-14 .review-final-intro{align-self:start;padding-bottom:64px;min-width:0}
+#board-14 .review-final h2{font-size:42px;line-height:57px;font-weight:650;letter-spacing:0;color:#fff;margin:0 0 38px;overflow-wrap:normal}
+#board-14 .review-final-tail{white-space:nowrap}
+#board-14 .review-final-dot{display:inline-block;width:10px;height:10px;margin-left:10px;background:#4778ff;vertical-align:baseline}
+#board-14 .review-final p:not(.review-final-eyebrow){font-size:20px;line-height:34px;font-weight:400;color:#bcc5d5;margin:0}
+#board-14 .review-final .review-final-intro>p+p{margin-top:30px}
+#board-14 .review-final-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:44px;min-width:0}
+#board-14 .review-final-item{display:grid;grid-template-columns:48px minmax(0,1fr);gap:20px;align-items:start}
+#board-14 .review-final-number{font-size:34px;line-height:32px;font-weight:500;letter-spacing:0;color:#7BF4FB;-webkit-text-stroke:0;font-variant-numeric:tabular-nums}
+#board-14 .review-final h3{font-size:22px;line-height:32px;font-weight:600;color:#fff;margin:0 0 12px}
+#board-14 .review-final-decoration{position:absolute;z-index:0;pointer-events:none;left:-70px;bottom:20px;width:510px;height:210px;opacity:.7;transform:skewY(12deg)}
+#board-14 .review-final-decoration:before{content:"";position:absolute;inset:-70px;background:radial-gradient(ellipse at center,rgba(21,94,238,.27),transparent 65%)}
+#board-14 .review-final-decoration i{position:absolute;width:340px;height:150px;border:1px solid rgba(51,121,255,.6);border-radius:2px;background:linear-gradient(115deg,rgba(17,61,125,.06),rgba(26,96,231,.22));box-shadow:inset -1px 0 12px rgba(48,123,255,.14)}
+#board-14 .review-final-decoration i:nth-child(1){left:0;top:26px}#board-14 .review-final-decoration i:nth-child(2){left:100px;top:0;opacity:.65}#board-14 .review-final-decoration i:nth-child(3){left:180px;top:34px;opacity:.4}
+@media(max-width:1000px){#board-14 .review-final-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);gap:32px}#board-14 .review-final-item{grid-template-columns:44px minmax(0,1fr);gap:16px}#board-14 .review-final-number{font-size:34px}}
+@media(max-width:600px){#board-14 .review-final{position:relative;top:auto!important;padding:32px var(--d4s-gutter) 56px;min-height:0;scroll-margin-top:50px}#board-14 .review-final-eyebrow{font-size:14px;line-height:20px;margin-bottom:30px}#board-14 .review-final-grid{display:block}#board-14 .review-final-intro{padding-bottom:0;margin-bottom:44px}#board-14 .review-final h2{font-size:26px;line-height:36px;margin-bottom:24px}#board-14 .review-final p:not(.review-final-eyebrow){font-size:16px;line-height:28px}#board-14 .review-final .review-final-intro>p+p{margin-top:24px}#board-14 .review-final h3{font-size:18px;line-height:28px;margin-bottom:10px}#board-14 .review-final-list{gap:32px}#board-14 .review-final-item{grid-template-columns:36px minmax(0,1fr);gap:14px}#board-14 .review-final-number{font-size:26px;line-height:28px}#board-14 .review-final-decoration{opacity:.25;bottom:auto;top:220px;left:-220px}#board-14 .review-desktop-break{display:none}}
+
+/* Approved case value and tradeoff copy; keep source typography and tone. */
+#board-11 :is(.case-value,.case-tradeoff){display:block}
+#board-11 .case-tradeoff{margin-top:16px}
+#board-11 :is(.case-value,.case-tradeoff)>strong{font-weight:600}
+
+/* Keep the status mark beside the first finalized-scheme explanation. */
+@media(min-width:601px){
+#board-11>.board [data-node-id="2395:2836"]{padding-bottom:82.184px}
+#board-11>.board [data-node-id="2395:2868"]{position:absolute;right:16%;top:50%;bottom:auto;transform:translateY(-50%)}
+}
+
+#review-final .review-return{display:inline-block;position:relative;z-index:2;margin-top:48px;font-size:16px;color:#fff;text-underline-offset:6px}
+@media(max-width:600px){
+#review-final .review-return{margin-top:32px}
+#board-11 [data-source-node="2395:2825"],#board-11 [data-source-node="2395:2850"],#board-11 [data-source-node="2395:2851"]{margin-top:8px}
+}
+
+/* Align the return link with the final paragraph, while the intro stays at the top. */
+@media(min-width:601px){
+#board-14 .review-final-intro{align-self:stretch;display:flex;flex-direction:column;padding-bottom:0}
+#review-final .review-return{align-self:flex-start;margin-top:auto;line-height:34px;top:.15625em}
+}
+
+@media(max-width:600px){#board-11 [data-source-node="2395:2851"]{margin-top:108px}}
+
+/* Section backgrounds belong to the viewport; content keeps its original grid. */
+#board-11>.board>[data-node-id="2390:2844"],#board-11>.mobile-section,#board-11 .mobile-band{background-color:transparent!important}
+
+#board-8 .project-insights article{height:auto;align-self:stretch;text-align:left}
+#board-8 .project-insights ul{margin:0;padding-left:1.1em;display:grid;gap:16px;color:#BCC5D5}
+#board-8 .project-insights li{padding-left:4px}
+#board-8 .project-insights li p{margin:0;text-align:left;color:#BCC5D5;font-size:20px;line-height:34px;font-weight:400}
+@media(max-width:600px){#board-8 .project-insights ul{gap:12px}#board-8 .project-insights li p{font-size:16px;line-height:28px}}
+
+/* Display ordinals reuse the existing project-step typography. Business values are untouched. */
+.d4s-display-number,
+#board-8 .project-build-demo .project-steps h4 span,
+#board-14 .review-final-number,
+#board-14 [data-node-id="2395:2974"],#board-14 [data-node-id="2395:2976"],#board-14 [data-node-id="2395:2978"],
+#board-14 [data-source-node="2395:2974"],#board-14 [data-source-node="2395:2976"],#board-14 [data-source-node="2395:2978"]{font-family:ui-monospace,SFMono-Regular,monospace!important;font-variant-numeric:tabular-nums;font-weight:600!important}
+.d4s-display-number{font-size:inherit;line-height:inherit;color:inherit}
+
+/* Approved B treatment: transparent grouping on one continuous navy ground. */
+#board-11{background:#081426!important;background-image:none!important}
+#board-11>.board,#board-11>.mobile-section{z-index:1}
+#board-11>.case-group-surface{position:absolute;z-index:0;left:3.8%;right:3.8%;pointer-events:none;border-radius:20px;background:linear-gradient(135deg,rgba(148,182,227,.055),rgba(99,136,186,.025));box-shadow:inset 0 1px rgba(189,213,248,.045)}
+@media(max-width:600px){#board-11>.case-group-surface{left:10px;right:10px;border-radius:14px}}
+/* Insight cards share the approved quiet, translucent B surface. */
+#board-8 .project-insights article{background:linear-gradient(135deg,rgba(148,182,227,.055),rgba(99,136,186,.025))!important;border-radius:20px;box-shadow:inset 0 1px rgba(189,213,248,.045)}
+@media(max-width:600px){#board-8 .project-insights article{border-radius:14px}}
+/* Task insights and strategy wrappers: same quiet surface, original inner UI intact. */
+#board-10 .task-insights article,
+#board-10 .task-row-group .task-canvas>[data-node-id="2167:10239"],
+#board-10 .task-row-group .task-canvas>[data-node-id="2167:10421"],
+#board-10 .task-row-group .task-canvas>[data-node-id="2167:10266"],
+#board-10 .task-row-group .task-canvas>[data-node-id="2167:10427"]{background:linear-gradient(135deg,rgba(148,182,227,.055),rgba(99,136,186,.025))!important;border-radius:20px;box-shadow:inset 0 1px rgba(189,213,248,.045)}
+@media(max-width:600px){#board-10 .task-insights article{border-radius:14px}}

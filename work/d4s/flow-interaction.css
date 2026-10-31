@@ -1,0 +1,9 @@
+#board-6 .flow-hotspot{position:absolute;z-index:5;display:block;padding:0;border:0;border-radius:3px;background:transparent;color:transparent;cursor:pointer;box-shadow:none}
+#board-6 .flow-hotspot:focus-visible,.flow-note button:focus-visible{outline:3px solid #3e70e8;outline-offset:3px}
+.flow-note{position:fixed;z-index:1000;width:340px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 100px);overflow:auto;box-sizing:border-box;padding:18px 20px;background:#fff;color:#27335f;border:1px solid #dce2ef;border-radius:12px;box-shadow:0 12px 40px #18244728;font-size:16px;line-height:1.7}
+.flow-note[hidden]{display:none}.flow-note-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}.flow-note-heading strong{font-size:18px}.flow-note p{margin:12px 0 0;font-size:16px;line-height:1.7}.flow-note button{border:0;background:transparent;color:#616c86;font-size:26px;width:32px;height:32px;cursor:pointer;padding:0}
+@media(max-width:600px){.flow-note{width:calc(100vw - 24px);max-height:45dvh}.flow-mobile-scroll{overflow:auto;position:relative;overscroll-behavior-x:contain} }
+
+#board-6 .flow-hotspot[hidden]{display:none}
+
+#board-6 .flow-discovery-hint{position:absolute;margin:0;font-size:13px;line-height:20px;font-weight:400;color:#747e91;pointer-events:none;z-index:2}

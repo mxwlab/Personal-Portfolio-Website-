@@ -1,0 +1,30 @@
+/* All 13 auxiliary chapter headers. Body titles and the fixed menu are untouched. */
+.board-shell{--chapter-rail-ink:#8994a7;--chapter-rail-line-opacity:.28}
+#board-5,#board-6,#board-7,#board-9,#board-12,#board-13{--chapter-rail-ink:#727b88;--chapter-rail-line-opacity:.35}
+.board-shell .quiet-portfolio-rail,
+#board-1 .compact-native-header,#board-7 .compact-native-header,#board-8 .compact-native-header,#board-10 .compact-native-header{
+ font-family:OPPOSans,"PingFang SC",sans-serif;font-size:20px;line-height:26px;font-weight:400;color:var(--chapter-rail-ink);gap:12px;letter-spacing:0;
+}
+.board-shell .portfolio-wordmark,:is(#board-1,#board-7,#board-8,#board-10) .compact-native-header span:last-child{font-family:OPPOSans,"PingFang SC",sans-serif;font-size:13px;line-height:20px;font-weight:400;flex-shrink:0}
+#board-3 .desktop-portfolio-rail{display:flex}
+.board-shell .portfolio-wave{top:calc(100% + 8px);height:14px;object-fit:fill;opacity:var(--chapter-rail-line-opacity)}
+#board-1.results-native{padding-top:20px}
+#board-1 .compact-native-header{height:26px}
+#board-1 .compact-wave{top:34px;height:14px;opacity:var(--chapter-rail-line-opacity)}
+#board-1 .results-source{margin-top:24px}
+#board-7 .compact-native-header,#board-8 .compact-native-header,#board-10 .compact-native-header{padding-top:20px;height:46px}
+#board-7 .compact-wave,#board-8 .compact-wave,#board-10 .compact-wave{top:54px;height:14px;opacity:var(--chapter-rail-line-opacity)}
+#board-7 .journey-intro h2,#board-8 .project-intro h2,#board-10 .task-intro h2{margin-top:46px}
+@media(max-width:600px){
+ .board-shell .desktop-portfolio-rail,#board-3 .desktop-portfolio-rail{display:none}
+ .board-shell .mobile-portfolio-rail{font-size:14px;line-height:20px;margin-bottom:8px;white-space:normal;align-items:center}
+ .board-shell .portfolio-wordmark,:is(#board-1,#board-7,#board-8,#board-10) .compact-native-header span:last-child{font-size:11px;line-height:16px;white-space:nowrap}
+ .board-shell .mobile-band:has(.mobile-portfolio-rail){padding-top:16px}
+ #board-1.results-native{padding-top:16px}
+ #board-1 .compact-native-header{font-size:14px;line-height:20px;height:20px}
+ #board-1 .compact-wave{top:28px;height:10px}
+ #board-7 .compact-native-header,#board-8 .compact-native-header,#board-10 .compact-native-header{font-size:14px;line-height:20px;padding-top:16px;height:36px}
+ #board-7 .compact-wave,#board-8 .compact-wave,#board-10 .compact-wave{top:44px;height:10px}
+ .board-shell .portfolio-wave{height:10px}
+ #board-7 .journey-intro h2,#board-8 .project-intro h2,#board-10 .task-intro h2{margin-top:38px}
+}

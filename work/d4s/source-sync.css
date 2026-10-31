@@ -1,0 +1,66 @@
+/* Visible changes verified against current main Figma, 2026-10-29. */
+.board [data-node-id="2167:10058"],.board [data-node-id="2167:10110"]{background:#070709}
+#board-3 .mobile-band,#board-4 .mobile-band{background:#070709!important}
+.board [data-node-id="2167:10073"]{background:#041462}
+.board [data-node-id="2167:10074"]{color:#49a2ff}
+.board [data-node-id="2167:10068"],.board [data-node-id="2167:10078"],.board [data-node-id="2167:10083"],.board [data-node-id="2167:10087"],.board [data-node-id="2167:10091"]{background:transparent}
+.board [data-node-id="2167:10069"],.board [data-node-id="2167:10079"],.board [data-node-id="2167:10084"],.board [data-node-id="2167:10088"],.board [data-node-id="2167:10092"]{color:#0e81fa}
+.board [data-node-id="2167:10095"]{border-color:#f70}
+.board [data-node-id="2167:10101"]{display:contents;position:static}
+.board [data-node-id="2167:10102"],.board [data-node-id="2167:10104"],.board [data-node-id="2167:10106"]{position:absolute;width:200px;height:200px;border:5.895px solid #14213f;border-radius:50%;background:transparent}
+.board [data-node-id="2167:10102"]{left:1345.39px;top:806.68px}
+.board [data-node-id="2167:10104"]{left:1429.39px;top:658px;border-color:#f70;background:rgba(255,119,0,.2)}
+.board [data-node-id="2167:10106"]{left:1518.23px;top:806.68px}
+.board [data-node-id="2167:10103"],.board [data-node-id="2167:10105"],.board [data-node-id="2167:10107"]{color:#f70}
+@media(max-width:600px){
+#board-3 [data-source-node="2167:10102"],#board-3 [data-source-node="2167:10106"]{background:transparent!important;border:1px solid #14213f}
+#board-3 [data-source-node="2167:10104"]{background:rgba(255,119,0,.2)!important;border:1px solid #f70}
+#board-3 [data-source-node="2167:10103"],#board-3 [data-source-node="2167:10105"],#board-3 [data-source-node="2167:10107"]{color:#f70!important}
+}
+.board [data-node-id="2167:10103"]{left:24.01px;top:74.06px;font-size:28.603px}
+.board [data-node-id="2167:10105"]{left:37.84px;top:73.15px;font-size:28.25px}
+.board [data-node-id="2167:10107"]{left:38.31px;top:74.06px;font-size:28.603px}
+.board [data-node-id="2167:10065"]{top:310px}
+.board [data-node-id="2167:10066"],.board [data-node-id="2167:10076"]{top:438.27px}
+.board [data-node-id="2167:10072"],.board [data-node-id="2167:10094"]{top:229px}
+.board [data-node-id="2167:10082"]{top:338px}
+.board [data-node-id="2167:10090"]{top:442px}
+.board [data-node-id="2167:10086"]{top:546px}
+.board [data-node-id="2167:10108"],.board [data-node-id="2167:10109"]{top:714.55px}
+#board-0{background-image:linear-gradient(180deg,#070709 54.93%,#091f4e)}
+#board-0>.board>[data-node-id="2167:9146"]{background:transparent}
+@media(max-width:600px){#board-0 .mobile-band{background-color:transparent!important}}
+@media(max-width:600px){
+#board-3 [data-source-node="2167:10073"]{background:#041462!important}
+#board-3 [data-source-node="2167:10074"]{color:#49a2ff!important}
+#board-3 [data-source-node="2167:10068"],#board-3 [data-source-node="2167:10078"],#board-3 [data-source-node="2167:10083"],#board-3 [data-source-node="2167:10087"],#board-3 [data-source-node="2167:10091"]{background:transparent!important;padding:0}
+#board-3 [data-source-node="2167:10069"],#board-3 [data-source-node="2167:10079"],#board-3 [data-source-node="2167:10084"],#board-3 [data-source-node="2167:10088"],#board-3 [data-source-node="2167:10092"]{color:#0e81fa!important}
+}
+@media(max-width:600px){
+#board-3 [data-source-node="2167:10073"]{width:fit-content;padding:5px 15px}
+#board-3 [data-source-node="2167:10072"],#board-3 [data-source-node="2167:10067"],#board-3 [data-source-node="2167:10077"]{display:flex;flex-direction:row;align-items:center;gap:10px;flex-wrap:wrap}
+#board-3 [data-source-node="2167:10068"],#board-3 [data-source-node="2167:10078"]{order:-1;width:auto}
+}
+
+/* Background screen: current 2167:10058 source, isolated from other chapters. */
+#board-3 .desktop-portfolio-rail{display:none}
+#board-3 .background-source-header{position:absolute;left:80px;top:43px;width:1760px;display:flex;align-items:center;justify-content:space-between;color:#fff;font:400 40px/1 OPPOSans,"PingFang SC",sans-serif}
+#board-3 .background-source-wordmark{font:400 24px/1.8 "ADLaM Display",OPPOSans,sans-serif}
+#board-3 .background-source-wave{position:absolute;left:-13.74px;top:100.65px;width:1933.743px;height:36.37px;max-width:none}
+#board-3>.board [data-node-id="2167:10068"],#board-3>.board [data-node-id="2167:10078"]{padding:0}
+#board-3>.board [data-node-id="2167:10077"]{width:267px}
+#board-3>.board [data-node-id="2167:10104"]{border-width:5.822px}
+#board-3>.board [data-node-id="2167:10108"]{width:440px;height:247.399px}
+#board-3>.board [data-node-id="2167:10109"]{width:440.16px;height:247.398px}
+@media(max-width:600px){
+ #board-3 [data-source-node="2167:10094"]{display:flex;align-items:center;gap:10px}
+ #board-3 [data-source-node="2167:10094"]::before{content:"";width:17px;height:17px;border:4px solid #f70;border-radius:50%;box-sizing:border-box;flex-shrink:0}
+ #board-3 [data-source-node="2167:10101"]{display:block;position:relative;aspect-ratio:372.84 / 348.68;width:100%;max-width:373px;margin:20px auto 0;padding:0;gap:0}
+ #board-3 [data-source-node="2167:10101"]>.mobile-card{position:absolute;display:flex;align-items:center;justify-content:center;width:53.6423%;height:57.3592%;box-sizing:border-box;border:4px solid #14213f;border-radius:50%;padding:0;margin:0;overflow:hidden}
+ #board-3 [data-source-node="2167:10102"]{left:0;top:42.6408%}
+ #board-3 [data-source-node="2167:10104"]{left:22.5298%;top:0;border-color:#f70!important}
+ #board-3 [data-source-node="2167:10106"]{left:46.3577%;top:42.6408%}
+ #board-3 [data-source-node="2167:10101"] .mobile-copy{font-size:clamp(17px,5vw,23px)!important;line-height:1.5;white-space:nowrap;margin:0}
+}
+/* Scheme comparison: remove editorial dividers only; retain geometry and UI assets. */
+#board-11 :is([data-node-id="2392:2847"],[data-node-id="2392:2862"],[data-node-id="2392:2877"],[data-node-id="2392:2892"], [data-source-node="2392:2847"],[data-source-node="2392:2862"],[data-source-node="2392:2877"],[data-source-node="2392:2892"]){visibility:hidden}

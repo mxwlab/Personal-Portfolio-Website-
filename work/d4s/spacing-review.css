@@ -1,0 +1,29 @@
+/* Screenshot-requested gaps only; no body typography changes. */
+body.figma-page{--review-gap:clamp(72px,7.5vw,120px)}
+#board-7 .journey-outro{min-height:calc(100svh - var(--detail-return-height));padding-block:32px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+#board-7 .journey-outro .journey-inner{width:calc(100% - 2 * var(--d4s-gutter))}
+@media(min-width:601px){
+ #board-8 .project-finance{padding-top:calc(var(--review-gap) / 2)}
+ #board-10 .task-delivery{padding-top:var(--review-gap)}
+}
+@media(max-width:600px){
+ #board-8 .project-finance{padding-top:16px}
+ #board-10 .task-delivery{padding-top:24px}
+ #board-6 .mobile-band:last-child,#board-11 .mobile-band:last-child,#board-12 .mobile-band:last-child{padding-bottom:14px}
+}
+
+/* Second screenshot review: retain the dark table introduction only. */
+#board-7 .journey-intro{padding-bottom:3.45cqw}
+#board-7 .journey-photo{margin-bottom:2.05cqw}
+#board-7 .journey-lead{padding-top:4.9cqw;padding-bottom:3.9cqw}
+#board-7 .journey-lead h2{margin-bottom:24px}
+#board-8 .project-build>h4,#board-8 .project-finance>h4{font-size:2.38cqw;font-weight:700;line-height:1.5}
+#board-8 .project-outro{min-height:calc(100svh - var(--detail-return-height));padding-block:32px;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+#board-10 .task-strategy{padding-bottom:5.1cqw}
+@media(max-width:600px){
+ #board-7 .journey-intro{padding-bottom:22px}#board-7 .journey-photo{margin-bottom:18px}
+ #board-7 .journey-lead{padding-top:32px;padding-bottom:24px}#board-7 .journey-lead h2{margin-bottom:18px}
+ #board-8 .project-build>h4,#board-8 .project-finance>h4{font-size:20px}
+ #board-10 .task-strategy{padding-bottom:18px}
+ #board-13 .mobile-band:last-child{padding-bottom:14px}
+}

@@ -1,0 +1,22 @@
+/* Flow containers grow with the approved reading scale, never clip larger copy. */
+.project-insights article,.task-insights article{height:auto}
+#board-10 .task-insights h4{white-space:normal;margin-bottom:24px}
+#board-10 .task-insights article{padding:40px 20px;min-height:0}
+#board-8 .project-insights h4{margin-bottom:24px}
+[data-reading-type]{overflow-wrap:break-word}
+@media(max-width:600px){#board-10 .task-insights article{padding:30px 24px}#board-10 .task-insights h4,#board-8 .project-insights h4{margin-bottom:18px}}
+
+/* One in-flow marker per chapter title; it never wraps away from the last glyph. */
+.chapter-title-tail{white-space:nowrap}
+.chapter-title-dot{display:inline-block;width:.24em;height:.24em;margin-left:.18em;background:#3d76ff;vertical-align:.04em}
+[data-node-id="2167:9814"][hidden]{display:none}
+
+/* Editorial subheads stay subordinate to the 01/02 module heading. */
+#board-8 .project-feature{margin-top:32px;margin-bottom:48px}
+#board-8 .project-feature h4{margin-bottom:20px}
+#board-8 .project-feature p+p{margin-top:20px}
+#board-8 .project-feature strong{font-weight:600}
+@media(max-width:600px){#board-8 .project-feature{margin-top:24px;margin-bottom:32px}#board-8 .project-feature h4{margin-bottom:16px}}
+
+/* Standard chapter headings on light surfaces share one ink; special display text is excluded. */
+:is(#board-5,#board-6,#board-9,#board-12,#board-13) [data-reading-type="chapter"]{color:#27335f}

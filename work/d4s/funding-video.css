@@ -1,0 +1,22 @@
+#board-8 .funding-video{box-sizing:border-box;min-height:calc(100dvh - 54px);padding:30px 0 24px;display:flex;flex-direction:column;justify-content:flex-start;gap:12px}
+#board-8 .funding-video>h4{font-size:22px;line-height:32px;font-weight:600;color:#333}
+#board-8 .funding-video-hint{font-size:16px;line-height:26px;font-weight:400;color:#606976;margin:0 0 4px}
+#board-8 .funding-video-player{position:relative;align-self:center;width:min(100%,calc((100dvh - 206px) * 1.77777778));background:#111820;line-height:0;margin:0;padding:0;max-width:100%}
+#board-8 .funding-video-player video{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#111820;border:0;border-radius:0;padding:0}
+@media(max-width:900px){
+ #board-8 .funding-video{min-height:0;padding:32px 0;gap:12px}
+ #board-8 .funding-video-player{width:100%}
+ #board-8 .funding-video>h4{font-size:18px;line-height:28px}
+ #board-8 .funding-video-hint{font-size:14px;line-height:22px}
+}
+/* Same native player/fullscreen rules as industrial-semantic-base/case-v3.css and site.css. */
+#board-8 .iv3-video video:fullscreen{width:100vw;height:100vh;max-width:none;max-height:none;object-fit:contain;background:#000}
+video#funding-demo.native-controls-idle:fullscreen::-webkit-media-controls{opacity:0;pointer-events:none}
+video#funding-demo.native-controls-idle:fullscreen{cursor:none}
+/* Halve only the gap from the PLM diagram to the video title:
+   desktop: (14.8cqw + 30px) / 2; mobile: (48px + 32px) / 2. */
+@media(min-width:901px){#board-8 .project-finance:has(+ #funding-video){padding-bottom:max(0px,calc(7.4cqw - 15px))}}
+@media(max-width:900px){#board-8 .project-finance:has(+ #funding-video){padding-bottom:8px}}
+
+#board-8 #funding-video{--funding-block-gap:calc(7.4cqw + 15px);scroll-margin-bottom:var(--funding-block-gap)}
+@media(max-width:900px){#board-8 #funding-video{--funding-block-gap:40px;scroll-margin-bottom:var(--funding-block-gap)}}

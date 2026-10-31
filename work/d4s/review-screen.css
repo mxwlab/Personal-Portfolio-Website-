@@ -1,0 +1,12 @@
+/* Final reflection: source 2313:2862; scope excludes all other chapters. */
+#board-14 .board [data-node-id="2395:2973"]{top:73px}
+#board-14 .board [data-node-id="2313:2865"]{top:200px;font-size:100px;font-weight:700;line-height:1.45;letter-spacing:normal}
+#board-14 .board [data-node-id="2313:2868"]{top:588.17px}
+#board-14 .board [data-node-id="2395:2981"]{top:701.42px}
+#board-14 .board [data-node-id="2395:2987"]{top:617.17px}
+#board-14 .board [data-node-id="2313:2869"],#board-14 .board [data-node-id="2395:2964"],#board-14 .board [data-node-id="2395:2969"]{font-size:34px}
+@media(max-width:600px){
+ #board-14 .mobile-copy[data-source-node="2313:2865"]{line-height:1.45;margin-bottom:32px}
+ #board-14 .mobile-copy[data-source-node="2313:2868"]{font-size:22px;line-height:1.45}
+ #board-14 .mobile-copy[data-source-node="2313:2869"],#board-14 .mobile-copy[data-source-node="2395:2964"],#board-14 .mobile-copy[data-source-node="2395:2969"]{line-height:1.8}
+}

@@ -1,0 +1,18 @@
+/* Desktop stage pages use whitespace, not smaller type, to fit their tables. */
+@media(min-width:601px){
+ #board-7 .journey-dark{padding-bottom:0}
+ #board-7 .journey-page{position:relative;min-height:calc(100dvh - 54px);box-sizing:border-box;padding:24px 0;display:flex;flex-direction:column;justify-content:center;--cell-pad:clamp(12px,calc(20px + (100dvh - 709px)/16),24px);--row-gap:12px;--stage-gap:12px}
+ #board-7 .journey-page-first{padding-top:66px;--cell-pad:clamp(10px,calc(12px + (100dvh - 709px)/31),16px);--row-gap:10px;--stage-gap:6px}
+ #board-7 .journey-stage-rail{position:absolute;top:20px;left:0;right:0;display:flex;justify-content:space-between;font-size:20px;line-height:26px;font-weight:400;color:#8994a7;border-bottom:1px solid #8994a733;padding-bottom:10px}
+ #board-7 .journey-stage-rail span:last-child{font-size:13px}
+ #board-7 .journey-page .journey-lead{padding:0 0 24px}
+ #board-7 .journey-page .journey-lead h2{margin-bottom:8px}
+ #board-7 .journey-page .journey-lead p{font-size:20px;line-height:30px}
+ #board-7 .journey-page .journey-stage h3{min-height:0;padding:12px 24px;margin-bottom:var(--stage-gap)}
+ #board-7 .journey-page table{width:calc(100% + 16px);margin-inline:-8px;border-spacing:8px var(--row-gap);line-height:1.3}
+ #board-7 .journey-page thead th{height:auto;padding:10px 16px}
+ #board-7 .journey-page tbody td,#board-7 .journey-page tbody th{height:auto;padding:var(--cell-pad) 24px}
+ #board-7 .journey-page .journey-arrow{width:24px;height:24px;margin:10px auto 0}
+}
+@media(min-width:601px) and (max-height:680px){#board-7 .journey-page{--row-gap:8px;--stage-gap:6px}#board-7 .journey-page-first{--cell-pad:10px}#board-7 .journey-page .journey-lead{padding-bottom:18px}#board-7 .journey-page .journey-stage h3{padding-block:8px}}
+@media(max-width:600px){#board-7 .journey-stage-rail{display:none}}

@@ -1,0 +1,58 @@
+/* Scoped reconstruction of current Figma 2167:9545, preserving source UI crops. */
+#board-8.project-native{height:auto;font-family:OPPOSans,"PingFang SC",sans-serif}
+#board-8.project-native>.board{display:none!important}
+#board-8 .project-dark{background:#0e1621;color:white}#board-8 .project-light{background:#e7ebf4;color:#333}
+#board-8 .project-inner{position:relative;margin-inline:var(--d4s-gutter);container-type:inline-size}
+#board-8 h2,#board-8 h3,#board-8 h4,#board-8 h5,#board-8 p{margin:0}
+#board-8 .project-header{display:flex;align-items:center;justify-content:space-between;padding-top:2.56cqw;font-size:2.38cqw;font-weight:400;line-height:1.2}
+#board-8 .project-header span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:1.43cqw}
+#board-8 .project-wave{position:absolute;left:calc(-1 * var(--d4s-gutter));top:6.13cqw;width:100vw;height:auto}
+#board-8 h2{font-size:42px;line-height:1.35;font-weight:650;letter-spacing:-.025em}
+#board-8 .project-intro h2{margin-top:8.65cqw;margin-bottom:42px}
+#board-8 .project-dot{display:inline-block;background:#3d76ff;width:.72cqw;height:.72cqw;margin-left:3px}
+#board-8 .project-lead{font-size:2.38cqw;line-height:1.5;color:#aeaeae}
+#board-8 h3{font-size:2.98cqw;font-weight:700;line-height:1.5}
+#board-8 h4{font-size:2.38cqw;font-weight:700;line-height:1.5}
+#board-8 .project-intro h3{margin-top:6.4cqw;margin-bottom:4.1cqw}
+#board-8 .project-insights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.14cqw}
+#board-8 .project-insights article{background:#14213d;text-align:center;padding:5.54cqw 2.9cqw 5cqw;min-height:26.2cqw}
+#board-8 .project-insights h4{font-size:1.79cqw;line-height:1.5;margin-bottom:3.4cqw}
+#board-8 .project-insights p{font-size:1.55cqw;line-height:1.8}
+#board-8 .project-intro{padding-bottom:10.5cqw}
+#board-8 .project-build h3{margin-bottom:2.45cqw}#board-8 .project-build h4{margin-bottom:3.05cqw}
+#board-8 .project-main-crop{width:100%;aspect-ratio:1678.588/673.799;overflow:hidden}
+#board-8 .project-main-crop img{display:block;width:100%;height:auto}
+#board-8 .project-build{padding-bottom:9.25cqw}
+#board-8 .project-steps{display:grid;grid-template-columns:510.863fr 681.97fr 420.435fr;gap:2.26cqw}
+#board-8 .project-steps h4{display:flex;align-items:center;gap:2.38cqw;white-space:nowrap;margin-bottom:2.29cqw}
+#board-8 .project-steps h4 span{display:grid;place-items:center;flex:0 0 5.36cqw;height:5.36cqw;border-radius:50%;background:#0066ff;font-size:2.38cqw;font-weight:400}
+#board-8 .project-steps img{display:block;width:100%;height:auto}
+#board-8 .project-fill>.project-lead{margin-top:4.6cqw}#board-8 .project-fill{padding-bottom:13.2cqw}
+#board-8 .project-finance{padding-top:19.4cqw;padding-bottom:14.8cqw}
+#board-8 .project-feature{margin-top:8.8cqw;margin-bottom:7.5cqw}
+#board-8 .project-feature h4{margin-bottom:1.78cqw}
+#board-8 .project-feature p{font-size:2.02cqw;line-height:2}
+#board-8 .project-feature p+p{margin-top:1.78cqw}
+#board-8 .project-diagram-scroll{overflow:auto;scrollbar-width:none;outline-offset:5px}
+#board-8 .project-diagram-scroll::-webkit-scrollbar{display:none}
+#board-8 .project-diagram-scroll:focus-visible{outline:2px solid #0066ff}
+#board-8 .project-diagram{position:relative;width:100%;aspect-ratio:1744.24/1316.498;overflow:hidden}
+#board-8 .project-diagram-canvas{position:absolute;width:1920px;height:5500px;transform-origin:0 0}
+#board-8 .project-diagram-canvas h5{position:absolute;font-size:36px;font-weight:700;line-height:1.5;color:#333}
+#board-8 .project-diagram-canvas p{position:absolute;font-size:34px;font-weight:400;line-height:1.5;color:#333}
+#board-8 .project-execution-copy{font-size:2.02cqw;line-height:1.5;margin-top:1.45cqw;margin-bottom:2.52cqw}
+#board-8 .project-execution-crop{width:100%;aspect-ratio:1753/753;position:relative;overflow:hidden;background:white}
+#board-8 .project-execution-crop img{position:absolute;width:100%;max-width:none;height:326.7%;top:-227.9%;left:0}
+#board-8 .project-outro{padding-block:8.2cqw 10cqw;text-align:center}
+#board-8 .project-outro p{font-size:4.17cqw;line-height:1.5;font-weight:700;margin:auto;max-width:85.6%}
+@media(max-width:600px){
+ #board-8 .project-header{font-size:18px;padding-top:24px}#board-8 .project-header span:last-child{font-size:12px}#board-8 .project-wave{top:57px}
+ #board-8 .project-intro h2{font-size:26px;margin-top:58px;margin-bottom:30px}#board-8 .project-lead{font-size:18px;line-height:1.65}
+ #board-8 h3{font-size:24px}#board-8 h4{font-size:20px}#board-8 .project-intro h3{margin:40px 0 24px}
+ #board-8 .project-insights{grid-template-columns:1fr;gap:16px}#board-8 .project-insights article{padding:30px 24px;min-height:0}#board-8 .project-insights h4{font-size:19px;margin-bottom:18px}#board-8 .project-insights p{font-size:16px}
+ #board-8 .project-intro{padding-bottom:56px}#board-8 .project-build h3{margin-bottom:24px}#board-8 .project-build h4{margin-bottom:24px}#board-8 .project-build{padding-bottom:48px}
+ #board-8 .project-steps{grid-template-columns:1fr;gap:32px}#board-8 .project-steps h4{gap:16px;margin-bottom:18px}#board-8 .project-steps h4 span{font-size:20px;flex-basis:44px;height:44px}
+ #board-8 .project-fill>.project-lead{margin-top:32px}#board-8 .project-fill{padding-bottom:56px}
+ #board-8 .project-finance{padding-top:64px;padding-bottom:48px}#board-8 .project-feature{margin-top:40px;margin-bottom:32px}#board-8 .project-feature h4{margin-bottom:24px}#board-8 .project-feature p{font-size:16px;line-height:1.8}#board-8 .project-feature p+p{margin-top:20px}
+ #board-8 .project-diagram{width:900px}#board-8 .project-execution-copy{font-size:16px;margin:18px 0 24px}#board-8 .project-outro{padding-block:48px}#board-8 .project-outro p{font-size:24px;max-width:100%}
+}

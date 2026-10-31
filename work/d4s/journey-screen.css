@@ -1,0 +1,52 @@
+/* Current Figma 2343:2844. Native text/table layout, scoped to the journey only. */
+#board-7.journey-native{height:auto;background:#f4f5fa;color:#27335f;font-family:OPPOSans,"PingFang SC",sans-serif}
+#board-7.journey-native>.board{display:none!important}
+#board-7 .journey-inner{position:relative;margin-inline:var(--d4s-gutter);container-type:inline-size}
+#board-7 h2,#board-7 h3,#board-7 p{margin:0}
+#board-7 .journey-header{display:flex;align-items:center;justify-content:space-between;padding-top:2.58cqw;color:#333;font-size:2.4cqw;line-height:1.2;font-weight:400}
+#board-7 .journey-header span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:1.44cqw}
+#board-7 .journey-wave{position:absolute;left:calc(-1 * var(--d4s-gutter));top:6.19cqw;width:100vw;height:auto;pointer-events:none}
+#board-7 h2{font-size:clamp(32px,3vw,42px);font-weight:650;line-height:1.35;letter-spacing:-.025em}
+#board-7 .journey-dot{display:inline-block;width:.72cqw;height:.72cqw;min-width:6px;min-height:6px;background:#3d76ff;margin-left:3px;vertical-align:baseline}
+#board-7 .journey-intro h2{margin-top:7.6cqw;margin-bottom:42px}
+#board-7 .journey-intro h3{font-size:2.7cqw;font-weight:700;line-height:1.2;color:#27335f}
+#board-7 .journey-intro p{font-size:1.8cqw;line-height:1.8;font-weight:400;color:#1a233a;margin-top:2.4cqw}
+#board-7 .journey-photo{position:relative;width:100%;aspect-ratio:1633/590;margin-block:3cqw 4.1cqw}
+#board-7 .journey-photo-canvas{position:absolute;left:0;top:0;width:1633px;height:590px;transform-origin:top left}
+#board-7 .journey-photo-canvas>[data-node-id="2343:2875"]{left:0;top:0}
+#board-7 .journey-intro{padding-bottom:6.9cqw}
+#board-7 .journey-dark{background:#0e1621;color:#ebf0fa;padding-bottom:4.2cqw}
+#board-7 .journey-lead{padding-top:9.8cqw;padding-bottom:7.8cqw}
+#board-7 .journey-lead h2{color:#fff;margin-bottom:42px}
+#board-7 .journey-lead p{font-size:2.4cqw;line-height:1.5;font-weight:300;color:#aeb4bd}
+#board-7 .journey-stage h3{background:#0066ff;color:white;border-radius:.6cqw;min-height:5.4cqw;padding:1.08cqw 2.88cqw;font-size:2.4cqw;line-height:1.35;font-weight:700}
+#board-7 .journey-table-scroll{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;outline-offset:5px}
+#board-7 .journey-table-scroll:focus-visible{outline:2px solid #569de4}
+#board-7 .journey-table-scroll::-webkit-scrollbar{display:none}
+#board-7 table{width:calc(100% + 2.4cqw);margin-inline:-1.2cqw;border-collapse:separate;border-spacing:1.2cqw;table-layout:fixed;font-size:1.8cqw;line-height:1.14;text-align:left;font-weight:700}
+#board-7 col.role-col{width:22.78325%}#board-7 col.task-col{width:32.63547%}#board-7 col.problem-col{width:44.58128%}
+#board-7 thead th{position:relative;background:#233857;border:1px solid #569de4;border-radius:.6cqw;height:6cqw;color:#fff;text-align:center;font-size:2.16cqw}
+#board-7 thead th:before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:.48cqw;background:#0066ff;border-radius:.6cqw .6cqw 0 0}
+#board-7 tbody td,#board-7 tbody th{font-weight:400;height:7.2cqw;padding:1.2cqw 2.4cqw;background:#181f2a;border:1.3px dashed #344065;border-radius:2px;vertical-align:middle}
+#board-7 tbody tr:nth-child(even)>*{background:#182537;border-color:#345376}
+#board-7 tbody th{color:#c0c5cf;text-align:center;padding-inline:1.2cqw}
+#board-7 .journey-task{display:flex;align-items:center;gap:.64cqw}
+#board-7 .journey-task:before{content:"";display:block;flex:0 0 .96cqw;height:.96cqw;margin-inline:.2cqw;background:#fc0;transform:rotate(45deg)}
+#board-7 .journey-arrow{display:block;width:3.6cqw;height:3.6cqw;margin:1.2cqw auto 1.8cqw}
+#board-7 .journey-outro{background:#f4f5fa;color:#333;padding-block:7.2cqw}
+#board-7 .journey-outro p{text-align:center;font-size:4.2cqw;line-height:1.5;font-weight:900}
+@media(max-width:600px){
+ #board-7 .journey-header{font-size:18px;padding-top:24px}#board-7 .journey-header span:last-child{font-size:12px}
+ #board-7 .journey-wave{top:57px}#board-7 .journey-intro h2{font-size:26px;margin-top:58px;margin-bottom:30px}
+ #board-7 .journey-intro h3{font-size:23px}#board-7 .journey-intro p{font-size:16px;line-height:1.8;margin-top:20px}
+ #board-7 .journey-photo{margin-block:28px 36px}#board-7 .journey-intro{padding-bottom:44px}
+ #board-7 .journey-lead{padding-top:52px;padding-bottom:40px}#board-7 .journey-lead h2{font-size:26px;margin-bottom:30px}#board-7 .journey-lead p{font-size:18px;line-height:1.65}
+ #board-7 .journey-stage h3{font-size:22px;padding:14px 18px;min-height:58px;border-radius:6px}
+ #board-7 table{width:668px;max-width:none;margin-inline:-7px;border-spacing:7px;font-size:16px;line-height:1.45}
+ #board-7 col.role-col{width:150px}#board-7 col.task-col{width:230px}#board-7 col.problem-col{width:260px}
+ #board-7 thead th{height:54px;font-size:20px;border-radius:6px}#board-7 thead th:before{height:5px;border-radius:6px 6px 0 0}
+ #board-7 tbody th,#board-7 tbody td{height:72px;padding:12px 20px}#board-7 tbody th{padding-inline:12px}
+ #board-7 .journey-task{gap:8px}#board-7 .journey-task:before{flex-basis:9px;height:9px;margin-inline:2px}
+ #board-7 .journey-arrow{width:34px;height:34px;margin:20px auto 28px}
+ #board-7 .journey-dark{padding-bottom:40px}#board-7 .journey-outro{padding-block:52px}#board-7 .journey-outro p{font-size:24px;line-height:1.6}
+}

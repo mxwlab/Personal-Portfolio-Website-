@@ -1,0 +1,27 @@
+/* One editorial demonstration, retaining the three original UI assets. */
+#board-8 .project-build-demo{padding:24px 0;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;min-height:calc(100dvh - 54px)}
+#board-8 .project-build-demo>h3{margin:0 0 20px}
+#board-8 .project-build-demo>h4{margin:0 0 16px}
+#board-8 .project-build-stage{position:relative;background:#f4f6fa;color:#27335f}
+#board-8 .project-build-demo .project-main-crop{position:relative;aspect-ratio:1920/292;overflow:hidden}
+#board-8 .project-build-demo .project-main-crop>img{position:absolute;top:-2.6042cqw;width:100%;height:auto}
+#board-8 .project-build-demo .project-fill{position:relative;min-height:0;padding:12px 24px 16px;border-top:2px solid #5486d8;display:block;background:#eaf0fb}
+#board-8 .project-demo-label{font-size:16px;line-height:24px;font-weight:600;color:#275aa5;margin:0 0 10px}
+#board-8 .project-build-demo .project-steps{max-width:min(100%,calc(max(120px,100dvh - 560px) * 6.73127946 + 48px));margin-inline:auto;grid-template-columns:minmax(0,2.16704289fr) minmax(0,2.82352941fr) minmax(0,1.74070716fr);gap:24px}
+#board-8 .project-build-demo .project-steps h4{gap:10px;margin:0 0 10px;white-space:normal}
+#board-8 .project-build-demo .project-steps h4 span{display:inline;flex:0 0 auto;height:auto;background:none;border-radius:0;color:#2466c9;font-family:ui-monospace,SFMono-Regular,monospace;font-variant-numeric:tabular-nums}
+#board-8 .project-build-demo .project-steps img{width:100%;height:auto;object-fit:contain;object-position:left top}
+#board-8 .project-build-demo .project-fill>.project-lead{margin:12px 0 0;color:#606976}
+@media(max-width:900px){
+ #board-8 .project-build-demo{min-height:0;padding:32px 0 48px}
+ #board-8 .project-build-demo .project-steps{max-width:none;grid-template-columns:1fr;gap:24px}
+ #board-8 .project-build-demo .project-steps img{height:auto;width:100%}
+ #board-8 .project-build-demo .project-fill{padding:20px 16px 24px}
+ #board-8 .project-build-demo .project-main-crop{aspect-ratio:auto;height:128px;overflow:hidden;clip-path:none}
+ #board-8 .project-build-demo .project-main-crop>img{width:840px;max-width:none;top:-22px;left:0}
+ #board-8 .project-build-demo .project-fill>.project-lead{margin-top:20px}
+}
+
+#board-8 .project-build-demo .project-steps h4 span{font-style:normal}
+
+@media(max-width:600px){#board-8 .project-build-demo>h3{margin-bottom:16px}}
