@@ -5,7 +5,7 @@
 #board-1 .compact-native-header,#board-7 .compact-native-header,#board-8 .compact-native-header,#board-10 .compact-native-header{
  font-family:OPPOSans,"PingFang SC",sans-serif;font-size:20px;line-height:26px;font-weight:400;color:var(--chapter-rail-ink);gap:12px;letter-spacing:0;
 }
-.board-shell .portfolio-wordmark,:is(#board-1,#board-7,#board-8,#board-10) .compact-native-header span:last-child{font-family:OPPOSans,"PingFang SC",sans-serif;font-size:13px;line-height:20px;font-weight:400;flex-shrink:0}
+.board-shell .portfolio-wordmark,:is(#board-1,#board-7,#board-8,#board-10) .compact-native-header > .compact-wordmark{font-family:OPPOSans,"PingFang SC",sans-serif;font-size:13px;line-height:20px;font-weight:400;flex-shrink:0}
 #board-3 .desktop-portfolio-rail{display:flex}
 .board-shell .portfolio-wave{top:calc(100% + 8px);height:14px;object-fit:fill;opacity:var(--chapter-rail-line-opacity)}
 #board-1.results-native{padding-top:20px}
@@ -18,7 +18,7 @@
 @media(max-width:600px){
  .board-shell .desktop-portfolio-rail,#board-3 .desktop-portfolio-rail{display:none}
  .board-shell .mobile-portfolio-rail{font-size:14px;line-height:20px;margin-bottom:8px;white-space:normal;align-items:center}
- .board-shell .portfolio-wordmark,:is(#board-1,#board-7,#board-8,#board-10) .compact-native-header span:last-child{font-size:11px;line-height:16px;white-space:nowrap}
+ .board-shell .portfolio-wordmark,:is(#board-1,#board-7,#board-8,#board-10) .compact-native-header > .compact-wordmark{font-size:11px;line-height:16px;white-space:nowrap}
  .board-shell .mobile-band:has(.mobile-portfolio-rail){padding-top:16px}
  #board-1.results-native{padding-top:16px}
  #board-1 .compact-native-header{font-size:14px;line-height:20px;height:20px}

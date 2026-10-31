@@ -81,9 +81,9 @@ main{overflow-anchor:none}
 .desktop-portfolio-rail{position:absolute;left:var(--d4s-gutter);right:var(--d4s-gutter);z-index:2}
 .mobile-portfolio-rail{display:none}
 .results-native .results-eyebrow{height:20px;color:#fff;font-size:clamp(20px,2.083333vw,40px);line-height:1}
-.results-native .results-eyebrow span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:clamp(14px,1.25vw,24px)}
+.results-native .results-eyebrow > span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:clamp(14px,1.25vw,24px)}
 .results-native .results-rule{top:20px}
-@media(max-width:600px){.desktop-portfolio-rail{display:none}.mobile-portfolio-rail{position:relative;display:flex;font-size:16px;gap:12px;width:100%;min-width:0;margin-bottom:24px}.mobile-portfolio-rail[hidden]{display:none}.portfolio-wordmark{font-size:12px;flex-shrink:0}.portfolio-wave{top:calc(100% + 10px)}.results-native .results-eyebrow{font-size:16px}.results-native .results-eyebrow span:last-child{font-size:12px}.results-native .results-rule{top:30px}}
+@media(max-width:600px){.desktop-portfolio-rail{display:none}.mobile-portfolio-rail{position:relative;display:flex;font-size:16px;gap:12px;width:100%;min-width:0;margin-bottom:24px}.mobile-portfolio-rail[hidden]{display:none}.portfolio-wordmark{font-size:12px;flex-shrink:0}.portfolio-wave{top:calc(100% + 10px)}.results-native .results-eyebrow{font-size:16px}.results-native .results-eyebrow > span:last-child{font-size:12px}.results-native .results-rule{top:30px}}
 
 /* The actual menu edge is shared by layout, anchors and reading stops. */
 body.d4s-return-page{--detail-return-height:calc(54px + env(safe-area-inset-top,0px))}
@@ -253,3 +253,11 @@ html:has(>body.d4s-return-page){scroll-padding-top:var(--d4s-nav-height,54px)}
 #board-10 .task-row-group .task-canvas>[data-node-id="2167:10266"],
 #board-10 .task-row-group .task-canvas>[data-node-id="2167:10427"]{background:linear-gradient(135deg,rgba(148,182,227,.055),rgba(99,136,186,.025))!important;border-radius:20px;box-shadow:inset 0 1px rgba(189,213,248,.045)}
 @media(max-width:600px){#board-10 .task-insights article{border-radius:14px}}
+
+/* Specific story headings replace generic STORY badges, 2026-10-31. */
+#board-3 :is([data-node-id="2167:10068"],[data-node-id="2167:10078"],[data-source-node="2167:10068"],[data-source-node="2167:10078"]){display:none!important}
+#board-3 :is([data-node-id="2167:10067"],[data-node-id="2167:10077"]){height:auto!important;min-height:0!important;display:block!important}
+#board-3 :is([data-node-id="2167:10070"],[data-node-id="2167:10080"],[data-source-node="2167:10070"],[data-source-node="2167:10080"]){white-space:normal!important;max-width:100%;height:auto!important}
+
+#board-3 :is([data-node-id="2167:10067"],[data-node-id="2167:10077"]){width:100%!important}
+#board-3 :is([data-node-id="2167:10070"],[data-node-id="2167:10080"]){width:100%!important}

@@ -5,7 +5,7 @@
 #board-8 .project-inner{position:relative;margin-inline:var(--d4s-gutter);container-type:inline-size}
 #board-8 h2,#board-8 h3,#board-8 h4,#board-8 h5,#board-8 p{margin:0}
 #board-8 .project-header{display:flex;align-items:center;justify-content:space-between;padding-top:2.56cqw;font-size:2.38cqw;font-weight:400;line-height:1.2}
-#board-8 .project-header span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:1.43cqw}
+#board-8 .project-header > span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:1.43cqw}
 #board-8 .project-wave{position:absolute;left:calc(-1 * var(--d4s-gutter));top:6.13cqw;width:100vw;height:auto}
 #board-8 h2{font-size:42px;line-height:1.35;font-weight:650;letter-spacing:-.025em}
 #board-8 .project-intro h2{margin-top:8.65cqw;margin-bottom:42px}
@@ -46,7 +46,7 @@
 #board-8 .project-outro{padding-block:8.2cqw 10cqw;text-align:center}
 #board-8 .project-outro p{font-size:4.17cqw;line-height:1.5;font-weight:700;margin:auto;max-width:85.6%}
 @media(max-width:600px){
- #board-8 .project-header{font-size:18px;padding-top:24px}#board-8 .project-header span:last-child{font-size:12px}#board-8 .project-wave{top:57px}
+ #board-8 .project-header{font-size:18px;padding-top:24px}#board-8 .project-header > span:last-child{font-size:12px}#board-8 .project-wave{top:57px}
  #board-8 .project-intro h2{font-size:26px;margin-top:58px;margin-bottom:30px}#board-8 .project-lead{font-size:18px;line-height:1.65}
  #board-8 h3{font-size:24px}#board-8 h4{font-size:20px}#board-8 .project-intro h3{margin:40px 0 24px}
  #board-8 .project-insights{grid-template-columns:1fr;gap:16px}#board-8 .project-insights article{padding:30px 24px;min-height:0}#board-8 .project-insights h4{font-size:19px;margin-bottom:18px}#board-8 .project-insights p{font-size:16px}

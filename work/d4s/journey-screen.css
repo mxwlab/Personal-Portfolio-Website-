@@ -4,7 +4,7 @@
 #board-7 .journey-inner{position:relative;margin-inline:var(--d4s-gutter);container-type:inline-size}
 #board-7 h2,#board-7 h3,#board-7 p{margin:0}
 #board-7 .journey-header{display:flex;align-items:center;justify-content:space-between;padding-top:2.58cqw;color:#333;font-size:2.4cqw;line-height:1.2;font-weight:400}
-#board-7 .journey-header span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:1.44cqw}
+#board-7 .journey-header > span:last-child{font-family:"ADLaM Display",OPPOSans,sans-serif;font-size:1.44cqw}
 #board-7 .journey-wave{position:absolute;left:calc(-1 * var(--d4s-gutter));top:6.19cqw;width:100vw;height:auto;pointer-events:none}
 #board-7 h2{font-size:clamp(32px,3vw,42px);font-weight:650;line-height:1.35;letter-spacing:-.025em}
 #board-7 .journey-dot{display:inline-block;width:.72cqw;height:.72cqw;min-width:6px;min-height:6px;background:#3d76ff;margin-left:3px;vertical-align:baseline}
@@ -36,7 +36,7 @@
 #board-7 .journey-outro{background:#f4f5fa;color:#333;padding-block:7.2cqw}
 #board-7 .journey-outro p{text-align:center;font-size:4.2cqw;line-height:1.5;font-weight:900}
 @media(max-width:600px){
- #board-7 .journey-header{font-size:18px;padding-top:24px}#board-7 .journey-header span:last-child{font-size:12px}
+ #board-7 .journey-header{font-size:18px;padding-top:24px}#board-7 .journey-header > span:last-child{font-size:12px}
  #board-7 .journey-wave{top:57px}#board-7 .journey-intro h2{font-size:26px;margin-top:58px;margin-bottom:30px}
  #board-7 .journey-intro h3{font-size:23px}#board-7 .journey-intro p{font-size:16px;line-height:1.8;margin-top:20px}
  #board-7 .journey-photo{margin-block:28px 36px}#board-7 .journey-intro{padding-bottom:44px}
