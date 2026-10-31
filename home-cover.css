@@ -115,3 +115,16 @@ body.home-page .hero-cover-actions .hero-action-secondary:active{background:tran
 .home-page #main #about-practice .journey-card h3{font-size:34px;font-weight:600;line-height:1.35;margin-bottom:10px}
 .home-page #about-practice .journey-card .journey-role{font-size:17px;line-height:1.6;margin:0 0 18px;opacity:.8}
 @media(max-width:760px){.home-page #main #about-practice .journey-card h3{font-size:24px}.home-page #about-practice .journey-card .journey-role{font-size:15px;margin-bottom:14px}}
+
+/* Mobile-only placement: taste sticker beside the headline; retain the hello row. */
+@media(max-width:600px){
+ .home-page .hero-cover-stage{grid-template-rows:auto auto 72px}
+ .home-page .hero-sticker-taste{grid-row:1;align-self:start;transform-origin:right top}
+ .home-page .hero-cover-actions{justify-content:center;flex-wrap:nowrap}
+}
+@media(max-width:374px){
+ .home-page .hero-sticker-taste{scale:.85}
+}
+@media(max-width:350px){
+ .home-page .hero-sticker-taste{scale:.72}
+}
