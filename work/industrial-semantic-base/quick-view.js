@@ -1,21 +1,55 @@
-/* 3-minute overview drawer: opens in place between the cover and the next screen */
+/* 3-minute overview: top-bar launch button, first-visit nudge, side drawer / bottom sheet */
 (()=>{
- for(const box of document.querySelectorAll('.qv-drawer')){
-  const btn=box.querySelector('.qv-toggle'),panel=box.querySelector('.qv-panel'),state=box.querySelector('.qv-toggle-state');
-  const set=open=>{
-   box.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',open);
-   if(open)panel.removeAttribute('inert');else panel.setAttribute('inert','');
-   state.textContent=open?state.dataset.open:state.dataset.closed;
-  };
-  btn.addEventListener('click',()=>{
-   const open=!box.classList.contains('is-open');set(open);
-   if(open){
-    const bar=document.querySelector('.topbar,.project-return-nav');
-    const offset=bar?bar.getBoundingClientRect().bottom:0;
-    const top=box.getBoundingClientRect().top+scrollY-offset;
-    scrollTo({top,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
-   }
-  });
-  if(location.hash==='#'+box.id)set(true);
+ const root=document.querySelector('.qv-root');if(!root)return;
+ const bar=document.querySelector('.project-return-nav,.topbar');if(!bar)return;
+ const sheet=root.querySelector('.qv-sheet'),reduce=matchMedia('(prefers-reduced-motion:reduce)');
+ const btn=document.createElement('button');btn.type='button';btn.className='qv-launch';
+ btn.setAttribute('aria-haspopup','dialog');btn.setAttribute('aria-controls',root.id);
+ btn.innerHTML='<svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path class="qv-clock-hand" d="M9 9V5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 9l2.6 1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span><span class="qv-long">3 分钟</span>速览</span>';
+ bar.appendChild(btn);
+ let last=null,tip=null;
+ const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+ const hideTip=()=>{if(!tip)return;tip.classList.remove('is-shown');btn.classList.remove('is-calling');const t=tip;tip=null;setTimeout(()=>t.remove(),320)};
+ const open=()=>{
+  hideTip();store.set('qv-seen','1');last=document.activeElement;
+  root.hidden=false;document.documentElement.classList.add('qv-lock');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('is-open')));
+  btn.setAttribute('aria-expanded','true');setTimeout(()=>sheet.focus({preventScroll:true}),60);
+ };
+ const close=(after)=>{
+  root.classList.remove('is-open');btn.setAttribute('aria-expanded','false');
+  setTimeout(()=>{root.hidden=true;document.documentElement.classList.remove('qv-lock');(last||btn).focus?.({preventScroll:true});if(after)after();},reduce.matches?0:420);
+ };
+ btn.addEventListener('click',open);
+ root.addEventListener('click',e=>{if(e.target.closest('[data-qv-close]'))close();});
+ for(const a of root.querySelectorAll('.qv-nav a'))a.addEventListener('click',e=>{
+  e.preventDefault();const id=a.getAttribute('href');last=null;
+  close(()=>{location.hash=id;});
+ });
+ document.addEventListener('keydown',e=>{
+  if(root.hidden)return;
+  if(e.key==='Escape'){e.preventDefault();close();return}
+  if(e.key==='Tab'){const f=[...sheet.querySelectorAll('a,button')];if(!f.length)return;const a=f[0],z=f[f.length-1];
+   if(e.shiftKey&&(document.activeElement===a||document.activeElement===sheet)){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
+ });
+ // Keep page-level wheel handlers (D4S paging) away while the drawer is open.
+ addEventListener('wheel',e=>{if(root.hidden)return;e.stopImmediatePropagation();if(!e.target.closest('.qv-sheet-body'))e.preventDefault();},{capture:true,passive:false});
+ // First visit: the button rings and a short tip appears, then both go away on their own.
+ if(!store.get('qv-seen')){
+  setTimeout(()=>{
+   if(!root.hidden)return;
+   tip=document.createElement('div');tip.className='qv-tip';tip.setAttribute('role','status');
+   tip.innerHTML='<b>时间有限？先看这里</b>3 分钟看完项目问题、我的判断和结果。';
+   tip.style.fontFamily=getComputedStyle(btn).fontFamily;document.body.appendChild(tip);
+   const r=btn.getBoundingClientRect(),w=Math.min(260,innerWidth-32);
+   const left=Math.max(16,Math.min(innerWidth-w-16,r.right-w));
+   tip.style.left=left+'px';tip.style.top=(r.bottom+12)+'px';tip.style.width=w+'px';
+   tip.style.setProperty('--qv-tip-arrow',Math.max(14,Math.min(w-26,r.left+r.width/2-left-6))+'px');
+   tip.addEventListener('click',open);
+   requestAnimationFrame(()=>tip&&tip.classList.add('is-shown'));
+   if(!reduce.matches)btn.classList.add('is-calling');
+   setTimeout(hideTip,6500);
+  },1000);
+  addEventListener('scroll',()=>{if(tip&&scrollY>200)hideTip()},{passive:true});
  }
 })();

@@ -7,7 +7,7 @@
   const offset=document.querySelector('.topbar').getBoundingClientRect().height;
   const usable=Math.max(240,innerHeight-offset),max=document.documentElement.scrollHeight-innerHeight;
   const points=[0];
-  for(const shell of document.querySelectorAll('.board-shell,.qv')){
+  for(const shell of document.querySelectorAll('.board-shell')){
    const groups=[...shell.querySelectorAll('.desktop-reading-group')];
    for(const el of groups.length?groups:[shell]){
     const r=el.getBoundingClientRect(),start=Math.max(0,r.top+scrollY-offset),end=Math.max(start,r.bottom+scrollY-innerHeight);
