@@ -3,10 +3,10 @@
  const root=document.querySelector('.qv-root');if(!root)return;
  const bar=document.querySelector('.project-return-nav,.topbar');if(!bar)return;
  const sheet=root.querySelector('.qv-sheet'),reduce=matchMedia('(prefers-reduced-motion:reduce)');
- const btn=document.createElement('button');btn.type='button';btn.className='qv-launch';
- btn.setAttribute('aria-haspopup','dialog');btn.setAttribute('aria-controls',root.id);
- btn.innerHTML='<svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path class="qv-clock-hand" d="M9 9V5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 9l2.6 1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span><span class="qv-long">3 分钟</span>速览</span>';
- bar.appendChild(btn);
+ let btn=bar.querySelector('.qv-launch');
+ if(!btn){btn=document.createElement('button');btn.type='button';btn.className='qv-launch';btn.setAttribute('aria-haspopup','dialog');btn.setAttribute('aria-controls',root.id);btn.innerHTML='<span>3 分钟速览</span>';bar.appendChild(btn);}
+ // The chapter links are inserted by another script; keep the button last.
+ const keepLast=()=>{if(bar.lastElementChild!==btn)bar.appendChild(btn)};keepLast();new MutationObserver(keepLast).observe(bar,{childList:true});
  let last=null,tip=null;
  const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
  const hideTip=()=>{if(!tip)return;tip.classList.remove('is-shown');btn.classList.remove('is-calling');const t=tip;tip=null;setTimeout(()=>t.remove(),320)};
