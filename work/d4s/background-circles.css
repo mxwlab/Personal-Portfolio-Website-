@@ -1,0 +1,12 @@
+/* Keep the original three-circle diagram. All labels remain visible. */
+#board-3 [data-node-id="2167:10102"],#board-3 [data-source-node="2167:10102"],
+#board-3 [data-node-id="2167:10106"],#board-3 [data-source-node="2167:10106"]{--circle-border:#14213f;--circle-fill:transparent}
+#board-3 [data-node-id="2167:10104"],#board-3 [data-source-node="2167:10104"]{--circle-border:#f70;--circle-fill:rgba(255,119,0,.2)}
+#board-3.is-circles-active :is([data-node-id="2167:10104"],[data-source-node="2167:10104"]){animation:d4s-background-circle 4800ms ease-in-out 0ms 2}
+#board-3.is-circles-active :is([data-node-id="2167:10102"],[data-source-node="2167:10102"]){animation:d4s-background-circle 4800ms ease-in-out 1600ms 2}
+#board-3.is-circles-active :is([data-node-id="2167:10106"],[data-source-node="2167:10106"]){animation:d4s-background-circle 4800ms ease-in-out 3200ms 2}
+@keyframes d4s-background-circle{
+  0%,60%,100%{transform:translateY(0);border-color:var(--circle-border);background-color:var(--circle-fill);box-shadow:none}
+  15%,35%{transform:translateY(-5px);border-color:#f70;background-color:rgba(255,119,0,.18);box-shadow:0 0 24px rgba(255,119,0,.18)}
+}
+@media(prefers-reduced-motion:reduce){#board-3.is-circles-active :is([data-node-id],[data-source-node]){animation:none!important}}
