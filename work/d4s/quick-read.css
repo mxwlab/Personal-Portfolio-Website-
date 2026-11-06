@@ -1,0 +1,8 @@
+/* 3-minute quick read: three key judgments under the results numbers */
+.results-judgments{margin:64px auto 0;max-width:1180px}
+.results-judgments-eyebrow{margin:0 0 20px;color:#7594b7;font-size:14px;letter-spacing:.08em}
+.results-judgments ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px)}
+.results-judgments li{border-top:1px solid #ffffff2e;padding-top:18px}
+.results-judgments strong{display:block;color:#fff;font-size:clamp(18px,1.4vw,24px);line-height:1.45;font-weight:600;margin-bottom:10px}
+.results-judgments p{margin:0;color:#9fb3cc;font-size:clamp(14px,1vw,17px);line-height:1.7}
+@media(max-width:760px){.results-judgments{margin-top:40px}.results-judgments ol{grid-template-columns:1fr;gap:20px}}

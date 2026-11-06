@@ -1,0 +1,31 @@
+/* 2026-11 homepage refinements: stat captions, compact visual-design band */
+.practice-stat .practice-note{display:block;margin-top:6px;font-size:12px;letter-spacing:.02em;opacity:.62}
+
+/* Visual design band: shorter banner cards, still side by side */
+.home-page #design-works{margin-top:72px}
+.home-page #design-works .design-card .project-image.poster-cover{aspect-ratio:2.6}
+.home-page #design-works .design-card .project-image.poster-cover img,
+.home-page #design-works .design-card .project-image.poster-cover video{width:100%;height:100%;object-fit:cover}
+.home-page #design-works .design-card .project-info{padding-top:14px}
+@media(max-width:760px){
+  .home-page #design-works{margin-top:48px}
+  .home-page #design-works .design-card .project-image.poster-cover{aspect-ratio:2.1}
+}
+
+/* Visual design band: trim vertical padding */
+.home-page #design-works{padding-top:44px;padding-bottom:56px}
+
+/* Journey: keep the stacking effect, shorter cards */
+.home-page #about-practice .journey-card{min-height:0;padding:36px 52px 34px}
+.home-page #about-practice .journey-meta{margin-bottom:20px;padding-bottom:16px}
+.home-page #about-practice .journey-index{top:40px}
+.home-page #about-practice .journey-card p{line-height:1.7}
+.home-page #about-practice .journey-card p + p{margin-top:8px}
+@media(max-width:760px){
+  .home-page #about-practice .journey-card{padding:26px 22px}
+  .home-page #about-practice .journey-index{top:28px}
+}
+.home-page #main #about-practice .journey-card{padding-top:28px;padding-bottom:28px}
+.home-page #main #about-practice .journey-card h3{margin-bottom:8px}
+.home-page #main #about-practice .journey-role{margin-bottom:10px}
+.home-page #main #about-practice .journey-index{top:34px}
