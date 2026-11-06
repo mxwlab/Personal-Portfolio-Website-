@@ -14,15 +14,16 @@
   hideTip();store.set('qv-seen','1');last=document.activeElement;
   root.hidden=false;document.documentElement.classList.add('qv-lock');
   requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('is-open')));
-  btn.setAttribute('aria-expanded','true');setTimeout(()=>sheet.focus({preventScroll:true}),60);
+  btn.setAttribute('aria-expanded','true');countUp();setTimeout(()=>sheet.focus({preventScroll:true}),60);
  };
  const close=(after)=>{
   root.classList.remove('is-open');btn.setAttribute('aria-expanded','false');
   setTimeout(()=>{root.hidden=true;document.documentElement.classList.remove('qv-lock');(last||btn).focus?.({preventScroll:true});if(after)after();},reduce.matches?0:420);
  };
+ const countUp=()=>{for(const el of root.querySelectorAll('[data-count]')){const to=+el.dataset.count;if(reduce.matches){el.textContent=to;continue}const t0=performance.now()+250,d=900;el.textContent='0';const step=t=>{const k=Math.min(1,Math.max(0,(t-t0)/d));el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)}};
  btn.addEventListener('click',open);
  root.addEventListener('click',e=>{if(e.target.closest('[data-qv-close]'))close();});
- for(const a of root.querySelectorAll('.qv-nav a'))a.addEventListener('click',e=>{
+ for(const a of root.querySelectorAll('.qv-map a,.qv-more a'))a.addEventListener('click',e=>{
   e.preventDefault();const id=a.getAttribute('href');last=null;
   close(()=>{location.hash=id;});
  });
