@@ -138,3 +138,6 @@ html.qv-lock,html.qv-lock body{overflow:hidden}
 .qv-root,.qv-tip{font-family:IndustrialMiSans,"PingFang SC","Microsoft YaHei",sans-serif}
 /* Industrial: keep every accent inside the page's own sea-and-sky blues */
 .qv-root{--qv-g1:#1c4fc0;--qv-g2:#3a86e8;--qv-g3:#36b3d4;--qv-a1:rgba(80,140,250,.40);--qv-a2:rgba(130,185,255,.34);--qv-a3:rgba(70,195,225,.28);--qv-a4:rgba(255,255,255,.55)}
+/* Drawer: no visible scrollbar; a soft fade at the bottom shows there is more */
+.qv-sheet-body{scrollbar-width:none;-ms-overflow-style:none;-webkit-mask-image:linear-gradient(#000 calc(100% - 36px),transparent);mask-image:linear-gradient(#000 calc(100% - 36px),transparent)}
+.qv-sheet-body::-webkit-scrollbar{display:none;width:0;height:0}
