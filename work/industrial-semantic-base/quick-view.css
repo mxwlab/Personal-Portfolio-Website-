@@ -136,3 +136,5 @@ html.qv-lock,html.qv-lock body{overflow:hidden}
 .qv-launch::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.9),transparent)}
 .qv-launch:focus-visible{outline-color:#3a6ff0}
 .qv-root,.qv-tip{font-family:IndustrialMiSans,"PingFang SC","Microsoft YaHei",sans-serif}
+/* Industrial: keep every accent inside the page's own sea-and-sky blues */
+.qv-root{--qv-g1:#1c4fc0;--qv-g2:#3a86e8;--qv-g3:#36b3d4;--qv-a1:rgba(80,140,250,.40);--qv-a2:rgba(130,185,255,.34);--qv-a3:rgba(70,195,225,.28);--qv-a4:rgba(255,255,255,.55)}
