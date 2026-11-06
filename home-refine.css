@@ -33,3 +33,7 @@
   .home-page #capabilities.capabilities-section{padding-top:44px;padding-bottom:44px}
 }
 @media(max-width:600px){.home-page #design-works{clip-path:inset(0 -100vmax -48px)}}
+
+/* No divider lines above or below the visual design band */
+.home-page #design-works{border-top:0}
+.home-page .home-about{border-top:0}
