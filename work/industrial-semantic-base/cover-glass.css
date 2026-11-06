@@ -1,0 +1,40 @@
+/* Match D4S's compact bar while this case's complete cover runs underneath. */
+body.iv3-preview.project-return-page {
+  --detail-return-height: calc(54px + env(safe-area-inset-top, 0px));
+  --header-height: var(--detail-return-height);
+}
+body.iv3-preview.project-return-page > .project-return-nav {
+  --nav-glass-image: rgb(255 255 255 / .24);
+  --nav-glass-blur: 20px;
+  position: fixed;
+  inset: 0 0 auto;
+  height: var(--detail-return-height);
+  min-height: var(--detail-return-height);
+  padding-block: env(safe-area-inset-top, 0px) 0;
+  box-sizing: border-box;
+  transition: background-color 180ms ease, backdrop-filter 180ms ease,
+    -webkit-backdrop-filter 180ms ease;
+}
+/* Scrolled tones and glass remain owned by the shared navigation stylesheet. */
+body.iv3-preview.project-return-page.industrial-at-top > .project-return-nav {
+  background: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* Keep the embedded cover title clear of the bar at narrower widths. */
+.iv3-preview #v3-01-cover .iv3-cover-visual {
+  box-sizing: border-box;
+  padding-top: max(0px, calc(var(--detail-return-height, 54px) + 12px - 5.8vw));
+  background: url("assets/cover/industrial-2124-170-3840.png") center top / 100% auto no-repeat;
+}
+@media (max-width: 600px) {
+  body.iv3-preview.project-return-page {
+    --detail-return-height: calc(50px + env(safe-area-inset-top, 0px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.iv3-preview.project-return-page > .project-return-nav {
+    transition: none;
+  }
+}

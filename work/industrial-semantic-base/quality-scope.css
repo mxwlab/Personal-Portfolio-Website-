@@ -1,0 +1,40 @@
+/* Align the introductory paragraph with its heading; preserve the illustration width. */
+.iv3-preview #v3-quality-opening .iv3-quality-task > .iv3-stack {
+  grid-column: 1 / -1;
+}
+.iv3-preview #v3-quality-opening .iv3-quality-task .iv3-quality-problem {
+  width: 100%;
+  margin-left: 0;
+}
+/* Restore the two design goals in the original label-and-content layout. */
+.iv3-preview #v3-quality-scope {
+  scroll-margin-top: var(--iv3-reading-offset, 130px);
+}
+.iv3-preview #v3-quality-scope .iv3-quality-goals {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.iv3-preview #v3-quality-scope .iv3-quality-goals > li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+.iv3-preview #v3-quality-scope .iv3-quality-goal-number {
+  color: #1f5fd1;
+  font: 400 17px/1.8 IndustrialRobotoMono, monospace;
+}
+.iv3-preview #v3-quality-scope .iv3-quality-goals .iv3-copy {
+  margin: 0;
+  white-space: normal;
+}
+/* Let the review summary wrap at the existing content edge. */
+.iv3-preview #v3-quality-acceptance > .iv3-copy:last-child {
+  max-width: none;
+  white-space: normal;
+}

@@ -1,0 +1,190 @@
+/* One primary result, with quieter supporting figures. Scoped to this screen. */
+.iv3-preview #v3-factory-impact {
+  --impact-blue: #82aaff;
+  --impact-white: #f5f6f8;
+  --impact-gray: #a7afbd;
+  --impact-numerals: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #08090b;
+  color: var(--impact-white);
+  min-height: calc(100svh - var(--detail-return-height, 54px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  scroll-margin-top: var(--detail-return-height, 54px);
+}
+#v3-factory-impact .impact-shell {
+  width: 100%;
+  max-width: min(1920px, calc((100svh - var(--detail-return-height, 54px)) * 1.7778));
+  margin-inline: auto;
+  container-type: inline-size;
+}
+#v3-factory-impact .impact-stage {
+  padding: 3.7cqw 5.05cqw 5.4cqw;
+  box-sizing: border-box;
+}
+#v3-factory-impact :is(h2, p, dl, dt, dd) { margin: 0; }
+#v3-factory-impact .impact-heading {
+  padding-bottom: 1.5cqw;
+  border-bottom: 1px solid #343840;
+  color: var(--impact-gray);
+  font-size: clamp(22px, 2.1cqw, 30px);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+#v3-factory-impact .impact-heading strong {
+  color: var(--impact-white);
+  font-weight: 600;
+}
+#v3-factory-impact .impact-body {
+  display: grid;
+  grid-template-columns: 38% minmax(0, 1fr);
+  column-gap: 6cqw;
+  margin-top: 3.5cqw;
+}
+#v3-factory-impact .impact-quote {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: .9cqw;
+  color: var(--impact-blue);
+  transform: translateY(-1cqw);
+}
+#v3-factory-impact .impact-quote-lines { white-space: nowrap; }
+#v3-factory-impact .impact-quote-line {
+  display: block;
+  font-size: 2.15cqw;
+  line-height: 1.65;
+  font-weight: 400;
+}
+#v3-factory-impact .impact-quote-line strong {
+  font-size: 2.3cqw;
+  font-weight: 600;
+}
+#v3-factory-impact .impact-frame {
+  flex: none;
+  color: #787f8d;
+  font: 300 3cqw/1 Arial, sans-serif;
+  white-space: nowrap;
+}
+#v3-factory-impact .impact-frame-end {
+  margin-left: .3cqw;
+  font-size: 2.6cqw;
+}
+#v3-factory-impact .impact-before {
+  color: var(--impact-gray);
+  font-size: clamp(18px, 1.9cqw, 27px);
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+#v3-factory-impact .impact-after {
+  display: flex;
+  align-items: baseline;
+  gap: .8cqw;
+  margin-top: .65cqw;
+  color: #d6d9e1;
+  font-size: 2.45cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+#v3-factory-impact .impact-thirty {
+  color: var(--impact-blue);
+  font-family: var(--impact-numerals);
+  font-size: 10.5cqw;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -.04em;
+  font-variant-numeric: lining-nums;
+}
+#v3-factory-impact .impact-thirty-ready {
+  position: relative;
+}
+#v3-factory-impact .impact-thirty-space {
+  visibility: hidden;
+}
+#v3-factory-impact .impact-thirty-count {
+  position: absolute;
+  inset: 0;
+  text-align: right;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+#v3-factory-impact .impact-metrics {
+  --impact-small-size: clamp(12px, 1.25cqw, 17px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3.5cqw;
+  row-gap: 2cqw;
+  margin-top: 2.2cqw;
+  padding-top: 1.8cqw;
+  border-top: 1px solid #292d35;
+}
+#v3-factory-impact .impact-metric { min-width: 0; }
+#v3-factory-impact .impact-kicker {
+  margin-bottom: .6cqw;
+  color: var(--impact-gray);
+  font-size: clamp(12px, 1.05cqw, 15px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+#v3-factory-impact .impact-value {
+  display: grid;
+  grid-template-columns: 2em max-content minmax(0, 1fr);
+  align-items: baseline;
+  gap: .45cqw;
+  padding-left: .6cqw;
+  font-size: var(--impact-small-size);
+  white-space: nowrap;
+}
+#v3-factory-impact .impact-value > span { grid-row: 1; }
+#v3-factory-impact .impact-value > .impact-digit { grid-column: 2; }
+#v3-factory-impact .impact-value > .impact-unit { grid-column: 3; }
+#v3-factory-impact .impact-value > .impact-prefix { grid-column: 1; justify-self: end; }
+#v3-factory-impact .impact-digit {
+  display: inline-block;
+  font-family: var(--impact-numerals);
+  font-size: 5.1cqw;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.025em;
+  font-variant-numeric: lining-nums;
+}
+#v3-factory-impact .impact-unit {
+  color: var(--impact-gray);
+  font-size: var(--impact-small-size);
+  font-weight: 400;
+  line-height: 1;
+}
+#v3-factory-impact .impact-caption {
+  position: relative;
+  z-index: 1;
+  margin-top: -.5cqw;
+  padding: .55cqw .6cqw .45cqw;
+  background: #000;
+  color: var(--impact-gray);
+  font-size: var(--impact-small-size);
+  font-weight: 400;
+  line-height: 1.6;
+  white-space: normal;
+}
+@media (max-width: 760px) {
+  .iv3-preview #v3-factory-impact { min-height: 0; }
+  #v3-factory-impact .impact-shell { width: 100%; }
+  #v3-factory-impact .impact-stage { padding: 36px 24px 50px; }
+  #v3-factory-impact .impact-heading { font-size: clamp(17px, 4.5cqw, 28px); padding-bottom: 18px; }
+  #v3-factory-impact .impact-body { grid-template-columns: minmax(0, 1fr); gap: 36px; margin-top: 30px; }
+  #v3-factory-impact .impact-quote { justify-content: center; gap: 10px; transform: none; }
+  #v3-factory-impact .impact-quote-line { font-size: 5.1cqw; }
+  #v3-factory-impact .impact-quote-line strong { font-size: 5.6cqw; }
+  #v3-factory-impact .impact-frame { font-size: 8cqw; }
+  #v3-factory-impact .impact-frame-end { font-size: 6.7cqw; }
+  #v3-factory-impact .impact-before { font-size: 5.8cqw; }
+  #v3-factory-impact .impact-after { font-size: 7.5cqw; gap: 2cqw; margin-top: 4px; }
+  #v3-factory-impact .impact-thirty { font-size: 21cqw; }
+  #v3-factory-impact .impact-metrics { --impact-small-size: 12px; margin-top: 24px; padding-top: 22px; column-gap: 18px; row-gap: 28px; }
+  #v3-factory-impact .impact-kicker { font-size: 12px; margin-bottom: 6px; }
+  #v3-factory-impact .impact-value { gap: 4px; padding-left: 6px; }
+  #v3-factory-impact .impact-digit { font-size: 10cqw; }
+  #v3-factory-impact .impact-caption { margin-top: -1cqw; padding: 5px 6px; }
+}

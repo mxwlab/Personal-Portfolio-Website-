@@ -1,0 +1,40 @@
+/* Only this case opts into the approved short-screen / long-reading rhythm. */
+body.iv3-preview.industrial-reading-enabled .iv3-board[data-screen-mode="screen"] {
+  min-height: var(--industrial-screen-min-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body.iv3-preview.industrial-reading-enabled .iv3-board[data-screen-mode="screen"] > .iv3-inner {
+  margin-block: 0;
+}
+body.iv3-preview.industrial-reading-enabled #v3-factory-impact[data-screen-mode="screen"] {
+  min-height: var(--industrial-screen-min-height);
+}
+body.iv3-preview.industrial-reading-enabled .iv3-project-overview > .iv3-inner,
+body.iv3-preview.industrial-reading-enabled .iv3-scale-screen > .iv3-inner {
+  min-height: calc(100svh - var(--industrial-screen-offset, var(--detail-return-height)));
+}
+/* Owner-approved full-bleed cover; crop excess image area instead of letterboxing. */
+body.iv3-preview.industrial-reading-enabled #v3-01-cover > .iv3-inner {
+  width: 100%;
+  padding: 0;
+}
+body.iv3-preview.industrial-reading-enabled #v3-01-cover .iv3-cover-visual {
+  width: 100%;
+  height: 100svh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #8e9fc9, #c9c3d2 55%, #f4f5fa);
+}
+body.iv3-preview.industrial-reading-enabled #v3-01-cover :is(.iv3-image, .iv3-image button) {
+  height: 100%;
+}
+body.iv3-preview.industrial-reading-enabled #v3-01-cover .iv3-cover-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: auto;
+}

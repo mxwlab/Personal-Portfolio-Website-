@@ -1,0 +1,162 @@
+/* Platform background uses the case's existing labels and reading column. */
+.iv3-preview :is(#v3-platform, #v3-platform-applications) {
+  background: #fff !important;
+}
+.iv3-preview #v3-platform .iv3-platform-background {
+  margin: 34px 0 60px;
+}
+.iv3-preview :is(#v3-platform .iv3-platform-background, #v3-platform-applications .iv3-platform-context) .iv3-labelled {
+  margin: 0;
+  padding: 26px 0;
+  border-top: 1px solid #dce3eb;
+  align-items: start;
+}
+.iv3-preview #v3-platform .iv3-platform-challenges {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.iv3-preview #v3-platform .iv3-platform-challenges li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+}
+.iv3-preview #v3-platform .iv3-platform-challenges li > span {
+  color: #1f5fd1;
+  font: 13px/1.8 IndustrialRobotoMono, monospace;
+}
+.iv3-preview #v3-platform-scenario .iv3-background-transition {
+  margin: 0 0 12px;
+}
+
+/* Preserve the existing design; only fit spacing around each reading screen. */
+.iv3-preview #v3-platform-scenario {
+  background: #f0f4f9 !important;
+}
+.iv3-preview #v3-platform-applications .iv3-application-overview {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+@media (min-width: 721px) {
+  .iv3-preview .iv3-platform-screen > .iv3-inner {
+    box-sizing: border-box;
+    min-height: calc(100svh - var(--industrial-screen-offset, 125px));
+    padding-block: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .iv3-preview :is(#v3-platform, #v3-platform-scenario) > .iv3-inner {
+    padding-block: 20px;
+  }
+  .iv3-preview #v3-platform .iv3-chapter-name {
+    margin-bottom: 16px;
+  }
+  .iv3-preview #v3-platform .iv3-chapter-claim {
+    margin-bottom: 24px;
+  }
+  .iv3-preview #v3-platform .iv3-platform-background {
+    margin: 0;
+  }
+  .iv3-preview :is(#v3-platform .iv3-platform-background, #v3-platform-applications .iv3-platform-context) .iv3-labelled {
+    padding-block: clamp(10px, calc(15svh - 100px), 26px);
+  }
+  .iv3-preview #v3-platform-scenario .iv3-platform-copy {
+    gap: 32px;
+    margin: 20px 0;
+  }
+  .iv3-preview #v3-platform-scenario .iv3-domain-map {
+    margin: 20px 0 0;
+  }
+}
+@media (min-width: 721px) and (max-height: 700px) {
+  .iv3-preview #v3-platform-applications > .iv3-inner {
+    padding-block: 12px;
+  }
+}
+
+.iv3-preview #v3-platform-applications .iv3-platform-context {
+  margin: 0;
+}
+
+/* Emphasize only the two callouts and the product-domain panel. */
+.iv3-preview #v3-platform-scenario .iv3-hint-word {
+  opacity: 1;
+  filter: brightness(.62);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,.8) 80%, rgba(0,0,0,.48) 100%);
+}
+.iv3-preview #v3-platform-scenario .iv3-annotation-curve {
+  stroke: #6b88ad;
+  stroke-width: 1.25;
+  opacity: 1;
+}
+.iv3-preview #v3-platform-scenario .iv3-annotation-curve path:not(.iv3-curve-line) {
+  fill: #6b88ad;
+}
+.iv3-preview #v3-platform-scenario .iv3-domain-diagram {
+  background: #fff;
+}
+.iv3-preview #v3-platform-scenario .iv3-domain-diagram > h3 {
+  color: #254d7d;
+  border-color: #d5e0ed;
+}
+.iv3-preview #v3-platform-scenario .iv3-domain-diagram h4 {
+  color: #2b5d99;
+}
+.iv3-preview #v3-platform-scenario .iv3-domain-diagram svg {
+  color: #276fc4;
+  background: #fff;
+}
+
+.iv3-preview #v3-platform-scenario .iv3-domain-diagram > ol {
+  border-inline: 1px solid #d5e0ed;
+  border-bottom-color: #d5e0ed;
+}
+
+/* Existing product-domain blue; preserve the original glyphs and fade. */
+.iv3-preview #v3-platform-scenario .solution .iv3-hint-word {
+  filter: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22solution-blue%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeColorMatrix%20type%3D%22matrix%22%20values%3D%220%200%200%200%200.168627%200%200%200%200%200.364706%200%200%200%200%200.6%200%200%200%201%200%22%2F%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#solution-blue");
+}
+
+/* Remove the six decorative top rules without moving the content. */
+.iv3-preview #v3-platform-applications .iv3-application,
+.iv3-preview #v3-contribution .iv3-review-dimension {
+  border-top-color: transparent;
+}
+
+/* Original vector icons and names share the column's left alignment. */
+.iv3-preview #v3-platform-applications .iv3-application-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iv3-preview #v3-platform-applications .iv3-application-icon {
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  max-width: none;
+}
+
+.iv3-preview #v3-contribution .iv3-review-dimensions {
+  column-gap: 48px;
+}
+
+.iv3-preview #v3-contribution .iv3-review-dimension-label {
+  font-size: 28px;
+}
+
+/* Highlight the data prerequisite within the existing sequence judgment. */
+.iv3-preview #v3-contribution .iv3-sequence-emphasis {
+  display: block;
+  margin-top: 14px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #fff;
+}

@@ -1,11 +1,21 @@
 // Independent anchors and touch behavior; other project pages do not load this file.
 (() => {
   const rail = document.querySelector('.iv3-rail');
-  const chapters = [...document.querySelectorAll('[data-v3-chapter]')];
-  if (!rail || !chapters.length) return;
+  if (!rail) return;
   const links = [...rail.querySelectorAll('a')];
+  const chapters = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
+  if (!chapters.length) return;
+  const menuButton = document.querySelector('.iv3-menu-toggle');
+  const menuDialog = document.querySelector('#iv3-directory-dialog');
+  const mobile = () => matchMedia('(max-width:720px)').matches;
+  const dialogLinks = [...(menuDialog?.querySelectorAll('a') || [])];
+  const headerHeight = () => document.querySelector('.project-return-nav,.site-header')?.getBoundingClientRect().height || 60;
+  menuButton?.addEventListener('click', () => { menuDialog.showModal(); menuButton.setAttribute('aria-expanded','true'); });
+  menuDialog?.querySelector('[data-directory-close]')?.addEventListener('click', () => menuDialog.close());
+  menuDialog?.addEventListener('close', () => menuButton.setAttribute('aria-expanded','false'));
+  menuDialog?.addEventListener('click', event => { if(event.target === menuDialog) { const r=menuDialog.getBoundingClientRect(); if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)menuDialog.close(); } });
   const side = () => matchMedia('(min-width:1440px)').matches;
-  const offset = () => (document.querySelector('.project-return-nav,.site-header')?.getBoundingClientRect().height || 60) + (side() ? 0 : rail.getBoundingClientRect().height || 54) + 16;
+  const offset = () => (document.querySelector('.project-return-nav,.site-header')?.getBoundingClientRect().height || 60) + (side() ? 0 : mobile() ? 48 : rail.getBoundingClientRect().height || 54) + 16;
   let scheduled = false, activeId = '';
   function update() {
     scheduled = false;
@@ -13,13 +23,16 @@
     document.body.style.setProperty('--iv3-reading-offset',`${readingOffset}px`);
     const started = chapters[0].getBoundingClientRect().top <= readingOffset + 5;
     rail.hidden = !started;
+    if(menuButton)menuButton.hidden = !started || !mobile();
+    document.body.style.setProperty('--iv3-menu-top', `${headerHeight()}px`);
+    if(menuDialog?.open && (!started || !mobile()))menuDialog.close();
     const atEnd=scrollY+innerHeight>=document.documentElement.scrollHeight-4;
     const active = atEnd ? chapters.at(-1) : chapters.filter(chapter => chapter.getBoundingClientRect().top <= readingOffset + 8).at(-1) || chapters[0];
-    for (const link of links) {
+    for (const link of [...links, ...dialogLinks]) {
       if (started && link.hash === '#' + active.id) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     }
-    if(started&&!side()&&activeId!==active.id){
+    if(started&&!side()&&!mobile()&&activeId!==active.id){
       const link=links.find(link=>link.hash==='#'+active.id);
       if(link)rail.scrollTo({left:link.offsetLeft-(rail.clientWidth-link.offsetWidth)/2,behavior:'instant'});
     }
@@ -36,8 +49,9 @@
     scrollTo({top: target.getBoundingClientRect().top + scrollY - offset(), behavior: 'instant'});
     update();
   }
-  for (const link of links) link.addEventListener('click', event => {
+  for (const link of [...links, ...dialogLinks]) link.addEventListener('click', event => {
     event.preventDefault();
+    if(menuDialog?.open)menuDialog.close();
     history.replaceState(null, '', link.hash);
     locate(link.hash);
   });
