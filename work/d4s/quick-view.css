@@ -129,3 +129,10 @@ html.qv-lock,html.qv-lock body{overflow:hidden}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.qv-root{--qv-glass:#fbfcfe}.qv-root.qv-dark{--qv-glass:#10131b}}
 @media(prefers-reduced-motion:reduce){.qv-sheet,.qv-scrim,.qv-tip,.qv-reveal,.qv-bar i,.qv-meter::after{transition:none}.qv-aurora i,.qv-launch.is-calling,.qv-launch.is-calling::after,.qv-launch .qv-clock-hand{animation:none}}
 .qv-root,.qv-tip{font-family:OPPOSans,"PingFang SC","Microsoft YaHei",sans-serif}
+/* D4S: the page's own blue + orange */
+.qv-root.qv-dark{--qv-g1:#2f8cff;--qv-g2:#6cc0ff;--qv-g3:#ff8a1f;--qv-a1:rgba(14,129,250,.50);--qv-a2:rgba(41,166,255,.30);--qv-a3:rgba(0,104,182,.45);--qv-a4:rgba(255,119,0,.22)}
+.qv-dark .qv-grad,.qv-dark .qv-chip{background-image:linear-gradient(100deg,var(--qv-g1),var(--qv-g2))}
+.qv-dark .qv-meter::after{background:linear-gradient(90deg,#ff7700,#ffa600)}
+.qv-dark .qv-dot{background:linear-gradient(135deg,#2f8cff,#ff8a1f)}
+.qv-launch{background:linear-gradient(110deg,#0e81fa,#29a6ff);box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 6px 20px rgba(14,129,250,.38)}
+.qv-launch:hover{box-shadow:0 0 0 1px rgba(255,255,255,.35) inset,0 10px 26px rgba(14,129,250,.48)}
