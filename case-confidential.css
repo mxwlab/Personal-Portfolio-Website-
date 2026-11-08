@@ -7,7 +7,7 @@
   margin:28px 0 0;padding:16px 18px;
   border:1px solid var(--line);border-left:3px solid var(--forest);
   border-radius:3px;background:#ffffff8c;
-  font-size:14px;line-height:1.75;color:var(--ink-soft);max-width:760px}
+  font-size:14px;line-height:1.75;color:var(--ink-soft);max-width:none}
 .case-page .nda-note strong{color:var(--ink);font-weight:600;white-space:nowrap}
 
 /* 抽象流程图：步骤 + 箭头 */
