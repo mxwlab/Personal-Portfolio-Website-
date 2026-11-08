@@ -1,0 +1,17 @@
+export const tokenFields=['inputTokens','outputTokens','cacheReadTokens','cacheCreationTokens','reasoningOutputTokens','totalTokens'];
+export function validateHistory(h){
+ const keys=['schemaVersion','source','evidence','sourceLogAudited','producer','producerVersion','timeZone','originalExportedAt','recountedAt','sourceSha256','coverageStart','coverageEnd','missingDates','calls','sessions','daily','totals'];
+ const exact=(o,k)=>o&&typeof o==='object'&&!Array.isArray(o)&&Object.keys(o).length===k.length&&Object.keys(o).every(x=>k.includes(x));
+ const date=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&new Date(s+'T00:00:00Z').toISOString().slice(0,10)===s;
+ if(!exact(h,keys)||h.schemaVersion!==2||h.source!=='codex'||h.evidence!=='historical-local-aggregate'||h.sourceLogAudited!==false||h.producer!=='ccusage codex daily --json'||h.producerVersion!==null||h.timeZone!==null||h.originalExportedAt!==null||h.calls!==null||h.sessions!==null||h.missingDates!=='unknown'||!date(h.coverageStart)||!date(h.coverageEnd)||!Array.isArray(h.daily)||!h.daily.length||!exact(h.totals,tokenFields)||!/^\d{4}-.*(Z|[+-]\d\d:\d\d)$/.test(h.recountedAt)||isNaN(Date.parse(h.recountedAt))||!/^[a-f0-9]{64}$/.test(h.sourceSha256))throw Error('Invalid historical provenance');
+ const seen=new Set(),totals=Object.fromEntries(tokenFields.map(k=>[k,0]));
+ for(const r of h.daily){if(!exact(r,['date',...tokenFields,'models'])||!date(r.date)||seen.has(r.date)||r.date<h.coverageStart||r.date>h.coverageEnd)throw Error('Invalid historical date');seen.add(r.date);
+ for(const k of tokenFields){if(!Number.isSafeInteger(r[k])||r[k]<0)throw Error('Invalid historical count');totals[k]+=r[k];}
+ const modelNames=new Set();let modelTotal=0;if(!Array.isArray(r.models)||!r.models.length)throw Error('Missing model breakdown');for(const m of r.models){if(!exact(m,['name','totalTokens','isFallback'])||typeof m.name!=='string'||!/^[-a-zA-Z0-9._/]{1,80}$/.test(m.name)||modelNames.has(m.name)||typeof m.isFallback!=='boolean'||!Number.isSafeInteger(m.totalTokens)||m.totalTokens<0)throw Error('Invalid model');modelNames.add(m.name);modelTotal+=m.totalTokens;}if(modelTotal!==r.totalTokens)throw Error('Model/day mismatch');
+ if(r.totalTokens!==r.inputTokens+r.outputTokens+r.cacheReadTokens+r.cacheCreationTokens||r.reasoningOutputTokens>r.outputTokens)throw Error('Invalid token identity');}
+ if([...seen].sort()[0]!==h.coverageStart||[...seen].sort().at(-1)!==h.coverageEnd||tokenFields.some(k=>!Number.isSafeInteger(totals[k])||totals[k]!==h.totals[k]))throw Error('Historical totals mismatch');return h;
+}
+// Sums only existing recorded dates. Absent dates remain unknown, never zero-filled.
+export function recordedSummary(h,start,end){const rows=h.daily.filter(r=>r.date>=start&&r.date<=end);return {count:rows.length,first:rows[0]?.date??null,last:rows.at(-1)?.date??null,totals:Object.fromEntries(tokenFields.map(k=>[k,rows.length?rows.reduce((n,r)=>n+r[k],0):null]))};}
+
+export function modelSummary(h,start,end){const totals=new Map();for(const r of h.daily.filter(r=>r.date>=start&&r.date<=end))for(const m of r.models){const a=totals.get(m.name)??{name:m.name,totalTokens:0,fallbackMarkedTokens:0};a.totalTokens+=m.totalTokens;if(m.isFallback)a.fallbackMarkedTokens+=m.totalTokens;totals.set(m.name,a);}return [...totals.values()].sort((a,b)=>b.totalTokens-a.totalTokens||a.name.localeCompare(b.name));}

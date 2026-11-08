@@ -1,0 +1,439 @@
+{
+  "ai-continuity/cover.png": {
+    "src": "media/ai-continuity-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/ai-continuity-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/ai-continuity-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "meetingnotes/cover.png": {
+    "src": "media/meetingnotes-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/meetingnotes-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/meetingnotes-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "meetingnotes/mn-install-setup.png": {
+    "src": "media/meetingnotes-mn-install-setup-1376.png",
+    "width": 1376,
+    "height": 1500,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-install-setup-720.png",
+        "width": 720
+      },
+      {
+        "src": "media/meetingnotes-mn-install-setup-1376.png",
+        "width": 1376
+      }
+    ]
+  },
+  "meetingnotes/mn-install-progress.png": {
+    "src": "media/meetingnotes-mn-install-progress-1376.png",
+    "width": 1376,
+    "height": 1500,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-install-progress-720.png",
+        "width": 720
+      },
+      {
+        "src": "media/meetingnotes-mn-install-progress-1376.png",
+        "width": 1376
+      }
+    ]
+  },
+  "meetingnotes/mn-pet-1-listening.png": {
+    "src": "media/meetingnotes-mn-pet-1-listening-612.png",
+    "width": 612,
+    "height": 328,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-pet-1-listening-612.png",
+        "width": 612
+      }
+    ]
+  },
+  "meetingnotes/mn-pet-2-summarizing.png": {
+    "src": "media/meetingnotes-mn-pet-2-summarizing-612.png",
+    "width": 612,
+    "height": 328,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-pet-2-summarizing-612.png",
+        "width": 612
+      }
+    ]
+  },
+  "meetingnotes/mn-pet-3-done.png": {
+    "src": "media/meetingnotes-mn-pet-3-done-612.png",
+    "width": 612,
+    "height": 328,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-pet-3-done-612.png",
+        "width": 612
+      }
+    ]
+  },
+  "meetingnotes/mn-menubar-menu.png": {
+    "src": "media/meetingnotes-mn-menubar-menu-274.png",
+    "width": 274,
+    "height": 306,
+    "variants": [
+      {
+        "src": "media/meetingnotes-mn-menubar-menu-274.png",
+        "width": 274
+      }
+    ]
+  },
+  "knowledge-graph/cover.png": {
+    "src": "media/knowledge-graph-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/knowledge-graph-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/knowledge-graph-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "wechat-cc/cover.png": {
+    "src": "media/wechat-cc-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/wechat-cc-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "wechat-cc/companion-aquarium-poster.jpg": {
+    "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
+    "width": 1400,
+    "height": 934,
+    "variants": [
+      {
+        "src": "media/wechat-cc-companion-aquarium-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-companion-aquarium-poster-1400.jpg",
+        "width": 1400
+      }
+    ]
+  },
+  "wechat-cc/reader/todo-example.png": {
+    "src": "media/wechat-cc-reader-todo-example-1440.jpg",
+    "width": 1440,
+    "height": 746,
+    "variants": [
+      {
+        "src": "media/wechat-cc-reader-todo-example-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-reader-todo-example-1440.jpg",
+        "width": 1440
+      }
+    ]
+  },
+  "wechat-cc/reader/social-released.png": {
+    "src": "media/wechat-cc-reader-social-released-1600.jpg",
+    "width": 2200,
+    "height": 1720,
+    "variants": [
+      {
+        "src": "media/wechat-cc-reader-social-released-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/wechat-cc-reader-social-released-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "pocket-fishpond/cover.png": {
+    "src": "media/pocket-fishpond-cover-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-cover-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-cover-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "pocket-fishpond/reader/device-poster.jpg": {
+    "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
+    "width": 1006,
+    "height": 938,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-reader-device-poster-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-reader-device-poster-1006.jpg",
+        "width": 1006
+      }
+    ]
+  },
+  "pocket-fishpond/maker-space-workshop.jpg": {
+    "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
+    "width": 1800,
+    "height": 1471,
+    "variants": [
+      {
+        "src": "media/pocket-fishpond-maker-space-workshop-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/pocket-fishpond-maker-space-workshop-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "contact/wechat-qr.jpg": {
+    "src": "media/contact-wechat-qr-888.jpg",
+    "width": 888,
+    "height": 1131,
+    "variants": [
+      {
+        "src": "media/contact-wechat-qr-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/contact-wechat-qr-888.jpg",
+        "width": 888
+      }
+    ]
+  },
+  "about/sharing-pocket-reef.png": {
+    "src": "media/about-sharing-pocket-reef-1600.jpg",
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "media/about-sharing-pocket-reef-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-sharing-pocket-reef-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/maker-gathering.jpg": {
+    "src": "media/about-maker-gathering-1600.jpg",
+    "width": 1707,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "media/about-maker-gathering-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-maker-gathering-1600.jpg",
+        "width": 1600
+      }
+    ]
+  },
+  "about/motion/layered-form.jpg": {
+    "src": "media/about-motion-layered-form-1024.jpg",
+    "width": 1024,
+    "height": 1024,
+    "variants": [
+      {
+        "src": "media/about-motion-layered-form-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-layered-form-1024.jpg",
+        "width": 1024
+      }
+    ]
+  },
+  "about/motion/cube-crystal.jpg": {
+    "src": "media/about-motion-cube-crystal-800.jpg",
+    "width": 800,
+    "height": 800,
+    "variants": [
+      {
+        "src": "media/about-motion-cube-crystal-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-cube-crystal-800.jpg",
+        "width": 800
+      }
+    ]
+  },
+  "about/motion/walking-robot.jpg": {
+    "src": "media/about-motion-walking-robot-1500.jpg",
+    "width": 1500,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-walking-robot-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-walking-robot-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
+  "about/motion/building-blocks.jpg": {
+    "src": "media/about-motion-building-blocks-1500.jpg",
+    "width": 1500,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "media/about-motion-building-blocks-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-building-blocks-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
+  "about/motion/monkey-head-build.jpg": {
+    "src": "media/about-motion-monkey-head-build-1500.jpg",
+    "width": 1500,
+    "height": 1500,
+    "variants": [
+      {
+        "src": "media/about-motion-monkey-head-build-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-monkey-head-build-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
+  "about/motion/can-collision.jpg": {
+    "src": "media/about-motion-can-collision-1500.jpg",
+    "width": 1500,
+    "height": 1000,
+    "variants": [
+      {
+        "src": "media/about-motion-can-collision-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-motion-can-collision-1500.jpg",
+        "width": 1500
+      }
+    ]
+  },
+  "about/activity/maker-exchange.jpg": {
+    "src": "media/about-activity-maker-exchange-1200.jpg",
+    "width": 1536,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-activity-maker-exchange-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-activity-maker-exchange-1200.jpg",
+        "width": 1200
+      }
+    ]
+  },
+  "about/activity/technology-exhibition.jpg": {
+    "src": "media/about-activity-technology-exhibition-1200.jpg",
+    "width": 1536,
+    "height": 2048,
+    "variants": [
+      {
+        "src": "media/about-activity-technology-exhibition-720.jpg",
+        "width": 720
+      },
+      {
+        "src": "media/about-activity-technology-exhibition-1200.jpg",
+        "width": 1200
+      }
+    ]
+  },
+  "about/exploration/blender-scene-study.png": {
+    "src": "media/about-exploration-blender-scene-study-1600.webp",
+    "width": 3024,
+    "height": 1898,
+    "variants": [
+      {
+        "src": "media/about-exploration-blender-scene-study-480.webp",
+        "width": 480
+      },
+      {
+        "src": "media/about-exploration-blender-scene-study-960.webp",
+        "width": 960
+      },
+      {
+        "src": "media/about-exploration-blender-scene-study-720.webp",
+        "width": 720
+      },
+      {
+        "src": "media/about-exploration-blender-scene-study-1600.webp",
+        "width": 1600
+      }
+    ],
+    "original": "media/about/exploration/blender-scene-study.png"
+  },
+  "about/exploration/mountain-sketch-and-photo.jpg": {
+    "src": "media/about-exploration-mountain-sketch-and-photo-1242.webp",
+    "width": 1242,
+    "height": 1923,
+    "variants": [
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-480.webp",
+        "width": 480
+      },
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-960.webp",
+        "width": 960
+      },
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-720.webp",
+        "width": 720
+      },
+      {
+        "src": "media/about-exploration-mountain-sketch-and-photo-1242.webp",
+        "width": 1242
+      }
+    ],
+    "original": "media/about/exploration/mountain-sketch-and-photo.jpg"
+  }
+}

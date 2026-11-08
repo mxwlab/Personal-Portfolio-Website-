@@ -1,0 +1,10 @@
+/* Shared glass: translucent surface, opaque text. Never apply opacity to the bar. */
+:root{--nav-glass-light:rgb(255 255 255 / .32);--nav-glass-dark:rgb(255 255 255 / .12);--nav-glass-image:rgb(255 255 255 / .56);--nav-glass-blur:18px;--nav-glass-ink:#17251F;--nav-glass-pale:#F5F7F3}
+body .nav-glass{--glass-surface:var(--nav-glass-light);--glass-text:var(--nav-glass-ink);--glass-active:#40561F;background:var(--glass-surface)!important;background-image:none!important;color:var(--glass-text)!important;backdrop-filter:blur(var(--nav-glass-blur)) saturate(1.08)!important;-webkit-backdrop-filter:blur(var(--nav-glass-blur)) saturate(1.08)!important}
+body .nav-glass[data-glass-tone="dark"]{--glass-surface:var(--nav-glass-dark);--glass-text:var(--nav-glass-pale);--glass-active:#E1E6A0}
+body .nav-glass[data-glass-tone="image"]{--glass-surface:var(--nav-glass-image);--glass-active:var(--nav-glass-ink)}
+body .nav-glass :is(a:not(.wordmark),.nav-label){color:var(--glass-text)!important}
+body .nav-glass a:not(.wordmark):is(:hover,[aria-current]){color:var(--glass-active)!important}
+body .nav-glass a:not(.wordmark):is(:hover,[aria-current]) .nav-label{color:inherit!important}
+body .nav-glass a:focus-visible{outline-color:var(--glass-text)!important}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){body .nav-glass{background:#F5F7F3!important;--glass-text:#20312D;--glass-active:#40561F}body .nav-glass[data-glass-tone="dark"]{background:#20312D!important;--glass-text:#F5F7F3;--glass-active:#E1E6A0}}

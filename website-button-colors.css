@@ -1,0 +1,17 @@
+/* Website controls only; keep case artwork and PDF viewers unchanged. */
+:root{--website-button-bg:#CBCB6C;--website-button-ink:#323200}
+body :is(.button-dark,.skip-link,.work-filters button[aria-pressed="true"],.craft-dialog .craft-groups button[aria-pressed="true"]){background:var(--website-button-bg);color:var(--website-button-ink);border-color:var(--website-button-bg)}
+body :is(.button-dark,.skip-link,.work-filters button[aria-pressed="true"],.craft-dialog .craft-groups button[aria-pressed="true"]):is(:hover,:focus-visible,:active){background:var(--website-button-bg);color:var(--website-button-ink);border-color:var(--website-button-bg)}
+body :is(.button-dark,.skip-link,.work-filters button[aria-pressed="true"],.craft-dialog .craft-groups button[aria-pressed="true"]) :is(svg,.arrow-up-right){color:var(--website-button-ink)!important}
+body :is(.button-dark,.skip-link,.work-filters button[aria-pressed="true"],.craft-dialog .craft-groups button[aria-pressed="true"]):focus-visible{outline:2px solid var(--website-button-ink);outline-offset:3px}
+/* Work-list contact action follows the existing filter-pill control family. */
+body.work-page .contact-section .button-dark{border-radius:999px;min-height:44px;padding:9px 16px;font-size:14px;gap:12px}
+@media(max-width:720px){body.work-page .contact-section .button-dark{padding:8px 11px}}
+body.work-page .work-filters button{font-weight:400;white-space:nowrap}
+body.work-page .work-filters button::after{content:attr(data-width-label);display:block;height:0;line-height:0;visibility:hidden;pointer-events:none;font-weight:600;white-space:nowrap}
+body.work-page .work-filters button[aria-pressed="true"]{font-weight:600}
+body.work-page :is(.work-filters button,.contact-section .button-dark):hover{background:#CBCB6C;color:#323200;border-color:#CBCB6C!important}
+body.work-page :is(.work-filters button,.contact-section .button-dark):focus-visible{background:#CBCB6C;color:#323200;border-color:#CBCB6C!important;outline:2px solid rgb(203 203 108 / .65)!important;outline-offset:3px;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
+
+/* Unselected filter hover is outline-only; selection owns the filled surface. */
+body.work-page .work-filters button:not([aria-pressed="true"]):hover{background:transparent;color:#323200;border-color:#CBCB6C!important;font-weight:400}

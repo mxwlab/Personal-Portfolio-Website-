@@ -1,0 +1,2352 @@
+{
+  "schemaVersion": 2,
+  "source": "codex",
+  "evidence": "historical-local-aggregate",
+  "sourceLogAudited": false,
+  "producer": "ccusage codex daily --json",
+  "producerVersion": null,
+  "timeZone": null,
+  "originalExportedAt": null,
+  "recountedAt": "2026-10-26T04:57:37.058575+00:00",
+  "sourceSha256": "e3327ad280c6745ac483a2a91e37ee97e69c8ba55797bf1686e7529bf0750222",
+  "coverageStart": "2026-04-19",
+  "coverageEnd": "2026-10-23",
+  "missingDates": "unknown",
+  "calls": null,
+  "sessions": null,
+  "daily": [
+    {
+      "date": "2026-04-19",
+      "inputTokens": 255543,
+      "outputTokens": 19550,
+      "cacheReadTokens": 1388928,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 4905,
+      "totalTokens": 1664021,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 1664021,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "inputTokens": 708200,
+      "outputTokens": 72847,
+      "cacheReadTokens": 7842944,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 11833,
+      "totalTokens": 8623991,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 8623991,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "inputTokens": 123931,
+      "outputTokens": 17262,
+      "cacheReadTokens": 1146240,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2617,
+      "totalTokens": 1287433,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 1287433,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "inputTokens": 504496,
+      "outputTokens": 23125,
+      "cacheReadTokens": 11700992,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 5327,
+      "totalTokens": 12228613,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 12228613,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-10",
+      "inputTokens": 412275,
+      "outputTokens": 24212,
+      "cacheReadTokens": 5396352,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2800,
+      "totalTokens": 5832839,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 5832839,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "inputTokens": 326065,
+      "outputTokens": 34644,
+      "cacheReadTokens": 2463872,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1812,
+      "totalTokens": 2824581,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 2824581,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "inputTokens": 70321,
+      "outputTokens": 815,
+      "cacheReadTokens": 94976,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 92,
+      "totalTokens": 166112,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 166112,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "inputTokens": 2512295,
+      "outputTokens": 67331,
+      "cacheReadTokens": 22667520,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 15711,
+      "totalTokens": 25247146,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 25247146,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "inputTokens": 1870562,
+      "outputTokens": 25545,
+      "cacheReadTokens": 13264896,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 5404,
+      "totalTokens": 15161003,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 15161003,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "inputTokens": 191769,
+      "outputTokens": 1484,
+      "cacheReadTokens": 551552,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 253,
+      "totalTokens": 744805,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 744805,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "inputTokens": 229168,
+      "outputTokens": 13103,
+      "cacheReadTokens": 2378880,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1818,
+      "totalTokens": 2621151,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 2621151,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "inputTokens": 162567,
+      "outputTokens": 6545,
+      "cacheReadTokens": 720640,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2039,
+      "totalTokens": 889752,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 889752,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "inputTokens": 120841,
+      "outputTokens": 5816,
+      "cacheReadTokens": 683520,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 91,
+      "totalTokens": 810177,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 810177,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "inputTokens": 241811,
+      "outputTokens": 10868,
+      "cacheReadTokens": 667776,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 405,
+      "totalTokens": 920455,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 920455,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-24",
+      "inputTokens": 2414347,
+      "outputTokens": 102679,
+      "cacheReadTokens": 40001792,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 14335,
+      "totalTokens": 42518818,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 42518818,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "inputTokens": 1133503,
+      "outputTokens": 46044,
+      "cacheReadTokens": 20442624,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 12394,
+      "totalTokens": 21622171,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 21622171,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "inputTokens": 574678,
+      "outputTokens": 23258,
+      "cacheReadTokens": 13663744,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 4394,
+      "totalTokens": 14261680,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 14261680,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "inputTokens": 1573697,
+      "outputTokens": 41535,
+      "cacheReadTokens": 16384896,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2091,
+      "totalTokens": 18000128,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 18000128,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "inputTokens": 4008423,
+      "outputTokens": 68146,
+      "cacheReadTokens": 42254848,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 17614,
+      "totalTokens": 46331417,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 46331417,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "inputTokens": 812195,
+      "outputTokens": 12412,
+      "cacheReadTokens": 6661504,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 943,
+      "totalTokens": 7486111,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 7486111,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-30",
+      "inputTokens": 71886,
+      "outputTokens": 925,
+      "cacheReadTokens": 125696,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 96,
+      "totalTokens": 198507,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 198507,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-31",
+      "inputTokens": 1163620,
+      "outputTokens": 69860,
+      "cacheReadTokens": 24686464,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 9800,
+      "totalTokens": 25919944,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 25919944,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "inputTokens": 448565,
+      "outputTokens": 32611,
+      "cacheReadTokens": 3046144,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2520,
+      "totalTokens": 3527320,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 3527320,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "inputTokens": 232197,
+      "outputTokens": 17014,
+      "cacheReadTokens": 1841792,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2204,
+      "totalTokens": 2091003,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 2091003,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "inputTokens": 42771,
+      "outputTokens": 1805,
+      "cacheReadTokens": 121984,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 167,
+      "totalTokens": 166560,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 166560,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "inputTokens": 1463224,
+      "outputTokens": 75532,
+      "cacheReadTokens": 27313280,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 16142,
+      "totalTokens": 28852036,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 5175278,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 23676758,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "inputTokens": 166508,
+      "outputTokens": 13060,
+      "cacheReadTokens": 639488,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1434,
+      "totalTokens": 819056,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 819056,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-06",
+      "inputTokens": 2509148,
+      "outputTokens": 144358,
+      "cacheReadTokens": 25011584,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 50751,
+      "totalTokens": 27665090,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 7166250,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 20498840,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "inputTokens": 220426,
+      "outputTokens": 9576,
+      "cacheReadTokens": 814976,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 526,
+      "totalTokens": 1044978,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 1044978,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "inputTokens": 2241794,
+      "outputTokens": 109205,
+      "cacheReadTokens": 31205888,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 39134,
+      "totalTokens": 33556887,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 11877319,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 21679568,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "inputTokens": 2945876,
+      "outputTokens": 91903,
+      "cacheReadTokens": 14560640,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 45244,
+      "totalTokens": 17598419,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 16475576,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 1122843,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "inputTokens": 692392,
+      "outputTokens": 24960,
+      "cacheReadTokens": 2557312,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 885,
+      "totalTokens": 3274664,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 3274664,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-12",
+      "inputTokens": 724839,
+      "outputTokens": 29122,
+      "cacheReadTokens": 5965056,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 4514,
+      "totalTokens": 6719017,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 6719017,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-13",
+      "inputTokens": 282195,
+      "outputTokens": 12925,
+      "cacheReadTokens": 2081024,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 3318,
+      "totalTokens": 2376144,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 2376144,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-14",
+      "inputTokens": 538095,
+      "outputTokens": 32542,
+      "cacheReadTokens": 4829312,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2818,
+      "totalTokens": 5399949,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 5399949,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "inputTokens": 474314,
+      "outputTokens": 17326,
+      "cacheReadTokens": 3679872,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1481,
+      "totalTokens": 4171512,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 4171512,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "inputTokens": 448032,
+      "outputTokens": 27942,
+      "cacheReadTokens": 3558656,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2248,
+      "totalTokens": 4034630,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 4034630,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "inputTokens": 93218,
+      "outputTokens": 1596,
+      "cacheReadTokens": 399488,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 302,
+      "totalTokens": 494302,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 494302,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-23",
+      "inputTokens": 238330,
+      "outputTokens": 9594,
+      "cacheReadTokens": 1390976,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 464,
+      "totalTokens": 1638900,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 1638900,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "inputTokens": 1270513,
+      "outputTokens": 101226,
+      "cacheReadTokens": 25578496,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 19996,
+      "totalTokens": 26950235,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 4180407,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 22769828,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "inputTokens": 3192577,
+      "outputTokens": 121439,
+      "cacheReadTokens": 38772224,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 9178,
+      "totalTokens": 42086240,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 42086240,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "inputTokens": 3148681,
+      "outputTokens": 143721,
+      "cacheReadTokens": 34437504,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 28941,
+      "totalTokens": 37729906,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 846144,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 36883762,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-27",
+      "inputTokens": 2351500,
+      "outputTokens": 110557,
+      "cacheReadTokens": 22811008,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 17889,
+      "totalTokens": 25273065,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 25273065,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-28",
+      "inputTokens": 147386,
+      "outputTokens": 9023,
+      "cacheReadTokens": 1399680,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1328,
+      "totalTokens": 1556089,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 1556089,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-29",
+      "inputTokens": 856106,
+      "outputTokens": 40473,
+      "cacheReadTokens": 9385600,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 14463,
+      "totalTokens": 10282179,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 2757101,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 7525078,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "inputTokens": 254327,
+      "outputTokens": 7801,
+      "cacheReadTokens": 2107648,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 580,
+      "totalTokens": 2369776,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 2369776,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "inputTokens": 413931,
+      "outputTokens": 19748,
+      "cacheReadTokens": 2627712,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2845,
+      "totalTokens": 3061391,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 3061391,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "inputTokens": 99797,
+      "outputTokens": 10088,
+      "cacheReadTokens": 801536,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1090,
+      "totalTokens": 911421,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 911421,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-04",
+      "inputTokens": 567731,
+      "outputTokens": 21773,
+      "cacheReadTokens": 4954112,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2995,
+      "totalTokens": 5543616,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 5543616,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "inputTokens": 6156437,
+      "outputTokens": 378602,
+      "cacheReadTokens": 92663552,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 136200,
+      "totalTokens": 99198591,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 52223752,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 46974839,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "inputTokens": 3332042,
+      "outputTokens": 147657,
+      "cacheReadTokens": 52301568,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 45618,
+      "totalTokens": 55781267,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 7325822,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 48455445,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "inputTokens": 5085200,
+      "outputTokens": 167843,
+      "cacheReadTokens": 78230272,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 30308,
+      "totalTokens": 83483315,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 97140,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 83386175,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "inputTokens": 2277570,
+      "outputTokens": 86458,
+      "cacheReadTokens": 38495744,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 22442,
+      "totalTokens": 40859772,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 1257380,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 39602392,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "inputTokens": 4063715,
+      "outputTokens": 73165,
+      "cacheReadTokens": 22206336,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 25930,
+      "totalTokens": 26343216,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 19640991,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 2952195,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 3750030,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "inputTokens": 2320832,
+      "outputTokens": 100155,
+      "cacheReadTokens": 35593472,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 34219,
+      "totalTokens": 38014459,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 23596413,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 14418046,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "inputTokens": 106603,
+      "outputTokens": 5327,
+      "cacheReadTokens": 938496,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 555,
+      "totalTokens": 1050426,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 1050426,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-12",
+      "inputTokens": 751589,
+      "outputTokens": 28899,
+      "cacheReadTokens": 6307584,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 5887,
+      "totalTokens": 7088072,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 54990,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 6690578,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 342504,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "inputTokens": 6799189,
+      "outputTokens": 233912,
+      "cacheReadTokens": 59561472,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 79625,
+      "totalTokens": 66594573,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 2474188,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 8348438,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 25373469,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 30398478,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "inputTokens": 3999352,
+      "outputTokens": 259382,
+      "cacheReadTokens": 75721984,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 95598,
+      "totalTokens": 79980718,
+      "models": [
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 79980718,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "inputTokens": 5848454,
+      "outputTokens": 503175,
+      "cacheReadTokens": 98417152,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 166936,
+      "totalTokens": 104768781,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 4245372,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 15829106,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 41236230,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 43458073,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "inputTokens": 3113606,
+      "outputTokens": 224223,
+      "cacheReadTokens": 77475840,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 79263,
+      "totalTokens": 80813669,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 55362740,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 25450929,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "inputTokens": 2428339,
+      "outputTokens": 139648,
+      "cacheReadTokens": 41544960,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 39391,
+      "totalTokens": 44112947,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 27415,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 32727542,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 11357990,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "inputTokens": 1218466,
+      "outputTokens": 85847,
+      "cacheReadTokens": 24739584,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 29808,
+      "totalTokens": 26043897,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 32794,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 24160380,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 1850723,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "inputTokens": 409670,
+      "outputTokens": 37751,
+      "cacheReadTokens": 5756288,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 6833,
+      "totalTokens": 6203709,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 663449,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 5540260,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "inputTokens": 176422,
+      "outputTokens": 9315,
+      "cacheReadTokens": 1434880,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1703,
+      "totalTokens": 1620617,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 1321499,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 299118,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "inputTokens": 148065,
+      "outputTokens": 6719,
+      "cacheReadTokens": 888960,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1306,
+      "totalTokens": 1043744,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 417149,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 608171,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 18424,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "inputTokens": 603211,
+      "outputTokens": 38845,
+      "cacheReadTokens": 8178176,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 7118,
+      "totalTokens": 8820232,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 8820232,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "inputTokens": 2408875,
+      "outputTokens": 169499,
+      "cacheReadTokens": 58444160,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 49264,
+      "totalTokens": 61022534,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 5595287,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 741132,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 12178855,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 42507260,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-26",
+      "inputTokens": 2043669,
+      "outputTokens": 254352,
+      "cacheReadTokens": 59854848,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 71560,
+      "totalTokens": 62152869,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 6539357,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 1453016,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 26386912,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-terra",
+          "totalTokens": 27773584,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "inputTokens": 2270948,
+      "outputTokens": 350882,
+      "cacheReadTokens": 93138560,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 153702,
+      "totalTokens": 95760390,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 924903,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 4535442,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 90300045,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "inputTokens": 1291171,
+      "outputTokens": 158666,
+      "cacheReadTokens": 58402048,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 31208,
+      "totalTokens": 59851885,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 59851885,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "inputTokens": 475971,
+      "outputTokens": 17183,
+      "cacheReadTokens": 11186176,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 3462,
+      "totalTokens": 11679330,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 11679330,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "inputTokens": 282881,
+      "outputTokens": 8646,
+      "cacheReadTokens": 1861632,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1554,
+      "totalTokens": 2153159,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 2153159,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "inputTokens": 357554,
+      "outputTokens": 29138,
+      "cacheReadTokens": 7202816,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 5389,
+      "totalTokens": 7589508,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 7589508,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "inputTokens": 45541,
+      "outputTokens": 1707,
+      "cacheReadTokens": 253952,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 386,
+      "totalTokens": 301200,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 301200,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "inputTokens": 207834,
+      "outputTokens": 14989,
+      "cacheReadTokens": 5860864,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 3193,
+      "totalTokens": 6083687,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 6083687,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "inputTokens": 306712,
+      "outputTokens": 15801,
+      "cacheReadTokens": 2344704,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 4316,
+      "totalTokens": 2667217,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 411390,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 41607,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 2214220,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "inputTokens": 1036455,
+      "outputTokens": 58621,
+      "cacheReadTokens": 18114560,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 14450,
+      "totalTokens": 19209636,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 19209636,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "inputTokens": 281130,
+      "outputTokens": 12749,
+      "cacheReadTokens": 2297088,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1812,
+      "totalTokens": 2590967,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 2590967,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "inputTokens": 121103,
+      "outputTokens": 2095,
+      "cacheReadTokens": 351488,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 519,
+      "totalTokens": 474686,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 474686,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "inputTokens": 537312,
+      "outputTokens": 29998,
+      "cacheReadTokens": 10728064,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 7244,
+      "totalTokens": 11295374,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 11295374,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "inputTokens": 594561,
+      "outputTokens": 36742,
+      "cacheReadTokens": 5572992,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 5864,
+      "totalTokens": 6204295,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 55313,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 6148982,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "inputTokens": 324132,
+      "outputTokens": 16467,
+      "cacheReadTokens": 4437248,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 3279,
+      "totalTokens": 4777847,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 301997,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 4475850,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "inputTokens": 1913173,
+      "outputTokens": 164606,
+      "cacheReadTokens": 55864064,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 20170,
+      "totalTokens": 57941843,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 57941843,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "inputTokens": 4526426,
+      "outputTokens": 170370,
+      "cacheReadTokens": 68368384,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 29329,
+      "totalTokens": 73065180,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 29070106,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 43995074,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "inputTokens": 38510,
+      "outputTokens": 1289,
+      "cacheReadTokens": 46208,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 280,
+      "totalTokens": 86007,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 86007,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "inputTokens": 182642,
+      "outputTokens": 25374,
+      "cacheReadTokens": 4055040,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 3911,
+      "totalTokens": 4263056,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 4263056,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "inputTokens": 159190,
+      "outputTokens": 9788,
+      "cacheReadTokens": 789632,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 2601,
+      "totalTokens": 958610,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 376102,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 582508,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "inputTokens": 1741007,
+      "outputTokens": 221496,
+      "cacheReadTokens": 59979776,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 40361,
+      "totalTokens": 61942279,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 18332,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 36709372,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 25214575,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "inputTokens": 313146,
+      "outputTokens": 52654,
+      "cacheReadTokens": 20304128,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 9492,
+      "totalTokens": 20669928,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 1320687,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 19349241,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "inputTokens": 828774,
+      "outputTokens": 49260,
+      "cacheReadTokens": 21927296,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 13911,
+      "totalTokens": 22805330,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 22763757,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 41573,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "inputTokens": 2521100,
+      "outputTokens": 238192,
+      "cacheReadTokens": 82451456,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 76061,
+      "totalTokens": 85210748,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 58147832,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 27062916,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "inputTokens": 296000,
+      "outputTokens": 17357,
+      "cacheReadTokens": 2831104,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 7132,
+      "totalTokens": 3144461,
+      "models": [
+        {
+          "name": "gpt-5.4",
+          "totalTokens": 226216,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 13032,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 2905213,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "inputTokens": 3411330,
+      "outputTokens": 283669,
+      "cacheReadTokens": 92419840,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 89534,
+      "totalTokens": 96114839,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 44009,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 61635935,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 34434895,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "inputTokens": 2076628,
+      "outputTokens": 189011,
+      "cacheReadTokens": 53619456,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 68457,
+      "totalTokens": 55885095,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 24715928,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 31169167,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "inputTokens": 939776,
+      "outputTokens": 123605,
+      "cacheReadTokens": 36944000,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 44816,
+      "totalTokens": 38007381,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 1932130,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 36075251,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "inputTokens": 629945,
+      "outputTokens": 61322,
+      "cacheReadTokens": 13379712,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 31427,
+      "totalTokens": 14070979,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 14070979,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "inputTokens": 34670,
+      "outputTokens": 758,
+      "cacheReadTokens": 165632,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 311,
+      "totalTokens": 201060,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 201060,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "inputTokens": 990191,
+      "outputTokens": 114098,
+      "cacheReadTokens": 30339456,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 40965,
+      "totalTokens": 31443745,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 31443745,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "inputTokens": 1700348,
+      "outputTokens": 88180,
+      "cacheReadTokens": 17856256,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 28513,
+      "totalTokens": 19644784,
+      "models": [
+        {
+          "name": "gpt-5.4-mini",
+          "totalTokens": 3513234,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 1776383,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 18153,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 14116335,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 220679,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "inputTokens": 750031,
+      "outputTokens": 32778,
+      "cacheReadTokens": 6955008,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 6958,
+      "totalTokens": 7737817,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 412967,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 635612,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 2067835,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 4621403,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "inputTokens": 229849,
+      "outputTokens": 19034,
+      "cacheReadTokens": 3465472,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 10093,
+      "totalTokens": 3714355,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 3714355,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "inputTokens": 705196,
+      "outputTokens": 54876,
+      "cacheReadTokens": 8775168,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 20330,
+      "totalTokens": 9535240,
+      "models": [
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 9245288,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 289952,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "inputTokens": 1482949,
+      "outputTokens": 104707,
+      "cacheReadTokens": 24319872,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 22669,
+      "totalTokens": 25907528,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 12812328,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 1996248,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 11098952,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "inputTokens": 1296363,
+      "outputTokens": 111849,
+      "cacheReadTokens": 12625024,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 29611,
+      "totalTokens": 14033236,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 468105,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 5953310,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 7611821,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "inputTokens": 1873068,
+      "outputTokens": 195608,
+      "cacheReadTokens": 49511680,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 13631,
+      "totalTokens": 51580356,
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "totalTokens": 78106,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 94289,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-5.6-sol",
+          "totalTokens": 2817287,
+          "isFallback": false
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 48590674,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "inputTokens": 1176569,
+      "outputTokens": 91079,
+      "cacheReadTokens": 40739584,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 5983,
+      "totalTokens": 42007232,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 4494963,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 37512269,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "inputTokens": 2829669,
+      "outputTokens": 424051,
+      "cacheReadTokens": 119596032,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 174452,
+      "totalTokens": 122849752,
+      "models": [
+        {
+          "name": "gpt-6-sol",
+          "totalTokens": 122849752,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "inputTokens": 342612,
+      "outputTokens": 51881,
+      "cacheReadTokens": 30283520,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 21435,
+      "totalTokens": 30678013,
+      "models": [
+        {
+          "name": "gpt-6-sol",
+          "totalTokens": 30678013,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "inputTokens": 3771666,
+      "outputTokens": 441735,
+      "cacheReadTokens": 128570880,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 143274,
+      "totalTokens": 132784281,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 19236,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 80773672,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-luna",
+          "totalTokens": 6330425,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-sol",
+          "totalTokens": 45660948,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "inputTokens": 707410,
+      "outputTokens": 103357,
+      "cacheReadTokens": 28836864,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 49654,
+      "totalTokens": 29647631,
+      "models": [
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 8882865,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-luna",
+          "totalTokens": 20764766,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "inputTokens": 50297,
+      "outputTokens": 2255,
+      "cacheReadTokens": 601088,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 35,
+      "totalTokens": 653640,
+      "models": [
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 653640,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "inputTokens": 393775,
+      "outputTokens": 31808,
+      "cacheReadTokens": 6014336,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 7510,
+      "totalTokens": 6439919,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 189580,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 6250339,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "inputTokens": 275109,
+      "outputTokens": 7956,
+      "cacheReadTokens": 1612544,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 42,
+      "totalTokens": 1895609,
+      "models": [
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 1895609,
+          "isFallback": true
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "inputTokens": 160173,
+      "outputTokens": 11294,
+      "cacheReadTokens": 3994368,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 1648,
+      "totalTokens": 4165835,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 78922,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 4086913,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "inputTokens": 15604,
+      "outputTokens": 1448,
+      "cacheReadTokens": 178560,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 175,
+      "totalTokens": 195612,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 10443,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 185169,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "inputTokens": 54070,
+      "outputTokens": 2547,
+      "cacheReadTokens": 428544,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 130,
+      "totalTokens": 485161,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 16412,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 468749,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "inputTokens": 95616,
+      "outputTokens": 2887,
+      "cacheReadTokens": 811520,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 130,
+      "totalTokens": 910023,
+      "models": [
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 910023,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "inputTokens": 60309,
+      "outputTokens": 3788,
+      "cacheReadTokens": 470272,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 143,
+      "totalTokens": 534369,
+      "models": [
+        {
+          "name": "gpt-5.6-luna",
+          "totalTokens": 16937,
+          "isFallback": true
+        },
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 517432,
+          "isFallback": false
+        }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "inputTokens": 75761,
+      "outputTokens": 5748,
+      "cacheReadTokens": 1014656,
+      "cacheCreationTokens": 0,
+      "reasoningOutputTokens": 120,
+      "totalTokens": 1096165,
+      "models": [
+        {
+          "name": "gpt-6-astra",
+          "totalTokens": 1096165,
+          "isFallback": false
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "inputTokens": 145620229,
+    "outputTokens": 9141099,
+    "cacheReadTokens": 2597737600,
+    "cacheCreationTokens": 0,
+    "reasoningOutputTokens": 2571467,
+    "totalTokens": 2752498928
+  }
+}

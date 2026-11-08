@@ -1,0 +1,4 @@
+.DS_Store
+preview-*
+.playwright-mcp/
+.archive/

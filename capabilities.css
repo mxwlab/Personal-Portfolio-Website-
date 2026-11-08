@@ -1,0 +1,38 @@
+.capabilities-section{padding-block:60px 85px;scroll-margin-top:90px}.capabilities-section .practice-numbers{padding-bottom:45px}.capabilities-section .practice-value{font-size:96px}
+.cap-index-heading{display:flex;justify-content:space-between;align-items:center;gap:30px;margin:42px 0 32px}.cap-index-heading h2{font-size:28px}.cap-instruction{font-size:12px;color:var(--muted);max-width:370px;line-height:1.8}
+.cap-index-directory ol{list-style:none;padding:0;margin:0;display:flex;justify-content:space-between;gap:20px;align-items:center}.cap-index-directory .cap-ai-list{padding-bottom:21px;border-bottom:1px solid var(--line)}.cap-index-directory .cap-core-list{padding:22px 5% 0 3%}.cap-index-item{flex:0 0 auto}.item-2,.item-7{transform:translateY(7px)}.item-3,.item-9{transform:translateY(-4px)}.item-5,.item-10{transform:translateY(4px)}
+.cap-index-link{display:inline-flex;align-items:center;padding:12px 0;background:none;border:0;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.6;text-align:left;cursor:pointer}.cap-core-list .cap-index-link{font-size:16px}.cap-word{background:linear-gradient(#dce7d6,#dce7d6) left bottom/0% 38% no-repeat;transition:background-size 120ms;white-space:nowrap}.cap-index-link:is(:focus-visible,[aria-expanded=true]) .cap-word{background-size:100% 38%}.cap-index-link:focus-visible{outline:1px solid var(--accent);outline-offset:4px}.cap-arrow{display:none}.cap-preview-slot{display:contents}
+#cap-preview{position:fixed;z-index:100;display:block;width:320px;max-width:calc(100vw - 24px);padding:13px;background:#f8f8f2;border:1px solid #cdd7c9;border-radius:5px;box-shadow:0 12px 36px #223e391c;overflow:auto;overscroll-behavior:contain}#cap-preview[hidden]{display:none}.cap-preview-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;color:var(--muted);font-size:10px}.cap-close{background:none;border:0;color:var(--ink);font:inherit;padding:4px 0 4px 10px;cursor:pointer}.cap-preview-figure{margin:0;aspect-ratio:1.65;background:#e7ebe3;overflow:hidden;border:1px solid #dce1d8}.cap-preview-figure img{width:100%;height:100%;object-fit:contain;display:block}.cap-preview-note{font-size:10px;line-height:1.5;color:var(--muted);margin:8px 0 0}#cap-preview-title{font-size:17px;line-height:1.5;margin:10px 0 0}#cap-preview-description{font-size:12px;line-height:1.8;margin:8px 0 0;color:var(--muted)}.cap-preview-visit{display:flex;justify-content:space-between;font-size:12px;border-top:1px solid var(--line);padding-top:10px;margin-top:12px}
+@media(min-width:701px) and (max-width:1100px){.cap-index-directory ol{gap:12px}.cap-index-link{font-size:14px}.cap-core-list .cap-index-link{font-size:14px}}
+@media(max-width:700px){.capabilities-section{padding-block:35px 50px}.capabilities-section .practice-value{font-size:55px}.capabilities-section .practice-numbers{padding-bottom:30px}.cap-index-heading{display:block;margin:30px 0 16px}.cap-index-heading h2{font-size:25px}.cap-instruction{margin-top:12px;font-size:12px}.cap-index-directory ol{flex-wrap:wrap;justify-content:flex-start;gap:2px 24px}.cap-index-directory .cap-core-list{padding:14px 0 0}.cap-index-directory .cap-ai-list{padding-bottom:14px}.cap-index-item{transform:none}.cap-index-link,.cap-core-list .cap-index-link{font-size:15px;min-height:44px;padding:8px 0}#cap-preview{width:300px}.cap-close{min-height:32px;min-width:52px}.cap-preview-visit{min-height:40px;align-items:center}.cap-preview-figure{aspect-ratio:1.85}}
+@media(prefers-reduced-motion:reduce){.cap-word{transition:none}}
+.capabilities-section .practice-numbers{border:0;max-width:1100px;margin-inline:auto;gap:clamp(12px,5vw,80px)}
+.capabilities-section .practice-stat,.capabilities-section .practice-stat:first-child{border:0;padding-inline:0;text-align:center}
+.capabilities-section .practice-value{justify-content:center}
+.cap-general{cursor:default}.cap-general .cap-word{background:none;transition:none}
+/* Lightweight image tag: original image proportions, no reserved space. */
+#cap-preview{width:260px;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible}
+.cap-preview-top,.cap-preview-note,#cap-preview-title,#cap-preview-description,.cap-preview-visit{display:none}
+.cap-picture-link{display:block;color:var(--ink);text-decoration:none}
+.cap-preview-figure{width:100%;aspect-ratio:auto;max-height:none;background:#f8f8f2;border:1px solid #d6ddd2;box-shadow:0 3px 10px #223e3910;display:flex;justify-content:center}
+.cap-preview-figure img{display:block;width:auto;height:auto;max-width:100%;object-fit:contain}
+.cap-picture-name{display:block;width:max-content;max-width:100%;padding:5px 7px;font-size:12px;line-height:1.6;background:#f3f3ed;color:var(--ink)}
+.cap-picture-link:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
+@media(max-width:700px){#cap-preview{width:250px}.cap-preview-top{display:flex;margin:0;background:#f3f3ed;justify-content:flex-end}.cap-preview-label{display:none}.cap-close{min-height:30px;padding:2px 7px}.cap-picture-name{font-size:12px}}
+.capabilities-section .practice-numbers{padding-bottom:28px}
+.cap-index-directory{margin-top:22px}
+#cap-preview{width:260px;height:176.25px}
+.cap-preview-figure{width:260px;height:146.25px;aspect-ratio:auto;box-sizing:border-box;align-items:center}
+.cap-preview-figure img{width:100%;height:100%;max-width:100%;max-height:100%!important;object-fit:contain}
+.cap-picture-name{box-sizing:border-box;width:260px;height:30px;white-space:nowrap;padding:5px 7px;line-height:20px}
+@media(max-width:700px){#cap-preview{width:260px;height:206.25px}.cap-preview-top{height:30px}.capabilities-section .practice-numbers{padding-bottom:22px}.cap-index-directory{margin-top:16px}}
+/* More breathing room below the numbers; slightly larger capability text. */
+.cap-index-directory{margin-top:50px}
+.cap-index-directory .cap-ai-list{border-bottom:0}
+.cap-index-link{font-size:19px}
+.cap-core-list .cap-index-link{font-size:18px}
+@media(min-width:701px) and (max-width:1100px){.cap-index-link,.cap-core-list .cap-index-link{font-size:16px}.cap-index-directory ol{gap:10px}}
+@media(max-width:700px){.cap-index-directory{margin-top:44px}.cap-index-link,.cap-core-list .cap-index-link{font-size:17px}}
+.practice-count{display:inline-block;min-width:2ch;text-align:right;font-variant-numeric:tabular-nums;letter-spacing:-.055em}
+.practice-count[data-count="8"]{min-width:1ch}
+.cap-index-directory .cap-index-item{transform:none}

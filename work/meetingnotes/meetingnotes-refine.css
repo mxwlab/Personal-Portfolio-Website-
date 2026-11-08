@@ -1,0 +1,33 @@
+/* MeetingNotes: "我和 AI 的分工" + four judgment comparisons, in the page's own editorial language */
+.project-meetingnotes .mn-k{margin:0 0 12px;font-family:var(--mono,ui-monospace,SFMono-Regular,monospace);font-size:12px;letter-spacing:.06em;color:var(--forest,#8fb3e0)}
+.project-meetingnotes .mn-split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:32px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.project-meetingnotes .mn-split>div{padding:24px 28px 26px 0}
+.project-meetingnotes .mn-split>div+div{padding-left:28px;border-left:1px solid var(--line)}
+.project-meetingnotes .mn-split ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.project-meetingnotes .mn-split li{position:relative;font-family:var(--sans);padding-left:16px;font-size:15px;line-height:1.75;color:var(--ink-soft)}
+.project-meetingnotes .mn-split li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:currentColor;opacity:.6}
+.project-meetingnotes .mn-check{margin:36px 0 0}
+.project-meetingnotes .mn-check ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;counter-reset:mn}
+.project-meetingnotes .mn-check li{counter-increment:mn;padding:0 20px 0 0}
+.project-meetingnotes .mn-check li+li{padding-left:20px;border-left:1px solid var(--line)}
+.project-meetingnotes .mn-check strong{display:block;margin:0 0 6px;font:600 16px/1.5 var(--serif);color:var(--ink)}
+.project-meetingnotes .mn-check strong::before{content:"0" counter(mn) "  ";font:400 12px var(--mono,ui-monospace,monospace);color:var(--forest,#8fb3e0);margin-right:6px}
+.project-meetingnotes .mn-check span{display:block;font-size:14px;line-height:1.7;color:var(--ink-soft)}
+.project-meetingnotes .mn-judgment{margin-top:72px}
+.project-meetingnotes .mn-compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);margin:28px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.project-meetingnotes .mn-compare>div{padding:22px 22px 24px 0}
+.project-meetingnotes .mn-compare>div+div{padding-left:22px;border-left:1px solid var(--line)}
+.project-meetingnotes .mn-compare p:not(.mn-k){margin:0;font-family:var(--sans);font-size:14.5px;line-height:1.8;color:var(--ink-soft)}
+.project-meetingnotes .mn-compare .is-me{background:linear-gradient(180deg,rgba(143,179,224,.07),rgba(143,179,224,0))}
+.project-meetingnotes .mn-compare .is-me p:not(.mn-k){color:var(--ink)}
+.project-meetingnotes .mn-compare .is-me .mn-k{color:var(--ink)}
+.project-meetingnotes .mn-note{margin-top:20px;font-size:14px;color:var(--ink-soft)}
+@media(max-width:900px){
+ .project-meetingnotes .mn-split,.project-meetingnotes .mn-compare,.project-meetingnotes .mn-check ol{grid-template-columns:1fr}
+ .project-meetingnotes .mn-split>div,.project-meetingnotes .mn-compare>div{padding:18px 0}
+ .project-meetingnotes .mn-split>div+div,.project-meetingnotes .mn-compare>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+ .project-meetingnotes .mn-compare .is-me{padding-left:14px!important;padding-right:14px}
+ .project-meetingnotes .mn-check li,.project-meetingnotes .mn-check li+li{padding:14px 0;border-left:0;border-top:1px solid var(--line)}
+ .project-meetingnotes .mn-check li:first-child{border-top:0}
+ .project-meetingnotes .mn-judgment{margin-top:52px}
+}

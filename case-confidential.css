@@ -1,0 +1,53 @@
+/* case-confidential.css — 职务项目案例页（不展示界面截图）的补充样式。
+   只在 4 个单位项目页加载：工业智能语义基座、D4S、企业级智能体平台、数算融合知识图谱。
+   所有图示都是用 HTML/CSS 画的抽象流程，不复刻任何真实界面。 */
+
+.case-page .nda-note{
+  display:flex;gap:14px;align-items:flex-start;
+  margin:28px 0 0;padding:16px 18px;
+  border:1px solid var(--line);border-left:3px solid var(--forest);
+  border-radius:3px;background:#ffffff8c;
+  font-size:14px;line-height:1.75;color:var(--ink-soft);max-width:760px}
+.case-page .nda-note strong{color:var(--ink);font-weight:600;white-space:nowrap}
+
+/* 抽象流程图：步骤 + 箭头 */
+.case-page .schema{margin:30px 0 0;padding:26px 24px 22px;border:1px solid var(--line);
+  border-radius:4px;background:#fbfaf6cc}
+.case-page .schema-flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+.case-page .schema-step{flex:1 1 150px;min-width:130px;padding:14px 14px 13px;
+  border:1px solid var(--line);border-radius:6px;background:#fff}
+.case-page .schema-step b{display:block;font-family:var(--mono);font-size:11px;font-weight:400;
+  letter-spacing:.06em;color:var(--forest);margin-bottom:6px}
+.case-page .schema-step span{display:block;font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
+.case-page .schema-step small{display:block;margin-top:6px;font-size:12.5px;line-height:1.6;color:var(--muted)}
+.case-page .schema-step.is-human{border-color:var(--forest);background:#eef3ee}
+.case-page .schema-arrow{flex:0 0 auto;align-self:center;font-family:var(--mono);color:var(--forest);font-size:18px}
+.case-page .schema figcaption{margin-top:14px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--muted)}
+.case-page .schema-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--muted)}
+.case-page .schema-legend i{display:inline-block;width:10px;height:10px;border:1px solid var(--line);
+  border-radius:2px;background:#fff;margin-right:6px;vertical-align:-1px}
+.case-page .schema-legend i.is-human{border-color:var(--forest);background:#eef3ee}
+
+/* 三列分工 / 角色 */
+.case-page .schema-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.case-page .schema-columns .schema-step{flex:none}
+
+/* 关键数字 */
+.case-page .metric-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:26px 0 0}
+.case-page .metric{padding:16px;border-top:2px solid var(--forest);background:#ffffff8c}
+.case-page .metric strong{display:block;font:400 30px/1.1 var(--mono);color:var(--ink)}
+.case-page .metric span{display:block;margin-top:8px;font-size:13.5px;line-height:1.6;color:var(--ink-soft)}
+.case-page .metric-note{margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+
+/* 判断列表 */
+.case-page .decision-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:14px}
+.case-page .decision-list li{padding:16px 18px;border:1px solid var(--line-soft);border-radius:4px;background:#ffffff73}
+.case-page .decision-list h3{margin:0;font-size:16.5px;line-height:1.5;color:var(--ink)}
+.case-page .decision-list p{margin:6px 0 0;font-size:15px;line-height:1.8;color:var(--ink-soft)}
+
+@media (max-width:720px){
+  .case-page .schema{padding:18px 14px}
+  .case-page .schema-flow{flex-direction:column}
+  .case-page .schema-arrow{transform:rotate(90deg);align-self:flex-start;margin-left:16px}
+  .case-page .nda-note{flex-direction:column;gap:4px}
+}
