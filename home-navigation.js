@@ -37,5 +37,13 @@
     update();
   };
   addEventListener('load',()=>document.fonts.ready.then(settle),{once:true});
+  // Lazy media above a target can grow after the jump; re-align a few times so "联系" lands on the contact block.
+  const realign=()=>{let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{return}
+    if(!id)return;
+    [300,800,1500,2500].forEach(ms=>setTimeout(()=>{const el=document.getElementById(id);if(!el)return;
+      const d=el.getBoundingClientRect().top-offset();if(Math.abs(d)>6)scrollTo({top:Math.max(0,scrollY+d),behavior:'instant'});update();},ms));};
+  addEventListener('hashchange',realign);
+  addEventListener('load',realign,{once:true});
+  document.addEventListener('click',e=>{const a=e.target.closest('.site-header a[href$="#contact"]');if(a&&location.hash==='#contact')realign();});
   update();
 })();
