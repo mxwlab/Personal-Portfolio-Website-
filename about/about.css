@@ -89,3 +89,7 @@ body.about-reading.shared-nav .about-reader{width:min(720px,calc(100% - 48px));m
 @media(max-width:600px){.about-reading .about-collage{border-radius:18px}.about-reading .about-collage::before{inset:12px 12px 52px;background-size:120px 120px,120px 120px,24px 24px,24px 24px}.about-reading .mat-ruler{left:20px;top:6px;width:calc(100% - 40px);height:20px}.about-reading .mat-ruler text:nth-of-type(even){visibility:hidden}.about-reading .mat-angle{width:76px;height:76px;left:15px;bottom:56px}}
 .about-reading .about-collage::after{content:"";position:absolute;inset:18px 18px 58px;pointer-events:none;z-index:-1;background-image:repeating-linear-gradient(90deg,#cbcb6c40 0 1px,transparent 1px 20px),repeating-linear-gradient(90deg,#cbcb6c40 0 1px,transparent 1px 20px),repeating-linear-gradient(#cbcb6c40 0 1px,transparent 1px 20px),repeating-linear-gradient(#cbcb6c40 0 1px,transparent 1px 20px);background-size:100% 5px,100% 5px,5px 100%,5px 100%;background-position:top,bottom,left,right;background-repeat:no-repeat;border-radius:9px}
 @media(max-width:600px){.about-reading .about-collage::after{inset:12px 12px 52px;opacity:.65}}
+
+/* 下载简历 */
+.about-identity .about-resume{margin-top:12px;font-size:15px}
+.about-identity .about-resume a{display:inline-flex;gap:6px;align-items:center}
