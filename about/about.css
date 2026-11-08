@@ -91,5 +91,5 @@ body.about-reading.shared-nav .about-reader{width:min(720px,calc(100% - 48px));m
 @media(max-width:600px){.about-reading .about-collage::after{inset:12px 12px 52px;opacity:.65}}
 
 /* 下载简历 */
-.about-identity .about-resume{margin-top:12px;font-size:15px}
+.about-identity .about-resume{margin-top:12px;font-size:15px;display:flex;gap:22px;flex-wrap:wrap}
 .about-identity .about-resume a{display:inline-flex;gap:6px;align-items:center}
