@@ -4,16 +4,16 @@
 Requires: fonttools + brotli  (pip install fonttools brotli)
 Run from repo root:  python3 tools/subset_fonts.py
 
-Source files (full fonts) live in work/industrial-semantic-base/assets/fonts/.
+Source files (full fonts) live in work/industrial-ai/assets/fonts/.
 Output goes to /fonts/ and is shared by every case page.
 """
 import glob, html, os, re, subprocess, sys
 
 SOURCE = {
-    "Regular": "work/industrial-semantic-base/assets/fonts/MiSans-Regular.woff2",
-    "Semibold": "work/industrial-semantic-base/assets/fonts/MiSans-Semibold.woff2",
+    "Regular": "work/industrial-ai/assets/fonts/MiSans-Regular.woff2",
+    "Semibold": "work/industrial-ai/assets/fonts/MiSans-Semibold.woff2",
 }
-MONO_SOURCE = "work/industrial-semantic-base/assets/fonts/RobotoMono.ttf"
+MONO_SOURCE = "work/industrial-ai/assets/fonts/RobotoMono.ttf"
 
 def collect_chars():
     chars = set()
@@ -23,7 +23,7 @@ def collect_chars():
         s = open(f, encoding="utf-8", errors="ignore").read()
         s = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", s)
         chars |= set(html.unescape(re.sub(r"<[^>]+>", " ", s)))
-    for f in ["work/industrial-semantic-base/case-v3.js", "work/compass-scheduling/compass-v3.js", "site.js", "home.js"]:
+    for f in ["work/industrial-ai/case-v3.js", "work/compass-scheduling/compass-v3.js", "site.js", "home.js"]:
         if os.path.exists(f):
             chars |= set(open(f, encoding="utf-8").read())
     chars |= set(" 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.,:;!?()[]{}<>/\\|@#$%^&*_+-=~`'\"")

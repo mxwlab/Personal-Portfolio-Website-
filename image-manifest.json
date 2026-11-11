@@ -103,17 +103,17 @@
       }
     ]
   },
-  "knowledge-graph/cover.png": {
-    "src": "media/knowledge-graph-cover-1600.jpg",
+  "data-governance/cover.png": {
+    "src": "media/data-governance-cover-1600.jpg",
     "width": 1672,
     "height": 941,
     "variants": [
       {
-        "src": "media/knowledge-graph-cover-720.jpg",
+        "src": "media/data-governance-cover-720.jpg",
         "width": 720
       },
       {
-        "src": "media/knowledge-graph-cover-1600.jpg",
+        "src": "media/data-governance-cover-1600.jpg",
         "width": 1600
       }
     ]
