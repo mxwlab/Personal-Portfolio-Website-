@@ -12,11 +12,11 @@ from PIL import Image
 
 COVERS = {
     "media/industrial-cover-20261016.png": ([1200, 2048], 82),
-    "media/d4s-cover-1600.jpg": ([720, 1600], 80),
+    "media/budget-cover-1600.jpg": ([720, 1600], 80),
     "media/meetingnotes-cover-1600.jpg": ([720, 1600], 80),
     "media/ai-continuity-cover-1600.jpg": ([720, 1600], 80),
     "media/agent-platform-cover-1600.jpg": ([720, 1600], 80),
-    "media/knowledge-graph-cover-1600.jpg": ([720, 1600], 80),
+    "media/data-governance-cover-1600.jpg": ([720, 1600], 80),
     "media/wechat-cc-cover-1600.jpg": ([720, 1600], 80),
     "media/pocket-fishpond-cover-1600.jpg": ([720, 1600], 80),
     "media/about-motion-smart-factory-1600.jpg": ([720, 1600], 80),
@@ -28,11 +28,11 @@ COVERS = {
 }
 
 SAME = {
-    "work/industrial-semantic-base/assets/illustrations/bearing-photo-ai.png": 80,
-    "work/industrial-semantic-base/assets/illustrations/configuration-person-male-v2.png": 80,
-    "work/industrial-semantic-base/assets/pipeline-collaboration/ai-pipeline-collaboration.png": 86,
-    "work/industrial-semantic-base/assets/illustrations/solution-hint-bold.png": 90,
-    "work/industrial-semantic-base/assets/illustrations/existing-problem-hint-bold.png": 90,
+    "work/industrial-ai/assets/illustrations/bearing-photo-ai.png": 80,
+    "work/industrial-ai/assets/illustrations/configuration-person-male-v2.png": 80,
+    "work/industrial-ai/assets/pipeline-collaboration/ai-pipeline-collaboration.png": 86,
+    "work/industrial-ai/assets/illustrations/solution-hint-bold.png": 90,
+    "work/industrial-ai/assets/illustrations/existing-problem-hint-bold.png": 90,
 }
 
 PREVIEW = {
@@ -40,7 +40,7 @@ PREVIEW = {
     "capability-assets/workflow.jpg": 80,
     "capability-assets/fishpond-cover.jpg": 80,
     "capability-assets/confirmation.png": 80,
-    "capability-assets/d4s.jpg": 80,
+    "capability-assets/budget-platform.jpg": 80,
     "capability-assets/pipeline-55.png": 84,
 }
 

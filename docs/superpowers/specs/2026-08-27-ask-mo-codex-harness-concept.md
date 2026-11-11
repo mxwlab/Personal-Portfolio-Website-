@@ -34,8 +34,8 @@
 
 现有项目已经形成较完整的证据基础：
 
-- 工业智能语义基座：复杂 B 端 AI 交互与可信设计。
-- D4S：复杂业务理解与企业级交付。
+- 工业数据智能平台：复杂 B 端 AI 交互与可信设计。
+- 项目经费管理平台：复杂业务理解与企业级交付。
 - 企业级智能体平台：真实上线的企业 Agent 平台设计经历。
 - AI Continuity：Agent 上下文、隔离与交接。
 - MeetingNotes：AI 评估、回退机制与本地优先。
@@ -66,7 +66,7 @@ Ask Mo 的作用，是把这些静态证据转化成可以按面试官兴趣动�
 
 > 莫秀文的核心优势不是单纯完成界面，而是把复杂 AI 能力落成用户能理解、核验和操作的流程。
 >
-> 相关证据：工业智能语义基座、D4S、AI Continuity。
+> 相关证据：工业数据智能平台、项目经费管理平台、AI Continuity。
 
 ### 3.3 短回答、可继续追问
 
@@ -117,7 +117,7 @@ Ask Mo 的作用，是把这些静态证据转化成可以按面试官兴趣动�
 
 推荐问题：
 
-- 你在工业智能语义基座里真正负责了什么？
+- 你在工业数据智能平台里真正负责了什么？
 - 哪些产品决策是你做的，哪些是团队共同完成的？
 - 你如何处理 AI 结论的可信度？
 - 你会写代码吗？独立完成过什么？
@@ -223,12 +223,12 @@ Agent 可以：
 ```json
 {
   "id": "industrial-role-001",
-  "claim": "莫秀文是工业智能语义基座项目的唯一交互设计师",
-  "source": "industrial-semantic-base",
+  "claim": "莫秀文是工业数据智能平台项目的唯一交互设计师",
+  "source": "industrial-ai",
   "status": "confirmed",
   "ownership": "individual-role",
   "visibility": "public",
-  "evidence_url": "/project-industrial-semantic-base.html"
+  "evidence_url": "/project-industrial-ai.html"
 }
 ```
 

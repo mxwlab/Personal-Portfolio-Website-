@@ -23,15 +23,15 @@
 - 新增 `fonts/MiSans-Regular.woff2`（143KB）、`fonts/MiSans-Semibold.woff2`（146KB）、`fonts/RobotoMono.woff2`（25KB）。
   原文件分别为 4.6MB / 4.8MB / 179KB。
 - 子集按全站实际用字生成（641 个非 ASCII 字符 + ASCII + 常用标点/箭头），已用 fontTools cmap 校验 0 缺字。
-- `work/industrial-semantic-base/case-v3.css` 与 `work/compass-scheduling/compass-v3.css` 的 `@font-face` 已改为 `url('../../fonts/...')`。
-- 删除 `work/{industrial-semantic-base,compass-scheduling}/assets/fonts/` 下的重复 woff2/ttf（19MB）；`MiSans-license.pdf` 与 NOTICE 保留。
+- `work/industrial-ai/case-v3.css` 与 `work/compass-scheduling/compass-v3.css` 的 `@font-face` 已改为 `url('../../fonts/...')`。
+- 删除 `work/{industrial-ai,compass-scheduling}/assets/fonts/` 下的重复 woff2/ttf（19MB）；`MiSans-license.pdf` 与 NOTICE 保留。
 - 重建脚本：`python3 tools/subset_fonts.py`（需 fonttools + brotli）。
 
 **重要约束**：案例页文案若新增了子集里没有的汉字，必须重跑 `tools/subset_fonts.py`，否则出现回退字体/豆腐块。
 
 ### 2.2 图片 WebP + 响应式
 
-- 命名约定：`原名-<宽度>.webp`（如 `media/d4s-cover-1600.jpg` → `d4s-cover-720.webp` / `d4s-cover-1600.webp`）。
+- 命名约定：`原名-<宽度>.webp`（如 `media/budget-cover-1600.jpg` → `budget-cover-720.webp` / `budget-cover-1600.webp`）。
 - 首页/作品列表/关于页用 `<picture><source type="image/webp" srcset="…" sizes="…"><img src="原图" …></picture>`，
   原 JPG/PNG 作为回退保留。
 - `site.css`、`home.css` 顶部新增 `picture{display:contents}`（布局与直接用 `<img>` 一致，**不要删**）。
@@ -62,14 +62,14 @@
   `#2b6de8`→`#1f5fd1`、`#75889c`→`#5a6f85`、`#947033`→`#8a6829`、`#8998a7`→`#5d6b7a`、`#93a0ac`→`#5f6d7c`。
 - `compass-v3.css`：`#2b6de8`→`#1f5fd1`。
 - `index.html`：三个统计数字 `span.practice-value` 加 `role="img"`（`aria-label="8年/30+/10+"` 才生效）。
-- `work/d4s/index.html`：`assets/hero-ring.svg` 补 `alt="" aria-hidden="true"`。
+- `work/budget-platform/index.html`：`assets/hero-ring.svg` 补 `alt="" aria-hidden="true"`。
 - 未处理：个别案例页 h2→h4 的标题层级跳跃（视觉修复有风险，先记录）。
 
 ### 2.5 其他
 
 - **Compass 隐藏**：`work/compass-scheduling/index.html` 加 `<meta name="robots" content="noindex,nofollow">`；
   仍可直达，但不在作品列表、不在 sitemap。要发布需补列表卡片 + sitemap 并删该 meta。
-- **D4S 图注**：去掉 11 处 Figma 节点号前缀（`528:7198 · 项目基本信息原稿` → `项目基本信息原稿`），Figma 链接本身保留。
+- **项目经费管理平台 图注**：去掉 11 处 Figma 节点号前缀（`528:7198 · 项目基本信息原稿` → `项目基本信息原稿`），Figma 链接本身保留。
 - **sitemap**：补 `design-portfolio/`。
 - **缓存**：改过的样式统一 `?v=20261023b`（改 CSS 后记得同步 bump）。
 
@@ -82,11 +82,11 @@
 | Compass（隐藏） | 10.35 MB | 0.97 MB |
 | 作品列表 | 0.90 MB | 0.55 MB |
 | 关于 | 1.22 MB | 0.59 MB |
-| D4S | 0.65 MB | 0.65 MB |
+| 项目经费管理平台 | 0.65 MB | 0.65 MB |
 
 - axe：13 个页面 0 违规；移动端 390px 横向溢出 0。
 - 内部链接与锚点：0 失效（唯一例外：`404.html` 用绝对路径 `/Personal-Portfolio-Website-/`，线上正常）。
-- 与线上版本逐元素几何对比：work / industrial / about / d4s 位移 0；首页仅跑马灯动画相位差异。
+- 与线上版本逐元素几何对比：work / industrial / about / budget-platform 位移 0；首页仅跑马灯动画相位差异。
 - 字体覆盖：案例页用字 0 缺失。
 - 复核脚本在仓库外：`/Users/moxiuwen/workspace/deepseek/_shot/{bench,verify,geom}.mjs`（playwright-core 已装在同目录 `node_modules`）。
   本地预览：`python3 -m http.server 8799 --bind 127.0.0.1`。
@@ -114,11 +114,11 @@
 4. **Compass**：维持隐藏，还是补封面与列表卡片后发布（其 PM 叙事最强）。
 5. **仓库瘦身**：237MB `.MOV` 与 `downloads/` PDF 仍在；要真正变小需重写 Git 历史（可另出脚本，风险高，需作者确认）。
 6. **域名**：暂无；若有，需要加 `CNAME` + 统一 canonical/sitemap，并改 `404.html` 的绝对路径。
-7. **D4S 的“版本待确认 / 旧稿，仅用于迭代对照”** 等内部批注仍留在页面上，属内容层决策。
+7. **项目经费管理平台 的“版本待确认 / 旧稿，仅用于迭代对照”** 等内部批注仍留在页面上，属内容层决策。
 
 ## 6. 建议的接手顺序
 
 1. `git diff main..optimize-local --stat` 快速过一遍改动面。
-2. 起本地服务，抽查首页、旗舰案例、D4S、Compass 四页的视觉效果与 Network 体积。
+2. 起本地服务，抽查首页、旗舰案例、项目经费管理平台、Compass 四页的视觉效果与 Network 体积。
 3. 若要动内容：先读 `homepage-copy-v1.md`（早期文案草稿）与 `CHANGES.md`，再决定首屏/摘要结构。
 4. 动完任何文案或图片，记得重跑两个 `tools/*.py` 并 bump `?v=` 缓存参数。

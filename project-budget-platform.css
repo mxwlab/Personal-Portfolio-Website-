@@ -23,8 +23,8 @@ h2 { max-width: 860px; margin-bottom: 16px; font-size: clamp(30px, 4.2vw, 52px);
 h3 { font-size: 23px; line-height: 1.35; }
 .eyebrow { margin-bottom: 12px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
 
-.d4s-header { display: flex; width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 22px 0; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 750; }
-.d4s-header nav a { color: var(--muted); }
+.budget-header { display: flex; width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 22px 0; align-items: center; justify-content: space-between; font-size: 14px; font-weight: 750; }
+.budget-header nav a { color: var(--muted); }
 .hero, .section { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr); gap: clamp(38px, 6vw, 82px); min-height: 650px; padding: 82px 0 96px; align-items: center; }
 .hero-lead { max-width: 720px; font-size: 19px; }
@@ -77,8 +77,8 @@ h3 { font-size: 23px; line-height: 1.35; }
 }
 
 @media (max-width: 640px) {
-  .d4s-header, .hero, .section { width: calc(100% - 32px); }
-  .d4s-header { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .budget-header, .hero, .section { width: calc(100% - 32px); }
+  .budget-header { align-items: flex-start; flex-direction: column; gap: 10px; }
   .hero { padding: 48px 0 62px; }
   .section { padding: 62px 0; }
   h1 { font-size: 40px; }
