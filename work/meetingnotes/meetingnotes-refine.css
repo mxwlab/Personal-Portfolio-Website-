@@ -34,3 +34,6 @@
 
 /* 会听：纠错局部图不必铺满，避免字号远大于正文 */
 .project-meetingnotes #design-correction .media img{max-width:720px;margin-inline:auto}
+
+/* 会听：商店链接下方的地区说明 */
+.project-meetingnotes .mn-store-note{margin:12px 0 0;font-family:var(--sans);font-size:13px;line-height:1.7;color:var(--muted)}
