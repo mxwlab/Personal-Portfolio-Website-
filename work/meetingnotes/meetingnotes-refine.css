@@ -31,3 +31,6 @@
  .project-meetingnotes .mn-check li:first-child{border-top:0}
  .project-meetingnotes .mn-judgment{margin-top:52px}
 }
+
+/* 会听：纠错局部图不必铺满，避免字号远大于正文 */
+.project-meetingnotes #design-correction .media img{max-width:720px;margin-inline:auto}
